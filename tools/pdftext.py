@@ -17,7 +17,37 @@ def load_objects(data):
         num = int(m.group(1))
         end = data.find(b"endobj", m.end())
         objs[num] = data[m.end():end if end != -1 else len(data)]
+    objs.update(load_objstm(objs))
     return objs
+
+
+def load_objstm(objs):
+    """Objekte aus komprimierten Objektströmen (/Type /ObjStm) auspacken.
+
+    PDF 1.5 und neuer verpacken Objekte in solche Ströme. Ohne diesen Schritt
+    bleibt der Textextraktor bei modernen PDFs leer, weil er die Objekte im
+    Rohbytestrom nicht mehr findet.
+    """
+    gefunden = {}
+    for body in list(objs.values()):
+        if not re.search(rb"/Type\s*/ObjStm", body):
+            continue
+        daten = stream_bytes(body)
+        if not daten:
+            continue
+        mn = re.search(rb"/N\s+(\d+)", body)
+        mf = re.search(rb"/First\s+(\d+)", body)
+        if not (mn and mf):
+            continue
+        anzahl, erster = int(mn.group(1)), int(mf.group(1))
+        zahlen = re.findall(rb"(\d+)\s+(\d+)", daten[:erster])
+        paare = [(int(a), int(b)) for a, b in zahlen][:anzahl]
+        for i, (num, off) in enumerate(paare):
+            start = erster + off
+            ende = erster + paare[i + 1][1] if i + 1 < len(paare) else len(daten)
+            if num not in objs and 0 <= start < ende <= len(daten):
+                gefunden[num] = daten[start:ende]
+    return gefunden
 
 
 def stream_bytes(body):
