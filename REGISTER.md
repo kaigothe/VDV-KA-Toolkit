@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-46 Eintragräge
+57 Eintragräge
 
 
 ## A
@@ -21,6 +21,13 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
 
+## B
+
+- [Berechtigung](lexikon/berechtigungen/berechtigung.md)
+- [Berechtigungen](lexikon/berechtigungen.md)
+- [berStatus](lexikon/berechtigungen/berstatus.md)
+- [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) *(abgeleitet)*
+
 ## D
 
 - [Dienstleister](lexikon/rollen/dl.md) — DL
@@ -28,6 +35,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## E
 
+- [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) — EFS
 - [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) — EFM
 - [Elementarprozess](lexikon/grundlagen/elementarprozess.md) — EP
 - [Entsperrnachweis](lexikon/aktionsmanagement/entsperrnachweis.md)
@@ -37,6 +45,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## G
 
 - [Grundlagen](lexikon/grundlagen.md)
+- [Gültigkeit](lexikon/berechtigungen/gueltigkeit.md)
 
 ## H
 
@@ -56,6 +65,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md)
 
+## M
+
+- [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
+
 ## N
 
 - [Nachweis](lexikon/transaktionen/nachweis.md)
@@ -66,6 +79,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## P
 
+- [Produkt](lexikon/berechtigungen/produkt.md)
+- [Produktnummer](lexikon/berechtigungen/produktnummer.md)
+- [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md)
 - [Produktverantwortlicher](lexikon/rollen/pv.md) — PV
 
 ## R
@@ -73,6 +89,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Rollen](lexikon/rollen.md)
 - [Rollencodes](lexikon/rollen/rollencodes.md)
 - [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md)
+
+## S
+
+- [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) — StatBer
 
 ## T
 
