@@ -1,0 +1,10 @@
+# Beschaffte Quellendokumente: bleiben lokal.
+# Mehrere sind als "Vertraulich" gekennzeichnet, siehe CLAUDE.md Regel 9.
+QUELLEN/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
