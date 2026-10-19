@@ -17,6 +17,29 @@ from lexikon import (GEN_BLOECKE, HOME, REPO, baue_baum, lade_artikel,
 
 REGISTER = "REGISTER.md"
 ABKUERZUNGEN = "ABKUERZUNGEN.md"
+BESCHAFFUNG = "BESCHAFFUNG.md"
+
+# Nicht öffentliche KA-Dokumente und die Schreibweisen, unter denen sie in den
+# Artikeln auftreten. Inventarnummern aus dem eTicket-Regelwerk, Kap. 3 (Q25).
+NICHT_OEFFENTLICH = [
+    ("41", "KA AktM-SPEC", ["KA AktM-SPEC", "KA_SPEC_AktM"]),
+    ("4", "KA SST-SPEC", ["KA SST-SPEC", "KA_SPEC_SST"]),
+    ("1", "KA BOM-SPEC", ["KA BOM-SPEC", "KA_SPEC_BOM"]),
+    ("5", "KA XML-Schemata und WSDL", ["KA XML-Schemata", "KA XML-Schema"]),
+    ("—", "ALISE-Schnittstelle und ALISE-XSD", ["ALISE-XSD", "ALISE-Schnittstellenbeschreibung"]),
+    ("2", "Anlage TLV EFS", ["Anlage TLV EFS"]),
+    ("40", "KA MultiBER-SPEC", ["KA MultiBER-SPEC", "KA_SPEC_MULTIBER"]),
+    ("8", "KA SAM-SPEC", ["KA SAM-SPEC", "KA_SPEC_SAM"]),
+    ("6", "KA SEC-SPEC", ["KA SEC-SPEC"]),
+    ("11", "KA KOSES-Spec", ["KA KOSES-Spec"]),
+    ("42", "KA STB-Spec", ["KA STB-Spec"]),
+    ("33", "KA TXx-Prüfungs-ANW", ["KA TXx-Prüfungs-ANW"]),
+    ("35", "KA PROD_ID-ANW", ["KA PROD_ID-ANW"]),
+    ("3", "Anlage Datenschutz", ["Anlage Datenschutz"]),
+    ("7", "KA NM-SPEC", ["KA NM-SPEC"]),
+    ("9", "KA ION-SPEC", ["KA ION-SPEC"]),
+    ("12–21", "KA SysLH", ["KA SysLH", "SYSLH_", "SysLH"]),
+]
 
 
 def breadcrumb(a, artikel):
@@ -82,6 +105,70 @@ def baue_abkuerzungen(artikel):
     return "\n".join(zeilen) + "\n"
 
 
+def baue_verwendung(artikel):
+    """Verwendungsnachweis: welcher Artikel nennt welches nicht öffentliche Dokument."""
+    import re as _re
+
+    def link(a):
+        return f"[{a.titel}]({a.pfad})"
+
+    zeilen = []
+
+    # Tabelle 1: Dokument -> Artikel
+    treffer = []
+    for inv, name, muster in NICHT_OEFFENTLICH:
+        nennend = []
+        gesamt = 0
+        for a in sorted(artikel.values(), key=lambda x: sortkey(x.titel)):
+            n = sum(a.rumpf.count(m) for m in muster)
+            if n:
+                nennend.append(a)
+                gesamt += n
+        if nennend:
+            treffer.append((gesamt, inv, name, nennend))
+    treffer.sort(key=lambda t: (-t[0], t[1]))
+
+    zeilen += [
+        f"**{len(treffer)} nicht öffentliche Dokumente** werden derzeit in "
+        f"{len(artikel)} Artikeln als Normquelle genannt, nach Häufigkeit:",
+        "",
+        "| Nennungen | Inv.-Nr. | Dokument | genannt in |",
+        "|---:|---:|---|---|",
+    ]
+    for gesamt, inv, name, nennend in treffer:
+        wo = ", ".join(link(a) for a in nennend)
+        zeilen.append(f"| {gesamt} | {inv} | **{name}** | {wo} |")
+
+    # Tabelle 2: Artikel, die auf ein Dokument warten
+    wartend = [a for a in artikel.values() if a.fm.get("status") == "zu prüfen"]
+    zeilen += ["", "### Artikel, die ohne diese Dokumente unvollständig bleiben", ""]
+    if wartend:
+        zeilen += ["| Artikel | offene Fragen |", "|---|---|"]
+        for a in sorted(wartend, key=lambda x: sortkey(x.titel)):
+            offen = ", ".join(str(o) for o in (a.fm.get("offene_fragen") or [])) or "—"
+            zeilen.append(f"| {link(a)} | {offen} |")
+    else:
+        zeilen.append("Derzeit keine.")
+
+    # Tabelle 3: offene Frage -> Artikel
+    fragen = {}
+    for a in artikel.values():
+        for o in a.fm.get("offene_fragen") or []:
+            fragen.setdefault(str(o), []).append(a)
+    zeilen += ["", "### Offene Fragen und die betroffenen Artikel", ""]
+    if fragen:
+        zeilen += ["| Frage | betrifft |", "|---|---|"]
+        for o in sorted(fragen, key=lambda x: int(_re.sub(r"\D", "", x) or 0)):
+            wo = ", ".join(link(a) for a in
+                           sorted(fragen[o], key=lambda x: sortkey(x.titel)))
+            zeilen.append(f"| **{o}** | {wo} |")
+    else:
+        zeilen.append("Derzeit keine.")
+
+    zeilen += ["", f"*Erzeugt aus {len(artikel)} Artikeln. Die Links führen in das Lexikon.*"]
+    return "\n".join(zeilen)
+
+
 def main():
     pruefen = "--pruefen" in sys.argv
     artikel = lade_artikel()
@@ -114,6 +201,20 @@ def main():
             if not pruefen:
                 with open(os.path.join(REPO, a.pfad), "w", encoding="utf-8") as f:
                     f.write(text)
+
+    # Verwendungsnachweis in BESCHAFFUNG.md einsetzen
+    bpfad = os.path.join(REPO, BESCHAFFUNG)
+    if os.path.isfile(bpfad):
+        with open(bpfad, encoding="utf-8") as f:
+            btext = f.read()
+        neu, gefunden = setze_block(btext, "verwendung", baue_verwendung(artikel))
+        if not gefunden:
+            print(f"WARNUNG {BESCHAFFUNG}: Block GEN:verwendung fehlt")
+        elif neu != btext:
+            geaendert.append(BESCHAFFUNG)
+            if not pruefen:
+                with open(bpfad, "w", encoding="utf-8") as f:
+                    f.write(neu)
 
     dateien = {REGISTER: baue_register(artikel),
                ABKUERZUNGEN: baue_abkuerzungen(artikel)}

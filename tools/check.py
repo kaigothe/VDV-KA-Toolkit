@@ -272,7 +272,8 @@ def main():
 
     # Links in den Dokumenten der Wurzel
     for name in ("README.md", "PLAN.md", "STRUKTUR.md", "CLAUDE.md",
-                 QUELLEN_DATEI, "REGISTER.md", "ABKUERZUNGEN.md"):
+                 "BESCHAFFUNG.md", QUELLEN_DATEI, "REGISTER.md",
+                 "ABKUERZUNGEN.md"):
         pfad = os.path.join(REPO, name)
         if os.path.isfile(pfad):
             with open(pfad, encoding="utf-8") as f:
