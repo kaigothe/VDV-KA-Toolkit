@@ -70,7 +70,7 @@ Kleinbuchstaben, ASCII, Bindestriche, Umlaute ausgeschrieben (`ä` → `ae`), `�
 
 Für Feldnamen gilt dieselbe Regel, ohne Sonderbehandlung von Binnenmajuskeln: `berSynchronNummer` → `bersynchronnummer.md`. Das ist weniger schön als `berSynchronNummer.md`, aber gemischte Groß- und Kleinschreibung in Dateinamen ist zwischen macOS (gleichgültig) und Linux (unterscheidend) eine verlässliche Fehlerquelle; der korrekt geschriebene Begriff steht ohnehin in `titel` und in der H1.
 
-Der Dateiname ist damit **berechenbar**: `dateiname == slug(titel)`. [tools/check.py](tools/check.py) prüft das, statt sich auf Disziplin zu verlassen.
+Der Dateiname ist damit **berechenbar**: `dateiname == slug(titel)` — oder `slug(abkuerzung)`, wo eine Abkürzung im Frontmatter steht. Diese zweite Form wurde nachträglich zugelassen, als die Kategorie Rollen entstand: Sie hätte sonst `rollen/kundenvertragspartner.md` erzwungen, obwohl `rollen/kvp.md` der gebräuchliche und besser verlinkbare Pfad ist und `KVP` als „Deutsche Abkürzung“ direkt aus dem Glossar stammt. Titel, H1 und Register zeigen weiterhin den vollen Begriff. [tools/check.py](tools/check.py) prüft beide Formen und lässt nichts dazwischen zu.
 
 ### E3 — Navigation wird generiert
 
@@ -154,7 +154,7 @@ Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der
 | **0 — Planung** | dieses Dokument, [STRUKTUR.md](STRUKTUR.md), [CLAUDE.md](CLAUDE.md), Vorlagen, Welt-Bibel, Werkzeuge, Quellenbeschaffung | **fertig** |
 | **1 — Gerüst** | Ordner, alle P1-Artikel als Rumpf mit Frontmatter | **angefangen:** Ordner, Startseite, Werkzeugkette und die zwei Musterartikel stehen; `gen.py` und `check.py` laufen fehlerfrei. Die übrigen Rümpfe folgen nach Freigabe des Tons. |
 | **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
-| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement und Transaktionen fertig** (je 12 Artikel). Als Nächstes: Rollen, dann Grundlagen. |
+| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement (12), Transaktionen (12) und Rollen (10) fertig.** Als Nächstes: Grundlagen, danach Berechtigungen und Datenformate. |
 | **4 — Vertiefung** | restliche P1 sowie P2 nach Bedarf: Berechtigungen, Kontrolle, Sicherheit, Datenformate, ABT | rund 60 Artikel |
 | **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | Stand 1.0 |
 | **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |

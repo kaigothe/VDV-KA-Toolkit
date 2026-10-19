@@ -70,7 +70,7 @@ Vorlagen: [vorlagen/artikel.md](vorlagen/artikel.md) für Blattartikel, [vorlage
 - **Nur relative Links.** Keine Wiki-Links `[[…]]`, kein HTML, keine generierte Website. Das Lexikon muss in GitHub, VS Code und Obsidian funktionieren.
 - **Genau ein Parent je Artikel.** Der Baum hat keine Mehrfacheltern. Begriffe, die in mehrere Zweige passen, bekommen einen Platz und werden sonst über `siehe_auch` verlinkt. Die Zuordnung der Grenzfälle steht in [STRUKTUR.md](STRUKTUR.md), Abschnitt 12 — dort nachsehen, nicht neu entscheiden.
 - Kategorieartikel liegt **neben** seinem Ordner: `lexikon/aktionsmanagement.md` und `lexikon/aktionsmanagement/`.
-- **Dateiname = Slug des Titels:** Kleinbuchstaben, ASCII, Bindestriche, `ä`→`ae`, `ö`→`oe`, `ü`→`ue`, `ß`→`ss`. Feldnamen ohne Sonderbehandlung: `berSynchronNummer` → `bersynchronnummer.md`.
+- **Dateiname = Slug des Titels oder Slug der Abkürzung.** Kleinbuchstaben, ASCII, Bindestriche, `ä`→`ae`, `ö`→`oe`, `ü`→`ue`, `ß`→`ss`. Feldnamen ohne Sonderbehandlung: `berSynchronNummer` → `bersynchronnummer.md`. Die Abkürzung ist zugelassen, damit Rollen und Nachrichten kurze Pfade bekommen: `rollen/kvp.md` bei `titel: Kundenvertragspartner` und `abkuerzung: KVP`. Mehr Formen gibt es nicht — `check.py` lässt genau diese zwei zu.
 - **Breadcrumb, Unterartikel-Liste, Navigationszeile, [REGISTER.md](REGISTER.md) und [ABKUERZUNGEN.md](ABKUERZUNGEN.md) werden generiert.** Niemals von Hand ändern — Änderungen gehen beim nächsten Lauf verloren. Gepflegt werden nur `parent`, `siehe_auch` und der Fließtext.
 - Die generierten Blöcke sind durch HTML-Kommentare begrenzt (`<!-- GEN:… -->`). Sie sind die **einzige** erlaubte HTML-Verwendung, weil sie in allen Viewern unsichtbar bleiben.
 

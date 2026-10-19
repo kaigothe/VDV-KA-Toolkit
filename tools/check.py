@@ -61,11 +61,22 @@ def pruefe_frontmatter(a):
 
 
 def pruefe_dateiname(a):
+    """Dateiname = Slug des Titels oder Slug der Abkürzung.
+
+    Die Abkürzung ist zugelassen, weil sie bei Rollen und Nachrichten die
+    gebräuchliche Kurzform ist und aus dem Glossar stammt ('Deutsche
+    Abkürzung'). So bleibt der Pfad kurz (rollen/kvp.md), während Titel, H1
+    und Register den vollen Begriff zeigen. Die Regel bleibt eindeutig:
+    es sind genau diese zwei Formen erlaubt, nichts dazwischen.
+    """
     name = os.path.basename(a.pfad)[:-3]
-    erwartet = slug(a.titel)
-    if name != erwartet:
+    erlaubt = [slug(a.titel)]
+    if a.fm.get("abkuerzung"):
+        erlaubt.append(slug(str(a.fm["abkuerzung"])))
+    if name not in erlaubt:
         F(a.pfad, f"Dateiname '{name}.md' passt nicht zum Titel "
-                  f"'{a.titel}' — erwartet '{erwartet}.md'")
+                  f"'{a.titel}' — erwartet " +
+                  " oder ".join(f"'{e}.md'" for e in erlaubt))
 
 
 def pruefe_h1(a):
