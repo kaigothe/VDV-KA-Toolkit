@@ -12,7 +12,7 @@ codes:
     codeliste: NmTransaktionsTyp_CODE
     bedeutung: Rückgabetransaktion EFS über Aktionsliste
     quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
+    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
     status: belegt
     verbundspezifisch: true
 ---
@@ -50,8 +50,8 @@ Das andere ist der Zustandswert. Im RMV steht die 5 für „zurückgenommen“. 
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 („Rücknahme einer Berechtigung elektronischer Fahrschein oder eBezahlberechtigung“)
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Berechtigung-Rücknahme als KVP-Aktion; Nachweise TXABER, TXRBER, TXSNAWB; Fußnote 1, PDF-S. 13: Rückgabetransaktion EFS über Aktionsliste = 39) · *verbundspezifisch: eTicket RheinMain*
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238)
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Berechtigung-Rücknahme als KVP-Aktion; Nachweise TXABER, TXRBER, TXSNAWB; Fußnote 1, PDF-S. 14: Rückgabetransaktion EFS über Aktionsliste = 39) · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239)
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Abschnitt 2.1 (berStatus 5 = zurückgenommen) · *verbundspezifisch, Fundstelle noch nicht am Dokument geprüft*
 
 <!-- GEN:siehe_auch -->

@@ -42,7 +42,7 @@ Diese Nullen sind also keine fehlende Angabe und kein Fehler. Sie sind eine Auss
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): „Terminalaktionslisten bereitstellen“, „Terminalaktionsdifferenzlisten bereitstellen“, „TG_Terminal anlegen/entfernen/ändern“, „TG_Status aktivieren/deaktivieren“
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): „Terminalaktionslisten bereitstellen“, „Terminalaktionsdifferenzlisten bereitstellen“, „TG_Terminal anlegen/entfernen/ändern“, „TG_Status aktivieren/deaktivieren“
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 (Aufbereitung der Liste über Terminalgruppen und Produkte in KA 1.X)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (spezifische Aktionslisten für einzelne Terminals bzw. Terminalgruppen; zum Systemstart nicht eingesetzt) · *verbundspezifisch: eTicket RheinMain*
 

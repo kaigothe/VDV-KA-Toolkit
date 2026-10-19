@@ -43,7 +43,7 @@ Für die Praxis heißt das: Dem Namen nicht trauen, der Dokumentation trauen. We
 
 ## Quellen
 
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 („Transaktionsnachweise TXABER, TXRBER, TXSNAWB Entsperrung“; Fußnote 1, PDF-S. 13: `TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste = 38), Kap. 4.3.2 (Struktur aus `[KA_SPEC_SST]`, zusätzlich `[KA_SPEC_AktM]`) · *verbundspezifisch: eTicket RheinMain*
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 („Transaktionsnachweise TXABER, TXRBER, TXSNAWB Entsperrung“; Fußnote 1, PDF-S. 14: `TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste = 38), Kap. 4.3.2 (Struktur aus `[KA_SPEC_SST]`, zusätzlich `[KA_SPEC_AktM]`) · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 39 („Entsperrnachweis“: Empfängerregel)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4; KA AktM-SPEC, Inventarnummer 41)
 

@@ -47,8 +47,8 @@ Eine Einschränkung zum Schluss, die für dieses Lexikon typisch ist: Die Nachri
 
 ## Quellen
 
-- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6 „Konzept Externer Mandant“, Kap. 3.2.5 (PDF-S. 51 f.): `TXAFREIBER` als Aktionsfreigabeauftrag des beauftragenden KVP und `TXAFREIMITBER` als Aktionsfreigabemitteilung des ALISE, beide asynchron; daneben die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER`, `TXEAUFBER` · *verbundspezifisch: eTicket RheinMain*
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6 „Konzept Externer Mandant“, Kap. 3.2.5 (PDF-S. 52 f.): `TXAFREIBER` als Aktionsfreigabeauftrag des beauftragenden KVP und `TXAFREIMITBER` als Aktionsfreigabemitteilung des ALISE, beide asynchron; daneben die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER`, `TXEAUFBER` · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion
 
 <!-- GEN:siehe_auch -->

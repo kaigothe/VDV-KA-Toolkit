@@ -17,7 +17,7 @@ codes: []
 
 # Multiberechtigung
 
-Die Multiberechtigung ist eine **optionale Ergänzung** der VDV-KA. Sie ist nur in Verbindung mit den Ausbauvarianten 2, 2a, 2b-1 und 2b-2 zulässig ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 158) — also dort, wo es überhaupt elektronische Fahrscheine gibt.
+Die Multiberechtigung ist eine **optionale Ergänzung** der VDV-KA. Sie ist nur in Verbindung mit den Ausbauvarianten 2, 2a, 2b-1 und 2b-2 zulässig ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 159) — also dort, wo es überhaupt elektronische Fahrscheine gibt.
 
 Normquelle ist die nicht öffentliche **KA MultiBER-SPEC**, Inventarnummer 40 ([Q25](../../QUELLEN.md#q25), Kap. 3). Der vollständige Titel lautet nach [Q37](../../QUELLEN.md#q37): „Performanceverbesserung bei der EFS-Ausgabe in der Kernapplikation — Spezifikation zur Multi-Berechtigungsausgabe“. Der Zweck ist damit benannt: **Performanceverbesserung bei der Ausgabe**, also das Schreiben mehrerer Berechtigungen in einem Vorgang (abgeleitet).
 
@@ -55,7 +55,7 @@ Und sie setzt voraus, dass es überhaupt elektronische Fahrscheine gibt. Zu eine
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA MultiBER-SPEC, Inventarnummer 40); Anlage 2, PDF-S. 158 (MultiBER als optionale Ergänzung nur zu den Ausbauvarianten 2, 2a, 2b-1, 2b-2); Anlage 2, Kap. 5.1.1, Tabelle 37 (Paket „Multiberechtigung“ für das Kundenvertragspartner-System mit vier Anwendungsfällen)
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA MultiBER-SPEC, Inventarnummer 40); Anlage 2, PDF-S. 159 (MultiBER als optionale Ergänzung nur zu den Ausbauvarianten 2, 2a, 2b-1, 2b-2); Anlage 2, Kap. 5.1.1, Tabelle 37 (Paket „Multiberechtigung“ für das Kundenvertragspartner-System mit vier Anwendungsfällen)
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4 (vollständiger Titel „Performanceverbesserung bei der EFS-Ausgabe in der Kernapplikation — Spezifikation zur Multi-Berechtigungsausgabe“, Version 1.12.0)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (`TXAMBER`, `TXRMBER` ab KA 1.3.0; zum Systemstart nicht im Einsatz), Kap. 4.2.3 und 5.1 (`TXEMBER` bei der Kontrolltransaktion), Kap. 4.3.2 und 4.4.1 (`TXAMBER` aus Aktionsausführung und aus Verkauf) · *verbundspezifisch: eTicket RheinMain*
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag (weitere Nachrichtennamen im Umfeld) · *verbundspezifisch*

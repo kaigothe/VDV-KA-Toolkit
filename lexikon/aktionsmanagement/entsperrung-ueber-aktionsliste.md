@@ -12,7 +12,7 @@ codes:
     codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
     quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
+    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
     status: belegt
     verbundspezifisch: true
 ---
@@ -52,8 +52,8 @@ Zwei Begriffe lohnen die Unterscheidung: Dieser Artikel beschreibt den **Vorgang
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 („Entsperren einer Berechtigung“ als Aktion der Aktionsliste), S. 38 f. („Entsperrung“: Statusänderung auf dem Nutzermedium, nur an autorisierten KVP-Terminals), S. 39 („Entsperrnachweis“)
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Berechtigung-Entsperrung als KVP-Aktion; Fußnote 1, PDF-S. 13: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste = 38) · *verbundspezifisch: eTicket RheinMain*
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238)
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Berechtigung-Entsperrung als KVP-Aktion; Fußnote 1, PDF-S. 14: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste = 38) · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239)
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

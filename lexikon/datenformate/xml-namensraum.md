@@ -63,7 +63,7 @@ Ehrlich bleibt eine Unschärfe. Die Bereichsliste der Konvention nennt `pv-alise
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4.3.3 (PDF-S. 114): EBNF der Namensraumkonvention mit der Liste der Bereiche, Endung auf eine Version, Erhalt des Namensraums bei Service-Packs und Korrekturen, Erweiterung des Namensraumkürzels um `-ext-` plus Releasenummer; Kap. 4.3.1.3 (nur zwei Versionen gleichzeitig), Kap. 4.3.1.4 (Kompatibilität der Releases innerhalb einer Version über den gemeinsamen Namensraum)
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4.3.3 (PDF-S. 115): EBNF der Namensraumkonvention mit der Liste der Bereiche, Endung auf eine Version, Erhalt des Namensraums bei Service-Packs und Korrekturen, Erweiterung des Namensraumkürzels um `-ext-` plus Releasenummer; Kap. 4.3.1.3 (nur zwei Versionen gleichzeitig), Kap. 4.3.1.4 (Kompatibilität der Releases innerhalb einer Version über den gemeinsamen Namensraum)
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht mit dem Namensraum `http://vdv/ka/alise/2`. **Nicht öffentliche Unterlage**; übernommen ist nur der Namensraum.
 
 **Hinweis zur Extraktion:** Die EBNF in [Q25](../../QUELLEN.md#q25) enthält im extrahierten Text Lücken durch fehlende Sonderzeichen; insbesondere das Präfix der Namensraum-Produktion ist nicht vollständig lesbar. Zitate vor verbindlicher Verwendung am PDF prüfen.

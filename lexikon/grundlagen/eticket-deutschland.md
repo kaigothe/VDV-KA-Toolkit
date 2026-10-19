@@ -16,7 +16,7 @@ codes: []
 
 # eTicket Deutschland
 
-eTicket Deutschland ist der **Name, unter dem die Gesamtheit der interoperablen eTicket-Systeme in Deutschland firmiert**; in anderen Ländern wird ein dem jeweiligen Land entsprechender Name gewählt ([Q25](../../QUELLEN.md#q25), Kap. 4 „Markenbuch“, PDF-S. 38).
+eTicket Deutschland ist der **Name, unter dem die Gesamtheit der interoperablen eTicket-Systeme in Deutschland firmiert**; in anderen Ländern wird ein dem jeweiligen Land entsprechender Name gewählt ([Q25](../../QUELLEN.md#q25), Kap. 4 „Markenbuch“, PDF-S. 39).
 
 Der Zweck ist Wiedererkennbarkeit: Das eTicket-Logo, die Piktogramme, das Corporate Design sowie einheitliche Handlungsanweisungen und Verfahren erhöhen Wiedererkennbarkeit, Komfort und Akzeptanz. Durch die Verwendung der einheitlichen Marken und Zeichen wird dem Fahrgast signalisiert, **dass er dort, wo diese abgebildet sind, sein Nutzermedium interoperabel einsetzen kann**; damit werden Zugangshemmnisse zum ÖPV gesenkt ([Q25](../../QUELLEN.md#q25), Kap. 4).
 
@@ -52,7 +52,7 @@ Im Bärenland heißt dieser Rahmen **Bärenland-eTicket**, und der Bärenland eT
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4 „Markenbuch“ (PDF-S. 38 f.): eTicket Deutschland als Name der Gesamtheit der interoperablen eTicket-Systeme, Zweck von Logo, Piktogrammen und Corporate Design, Signalwirkung für den Fahrgast, marken- und geschmacksmusterrechtlicher Schutz durch die VDV eTS, Verwendung als Recht und Pflicht der Teilnehmer
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4 „Markenbuch“ (PDF-S. 39 f.): eTicket Deutschland als Name der Gesamtheit der interoperablen eTicket-Systeme, Zweck von Logo, Piktogrammen und Corporate Design, Signalwirkung für den Fahrgast, marken- und geschmacksmusterrechtlicher Schutz durch die VDV eTS, Verwendung als Recht und Pflicht der Teilnehmer
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 94 („Teilnahmevertrag“), S. 23 (Gewährung des Teilnahmerechts durch den Applikationsherausgeber)
 - [Q04](../../QUELLEN.md#q04) – VDV, „Der Weg zur einheitlichen Fahrkarte (eTicket)“: Aufbau, technische Grundlage, zentrale Dienste, Teilnahmeregeln
 - [Q24](../../QUELLEN.md#q24) – Bundestags-Drucksache 18/11086 vom 06.02.2017, Antwort der Bundesregierung auf die Kleine Anfrage Drucksache 18/10915 „Pläne der Bundesregierung für einheitliches elektronisches Ticketing (eTicketing) in Deutschland“ · *Sekundärquelle, politischer Rahmen*

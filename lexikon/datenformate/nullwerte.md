@@ -12,14 +12,14 @@ codes:
     codeliste: Nullwert-Bytewert
     bedeutung: Leerzeichen 0x20 als Nullwert in PrintableStrings
     quelle: Q06
-    fundstelle: Kap. 5.2 (PDF-S. 40)
+    fundstelle: Kap. 5.2 (PDF-S. 41)
     status: belegt
     verbundspezifisch: true
   - wert: 255
     codeliste: Nullwert-Bytewert
     bedeutung: 0xFF als "keine Angabe" bei OrtsTyp-Codes
     quelle: Q06
-    fundstelle: Kap. 5.2 (PDF-S. 40)
+    fundstelle: Kap. 5.2 (PDF-S. 41)
     status: belegt
     verbundspezifisch: true
 ---
@@ -65,7 +65,7 @@ Die Lehre für ein Auswertungswerkzeug: Zu jedem Feld gehört nicht nur sein Dat
 
 ## Quellen
 
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 5.2 „Kodierung von Nullwerten in Bytestrings in KA-Transaktionsdaten“ (PDF-S. 40): Nullwerte werden nicht immer durch den Wert 0 dargestellt; `berTarifversion` als `PrintableString5` mit fünf Leerzeichen, Leerzeichen als `0x20`; OrtsTyp-Codes in `efsStartort_ID` und `efsZielort_ID` mit dezimal 255 bzw. `0xFF` als „keine Angabe“ · *verbundspezifisch: eTicket RheinMain*
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 5.2 „Kodierung von Nullwerten in Bytestrings in KA-Transaktionsdaten“ (PDF-S. 41): Nullwerte werden nicht immer durch den Wert 0 dargestellt; `berTarifversion` als `PrintableString5` mit fünf Leerzeichen, Leerzeichen als `0x20`; OrtsTyp-Codes in `efsStartort_ID` und `efsZielort_ID` mit dezimal 255 bzw. `0xFF` als „keine Angabe“ · *verbundspezifisch: eTicket RheinMain*
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings (Platzhalter 1970-01-01 für ein fehlendes Geburtsdatum, `0x00` für das Geschlecht) · *Herstellerquelle*
 
 <!-- GEN:siehe_auch -->

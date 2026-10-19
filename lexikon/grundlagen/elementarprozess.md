@@ -32,7 +32,7 @@ Wie das in der Praxis aussieht, zeigt das eTicket-Regelwerk. Es listet die Anwen
 - „Applikationsinformation anfordern und empfangen“
 - „TG_Terminal anlegen / entfernen / ändern“, „TG_Status aktivieren / deaktivieren“
 
-Diese Listen sind der Grund, warum sich der Funktionsumfang einer [Ausbauvariante](ausbauvarianten.md) überhaupt vertraglich fassen lässt: Sie werden „in funktionsorientierten Paketen zusammengefasst, die gemeinsam ein funktionsfähiges System oder eine Systemkomponente beschreiben“ ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 158).
+Diese Listen sind der Grund, warum sich der Funktionsumfang einer [Ausbauvariante](ausbauvarianten.md) überhaupt vertraglich fassen lässt: Sie werden „in funktionsorientierten Paketen zusammengefasst, die gemeinsam ein funktionsfähiges System oder eine Systemkomponente beschreiben“ ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 159).
 
 Zur Abgrenzung: Eine [Transaktion](../transaktionen/transaktion.md) findet zwischen Nutzermedium und Terminal statt, eine [Aktion](../aktionsmanagement/aktion.md) ist ein vorbereiteter Auftrag — ein Elementarprozess fasst beides mit Nachrichten und Prüfungen zu einem fachlichen Ganzen zusammen.
 
@@ -57,7 +57,7 @@ Für das Lesen von Spezifikationen lohnt sich darum die Frage: Welcher Elementar
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 38 („Elementarprozess / Basic Process“: wörtliche Definition, Verteilung über Systeme, Zuordnung zu Anwendungsfällen; Abkürzungen EP und BP)
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): die 21 Anwendungsfälle des Pakets Aktionsmanagement für das Kundenvertragspartner-System; PDF-S. 158 (Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen je Ausbauvariante); Kap. 5.1 ff. (weitere Pakete je Rolle)
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): die 21 Anwendungsfälle des Pakets Aktionsmanagement für das Kundenvertragspartner-System; PDF-S. 159 (Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen je Ausbauvariante); Kap. 5.1 ff. (weitere Pakete je Rolle)
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

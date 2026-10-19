@@ -40,7 +40,7 @@ Genau deshalb ist es nachvollziehbar, dass das eTicket RheinMain diesen Mechanis
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 „Aktionsmanagement für das Kundenvertragspartner-System“ (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsdifferenzliste anfordern und empfangen“, „Terminalaktionsdifferenzlisten bereitstellen“
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 „Aktionsmanagement für das Kundenvertragspartner-System“ (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsdifferenzliste anfordern und empfangen“, „Terminalaktionsdifferenzlisten bereitstellen“
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 (die Aktionsliste bildet den kompletten derzeit gültigen Bestand ab)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Differenzlisten als Mechanismus der KA AktM-SPEC; zum Systemstart nicht eingesetzt, Ergänzung in einer nachfolgenden Ausbaustufe geplant) · *verbundspezifisch: eTicket RheinMain*
 

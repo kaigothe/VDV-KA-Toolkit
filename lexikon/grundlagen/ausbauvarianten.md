@@ -16,7 +16,7 @@ codes: []
 
 # Ausbauvarianten
 
-Die Ausbauvarianten legen fest, **welchen Funktionsumfang** ein Teilnehmer umsetzt. Sie entstehen aus den Vollausbauvarianten der KA KUSCH-Spec zusammen mit den Migrationsregelungen; jede zulässige Migrationsregelung ist einer Vollausbauvariante zugeordnet und durch eine Erweiterung der Nummerierung gekennzeichnet ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 158).
+Die Ausbauvarianten legen fest, **welchen Funktionsumfang** ein Teilnehmer umsetzt. Sie entstehen aus den Vollausbauvarianten der KA KUSCH-Spec zusammen mit den Migrationsregelungen; jede zulässige Migrationsregelung ist einer Vollausbauvariante zugeordnet und durch eine Erweiterung der Nummerierung gekennzeichnet ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 159).
 
 ```mermaid
 flowchart TD
@@ -35,7 +35,7 @@ flowchart TD
     AV3 --> AV3A2
 ```
 
-Zu einzelnen Varianten lassen sich **optionale Ergänzungen** zuwählen ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 158):
+Zu einzelnen Varianten lassen sich **optionale Ergänzungen** zuwählen ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 159):
 
 | Ergänzung | Zulässig zu |
 |---|---|
@@ -45,7 +45,7 @@ Zu einzelnen Varianten lassen sich **optionale Ergänzungen** zuwählen ([Q25](.
 | Statische Berechtigung, VDV-Barcode (STB) | auch als „autarke Lösung“ beim Handy- oder Onlineticket |
 | tarifliche Besonderheiten | — |
 
-Die Anwendungsfälle werden je Variante in **funktionsorientierten Paketen** zusammengefasst, die gemeinsam ein funktionsfähiges System oder eine Systemkomponente beschreiben ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 158).
+Die Anwendungsfälle werden je Variante in **funktionsorientierten Paketen** zusammengefasst, die gemeinsam ein funktionsfähiges System oder eine Systemkomponente beschreiben ([Q25](../../QUELLEN.md#q25), Anlage 2, PDF-S. 159).
 
 Die Dreiteilung entspricht den **Stufen des [EFM](efm.md)** — eBezahlen, elektronischer Fahrschein, automatisierte Fahrpreisermittlung ([Q02](../../QUELLEN.md#q02), S. 36 f.) (abgeleitet).
 
@@ -69,7 +69,7 @@ Für die Bärstädter Verkehrsbetriebe heißt das konkret: Sie haben Variante 2a
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, PDF-S. 158 (Anlagenseite 15): Herleitung der Ausbauvarianten aus den Vollausbauvarianten der KA KUSCH-Spec und den Migrationsregelungen; vollständige Liste der Varianten 1, 2, 2a, 2b-1, 2b-2, 3, 3a-1, 3a-2; optionale Ergänzungen MultiBER, AktM, PKM, STB/VDV-Barcode und tarifliche Besonderheiten samt Zulässigkeit; Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, PDF-S. 159 (Anlagenseite 15): Herleitung der Ausbauvarianten aus den Vollausbauvarianten der KA KUSCH-Spec und den Migrationsregelungen; vollständige Liste der Varianten 1, 2, 2a, 2b-1, 2b-2, 3, 3a-1, 3a-2; optionale Ergänzungen MultiBER, AktM, PKM, STB/VDV-Barcode und tarifliche Besonderheiten samt Zulässigkeit; Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 36 f. (die drei Stufen des EFM)
 
 <!-- GEN:siehe_auch -->

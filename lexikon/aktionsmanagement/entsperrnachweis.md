@@ -48,8 +48,8 @@ Diese Weitergabe hat eine praktische Folge, die man im Alltag unterschätzt: Geh
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 39 („Entsperrnachweis / Unblock Attestation“: Empfänger je nach Applikation oder Berechtigung), S. 65 („Nachweis / Attestation“: authentisches Protokoll einer ausgeführten Transaktion auf Nutzermedium-Ebene)
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): „Entsperrnachweis bearbeiten nach Aktionsauftrag“, „Entsperrnachweis an PV melden“
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 und Fußnote 1, PDF-S. 13 (TXSNAWB, `logTransaktionsTyp` 38) · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): „Entsperrnachweis bearbeiten nach Aktionsauftrag“, „Entsperrnachweis an PV melden“
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 und Fußnote 1, PDF-S. 14 (TXSNAWB, `logTransaktionsTyp` 38) · *verbundspezifisch: eTicket RheinMain*
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

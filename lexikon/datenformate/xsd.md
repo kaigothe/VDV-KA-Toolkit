@@ -61,7 +61,7 @@ Zwei Details verraten etwas über den Aufbau.
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA XML-Schemata und WSDL, Inventarnummer 5), Kap. 4.3.1.2 (Verbindlichkeit der Releasenummer für alle Komponenten), Kap. 4.3.2.1 f. (PDF-S. 113 f.): EBNF der XSD- und WSDL-Dateinamen samt der Listen zulässiger Bereiche und der Erweiterung `_ext-` bei Korrekturen, Kap. 4.3.3 (Namensraum bleibt bei Service-Packs bestehen), Kap. 4.3.4 (Namenskonventionen innerhalb der WSDL)
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA XML-Schemata und WSDL, Inventarnummer 5), Kap. 4.3.1.2 (Verbindlichkeit der Releasenummer für alle Komponenten), Kap. 4.3.2.1 f. (PDF-S. 114 f.): EBNF der XSD- und WSDL-Dateinamen samt der Listen zulässiger Bereiche und der Erweiterung `_ext-` bei Korrekturen, Kap. 4.3.3 (Namensraum bleibt bei Service-Packs bestehen), Kap. 4.3.4 (Namenskonventionen innerhalb der WSDL)
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4 (KA-XML-Schemata und WSDL der TX-Transaktionen in Version 1.12.0)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 7.1 (XSD als Anhang), Kap. 4.8 (Anlagen `KA-vHGS-Schnittstellen-1.107K20120104.zip` und `KA-vHGS-Schnittstellen-1.3.0.zip`) · *verbundspezifisch*
 

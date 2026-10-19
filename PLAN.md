@@ -37,7 +37,7 @@ Alle erreichbaren Quellen liegen jetzt in [QUELLEN/](QUELLEN/) und sind in [QUEL
 Beim Prüfen der Fundstellen an den Dokumenten selbst haben sich drei Punkte ergeben, die von den bisherigen Notizen in [Quellen_LBV.md](Quellen_LBV.md) und [QUELLEN_ALISE.md](QUELLEN_ALISE.md) abweichen. Sie sind wichtig, weil sie in Artikel und später ins Analysewerkzeug eingehen.
 
 **K1 — Der Rollencode 31 für ALISE gilt nicht pauschal.**
-Bisherige Notiz: „ALISE ist eine eigene KA-Rolle mit dem Rollen-Code 31“. Tatsächlich steht in [Q06](QUELLEN.md#q06), Fußnote 7 (PDF-S. 39): In der Schnittstellenversion KA 1.1.07 wurde 31 *alternativ* akzeptiert. Ab KA 1.3.0 ist 31 „für einen aus dem PVS ausgelagerten eigenständigen zentralen ALISE-Server reserviert“; ist ALISE in das PV-System integriert, ist die **Rolle 3** zu verwenden — und in der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen **zwingend der Rollencode 3** zu verwenden. Die Versionshistorie des Dokuments führt das als „Wegfall des Rollen-Code 31 ALISE in KA 1.3.0“. Für die Interpretation einer Nachricht heißt das: Aus dem Rollencode allein lässt sich nicht auf ALISE schließen, und 31 ist ein Hinweis auf eine ältere Schnittstellenversion.
+Bisherige Notiz: „ALISE ist eine eigene KA-Rolle mit dem Rollen-Code 31“. Tatsächlich steht in [Q06](QUELLEN.md#q06), Fußnote 7 (PDF-S. 40): In der Schnittstellenversion KA 1.1.07 wurde 31 *alternativ* akzeptiert. Ab KA 1.3.0 ist 31 „für einen aus dem PVS ausgelagerten eigenständigen zentralen ALISE-Server reserviert“; ist ALISE in das PV-System integriert, ist die **Rolle 3** zu verwenden — und in der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen **zwingend der Rollencode 3** zu verwenden. Die Versionshistorie des Dokuments führt das als „Wegfall des Rollen-Code 31 ALISE in KA 1.3.0“. Für die Interpretation einer Nachricht heißt das: Aus dem Rollencode allein lässt sich nicht auf ALISE schließen, und 31 ist ein Hinweis auf eine ältere Schnittstellenversion.
 
 **K2 — Die Aktionsliste kennt vier Aktionen, nicht drei.**
 Bisher wurden drei genannt (Ausgabe EFS, Entsperren, Rücknahme). [Q02](QUELLEN.md#q02), S. 19, nennt als vierte: **„Nur für (((etiCORE: Sperren einer Berechtigung auf Grundlage der ID des Aktionsauftrags“**. Die Rücknahme gilt dort außerdem für den EFS *oder* eine eBezahlberechtigung.
@@ -217,6 +217,20 @@ Zur Reichweite: Die Formulierung „Codeliste `WertobjektStatus_CODE`, relevante
 
 **O12 — Wirkung der Aktionsfreigabe: geklärt, verbundspezifisch.**
 [Q39](QUELLEN.md#q39), Kap. 3.2.5, nennt die Nachrichten und ihre Richtung: `TXAFREIBER` ist der Aktionsfreigabeauftrag des beauftragenden KVP an PV bzw. ALISE, `TXAFREIMITBER` die Aktionsfreigabemitteilung des ALISE zurück an den beauftragenden KVP, beide asynchron. Ausgearbeitet in `aktionsmanagement/aktionsfreigabe.md`. **Offen bleibt**, wo die Freigabe im Statusmodell des Standards ansetzt — das Glossar kennt den Begriff nicht.
+
+---
+
+## 5b. Ein Vorfall, der die Fundstellen betraf
+
+Am 19.10.2026 wurde `tools/pdftext.py` um die Unterstützung komprimierter Objektströme erweitert (PDF 1.5 und neuer). Der Regressionstest verglich damals die **Textmenge** je Quelle und war unauffällig. Unbemerkt blieb, dass der Seitenbaum nun mehr Seiten findet und sich die **Zählung** verschiebt.
+
+Folge: In [Q06](QUELLEN.md#q06) lagen alle PDF-Seitenangaben um eine Seite zu niedrig, bei [Q25](QUELLEN.md#q25) vier und bei [Q39](QUELLEN.md#q39) eine. Betroffen waren **77 Fundstellen** in Artikeln und Frontmatter — alle vor der Werkzeugänderung geschrieben. Inhaltlich war nichts falsch, aber jede dieser Angaben hätte beim Nachschlagen auf die falsche Seite geführt.
+
+Gefunden wurde das zufällig beim Vergleich zweier Kopien desselben Dokuments. Das ist der unbefriedigende Teil: Die Quellenpflicht dieses Lexikons steht und fällt mit der Richtigkeit der Fundstellen, und es gab keine Prüfung dafür.
+
+**Behoben:** alle 77 Angaben korrigiert, verifiziert an den Seitenfüßen der Dokumente, die ihre eigene Seitenzahl nennen. Neu ist [tools/fundstellen.py](tools/fundstellen.py) mit 25 Stichproben; `CLAUDE.md`, Regel 10, verlangt den Lauf nach jeder Änderung am Extraktor.
+
+**Lehre für künftige Werkzeugänderungen:** Ein Regressionstest auf Textmenge genügt nicht. Geprüft werden muss, was die Artikel tatsächlich zitieren.
 
 ---
 

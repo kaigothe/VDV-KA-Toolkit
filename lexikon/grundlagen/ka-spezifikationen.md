@@ -16,7 +16,7 @@ codes: []
 
 # KA-Spezifikationen
 
-Die VDV-Kernapplikation ist ein **Dokumentenpaket**. Kapitel 3 des eTicket-Regelwerks verzeichnet es mit **Inventarnummern von 0 bis 59** ([Q25](../../QUELLEN.md#q25), Kap. 3, PDF-S. 34 ff.). Damit sind Existenz, Kurzzeichen und Nummer öffentlich belegt — die **Inhalte** nicht.
+Die VDV-Kernapplikation ist ein **Dokumentenpaket**. Kapitel 3 des eTicket-Regelwerks verzeichnet es mit **Inventarnummern von 0 bis 59** ([Q25](../../QUELLEN.md#q25), Kap. 3, PDF-S. 35 ff.). Damit sind Existenz, Kurzzeichen und Nummer öffentlich belegt — die **Inhalte** nicht.
 
 Die für dieses Lexikon wichtigsten Einträge:
 
@@ -62,7 +62,7 @@ Daraus folgt eine nützliche Vorsicht: Ein Kurzzeichen wie „KA AktM-SPEC“ al
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 „VDV-KA-Dokumentation“ (PDF-S. 34 ff.): vollständiges Verzeichnis mit Inventarnummern 0 bis 59 und Kurzzeichen; Vermerke „entfallen ab Release 1.6.0“ zu den Nummern 52 und 58
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 „VDV-KA-Dokumentation“ (PDF-S. 35 ff.): vollständiges Verzeichnis mit Inventarnummern 0 bis 59 und Kurzzeichen; Vermerke „entfallen ab Release 1.6.0“ zu den Nummern 52 und 58
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4: zwölf Spezifikationen in Version 1.12.0, teils mit vollständigeren Titeln
 - [Q26](../../QUELLEN.md#q26) – VDV eTicket Service, Support: Bereitstellung von Spezifikationen und Releases über das ASM-Tool
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE als öffentlich verfügbares Dokument der Inventarnummer 0

@@ -52,7 +52,7 @@ Deshalb trägt dieser Artikel den Status „zu prüfen“, und die Frage steht a
 
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `amAuftragsTyp` mit dem Wert 13. **Nicht öffentliche Unterlage**; übernommen sind nur Feldname und Wert, keine weiteren Inhalte.
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 (die vier möglichen Aktionen einer Aktionsliste)
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41, als Normquelle der Codeliste); Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsauftrag …“
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41, als Normquelle der Codeliste); Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsauftrag …“
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

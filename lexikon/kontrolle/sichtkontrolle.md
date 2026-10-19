@@ -57,7 +57,7 @@ Und sie ist ein Vorgriff auf die Zukunft: In der nächsten Generation braucht au
 
 ## Quellen
 
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 6.1 „SCG Ticketinfo Mobil Kontrollgeräte“ (PDF-S. 43): Smartphones mit NFC-Schnittstelle und App zum Einlesen und Anzeigen von KA-Berechtigungen; Einsatz dort, wo ein vollwertiges mobiles Kontrollterminal wirtschaftlich nicht sinnvoll ist; reine Sichtkontrolle mit automatischer Auswertung ausgewählter EFS-Attribute; kein SAM, daher keine kryptographischen Prüfungen und keine Transaktionen mit dem Nutzermedium; Bezug und Auswertung der nutzermediumbezogenen Sperrliste `TXSLNM`; Kap. 6.2 (Beschränkung des Datenaustauschs auf Manifest und Sperrlistendownload) · *verbundspezifisch: eTicket RheinMain*
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 6.1 „SCG Ticketinfo Mobil Kontrollgeräte“ (PDF-S. 44): Smartphones mit NFC-Schnittstelle und App zum Einlesen und Anzeigen von KA-Berechtigungen; Einsatz dort, wo ein vollwertiges mobiles Kontrollterminal wirtschaftlich nicht sinnvoll ist; reine Sichtkontrolle mit automatischer Auswertung ausgewählter EFS-Attribute; kein SAM, daher keine kryptographischen Prüfungen und keine Transaktionen mit dem Nutzermedium; Bezug und Auswertung der nutzermediumbezogenen Sperrliste `TXSLNM`; Kap. 6.2 (Beschränkung des Datenaustauschs auf Manifest und Sperrlistendownload) · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 53 (Kontrolle ohne SAM ab 2GSI / etiCORE, weil der Kontrollnachweis nicht mehr auf das Nutzermedium geschrieben wird), S. 52 (Sperren auf dem Nutzermedium ohne SAM ab 2GSI)
 
 <!-- GEN:siehe_auch -->

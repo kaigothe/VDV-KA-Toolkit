@@ -12,21 +12,21 @@ codes:
     codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXABER – Ausgabe EFS über Aktionsliste
     quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
+    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
     status: belegt
     verbundspezifisch: true
   - wert: 38
     codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
     quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
+    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
     status: belegt
     verbundspezifisch: true
   - wert: 39
     codeliste: NmTransaktionsTyp_CODE
     bedeutung: Rückgabetransaktion EFS über Aktionsliste
     quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
+    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
     status: belegt
     verbundspezifisch: true
 ---
@@ -51,7 +51,7 @@ Im Feld `logTransaktionsTyp` vom Typ `NmTransaktionsTyp_CODE` gilt ([Q06](../../
 
 Diese Zuordnung ist eine Festlegung im eTicket RheinMain. Ob sie KA-weit gilt, ist nicht belegt (zu prüfen, O1).
 
-Zum **Rollencode** im Transaktionskopf: In der Schnittstellenversion KA 1.1.07 wurde für solche Transaktionen alternativ auch der Rollencode 31 (ALISE) akzeptiert. Ab KA 1.3.0 ist 31 für einen aus dem PV-System ausgelagerten, eigenständigen zentralen ALISE-Server reserviert; ist ALISE in das PV-System integriert, ist stattdessen die Rolle 3 zu verwenden. In der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen zwingend der Rollencode 3 zu verwenden ([Q06](../../QUELLEN.md#q06), Fußnote 7, PDF-S. 39).
+Zum **Rollencode** im Transaktionskopf: In der Schnittstellenversion KA 1.1.07 wurde für solche Transaktionen alternativ auch der Rollencode 31 (ALISE) akzeptiert. Ab KA 1.3.0 ist 31 für einen aus dem PV-System ausgelagerten, eigenständigen zentralen ALISE-Server reserviert; ist ALISE in das PV-System integriert, ist stattdessen die Rolle 3 zu verwenden. In der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen zwingend der Rollencode 3 zu verwenden ([Q06](../../QUELLEN.md#q06), Fußnote 7, PDF-S. 40).
 
 Normquelle ist die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41). Welchen Wert das Feld `amAuftragsTyp` für diesen Fall trägt, ist nicht belegt (zu prüfen, O2).
 
@@ -74,7 +74,7 @@ Ein Wort der Vorsicht: Diese drei Zahlen sind so im Pflichtenheft des eTicket Rh
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 („Aktionsliste“, Aufzählung „Ausgabe eines elektronischen Fahrscheins“)
-- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (KVP-Aktionen über Aktionsliste; TXAML hinein, TXABER/TXRBER/TXSNAWB heraus; Kennzeichnung über spezifische KA-Transaktionstyp-Codes), Kap. 2.1.5 Fußnote 1, PDF-S. 13 (Codes 37/38/39), Fußnote 7, PDF-S. 39 (Rollencode 31 bzw. 3) · *verbundspezifisch: eTicket RheinMain*
+- [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (KVP-Aktionen über Aktionsliste; TXAML hinein, TXABER/TXRBER/TXSNAWB heraus; Kennzeichnung über spezifische KA-Transaktionstyp-Codes), Kap. 2.1.5 Fußnote 1, PDF-S. 14 (Codes 37/38/39), Fußnote 7, PDF-S. 40 (Rollencode 31 bzw. 3) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41 „Aktionsmanagement für die Berechtigungsart EFS“)
 
 <!-- GEN:navigation -->

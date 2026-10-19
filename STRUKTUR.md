@@ -28,11 +28,11 @@ lexikon/aktionsmanagement/…         ← Unterartikel
 | Artikel | Pfad (unter `lexikon/grundlagen/`) | Hauptquelle, Fundstelle | Prio |
 |---|---|---|---|
 | VDV-Kernapplikation | `vdv-kernapplikation.md` | Q02 S. 50 „Kernapplikation / etiCORE“; Q04 | **P1** |
-| eTicket Deutschland | `eticket-deutschland.md` | Q25 Kap. 4 „Markenbuch“ (PDF-S. 38 ff.); Q04 | **P1** |
+| eTicket Deutschland | `eticket-deutschland.md` | Q25 Kap. 4 „Markenbuch“ (PDF-S. 39 ff.); Q04 | **P1** |
 | Elektronisches Fahrgeldmanagement (EFM) | `efm.md` | Q02 S. 36 | **P1** |
 | KA-Versionen und Releases | `versionen.md` | Q02 S. 2 „Releases“; Q25 Kap. 3 (Hinweise „entfallen ab Release 1.6.0“); Q29 | **P1** |
-| Ausbauvarianten | `ausbauvarianten.md` | Q25, Anlage 2 Migrationsszenarien, PDF-S. 158 | **P1** |
-| Verzeichnis der KA-Spezifikationen | `ka-spezifikationen.md` | Q25 Kap. 3, PDF-S. 34 ff. (Inventarnummern 0–59) | **P1** |
+| Ausbauvarianten | `ausbauvarianten.md` | Q25, Anlage 2 Migrationsszenarien, PDF-S. 159 | **P1** |
+| Verzeichnis der KA-Spezifikationen | `ka-spezifikationen.md` | Q25 Kap. 3, PDF-S. 35 ff. (Inventarnummern 0–59) | **P1** |
 | (((etiCORE / KA-Version 3 | `eticore.md` | Q02 S. 50; Q27 — **O7** | P2 |
 | Interoperabilität | `interoperabilitaet.md` | Q02 S. 48, S. 49 (Interoperabilitätsnetzwerk) | **P1** |
 | Teilnahmevertrag und Regelwerk | `teilnahmevertrag.md` | Q02 S. 94; Q25 (Mustervertrag) | P2 |
