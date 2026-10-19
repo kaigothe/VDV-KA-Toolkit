@@ -161,7 +161,7 @@ lexikon/aktionsmanagement/…         ← Unterartikel
 
 | Artikel | Pfad (unter `lexikon/kontrolle/`) | Hauptquelle, Fundstelle | Prio |
 |---|---|---|---|
-| Kontrolle | `kontrolle-begriff.md` | Q02 S. 52 | **P1** |
+| ~~Kontrolle~~ | *entfallen* | Der Begriff ist im Kategorieartikel `lexikon/kontrolle.md` erklärt — das ist die natürliche Stelle und vermeidet den Pfad `kontrolle/kontrolle.md`. Stattdessen ist `kontrollgeraet.md` von P2 auf P1 gezogen. | — |
 | Sperrung und Entsperrung | `sperrung.md` | Q02 S. 91, S. 38 | **P1** |
 | Sperrliste | `sperrliste.md` | Q02 S. 89; Q06 (TXSLNM/TXSLK/TXSLOS, ab KA 1.3.0 als *RESP-Varianten), Kap. 3.2 | **P1** |
 | Sperrlisteneintrag und Sperrobjekt | `sperrlisteneintrag.md` | Q02 S. 89, S. 90 | **P1** |
@@ -169,7 +169,7 @@ lexikon/aktionsmanagement/…         ← Unterartikel
 | Sperranforderung und Sperrauftrag | `sperranforderung.md` | Q02 S. 82, S. 84, S. 86, S. 87 | P2 |
 | Sperrnachweis | `sperrnachweis.md` | Q02 S. 90 | **P1** |
 | Kontrollnachweise (TXKNAWA/B, TXKNAWDM) | `kontrollnachweise.md` | Q06 Kap. 4.3 | **P1** |
-| Kontrollgerät | `kontrollgeraet.md` | Q33; Q16, Q20 (Marktpraxis) | P2 |
+| Kontrollgerät | `kontrollgeraet.md` | Q02 S. 22; Q06 Kap. 6.1; Q33 Kap. 7.1; Q16, Q20 (Marktpraxis) | **P1** |
 | Sichtkontrolle (mobile Kontrolle ohne SAM) | `sichtkontrolle.md` | Q06 (mobile Kontrolle ohne SAM); Q33 | **P1** |
 | Entwertung | `entwertung.md` | Q02 S. 39 | P2 |
 | Erhöhtes Beförderungsentgelt | `erhoehtes-befoerderungsentgelt.md` | Q02 S. 42 | P3 |
