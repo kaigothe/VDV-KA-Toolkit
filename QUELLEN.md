@@ -371,6 +371,87 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 - **Stichworte:** DL-System, Kontrolle, Sperrprozesse, Transaktionsprüfung, Version 1.107
 - **URL:** https://www.kcd-nrw.de/fileadmin/03_KC_Seiten/KCD/Downloads/Technische_Dokumente/Archiv/Rahmenlastenheft_DL-System_2_4.pdf
 
+## Q43
+
+**VDV eTicket Service – etiCORE Release Letter, Specification Artefacts Overview, 3.0.0-rc.6**
+
+- **Datei:** `QUELLEN/Q43_VDV-eTS_etiCORE-Release-Letter_v3.0.0-rc.6.pdf` (37 Seiten)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** teilweise (Inhaltsverzeichnis und Kap. 2.1 geprüft)
+- **Stand:** Version 3.0.0-rc.6, **24.11.2025**, Autor Wilk Hoffmann
+- **Inhalt — das etiCORE-Gegenstück zum KA-Inventar aus [Q25](#q25):**
+  - **Kap. 1 Änderungshistorie** mit je einem Abschnitt für die Release-Kandidaten 1 bis 6, darunter „Aufteilung Basispakete, optionale Anwendungsfälle“, „Neue Spezifikationen“, „Änderungen Schnittstellen“ und „Installation des lokalen Spezifikationsmodells“.
+  - **Kap. 2 Übersicht der Spezifikationsartefakte** (ab PDF-S. 22), Kap. 2.1 „Spezifikationsmodell und daraus exportierte Dokumente“ (PDF-S. 23), Kap. 2.2 „Weitere Spezifikationsdokumente“ (PDF-S. 25).
+  - Nennt die **öffentlich erreichbare Adresse des Spezifikationsmodells**, siehe [Q49](#q49).
+- **Bedeutung:** jüngste Primärquelle der Sammlung und einzige Quelle zum Stand von etiCORE als KA 3.
+- **Technischer Hinweis:** Die Seiten ab 22 sind CID-kodiert; `tools/pdftext.py` wertet dafür die ToUnicode-CMaps aus. Die Sprachmarker `de-DE` und `en-GB` aus der Auszeichnung stehen im extrahierten Text und sind beim Zitieren zu entfernen.
+- **Stichworte:** etiCORE, KA 3, Release-Kandidaten, Spezifikationsartefakte, Spezifikationsmodell
+
+## Q44
+
+**VDV eTicket Service – etiCORE Release Letter 3.0.0-rc.1**
+
+- **Datei:** `QUELLEN/Q44_VDV-eTS_etiCORE-Release-Letter_v3.0.0-rc.1.pdf` (14 Seiten)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** offen
+- **Inhalt:** ältere Fassung des Release Letters. Erlaubt zusammen mit [Q43](#q43) den Vergleich, was zwischen rc.1 und rc.6 hinzukam.
+- **Stichworte:** etiCORE, Versionsvergleich
+
+## Q45
+
+**VDV eTicket Service – ASM-Tool, Glossar und Abkürzungsverzeichnis**
+
+- **Datei:** `QUELLEN/Q45_VDV-eTS_ASM-Tool-Glossar-und-Abkuerzungsverzeichnis_V1.03_2016-07-20.pdf` (35 Seiten)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** teilweise (Inhaltsverzeichnis geprüft)
+- **Stand:** V1.02/1.03, erstellt 10.07.2014, geändert 20.07.2016, Ersteller VDV eTS
+- **Inhalt:** **Zweites offizielles Glossar** neben [Q02](#q02), bezogen auf das ASM-Tool. Kap. 1 Abkürzungsverzeichnis (S. 7), Kap. 2 Begriffe (S. 9 ff.), darunter Einträge, die in [Q02](#q02) fehlen — etwa „eTicket Ready Vertrag“ (S. 10).
+- **Bedeutung:** direkt verwertbar für [ABKUERZUNGEN.md](ABKUERZUNGEN.md) und als Gegenprobe zu [Q02](#q02).
+- **Stichworte:** Abkürzungen, Begriffe, ASM-Tool, eTicket Ready
+
+## Q46
+
+**VDV eTicket Service – Whitepaper Barcodes im ÖPNV**
+
+- **Datei:** `QUELLEN/Q46_VDV-eTS_Whitepaper-Barcode-OEPNV_2021.pdf` (16 Seiten)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** teilweise
+- **Stand:** 2021
+- **Inhalt (am Dokument geprüft):** Behandelt **dynamisierte Barcodes** — der signierte Barcode wird dynamisiert, etwa über ein Zeitmerkmal, sodass Kopien zum Kontrollzeitpunkt ein veraltetes Merkmal tragen und erkannt werden. Weiter: Abgrenzung des **UIC-Barcodes** des internationalen Eisenbahnverbands gegenüber dem **VDV-Barcode**, die daraus folgende Notwendigkeit, beide in Kontrollgeräten zu unterstützen, **Kombi-Tickets** mit Grund- und Zusatzfunktion sowie der Datenaustausch bei **NFC-Endgeräten** ohne Visualisierung als 2D-Barcode.
+- **Technischer Hinweis:** Die Extraktion verliert Umlaute und Wortteile. Zitate am PDF prüfen.
+- **Stichworte:** VDV-Barcode, UIC-Barcode, dynamischer Barcode, Kopierschutz, Kombi-Ticket, NFC
+
+## Q47
+
+**VDV-Kernapplikation – Schlussbericht 2005**
+
+- **Datei:** `QUELLEN/Q47_VDV-Kernapplikation_Schlussbericht_2005.pdf` (89 Seiten)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** **nicht möglich**
+- **Inhalt (unverifiziert):** Schlussbericht zum Vorhaben VDV-Kernapplikation, 2005 — mutmaßlich das Ursprungsdokument des Standards und damit für die historische Einordnung interessant.
+- **Technischer Hinweis:** Die Datei ist **verschlüsselt**; `tools/pdftext.py` gewinnt daraus nur 1.771 Zeichen. In einem PDF-Betrachter lässt sie sich öffnen — Inhalte sind dort **von Hand zu prüfen**, bevor sie zitiert werden. Dasselbe gilt für [Q41](#q41).
+- **Stichworte:** Historie, Entstehung der KA, 2005 (zu prüfen)
+
+## Q48
+
+**eTicket Deutschland – Teilnehmerbrief Datenschutz**
+
+- **Datei:** `QUELLEN/Q48_eTicket-Deutschland_Teilnehmerbrief-Datenschutz_2014-12-22.pdf` (17 Seiten, geschwärzte Fassung)
+- **Typ:** Primär · **Herkunft:** lokal · **Auswertung:** teilweise (Inhaltsverzeichnis geprüft)
+- **Stand:** 22.12.2014
+- **Inhalt:** Datenschutzgrundsätze für eTicket Deutschland, gegliedert in **sieben Punkte**: 1. Transparenz, 2. Widerspruchsrecht, 3. Wahlmöglichkeit, 4. Datensparsamkeit, 5. Getrennte Verarbeitung, 6. Zweckbindung der Ticketdaten, 7. Vorabkontrolle. Dazu Editorial und tabellarische Übersicht.
+- **Bedeutung:** erste Primärquelle der Sammlung zum Datenschutz. Ergänzt die bisher nur verbundspezifisch belegte Vorgabe zum Leeren der Fahrt- und Linienangaben in Kontrollnachweisen ([Q06](#q06), Kap. 5.1.2).
+- **Rechte:** geschwärzte Fassung; Schwärzungen respektieren und nicht zu rekonstruieren versuchen.
+- **Stichworte:** Datenschutz, Datensparsamkeit, Zweckbindung, getrennte Verarbeitung, Vorabkontrolle
+
+## Q49
+
+**VDV eTicket Service – etiCORE Specification (Spezifikationsmodell, online)**
+
+- **URL:** https://modell.eticket-deutschland.de/LATEST/EA/index.html — die jeweils aktuelle Fassung; versionierte Einstiege wie `…/3.0.0-rc.6/EA/` existieren ebenfalls
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** **nur Struktur geprüft, Inhalte offen**
+- **Inhalt — potenziell die wichtigste öffentliche Quelle des Projekts:** Ein HTML-Export des etiCORE-Spezifikationsmodells aus Enterprise Architect, Titel „etiCORE Specification“. Die oberste Ebene hat 18 Pakete:
+  - Introduction · **Role Model** · Layer 1 und 2 (Workflows und Basic Processes in BPMN) · Layer 3 (Use Cases in UML) · **Layer 4 (System Components and Interfaces in UML)** · Layer 5 (Implementation Details in UML) · **ION Specification** · General Specification Parts for Terminals · Spec EUI, MPI, ESI · SAM-Server · User Manual · **Types** · **Interfaces** · **Glossary** · Operational parameters · List of References
+  - Allein unter „Types“ hängen über 100 Unterpakete.
+- **Einschränkung, die zu beachten ist:** Das Modell beschreibt **etiCORE, also KA Version 3** — nicht die KA 1.x, auf die sich dieses Lexikon vorrangig bezieht. Aussagen daraus gelten **nicht ohne Prüfung** für KA 1.x und sind entsprechend zu kennzeichnen.
+- **Erschließung:** Der Export verschachtelt Pakete tief; jede Seite ist ein Navigationsrahmen mit Inhalt darunter. Eine systematische Auswertung erfordert ein gezieltes Abrufen der Blattseiten. Entsprechender Bedarf ist in [BESCHAFFUNG.md](BESCHAFFUNG.md) vermerkt.
+- **Stichworte:** etiCORE, Spezifikationsmodell, Datentypen, Codelisten, Schnittstellen, Rollenmodell, ION
+
 ---
 
 # 3. Hersteller- und Anbieterquellen

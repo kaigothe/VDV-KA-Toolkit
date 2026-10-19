@@ -110,6 +110,72 @@ def page_order(objs):
     return pages
 
 
+def parse_tounicode(daten):
+    """ToUnicode-CMap auswerten: Zeichencode -> Unicode.
+
+    Moderne PDFs kodieren Text als CID, also als Zeichennummer der Schrift
+    statt als Zeichensatzwert. Ohne diese Zuordnung kommt Buchstabensalat
+    heraus - oder Steuerzeichen, die Textwerkzeuge die Datei für binär
+    halten lassen.
+    """
+    text = daten.decode("latin-1", "replace")
+    karte = {}
+    for block in re.findall(r"beginbfchar(.*?)endbfchar", text, re.DOTALL):
+        for src, dst in re.findall(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>", block):
+            karte[int(src, 16)] = _utf16(dst)
+    for block in re.findall(r"beginbfrange(.*?)endbfrange", text, re.DOTALL):
+        for lo, hi, dst in re.findall(
+                r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>", block):
+            start, ende, ziel = int(lo, 16), int(hi, 16), int(dst, 16)
+            if ende - start > 65535:
+                continue
+            for i in range(ende - start + 1):
+                karte[start + i] = chr(ziel + i) if ziel + i < 0x110000 else ""
+        # Variante mit Array: <lo> <hi> [<d1> <d2> ...]
+        for lo, hi, arr in re.findall(
+                r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*\[(.*?)\]", block, re.DOTALL):
+            ziele = re.findall(r"<([0-9A-Fa-f]+)>", arr)
+            for i, z in enumerate(ziele):
+                karte[int(lo, 16) + i] = _utf16(z)
+    return karte
+
+
+def _utf16(hexstr):
+    try:
+        roh = bytes.fromhex(hexstr if len(hexstr) % 2 == 0 else "0" + hexstr)
+    except ValueError:
+        return ""
+    if len(roh) >= 2:
+        return roh.decode("utf-16-be", "replace")
+    return roh.decode("latin-1", "replace")
+
+
+def seiten_fontkarten(objs, seitenobj):
+    """Je Fontname der Seite die ToUnicode-Zuordnung, soweit vorhanden."""
+    karten = {}
+    m = re.search(rb"/Font\s*<<(.*?)>>", seitenobj, re.DOTALL)
+    if not m:
+        return karten
+    for name, num in re.findall(rb"/([A-Za-z0-9#+.-]+)\s+(\d+)\s+\d+\s+R", m.group(1)):
+        font = objs.get(int(num))
+        if not font:
+            continue
+        refs = refs_(font, "/ToUnicode")
+        if not refs or refs[0] not in objs:
+            continue
+        daten = stream_bytes(objs[refs[0]])
+        if daten:
+            karte = parse_tounicode(daten)
+            if karte:
+                karten[name.decode("latin-1")] = karte
+    return karten
+
+
+def refs_(body, key):
+    m = re.search(key.encode() + rb"\s*(\d+)\s+\d+\s+R", body)
+    return [int(m.group(1))] if m else []
+
+
 ESC = {b"n": b"\n", b"r": b"\r", b"t": b"\t", b"b": b"\b", b"f": b"\f",
        b"(": b"(", b")": b")", b"\\": b"\\"}
 
@@ -147,11 +213,25 @@ tok_re = re.compile(
 )
 
 
-def decode_hex(tok, shift=0):
+def _ueber_karte(roh, karte):
+    """Bytefolge über eine ToUnicode-Karte in Text wandeln.
+
+    Zweibyte-Codes zuerst, weil CID-Schriften meist zweibytig kodieren.
+    """
+    if len(roh) >= 2 and all((roh[i] << 8 | roh[i + 1]) in karte
+                             for i in range(0, len(roh) - 1, 2)):
+        return "".join(karte[roh[i] << 8 | roh[i + 1]]
+                       for i in range(0, len(roh) - 1, 2))
+    return "".join(karte.get(b, chr(b) if b >= 32 else "") for b in roh)
+
+
+def decode_hex(tok, shift=0, karte=None):
     h = re.sub(rb"\s", b"", tok[1:-1])
     if len(h) % 2:
         h += b"0"
     raw = bytes.fromhex(h.decode("ascii"))
+    if karte:
+        return _ueber_karte(raw, karte)
     if len(raw) > 1 and raw[0::2].count(0) > len(raw) // 4:
         return raw.decode("utf-16-be", "replace")
     return apply_shift(raw.decode("latin-1", "replace"), shift)
@@ -163,7 +243,7 @@ def apply_shift(s, shift):
     return "".join(chr(ord(c) + shift) if 32 <= ord(c) < 127 else c for c in s)
 
 
-def extract(content, shift=0, ygap=2.0, xgap=0.28):
+def extract(content, shift=0, ygap=2.0, xgap=0.28, fontkarten=None):
     """Textruns nach Position zu Zeilen zusammensetzen.
 
     Zeilenumbruch nur bei Sprung der Y-Position, Leerzeichen bei X-Lücke.
@@ -174,6 +254,8 @@ def extract(content, shift=0, ygap=2.0, xgap=0.28):
     fs = 12.0
     in_array = False
     nums = []
+    fontkarten = fontkarten or {}
+    karte = None
     for m in tok_re.finditer(content):
         tok = m.group()
         if m.group("num") is not None:
@@ -194,9 +276,11 @@ def extract(content, shift=0, ygap=2.0, xgap=0.28):
         op = m.group("op")
         if op is None:                      # String-Token
             if tok.startswith(b"("):
-                txt = apply_shift(unescape(tok[1:-1]).decode("latin-1", "replace"), shift)
+                roh = unescape(tok[1:-1])
+                txt = (_ueber_karte(roh, karte) if karte
+                       else apply_shift(roh.decode("latin-1", "replace"), shift))
             else:
-                txt = decode_hex(tok, shift)
+                txt = decode_hex(tok, shift, karte)
             if txt:
                 runs.append((y, x, txt, fs))
                 x += len(txt) * 0.5 * fs    # Vorschub aus Schriftgröße
@@ -204,6 +288,8 @@ def extract(content, shift=0, ygap=2.0, xgap=0.28):
             continue
         if op == b"Tf" and nums:
             fs = abs(nums[-1]) or 12.0
+            mf = re.search(rb"/([A-Za-z0-9#+.-]+)\s*$", content[:m.start()].rstrip())
+            karte = fontkarten.get(mf.group(1).decode("latin-1")) if mf else None
         elif op == b"Tm" and len(nums) >= 6:
             x, y = nums[-2], nums[-1]
             if abs(nums[0]) > 0.01:        # Skalierung der Textmatrix
@@ -261,8 +347,9 @@ def main():
         content = b"".join(stream_bytes(objs[c]) for c in refs(objs[num], "/Contents") if c in objs)
         if not content:
             content = stream_bytes(objs[num])
+        karten = seiten_fontkarten(objs, objs[num])
         print(f"=== [SEITE {idx}] ===")
-        print(extract(content, shift=shift))
+        print(extract(content, shift=shift, fontkarten=karten))
 
 
 if __name__ == "__main__":
