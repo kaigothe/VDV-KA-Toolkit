@@ -154,7 +154,7 @@ Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der
 | **0 — Planung** | dieses Dokument, [STRUKTUR.md](STRUKTUR.md), [CLAUDE.md](CLAUDE.md), Vorlagen, Welt-Bibel, Werkzeuge, Quellenbeschaffung | **fertig** |
 | **1 — Gerüst** | Ordner, alle P1-Artikel als Rumpf mit Frontmatter | **angefangen:** Ordner, Startseite, Werkzeugkette und die zwei Musterartikel stehen; `gen.py` und `check.py` laufen fehlerfrei. Die übrigen Rümpfe folgen nach Freigabe des Tons. |
 | **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
-| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement fertig** (12 Artikel, Ton freigegeben am 19.10.2026). Als Nächstes: Transaktionen, dann Rollen, dann Grundlagen. |
+| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement und Transaktionen fertig** (je 12 Artikel). Als Nächstes: Rollen, dann Grundlagen. |
 | **4 — Vertiefung** | restliche P1 sowie P2 nach Bedarf: Berechtigungen, Kontrolle, Sicherheit, Datenformate, ABT | rund 60 Artikel |
 | **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | Stand 1.0 |
 | **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |
@@ -180,6 +180,7 @@ Fachliche Punkte, die nicht aus den vorhandenen Quellen zu klären sind. Jeder A
 | **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
 | **O12** | Was bewirkt die **Aktionsfreigabe** genau? Belegt ist nur, dass es die Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ gibt; das Glossar kennt den Begriff nicht. | `aktionsmanagement/aktionsfreigabe.md` | KA AktM-SPEC |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
+| **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. | `transaktionen/txalisber.md` | ALISE-Spezifikation und ALISE-XSD |
 | **O11** | Hat die Bundestags-Drucksache [Q24](QUELLEN.md#q24) überhaupt Bezug zum eTicket? Falls nicht, Quelle streichen. | Quellenverzeichnis | Q24 lesen |
 
 ---
