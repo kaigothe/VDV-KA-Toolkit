@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-37 Eintragräge
+46 Eintragräge
 
 
 ## A
@@ -18,6 +18,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) *(zu prüfen)*
 - [Applikationsherausgeber](lexikon/rollen/ah.md) — AH
 - [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) *(zu prüfen)*
+- [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
 
 ## D
@@ -27,15 +28,27 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## E
 
+- [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) — EFM
+- [Elementarprozess](lexikon/grundlagen/elementarprozess.md) — EP
 - [Entsperrnachweis](lexikon/aktionsmanagement/entsperrnachweis.md)
 - [Entsperrung über Aktionsliste](lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md)
+- [eTicket Deutschland](lexikon/grundlagen/eticket-deutschland.md)
+
+## G
+
+- [Grundlagen](lexikon/grundlagen.md)
 
 ## H
 
 - [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) — HGS
 
+## I
+
+- [Interoperabilität](lexikon/grundlagen/interoperabilitaet.md)
+
 ## K
 
+- [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md)
 - [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) — KOSE
 - [Kundenvertragspartner](lexikon/rollen/kvp.md) — KVP
 
@@ -74,6 +87,11 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [TXEBER](lexikon/transaktionen/txeber.md) — TXEBER
 - [TXRBER](lexikon/transaktionen/txrber.md) — TXRBER
 - [TXSNAWB](lexikon/transaktionen/txsnawb.md) — TXSNAWB
+
+## V
+
+- [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) — KA
+- [Versionen](lexikon/grundlagen/versionen.md)
 
 ---
 

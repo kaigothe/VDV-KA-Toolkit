@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-17 Abkürzungen.
+20 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -11,7 +11,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **AktM** | [Aktionsmanagement](lexikon/aktionsmanagement.md) | action management |
 | **ALISE** | [Aktionslistenservice](lexikon/rollen/alise.md) | Action List Service |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |
+| **EFM** | [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) | Electronic Fare Management |
+| **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
 | **HGS** | [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) | Backoffice System |
+| **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
 | **KOSE** | [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) | Hotlist Service |
 | **KVP** | [Kundenvertragspartner](lexikon/rollen/kvp.md) | Customer Contract Partner |
 | **Org-ID** | [Organisations-ID](lexikon/rollen/organisations-id.md) | Organisation ID |
