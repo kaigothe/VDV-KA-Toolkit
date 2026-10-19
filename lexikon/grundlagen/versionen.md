@@ -3,7 +3,7 @@ titel: Versionen
 englisch: versions and releases
 parent: lexikon/grundlagen.md
 siehe_auch: [lexikon/grundlagen/vdv-kernapplikation.md, lexikon/transaktionen/txalisber.md]
-quellen: [Q02, Q06, Q25, Q29, Q37, Q42]
+quellen: [Q02, Q06, Q25, Q29, Q37, Q42, Q43]
 status: belegt
 offene_fragen: [O4]
 stand: 2026-10-19
@@ -24,7 +24,7 @@ codes: []
 
 **Die Versionen:** Kernapplikation ist der Name für **Version 1 und 2**, etiCORE für **Version 3** ([Q02](../../QUELLEN.md#q02), S. 51). Die Releasehistorie des Glossars zeigt die Übergangsphase mit Doppelnummerierung, etwa „1.9.0/3.0.0“ und „1.10/3.0.0-rc.1 — Added etiCORE as Name for the new Version KA 3“ ([Q02](../../QUELLEN.md#q02), S. 2).
 
-**Die Releases**, soweit belegt: 1.1.07 und 1.3.0 werden in den Projektdokumenten als `*_1107` und `*_1300` unterschieden ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5); zu 1.5.0 existiert nur eine Sekundärquelle ([Q29](../../QUELLEN.md#q29), zu prüfen); ein Zulassungs-Prüfbericht von 2024 führt zwölf Spezifikationen in **1.12.0** ([Q37](../../QUELLEN.md#q37)). Welches Release heute verbindlich ist, ist von außen nicht erkennbar.
+**Die Releases**, soweit belegt: 1.1.07 und 1.3.0 werden in den Projektdokumenten als `*_1107` und `*_1300` unterschieden ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5); zu 1.5.0 existiert nur eine Sekundärquelle ([Q29](../../QUELLEN.md#q29), zu prüfen); ein Zulassungs-Prüfbericht von 2024 führt zwölf Spezifikationen in **1.12.0** ([Q37](../../QUELLEN.md#q37)). Der etiCORE Release Letter von November 2025 führt die aus KA 1.x übernommenen Dokumente in **1.12.1** ([Q43](../../QUELLEN.md#q43), Kap. 3, PDF-S. 27); das Glossar trägt dort die Doppelnummer „1.12.1 / 3.0.0-rc.2“ und ist „nicht mehr dem CR-Verfahren unterworfen“ ([Q43](../../QUELLEN.md#q43), Kap. 2.1, PDF-S. 23). Welches Release heute verbindlich ist, ist von außen nicht erkennbar.
 
 **Die Zeitschiene** der Sicherheitsgenerationen ([Q42](../../QUELLEN.md#q42), [Q02](../../QUELLEN.md#q02), S. 14 f.):
 
@@ -64,6 +64,7 @@ Ein Rat aus dieser Konstellation: Die Nachrichtenverarbeitung von Anfang an vers
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4.3.1.2 (Inhalt eines neuen Releases, Verbindlichkeit der Releasenummer für alle Komponenten), Kap. 4.3.1.3 (nur zwei Versionen gleichzeitig), Kap. 4.3.1.4 (Kompatibilität der Releases innerhalb einer Version über den gemeinsamen Namensraum, mit Beispiel)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 51 (Version 1 und 2 als KA, Version 3 als etiCORE), S. 2 (Releasehistorie des Glossars mit Doppelnummerierung „1.9.0/3.0.0“ und „1.10/3.0.0-rc.1 — Added etiCORE as Name for the new Version KA 3“), S. 14 f. (1GSI mit Algorithmen, Schlüsseln und PKI im Format von 2006; 2GSI ab 2026)
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4 (zwölf Spezifikationen in Version 1.12.0)
+- [Q43](../../QUELLEN.md#q43) – etiCORE Release Letter 3.0.0-rc.6, Kap. 2.1, PDF-S. 23 (Glossar in 1.12.1 / 3.0.0-rc.2, nicht mehr im CR-Verfahren), Kap. 3, PDF-S. 27 (aus KA 1.x übernommene Dokumente in Version 1.12.1)
 - [Q42](../../QUELLEN.md#q42) – KCD NRW, Newsletterarchiv (Root-Zertifikat 1GSI bis 01.12.2021, SubCA-Zertifikate bis 01.12.2031, etiCORE als KA 3.0 zum 01.12.2026, Parallelbetrieb 2026–2031) · *Sekundärquelle*
 - [Q29](../../QUELLEN.md#q29) – itcs-info, Release 1.5.0 · *Sekundärquelle, zu prüfen*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Unterscheidung `*_1107` und `*_1300`) · *verbundspezifisch*

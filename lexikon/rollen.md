@@ -61,6 +61,7 @@ Der praktische Nutzen zeigt sich, wenn Pia nach Luchsstadt fährt. Dort beförde
 - [Organisations-ID](rollen/organisations-id.md)
 - [Produktverantwortlicher](rollen/pv.md)
 - [Rollencodes](rollen/rollencodes.md)
+- [Rollennamen in etiCORE](rollen/rollennamen-in-eticore.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

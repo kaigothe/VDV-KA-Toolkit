@@ -3,9 +3,9 @@ titel: KA-Spezifikationen
 englisch: register of KA specifications
 parent: lexikon/grundlagen.md
 siehe_auch: [lexikon/grundlagen/versionen.md, lexikon/grundlagen/vdv-kernapplikation.md]
-quellen: [Q02, Q25, Q26, Q37]
+quellen: [Q02, Q25, Q26, Q37, Q43, Q46]
 status: belegt
-offene_fragen: []
+offene_fragen: [O16]
 stand: 2026-10-19
 codes: []
 ---
@@ -42,9 +42,11 @@ Die für dieses Lexikon wichtigsten Einträge:
 
 Zwei Einträge sind ausdrücklich **„entfallen ab Release 1.6.0“** (Inv. 52 und 58) — ein Hinweis, dass das Verzeichnis selbst versioniert ist ([Q25](../../QUELLEN.md#q25), Kap. 3).
 
-**Versionsstand:** Ein Zulassungs-Prüfbericht von 2024 führt zwölf dieser Dokumente in **Version 1.12.0** auf, teils mit vollständigeren Titeln als im Regelwerk — die KA AktM-SPEC etwa als „Aktionsmanagement für die Berechtigungsart EFS **und Entsperrung von AF…**“ ([Q37](../../QUELLEN.md#q37)).
+**Drei Anlagen zur KA STB-Spec** sind über ein Whitepaper belegt ([Q46](../../QUELLEN.md#q46), Kap. 4, PDF-S. 7): die **KA STB-SPEC mobile+** zum kryptographischen Kopierschutz als Anlage 1, die **KA STB-SPEC CIBO-STB** zur „Nutzung der Statischen Berechtigung … in IN/OUT-Systemen“ als Anlage 2 sowie die **KA KUSCH-SPEC** zur einheitlichen Kundenschnittstelle.
 
-**Bezug:** Die Dokumente sind nicht öffentlich. Der offizielle Weg führt über das ASM-Tool des VDV eTicket Service ([Q26](../../QUELLEN.md#q26)); die Anfrageliste steht in [BESCHAFFUNG.md](../../BESCHAFFUNG.md).
+**Versionsstand:** Ein Zulassungs-Prüfbericht von 2024 führt zwölf dieser Dokumente in **Version 1.12.0** auf, teils mit vollständigeren Titeln als im Regelwerk — die KA AktM-SPEC etwa als „Aktionsmanagement für die Berechtigungsart EFS **und Entsperrung von AF…**“ ([Q37](../../QUELLEN.md#q37)). Der jüngste belegte Stand ist **1.12.1**: In dieser Version wurden die fünf PKM-Spezifikationen, die „Anlage Datenschutz“ und die „Anlage TLV EFS“ nach [etiCORE](eticore.md) übernommen ([Q43](../../QUELLEN.md#q43), Kap. 3, PDF-S. 27).
+
+**Bezug:** Die Dokumente sind nicht öffentlich. Der offizielle Weg führt über das ASM-Tool des VDV eTicket Service ([Q26](../../QUELLEN.md#q26)); die Anfrageliste steht in [BESCHAFFUNG.md](../../BESCHAFFUNG.md). Ein Whitepaper nennt das ASM-Tool ausdrücklich als Downloadort der Spezifikationen und die Registrierung als kostenlos ([Q46](../../QUELLEN.md#q46), Kap. 6.1, PDF-S. 15); ob der vollständige Zugriff einen Teilnahmevertrag voraussetzt, geht aus der Quelle nicht hervor (zu prüfen, O16).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
@@ -66,6 +68,9 @@ Daraus folgt eine nützliche Vorsicht: Ein Kurzzeichen wie „KA AktM-SPEC“ al
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4: zwölf Spezifikationen in Version 1.12.0, teils mit vollständigeren Titeln
 - [Q26](../../QUELLEN.md#q26) – VDV eTicket Service, Support: Bereitstellung von Spezifikationen und Releases über das ASM-Tool
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE als öffentlich verfügbares Dokument der Inventarnummer 0
+
+- [Q43](../../QUELLEN.md#q43) – etiCORE Release Letter 3.0.0-rc.6, Kap. 3, PDF-S. 27 (fünf PKM-Spezifikationen, „Anlage Datenschutz“ und „Anlage TLV EFS“ in Version 1.12.1 nach etiCORE übernommen)
+- [Q46](../../QUELLEN.md#q46) – Whitepaper Barcodes im ÖPNV (2021), Kap. 4, PDF-S. 7 (KA STB-SPEC mobile+ als Anlage 1, KA STB-SPEC CIBO-STB als Anlage 2, KA KUSCH-SPEC), Kap. 6.1, PDF-S. 15 (ASM-Tool als Downloadort, kostenlose Registrierung)
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

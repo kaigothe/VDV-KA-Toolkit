@@ -56,6 +56,7 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 - [Duplikaterkennung](transaktionen/duplikaterkennung.md)
 - [logTransaktionsTyp](transaktionen/logtransaktionstyp.md)
 - [Nachweis](transaktionen/nachweis.md)
+- [Pflichtelemente einer Transaktion](transaktionen/pflichtelemente-einer-transaktion.md)
 - [Transaktion](transaktionen/transaktion.md)
 - [TX_BASE](transaktionen/tx-base.md)
 - [TXA/TXB](transaktionen/txa-txb.md)

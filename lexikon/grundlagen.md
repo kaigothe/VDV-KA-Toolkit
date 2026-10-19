@@ -68,11 +68,14 @@ Und noch eine Abgrenzung, die im Alltag oft verrutscht: Das **elektronische Fahr
 ## Unterartikel
 
 - [Ausbauvarianten](grundlagen/ausbauvarianten.md)
+- [Datenschutz](grundlagen/datenschutz.md)
 - [Elektronisches Fahrgeldmanagement](grundlagen/efm.md)
 - [Elementarprozess](grundlagen/elementarprozess.md)
 - [eTicket Deutschland](grundlagen/eticket-deutschland.md)
+- [etiCORE](grundlagen/eticore.md)
 - [Interoperabilität](grundlagen/interoperabilitaet.md)
 - [KA-Spezifikationen](grundlagen/ka-spezifikationen.md)
+- [Spezifikationsmodell](grundlagen/spezifikationsmodell.md)
 - [VDV-Kernapplikation](grundlagen/vdv-kernapplikation.md)
 - [Versionen](grundlagen/versionen.md)
 <!-- /GEN:unterartikel -->

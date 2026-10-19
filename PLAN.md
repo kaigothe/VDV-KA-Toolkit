@@ -194,6 +194,8 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 | **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
 | **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. | `transaktionen/txalisber.md` | ALISE-Spezifikation und ALISE-XSD |
+| **O15** | Welcher Füllwert gilt für nicht benutzte Datenelemente einer Transaktion? [Q48](QUELLEN.md#q48), S. 7, nennt `0x00`; die Nullwert-Konvention der Datenformate sieht für andere Typen andere Füllwerte vor. Gilt `0x00` nur für die dort genannten Felder? | `transaktionen/pflichtelemente-einer-transaktion.md`, `datenformate/nullwerte.md` | KA NM-SPEC, KA BOM-SPEC |
+| **O16** | Setzt der Download der KA-Spezifikationen im ASM-Tool einen Teilnahmevertrag voraus? [Q46](QUELLEN.md#q46), Kap. 6.1, nennt die Registrierung kostenlos und das ASM-Tool als Downloadort, ohne das Verhältnis zum Vertrag zu klären. | `grundlagen/ka-spezifikationen.md`, [BESCHAFFUNG.md](BESCHAFFUNG.md) | VDV eTicket Service |
 
 ---
 

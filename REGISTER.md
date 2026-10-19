@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-99 Eintragräge
+104 Eintragräge
 
 
 ## A
@@ -41,6 +41,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## D
 
 - [Datenformate](lexikon/datenformate.md)
+- [Datenschutz](lexikon/grundlagen/datenschutz.md)
 - [Deny List](lexikon/abt/deny-list.md)
 - [Dienstleister](lexikon/rollen/dl.md) — DL
 - [Duplikaterkennung](lexikon/transaktionen/duplikaterkennung.md)
@@ -53,6 +54,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Entsperrnachweis](lexikon/aktionsmanagement/entsperrnachweis.md)
 - [Entsperrung über Aktionsliste](lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md)
 - [eTicket Deutschland](lexikon/grundlagen/eticket-deutschland.md)
+- [etiCORE](lexikon/grundlagen/eticore.md)
 
 ## G
 
@@ -106,6 +108,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## P
 
 - [Personengebunden](lexikon/medien/personengebunden.md)
+- [Pflichtelemente einer Transaktion](lexikon/transaktionen/pflichtelemente-einer-transaktion.md)
 - [Produkt](lexikon/berechtigungen/produkt.md)
 - [Produktnummer](lexikon/berechtigungen/produktnummer.md)
 - [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md)
@@ -116,6 +119,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [Rollen](lexikon/rollen.md)
 - [Rollencodes](lexikon/rollen/rollencodes.md)
+- [Rollennamen in etiCORE](lexikon/rollen/rollennamen-in-eticore.md)
 - [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md)
 
 ## S
@@ -131,6 +135,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Sperrlisteneintrag](lexikon/kontrolle/sperrlisteneintrag.md)
 - [Sperrnachweis](lexikon/kontrolle/sperrnachweis.md)
 - [Sperrung](lexikon/kontrolle/sperrung.md)
+- [Spezifikationsmodell](lexikon/grundlagen/spezifikationsmodell.md)
 - [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) — StatBer
 
 ## T
