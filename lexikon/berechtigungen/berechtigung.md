@@ -66,6 +66,14 @@ Und es erklärt, warum die Karte so sparsam mit Schreibvorgängen umgehen kann. 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 30 („Berechtigung / Entitlement“: wörtliche Definition, eindeutige ID und Gültigkeitszeitraum, Ablage binär in einer Applikation, kopiergeschützt im Smartphone, als statischer Barcode oder in einer Cloud; EFS oder eBezahlberechtigung in einer Applikation, sonst nur EFS)
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (PDF-S. 8 f.): vollständige TLV-Struktur „Berechtigung“ mit den Tags 0xE8, 0xE9, 0xC0, 0x83, 0x84, 0xEA und 0x85, den Längen und den Feldern samt Datentypen und MAC-Schlüsselreferenzen · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elektronischer Fahrschein](efs.md) (EFS)
+- [berStatus](berstatus.md)
+- [Produktspezifischer Teil](produktspezifischer-teil.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

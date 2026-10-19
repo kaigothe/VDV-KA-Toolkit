@@ -10,6 +10,7 @@ offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 31
+    codeliste: KA-Rollencode
     bedeutung: Rollencode ALISE — ab KA 1.3.0 nur für einen aus dem PV-System ausgelagerten zentralen ALISE-Server
     quelle: Q06
     fundstelle: Fußnote 7 (PDF-S. 39)
@@ -52,6 +53,14 @@ Das ist ein gutes Beispiel dafür, warum dieses Lexikon Fundstellen angibt. Die 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 21 („Aktionslistenservice / Action List Service“: Angebot durch das PV-System, Download durch die ausführenden KVP, Bestellung von Aktionen durch die beauftragenden KVP; Abkürzung ALISE)
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Glossarteil (ALISE als Spezialisierung der Rolle PV, ALISES im PVS) und Kap. 3.3.2, PDF-S. 53 (Rollentabelle „vHGS als ALISE PV“ mit Rollencode 3) · *verbundspezifisch: eTicket RheinMain*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 1.2.2 (Aktionslistenabruf des KVP-Systems gegen das ALISES), Fußnote 7, PDF-S. 39 (Rollencode 31 in KA 1.1.07 alternativ akzeptiert; ab KA 1.3.0 für einen aus dem PVS ausgelagerten zentralen ALISE-Server reserviert; bei Integration in das PVS zwingend Rolle 3), Versionshistorie zu v2.2 („Hinweis auf Wegfall des Rollen-Code 31 ALISE in KA 1.3.0“) · *verbundspezifisch: eTicket RheinMain*
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Produktverantwortlicher](pv.md) (PV)
+- [Aktionsliste](../aktionsmanagement/aktionsliste.md) (TXAML)
+- [txalisber](../transaktionen/txalisber.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

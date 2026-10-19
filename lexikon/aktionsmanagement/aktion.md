@@ -42,6 +42,12 @@ Beide Bedeutungen heißen gleich, weil sie dasselbe Vorhaben in zwei Lebensphase
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 18 („Aktion“, einschließlich des Hinweises auf die abstrahierte Bedeutung im Aktionsmanagement), S. 20 (Lebenszyklus), S. 38 („Elementarprozess“)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsliste](aktionsliste.md) (TXAML)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

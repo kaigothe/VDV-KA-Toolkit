@@ -60,6 +60,13 @@ Und sie setzt voraus, dass es überhaupt elektronische Fahrscheine gibt. Zu eine
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (`TXAMBER`, `TXRMBER` ab KA 1.3.0; zum Systemstart nicht im Einsatz), Kap. 4.2.3 und 5.1 (`TXEMBER` bei der Kontrolltransaktion), Kap. 4.3.2 und 4.4.1 (`TXAMBER` aus Aktionsausführung und aus Verkauf) · *verbundspezifisch: eTicket RheinMain*
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag (weitere Nachrichtennamen im Umfeld) · *verbundspezifisch*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigung](berechtigung.md)
+- [Ausbauvarianten](../grundlagen/ausbauvarianten.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

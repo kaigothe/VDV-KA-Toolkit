@@ -56,6 +56,13 @@ Deshalb verläuft hier auch die Grenze zum Hintergrundsystem: Davor stehen die G
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 21 f. („Akzeptanztechnik, Akzeptanzstellen, Akzeptanzterminal / Medium Access Device“: Definition als Gesamtheit der Gerätetechnik mit Verweis auf ISO/IEC 14443, Aufzählung der sieben Gerätearten; Abkürzungen AKT und MAD), S. 19 (KVP-Terminal als Spezialisierung eines Akzeptanzterminals), S. 35 (Dienstleister-Terminal), S. 46 (Abgrenzung zum Hintergrundsystem), S. 61 (KVP-Terminal), S. 96 (Transaktion findet ausschließlich zwischen Nutzermedium und Akzeptanzterminal unter Mithilfe eines SAM statt), S. 97 (Vertriebsterminal)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Verteilung der Aktionsliste auf die Akzeptanzterminals) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Hintergrundsystem](hintergrundsystem.md) (HGS)
+- [Aktionsliste](../aktionsmanagement/aktionsliste.md) (TXAML)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

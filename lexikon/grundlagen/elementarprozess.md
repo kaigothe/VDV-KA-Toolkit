@@ -59,6 +59,13 @@ Für das Lesen von Spezifikationen lohnt sich darum die Frage: Welcher Elementar
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 38 („Elementarprozess / Basic Process“: wörtliche Definition, Verteilung über Systeme, Zuordnung zu Anwendungsfällen; Abkürzungen EP und BP)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): die 21 Anwendungsfälle des Pakets Aktionsmanagement für das Kundenvertragspartner-System; PDF-S. 158 (Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen je Ausbauvariante); Kap. 5.1 ff. (weitere Pakete je Rolle)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Transaktion](../transaktionen/transaktion.md)
+- [Aktion](../aktionsmanagement/aktion.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -55,6 +55,13 @@ Und noch ein Satz zur Ehrlichkeit in der Debatte: Auch Pias Karte ist nicht wirk
 - [Q01](../../QUELLEN.md#q01) – VDV eTS, Einordnung von Account Based Ticketing, V1.0: Speicherung auf einem Smartphone oder anderen Medium, lokale Verarbeitung durch Terminals oder Prüfgeräte, Übernahme in die Hintergrundsysteme in der Regel im Laufe von 24 Stunden; die VDV-KA ist mit ihren MBT-Prozessen voll ausspezifiziert, einschließlich Werteinheiten-Berechtigung, PrePaid-Karten, eTicket, eKontrolle, CICO und BIBO; alle für ein interoperables ABT benötigten Prozesse stehen im Kern bereits zur Verfügung
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1, Kap. 5.1 („Erwartungen im Vergleich zum aktuellen MBT eTicket Deutschland“)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elektronischer Fahrschein](../berechtigungen/efs.md) (EFS)
+- [Ticket Cloud](ticket-cloud.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

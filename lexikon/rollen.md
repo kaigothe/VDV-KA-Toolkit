@@ -63,6 +63,12 @@ Der praktische Nutzen zeigt sich, wenn Pia nach Luchsstadt fährt. Dort beförde
 - [Rollencodes](rollen/rollencodes.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TX_BASE](transaktionen/tx-base.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

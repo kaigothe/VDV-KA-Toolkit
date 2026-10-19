@@ -53,6 +53,13 @@ Und eine Verwechslungsgefahr zum Schluss: Die **Tarif**produktnummer ist etwas a
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (`prodProdukt_ID` als Struktur „EFM Produkt_ID“ mit 4 Byte im statischen Teil, enthält Produktnummer und Org-ID, dient als Referenz-ID für `K_PV-NM-MAC`; Produktnummern werden vom RMV festgelegt) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA PROD_ID-ANW, Inventarnummer 35: Verfahrensanweisung zur Vergabe von Produkt_IDs)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Produkt](produkt.md)
+- [Organisations-ID](../rollen/organisations-id.md) (Org-ID)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -51,6 +51,13 @@ Und ein ehrliches Detail aus dem Pflichtenheft: Das Backend *kann* ein Duplikat 
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 5.3 „Duplikate und wiederholtes Senden“ (PDF-S. 41): keine Prüfung auf eindeutige Dateinamen, sondern auf den Inhalt; die zwei Duplikatfälle; Ablehnung mit `TXA`; fehlende Codes in `AblehnungsTyp_CODE`; Verfahren beim wiederholten Senden; Zusammensetzung der `IONTransaktion_ID`; Pflicht zur Bildung von Nummernkreisen · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TX_BASE](tx-base.md)
+- [TXA/TXB](txa-txb.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

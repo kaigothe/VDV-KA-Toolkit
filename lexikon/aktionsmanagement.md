@@ -3,7 +3,7 @@ titel: Aktionsmanagement
 abkuerzung: AktM
 englisch: action management
 parent: README.md
-siehe_auch: []
+siehe_auch: [lexikon/grundlagen/elementarprozess.md]
 quellen: [Q02, Q06, Q25, Q39]
 status: belegt
 offene_fragen: [O9]
@@ -72,6 +72,12 @@ Für Pia bedeutet das vor allem eines: Zwischen Bodos Genehmigung und dem fertig
 - [Rücknahme EFS über Aktionsliste](aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md)
 - [Terminalaktionsliste](aktionsmanagement/terminalaktionsliste.md)
 <!-- /GEN:unterartikel -->
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elementarprozess](grundlagen/elementarprozess.md) (EP)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

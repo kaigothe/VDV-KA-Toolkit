@@ -71,6 +71,13 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 - [Sicherheitsebenen](sicherheit/sicherheitsebenen.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Versionen](grundlagen/versionen.md)
+- [Kontrolle](kontrolle.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

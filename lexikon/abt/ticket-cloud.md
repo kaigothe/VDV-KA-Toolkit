@@ -56,6 +56,13 @@ Die Rechnung hat eine Gegenseite, und sie ist nicht klein: **Ohne Verbindung kei
 - [Q01](../../QUELLEN.md#q01) – VDV eTS, Einordnung von Account Based Ticketing, V1.0 (zunehmende Online-Verfügbarkeit erlaubt zentrale statt dezentrale Datenhaltung; Konnektivität als entscheidende Anforderung; Vorteile und Synchronisation beim MBT)
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1, Kap. 5.1 (Erwartungen im Vergleich zum MBT, vertriebliche und fachliche Vorteile), Kap. 5.2.7 (zentrales System und zentrale Organisation als Basisanforderung), Kap. 5.2.10 (Aufbau eines zentralen ABT-Systems für das Deutschlandticket)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Account](account.md)
+- [Berechtigung](../berechtigungen/berechtigung.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

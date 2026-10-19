@@ -53,6 +53,13 @@ Ein Hinweis zum Schluss, der beim Lesen von Nachrichten wichtig ist: Dass eine S
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht: die Felder `amMKPV-NM-MAC_ID`, `amMKKVP-NM-MAC_ID` und `amMKERF-NM-MAC_ID` mit jeweils Nummer, Version und Inhaber. **Nicht öffentliche Unterlage**; übernommen sind nur Feldnamen und Struktur.
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (Doppelfunktion der Felder als Fachdaten und Referenz-ID: `berBerechtigung_ID` für `K_KVP-NM-MAC`, `prodProdukt_ID` für `K_PV-NM-MAC`, `prodKeyOrganisation_ID` für `K_ERF-NM-MAC` und `MK/K_TR-MAC`) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [MAC](mac.md)
+- [Keymanagement](keymanagement.md) (KM)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

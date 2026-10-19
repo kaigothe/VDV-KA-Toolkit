@@ -58,6 +58,13 @@ Man merkt an dieser Aufteilung, dass hier ein Mehrparteiensystem organisiert wir
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 89 („Sperrlisteneintrag / Hotlist Entry“: Aufnahme eines Objekts der fünf Arten in die Sperrliste; Sperrliste als Menge von Einträgen), S. 90 („Sperrobjekt / Hotlisted Object“: Verwaltung durch die veranlassende Instanz), S. 54 (Bedeutung der Einträge; Berechtigungen zum Hinzufügen und Entfernen je Objektart, einschließlich der Erweiterung für Dienstleister in etiCORE), S. 88 (Sperrgrund)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrliste](sperrliste.md)
+- [Sperrgrund](sperrgrund.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

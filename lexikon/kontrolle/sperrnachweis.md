@@ -53,6 +53,13 @@ Ein Beleg über eine Sperrung hilft also dabei, eine Ausgabe zu verbuchen. Das i
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 90 („Sperrnachweis / Blocking Attestation“: Entstehung beim Prüfen gegen die Sperrlisten, Dokumentation des physikalischen Sperrens durch einen authentischen Nachweis, Meldung vom Terminal an die verantwortlichen Instanzen), S. 54 (Bearbeitung im Rahmen von Collecting and Forwarding nach ISO 24014-1, Sammeln und Weiterleiten durch die Dienstleister, Wegfall in etiCORE mit direktem Weg zum Produktverantwortlichen), S. 65 („Nachweis“ als authentisches Protokoll), S. 18 („Aktionsclearing“: Kontroll- oder Sperrnachweis als Auslöser)
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag (`TXSNAWA` und `TXSNAWB` als Sperrnachweise vom Dienstleister an den Kundenvertragspartner) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrlisteneintrag](sperrlisteneintrag.md)
+- [Aktionsclearing](../aktionsmanagement/aktionsclearing.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

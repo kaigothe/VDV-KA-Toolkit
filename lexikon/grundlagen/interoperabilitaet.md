@@ -2,7 +2,7 @@
 titel: Interoperabilität
 englisch: interoperability
 parent: lexikon/grundlagen.md
-siehe_auch: [lexikon/rollen/organisations-id.md, lexikon/transaktionen.md]
+siehe_auch: [lexikon/rollen/organisations-id.md, lexikon/transaktionen.md, lexikon/grundlagen/eticket-deutschland.md]
 quellen: [Q02, Q25]
 status: belegt
 offene_fragen: []
@@ -60,6 +60,14 @@ Damit erklärt sich auch rückblickend eine Eigenheit, über die man beim Lesen 
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 48 f. („Interoperabilität“: allgemeine Definition und die Definition innerhalb von eTicket Deutschland samt Hinweis auf MOTICS-Apps), S. 49 („Interoperabilitätsnetzwerk“: Nachrichtenformat und Adressierung, standardisierte Sicherheitsmechanismen, Sende- und Empfangsabläufe, Fehlerszenarien, Zentrale Vermittlungsstelle mit Umsetzung logischer in physische Adressierung, Adressierung über Organisations-ID, Rolle und Servicename), S. 99 („Zentrale Vermittlungsstelle“)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA ION-SPEC als Inventarnummer 9, KA IONA-Spec als Inventarnummer 39)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Organisations-ID](../rollen/organisations-id.md) (Org-ID)
+- [Transaktionen](../transaktionen.md)
+- [eTicket Deutschland](eticket-deutschland.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

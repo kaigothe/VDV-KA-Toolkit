@@ -55,6 +55,13 @@ In der neuen Generation wird das überflüssig — die kryptografischen Prozesse
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.6 und 4.9 (`TXSYMKEYL` und `TXSYMKEYACK`), Kap. 2.1.7 (Schlüsselmanagement) · *verbundspezifisch*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SEC-SPEC Inv. 6, KA SAM-SPEC Inv. 8)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Schlüsselarten](schluesselarten.md)
+- [Multiberechtigung](../berechtigungen/multiberechtigung.md) (MultiBER)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

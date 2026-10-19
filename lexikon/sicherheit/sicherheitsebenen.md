@@ -62,6 +62,13 @@ Für Bärstadt heißt das: Ein System, das 2026 gebaut wird, muss beide Generati
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 62 f. („Level-1 Development Environment“, „Level-2 Staging Environment“ mit dem Schutz aller Sicherheitskomponenten, „Level-3 Production Environment“ als dem Wirkbetrieb vorbehalten; ausschließliche Verwendung und Anerkennung von Wertobjekten mit Level-3-Organisations-IDs im Wirkbetrieb; für etiCORE nur Level-3-Zertifikate zusammen mit Level-3-Organisations-IDs), S. 14 f. („1GSI“ als erste Generation der Sicherheitsinfrastruktur mit Algorithmen und Schlüsseln im Format von 2006 und seit 2006 eingesetzter Schlüsselverwaltung und PKI, heutige Variante bis 2026 bzw. 2031; „2GSI“ als zweite Generation ab 2026), S. 81 („Sicherheitsebenen / Security Levels“: drei Sicherheitsebenen in der Sicherheitsarchitektur)
 - [Q42](../../QUELLEN.md#q42) – KCD NRW, Newsletterarchiv (neues Root-Zertifikat zur Einführung von etiCORE am 01.12.2026, SubCA-Gültigkeit bis 01.12.2031, Parallelbetrieb im Übergangszeitraum) · *Sekundärquelle*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Public Key Infrastructure](pki.md) (PKI)
+- [Versionen](../grundlagen/versionen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

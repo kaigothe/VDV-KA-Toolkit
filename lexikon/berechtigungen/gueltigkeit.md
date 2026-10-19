@@ -51,6 +51,13 @@ Eine kleine Eigenheit noch: In echten Datensätzen beginnen Gültigkeiten gern e
 - [Q35](../../QUELLEN.md#q35) – KCD NRW, Produktparameter der Tarife in NRW (Vorverkaufsbeginn sowie Vertriebs- und Gültigkeitsdaten je Produkt) · *verbundspezifisch: NRW*
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht (Zeitstempel mit Sekundenversatz gegenüber Mitternacht). **Nicht öffentliche Unterlage.**
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigung](berechtigung.md)
+- [berStatus](berstatus.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

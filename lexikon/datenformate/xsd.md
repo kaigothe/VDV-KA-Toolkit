@@ -67,6 +67,13 @@ Zwei Details verraten etwas über den Aufbau.
 
 **Hinweis zur Extraktion:** Die EBNF in [Q25](../../QUELLEN.md#q25) enthält im extrahierten Text Lücken durch fehlende Umlaute und Sonderzeichen. Die hier wiedergegebenen Produktionen sind die vollständig lesbaren; Zitate sind vor verbindlicher Verwendung am PDF zu prüfen.
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [XML-Namensraum](xml-namensraum.md)
+- [Versionen](../grundlagen/versionen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

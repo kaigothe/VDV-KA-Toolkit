@@ -46,6 +46,13 @@ Technisch hat der Dienstleister sein eigenes Hintergrundsystem. Es sammelt die D
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 34 („Dienstleister / Service Operator“: Transportdienstleistung, Abschluss des Beförderungsvertrags beim Einstieg, Teilnahmerecht über den eTicket-Teilnahmevertrag, Verträge mit PV und KVP, Forderungsclearing; „Dienstleister-System“: Zugehörigkeit zu den Hintergrundsystemen, Verbindung zu den DL-Terminals, Monitoring, SAM-Verwaltung), S. 35 („Dienstleister-Terminal“)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 (Rollencode DL = 2) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Kundenvertragspartner](kvp.md) (KVP)
+- [Hintergrundsystem](hintergrundsystem.md) (HGS)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

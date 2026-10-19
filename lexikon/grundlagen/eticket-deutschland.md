@@ -3,7 +3,7 @@ titel: eTicket Deutschland
 englisch: eTicket Deutschland
 parent: lexikon/grundlagen.md
 siehe_auch: [lexikon/grundlagen/interoperabilitaet.md, lexikon/rollen/ah.md]
-quellen: [Q02, Q04, Q25]
+quellen: [Q02, Q04, Q24, Q25]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -27,6 +27,8 @@ eTicket Deutschland ist also die **Marke und der organisatorische Rahmen**, die 
 Der Beitritt erfolgt über den **Teilnahmevertrag** ([Q02](../../QUELLEN.md#q02), S. 94), dessen Muster samt Regelwerk in [Q25](../../QUELLEN.md#q25) vorliegt. Produktverantwortliche, Kundenvertragspartner und Dienstleister erhalten ihr Teilnahmerecht vom [Applikationsherausgeber](../rollen/ah.md) als Teil des Scheme Manager ([Q02](../../QUELLEN.md#q02), S. 23).
 
 Zum Aufbau, zur technischen Grundlage und zu den zentralen Diensten siehe auch die Darstellung des VDV ([Q04](../../QUELLEN.md#q04)).
+
+Dass das Thema über die Branche hinausreicht, zeigt der politische Rahmen: Die Bundesregierung hat 2017 auf eine Kleine Anfrage zu „Plänen der Bundesregierung für einheitliches elektronisches Ticketing (eTicketing) in Deutschland“ geantwortet ([Q24](../../QUELLEN.md#q24)).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
@@ -53,6 +55,14 @@ Im Bärenland heißt dieser Rahmen **Bärenland-eTicket**, und der Bärenland eT
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4 „Markenbuch“ (PDF-S. 38 f.): eTicket Deutschland als Name der Gesamtheit der interoperablen eTicket-Systeme, Zweck von Logo, Piktogrammen und Corporate Design, Signalwirkung für den Fahrgast, marken- und geschmacksmusterrechtlicher Schutz durch die VDV eTS, Verwendung als Recht und Pflicht der Teilnehmer
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 94 („Teilnahmevertrag“), S. 23 (Gewährung des Teilnahmerechts durch den Applikationsherausgeber)
 - [Q04](../../QUELLEN.md#q04) – VDV, „Der Weg zur einheitlichen Fahrkarte (eTicket)“: Aufbau, technische Grundlage, zentrale Dienste, Teilnahmeregeln
+- [Q24](../../QUELLEN.md#q24) – Bundestags-Drucksache 18/11086 vom 06.02.2017, Antwort der Bundesregierung auf die Kleine Anfrage Drucksache 18/10915 „Pläne der Bundesregierung für einheitliches elektronisches Ticketing (eTicketing) in Deutschland“ · *Sekundärquelle, politischer Rahmen*
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Interoperabilität](interoperabilitaet.md)
+- [Applikationsherausgeber](../rollen/ah.md) (AH)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

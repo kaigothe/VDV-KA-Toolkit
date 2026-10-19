@@ -9,37 +9,43 @@ offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 1
+    codeliste: KA-Rollencode
     bedeutung: KVP — Kundenvertragspartner
     quelle: Q06
     fundstelle: Kap. 4.10 (PDF-S. 37 ff.)
     status: belegt
     verbundspezifisch: true
   - wert: 2
+    codeliste: KA-Rollencode
     bedeutung: DL — Dienstleister
     quelle: Q06
     fundstelle: Kap. 4.10 (PDF-S. 37 ff.)
     status: belegt
     verbundspezifisch: true
   - wert: 3
+    codeliste: KA-Rollencode
     bedeutung: PV — Produktverantwortlicher
     quelle: Q06
     fundstelle: Kap. 4.10 (PDF-S. 37 ff.)
     status: belegt
     verbundspezifisch: true
   - wert: 4
+    codeliste: KA-Rollencode
     bedeutung: AH — Applikationsherausgeber (laut Versionshistorie von 5 auf 4 korrigiert)
     quelle: Q06
     fundstelle: Kap. 4.10, Versionshistorie v2.2
     status: belegt
     verbundspezifisch: true
   - wert: 5
+    codeliste: KA-Rollencode
     bedeutung: KOSE — Kontroll- und Sperrlistenservice
     quelle: Q06
     fundstelle: Kap. 4.10 (PDF-S. 37 ff.)
     status: belegt
     verbundspezifisch: true
   - wert: 31
-    bedeutung: ALISE — ab KA 1.3.0 nur für einen ausgelagerten zentralen ALISE-Server
+    codeliste: KA-Rollencode
+    bedeutung: Rollencode ALISE — ab KA 1.3.0 nur für einen aus dem PV-System ausgelagerten zentralen ALISE-Server
     quelle: Q06
     fundstelle: Fußnote 7 (PDF-S. 39)
     status: belegt
@@ -95,6 +101,13 @@ Deshalb hier derselbe Hinweis wie bei allen Codelisten: Für ein anderes System 
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 „Übersicht über die in `TX_BASE` verwendeten KA-Rollencodes und Org-IDs“ (PDF-S. 37 ff.): Darstellung je Anwendungsfall, Codes KVP = 1, DL = 2, PV = 3, KOSE = 5, Vorrangregel bei Doppelrolle; Versionshistorie zu v2.2 (Korrektur des AH-Codes von 5 auf 4); Fußnote 7, PDF-S. 39 (Einschränkung des Codes 31 für ALISE); Kap. 2.1.2 (die Mandantenzuordnung erfolgt im Hintergrundsystem über die Device-ID, nicht über die Sender- und Empfängerattribute des `TX_BASE`) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle der Codelisten)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TX_BASE](../transaktionen/tx-base.md)
+- [Organisations-ID](organisations-id.md) (Org-ID)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

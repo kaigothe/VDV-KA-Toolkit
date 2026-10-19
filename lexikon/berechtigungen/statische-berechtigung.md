@@ -57,6 +57,13 @@ Genau deshalb gibt es inzwischen eine zusätzliche Spezifikation für den **Kopi
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht (2024), S. 4 (KA STB-SPEC und KA STB-SPEC mobile plus für den kryptographischen Kopierschutz, beide in Version 1.12.0)
 - [Q07](../../QUELLEN.md#q07) – RMV, Statische Berechtigung RMV-EFS, Spezifikation Datenlayout, v1.9 · *verbundspezifisch, Auswertung offen*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elektronischer Fahrschein](efs.md) (EFS)
+- [Berechtigung](berechtigung.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

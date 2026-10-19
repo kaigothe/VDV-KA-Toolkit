@@ -56,6 +56,13 @@ Vier Versionsangaben aus vier Quellen — ein guter Grund, bei jedem Zitat die F
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (Datentypen und Strukturen in der Berechtigung) · *verbundspezifisch*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 5.2 (OrtsTyp-Codes), Kap. 5.3 (`IONTransaktion_ID`, `AblehnungsTyp_CODE`, Verweis auf KA_SPEC_BOM) · *verbundspezifisch*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TLV-Kodierung](tlv.md) (TLV)
+- [KA-Spezifikationen](../grundlagen/ka-spezifikationen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

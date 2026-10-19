@@ -59,6 +59,13 @@ Und ein letzter Punkt, der Olli Tapsig betrifft: Weil der Barcode nicht verände
 - [Q34](../../QUELLEN.md#q34) – KCD NRW, Ergebnisdokument Deutschlandticket / UIC (Abgrenzung zum UIC-Barcode) · *Auswertung offen*
 - [Q07](../../QUELLEN.md#q07) – RMV, Statische Berechtigung RMV-EFS, Datenlayout · *verbundspezifisch, Auswertung offen*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Statische Berechtigung](../berechtigungen/statische-berechtigung.md) (StatBer)
+- [TLV-Kodierung](tlv.md) (TLV)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

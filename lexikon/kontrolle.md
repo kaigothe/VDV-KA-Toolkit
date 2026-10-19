@@ -2,7 +2,7 @@
 titel: Kontrolle
 englisch: inspection and blocking
 parent: README.md
-siehe_auch: [lexikon/rollen/kose.md, lexikon/transaktionen/nachweis.md]
+siehe_auch: [lexikon/rollen/kose.md, lexikon/transaktionen/nachweis.md, lexikon/kontrolle/kontrollnachweise.md, lexikon/berechtigungen/gueltigkeit.md]
 quellen: [Q02, Q06, Q33]
 status: belegt
 offene_fragen: []
@@ -76,6 +76,15 @@ Interessant ist der Blick nach vorn. Heute schreibt das Kontrollgerät einen Nac
 - [Sperrnachweis](kontrolle/sperrnachweis.md)
 - [Sperrung](kontrolle/sperrung.md)
 <!-- /GEN:unterartikel -->
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Kontroll- und Sperrlistenservice](rollen/kose.md) (KOSE)
+- [Nachweis](transaktionen/nachweis.md)
+- [Kontrollnachweise](kontrolle/kontrollnachweise.md)
+- [Gültigkeit](berechtigungen/gueltigkeit.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

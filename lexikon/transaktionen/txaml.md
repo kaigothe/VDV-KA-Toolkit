@@ -57,6 +57,13 @@ Und noch eine Besonderheit: `TXAML` ist die einzige Nachricht dieser Kategorie, 
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.2.5 (`TXAS` als Anforderung, `TXAML` als synchrone Antwort) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsliste](../aktionsmanagement/aktionsliste.md) (TXAML)
+- [TX_BASE](tx-base.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

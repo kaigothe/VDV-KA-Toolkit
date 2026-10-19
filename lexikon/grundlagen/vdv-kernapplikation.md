@@ -3,7 +3,7 @@ titel: VDV-Kernapplikation
 abkuerzung: KA
 englisch: core application
 parent: lexikon/grundlagen.md
-siehe_auch: [lexikon/grundlagen/versionen.md, lexikon/grundlagen/efm.md]
+siehe_auch: [lexikon/grundlagen/versionen.md, lexikon/grundlagen/efm.md, lexikon/grundlagen/eticket-deutschland.md]
 quellen: [Q02, Q25, Q37]
 status: belegt
 offene_fragen: []
@@ -53,6 +53,14 @@ Bemerkenswert ist noch, was die Kernapplikation **nicht** festlegt: Tarife, Prei
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 51 („Kernapplikation / etiCORE“: wörtliche Definition, Version 1 und 2 als KA, Version 3 als etiCORE, Umfang Sicherheit/Zertifizierung/Organisationskonzept/Systemschnittstellen, die vier Definitionsgegenstände; Abkürzung KA)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (Verzeichnis der KA-Dokumentation mit Inventarnummern 0–59)
 - [Q37](../../QUELLEN.md#q37) – cetecom-Prüfbericht Akzeptanzterminal (2024), S. 4 (zwölf KA-Spezifikationen in Version 1.12.0; Zulassung bei der Zulassungsstelle des VDV eTS) · *Herstellerquelle, belegt den Prüfgegenstand, nicht den Standard*
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Versionen](versionen.md)
+- [Elektronisches Fahrgeldmanagement](efm.md) (EFM)
+- [eTicket Deutschland](eticket-deutschland.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

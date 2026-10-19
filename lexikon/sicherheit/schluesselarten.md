@@ -54,6 +54,13 @@ Und eine letzte Feinheit: Aus einem Startschlüssel lassen sich für jede einzel
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 92 („Symmetrischer Schlüssel“: gleicher geheimer Schlüssel für Ver- und Entschlüsselung, Verwendung in KA 1.X für gegenseitige Authentifizierung mit Schlüsseln vom Scheme Manager und für den authentischen Nachweis von Berechtigungsausgaben und Bezahlvorgängen mit Schlüsseln von PV und KVP, Regulär- und Notfallversion), S. 65 („Notfallversion“: Begrenzung von Ausfällen und finanziellen Schäden, Speicherung von Notschlüsseln in der Applikation, Umschalten im Betrieb, Wegfall des Begriffs ab etiCORE), S. 25 („Asymmetrische Kryptographie“), S. 68 („Öffentlicher Schlüssel“), S. 73 („Privater Schlüssel“), S. 71 („Public Key Infrastructure“), S. 91 („Start Key / Session Key“: Vereinbarung eines gemeinsamen Startkeys und dynamische Ableitung von Session Keys für Verschlüsselung und MAC-Bildung bzw. -Prüfung), S. 81 („Secure Crypto Environment“: logische Komponente auf dem mobilen Gerät, unveränderliche Bindung der Schlüssel an Gerät und Ticketing-App, Resistenz gegen Auslesen und Kopieren)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Keymanagement](keymanagement.md) (KM)
+- [Public Key Infrastructure](pki.md) (PKI)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

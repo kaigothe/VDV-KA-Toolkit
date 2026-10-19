@@ -62,6 +62,13 @@ Jeder sperrt, was ihm gehört. Und niemand sperrt etwas, das einem anderen gehö
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 91 („Sperrung / Blocking“: Applikationen und Berechtigungen können gesperrt werden, Unbenutzbarkeit bis zur Entsperrung, Sperrung als Statusänderung auf dem Nutzermedium), S. 89 („Sperrliste“: physische Sperre bei Berechtigungen und Applikationen gegenüber logischer Sperre bzw. Ablehnung bei SAM-, Schlüssel- und Organisationssperreinträgen), S. 88 (Initiatoren je Objekt für KA und etiCORE), S. 52 (Sperren auf dem Nutzermedium ohne SAM ab 2GSI), S. 38 f. („Entsperrung“)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrliste](sperrliste.md)
+- [Entsperrung über Aktionsliste](../aktionsmanagement/entsperrung-ueber-aktionsliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -534,8 +534,10 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 
 - **Datei:** `QUELLEN/Q24_Bundestag_Drucksache_18-11086.pdf` (8 Seiten)
 - **Typ:** Sekundär · **Herkunft:** Original · **Auswertung:** offen
-- **Inhalt:** Antwort der Bundesregierung auf eine Kleine Anfrage zur Drucksache 18/10915; Thema digitale Angebote im öffentlichen Verkehr. **Bezug zum eTicket noch ungeprüft** — falls kein inhaltlicher Bezug besteht, Quelle streichen.
-- **Stichworte:** politischer und rechtlicher Rahmen (zu prüfen)
+- **Stand:** 06.02.2017, 18. Wahlperiode
+- **Inhalt (am Dokument geprüft):** Antwort der Bundesregierung auf die Kleine Anfrage der Fraktion BÜNDNIS 90/DIE GRÜNEN, Drucksache 18/10915, mit dem Titel **„Pläne der Bundesregierung für einheitliches elektronisches Ticketing (eTicketing) in Deutschland“**. Damit ist der eTicket-Bezug belegt; die Quelle dokumentiert den politischen Rahmen, nicht die Technik.
+- **Technischer Hinweis:** Die Extraktion streut Sprachmarker („de“) in den Text. Für Zitate `sed -e 's/de//g'` anwenden oder am PDF prüfen.
+- **Stichworte:** politischer und rechtlicher Rahmen, Bundespolitik, eTicketing in Deutschland
 - **URL:** https://dserver.bundestag.de/btd/18/110/1811086.pdf
 
 ## Q28

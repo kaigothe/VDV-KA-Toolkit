@@ -9,18 +9,21 @@ offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 0
+    codeliste: packageerrorcode in PACKAGEACK
     bedeutung: packageerrorcode – ok
     quelle: Q06
     fundstelle: Kap. 4.8 (PDF-S. 36)
     status: belegt
     verbundspezifisch: true
   - wert: 1
+    codeliste: packageerrorcode in PACKAGEACK
     bedeutung: packageerrorcode – ZIP-Datei lässt sich nicht öffnen
     quelle: Q06
     fundstelle: Kap. 4.8 (PDF-S. 36)
     status: belegt
     verbundspezifisch: true
   - wert: 2
+    codeliste: packageerrorcode in PACKAGEACK
     bedeutung: packageerrorcode – ZIP-Datei enthält unerwarteten Inhalt
     quelle: Q06
     fundstelle: Kap. 4.8 (PDF-S. 36)
@@ -64,6 +67,12 @@ Eine Unterscheidung lohnt noch: Es gibt einen Fehlercode für das **ganze Paket*
 ## Quellen
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 3.1 „Allgemeiner Ablauf“ (PDF-S. 18 f.): Paketversand, Paketnummer, Scheduler, `TXA` für abzulehnende und `TXB` für akzeptierte Transaktionen, Ablehnungsgründe, Bereitstellung und Abholung der Paket-Quittung über das Manifest, Bestätigung des Erhalts; Kap. 3.8 (KA-Transaktionen hochladen), Kap. 3.9 (Paket-Quittung herunterladen), Kap. 4.8 `PACKAGEACK` (PDF-S. 36): `packagenumber`, `packageerrorcode` mit den Werten 0, 1 und 2, `rejectedsize`, `acceptedsize` · *verbundspezifisch: eTicket RheinMain*
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Duplikaterkennung](duplikaterkennung.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

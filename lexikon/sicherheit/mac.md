@@ -51,6 +51,13 @@ Ein bewusster Tausch: weniger Beweiskraft für weniger Bewegungsdaten.
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (Schlüsselreferenzen `K_KVP-NM-MAC`, `K_PV-NM-MAC`, `K_ERF-NM-MAC`, `MK/K_TR-MAC` zu den jeweiligen Feldern der Berechtigung) · *verbundspezifisch*
 - [Q11](../../QUELLEN.md#q11) – ausgewertete Nachricht (Schlüsselreferenzfelder mit Nummer, Version und Inhaber; MAC-Bildung durch das SAM beim Schreiben). **Nicht öffentliche Unterlage**; übernommen sind nur Feldnamen und Struktur.
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Schlüsselreferenz](schluesselreferenz.md)
+- [TXA/TXB](../transaktionen/txa-txb.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -72,6 +72,13 @@ Für ein Auswertungswerkzeug ist das eine konkrete Prüfregel — und ein gutes 
 - [Q42](../../QUELLEN.md#q42) – KCD NRW, Newsletterarchiv: SubCA-Bereitstellung; Ende der aktiven Gültigkeit des Root-Zertifikats der 1GSI zum 01.12.2021 bei fortbestehender Gültigkeit der SubCAs; zehnjährige Gültigkeit der SubCAs bis 01.12.2031 „also bis zum Ende der VDV-Kernapplikation 1.x“; neues Root-Zertifikat erst für die 2GSI mit Einführung der VDV-Kernapplikation 3.0 als etiCORE zum 01.12.2026; Gültigkeit beider Zertifikate im Übergangszeitraum; ausdrückliche Richtigstellung des Prüfzeitpunkts · *Sekundärquelle; das KCD NRW gibt Informationen des eTicket Service wieder*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.7 (CV-Zertifikate, Keytype 7 als Zertifikat einer CA) · *verbundspezifisch*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [CV-Zertifikat](cv-zertifikat.md) (CVC)
+- [Sicherheitsebenen](sicherheitsebenen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

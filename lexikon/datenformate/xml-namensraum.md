@@ -68,6 +68,13 @@ Ehrlich bleibt eine Unschärfe. Die Bereichsliste der Konvention nennt `pv-alise
 
 **Hinweis zur Extraktion:** Die EBNF in [Q25](../../QUELLEN.md#q25) enthält im extrahierten Text Lücken durch fehlende Sonderzeichen; insbesondere das Präfix der Namensraum-Produktion ist nicht vollständig lesbar. Zitate vor verbindlicher Verwendung am PDF prüfen.
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [XSD und WSDL](xsd.md) (XSD)
+- [txalisber](../transaktionen/txalisber.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

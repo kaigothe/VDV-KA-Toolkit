@@ -64,6 +64,13 @@ Das ist keine technische Aussage mehr, sondern eine über Organisation und Wille
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1 (Verfahren und Basisanforderungen)
 - [Q33](../../QUELLEN.md#q33) – KCD NRW, Ergebnisdokument der Arbeitsgruppe Kontrolle, V1.3, Kap. 6.2 (Account-Based-Ticketing im Ausblick), Kap. 6.3 (Diskussion eines deutschlandweiten ALISE) · *produktbezogen*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Ausbauvarianten](../grundlagen/ausbauvarianten.md)
+- [Versionen](../grundlagen/versionen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

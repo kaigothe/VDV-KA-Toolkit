@@ -291,3 +291,35 @@ Begriffe aus [Q02](QUELLEN.md#q02), die noch keinen Platz haben. Sie werden aufg
 **Weiteres:** Chipkarten-Übertragungsprotokoll (S. 32), Persönliche Identifikationsnummer (S. 69), Nutzertarifparameter (S. 67), Start Key / Session Key (S. 91), Secure Crypto Environment (S. 81), Motics / Mobile Ticketing Crypto Service (S. 64), Einheitliche Kundenschnittstelle KUSCH (Q25 Inv. 29), Produkt- und Kontrollmodule PKM (Q25 Inv. 53–57), LuKA-Spezifikationen für NFC-Mobiltelefone (Q25 Inv. 44–49), Wide Range (S. 99), Ticket (S. 95)
 
 **Aus dem Analysewerkzeug heraus zu ergänzen:** `prodAbrechnungsVerfahren`, `berInfoText`, `logTransaktionsOperator_ID`, `prodKeyOrganisation_ID`, `berBezahlMittel` — jeweils sobald eine Codeliste vorliegt.
+
+---
+
+## 14. Stand nach dem Review (2026-10-19)
+
+Alle zehn Kategorien sind geschrieben: **99 Artikel** — 10 Kategorieartikel und 89 Blattartikel. Das liegt über der geplanten Startmenge von 66, weil die Kategorien Medien, Datenformate, Kontrolle, Sicherheit und ABT vorgezogen wurden.
+
+**Abweichungen vom Bauplan oben**, jeweils mit Grund:
+
+| Geplant | Umgesetzt | Grund |
+|---|---|---|
+| `kontrolle/kontrolle-begriff.md` | entfallen | Der Begriff steht im Kategorieartikel [lexikon/kontrolle.md](lexikon/kontrolle.md) — die natürliche Stelle, und der Pfad `kontrolle/kontrolle.md` wäre verwirrend. |
+| `kontrolle/kontrollgeraet.md` als P2 | P1 | Ergibt sich zwingend aus der Sichtkontrolle und ist über Q06 Kap. 6.1 gut belegt. |
+| — | `abt/account.md` | Der Account ist die erste Basisanforderung des Weißbuchs und das Gegenstück zum ID-Token. |
+| `abt/abt-in-der-ka.md` als P2 | P1, als `abt-in-der-kernapplikation.md` | Q01 belegt die Ausbaustufen 4 und 5 konkret. |
+| `sicherheit/pki.md` als P2 | P1 | Die Zertifikatshierarchie und die Daten aus Q42 sind zu wichtig für den Backlog. |
+| `medien/applikationsinstanz.md` | `applikationsinstanz-id.md` | Der Glossarbegriff lautet „Applikationsinstanz-ID“. |
+| `medien/lebenszyklus-applikation.md` | `lebenszyklus-der-applikation.md` | Dateiname folgt dem Titel. |
+| `datenformate/namespace.md` | `xml-namensraum.md` | deutscher Titel |
+| `datenformate/namenskuerzung.md` | `kuerzungsregel-fuer-namen.md` | Titel nach BOM-Abschnitt 6.7.2 |
+| `datenformate/tag-db-fahrgast.md` | `tag-0xdb-fahrgast.md` | Tag im Dateinamen sichtbar |
+
+**Statusverteilung:** 95 `belegt`, 3 `zu prüfen` (Auftragstyp, Aktionsfreigabe entfiel, `txalisber`, Änderungsreferenz), 1 `abgeleitet` (`berSynchronNummer`).
+
+**Noch nicht ausgewertete Quellen** (17 von 42). Sie sind beschafft und verzeichnet, aber in keinem Artikel zitiert:
+
+- **Projektdokumente mit Potenzial:** [Q31](QUELLEN.md#q31) (Abbildung und Kontrolle in NRW, 77 S., Stand 2026), [Q32](QUELLEN.md#q32) (Westfalen-Tarif, 92 S.), [Q38](QUELLEN.md#q38) (bwtarif, 158 S.), [Q36](QUELLEN.md#q36) (eTarife NRW), [Q40](QUELLEN.md#q40) (Rahmenlastenheft DL-System), [Q09](QUELLEN.md#q09) (AVV-Tarif), [Q08](QUELLEN.md#q08) (EFM-Integration)
+- **Hersteller- und Sekundärquellen:** [Q14](QUELLEN.md#q14), [Q15](QUELLEN.md#q15), [Q17](QUELLEN.md#q17), [Q21](QUELLEN.md#q21), [Q22](QUELLEN.md#q22), [Q23](QUELLEN.md#q23)
+- **Einstiegsseiten ohne eigenen Inhalt:** [Q03](QUELLEN.md#q03), [Q27](QUELLEN.md#q27), [Q28](QUELLEN.md#q28)
+- **Nicht auswertbar:** [Q41](QUELLEN.md#q41) (AES-256-verschlüsselt)
+
+Für die P2-Artikel des Bauplans sind vor allem Q31, Q32 und Q38 die nächsten Schritte: Sie decken Tarifabbildung, Produktparameter und Kontrolle in drei weiteren Verbünden ab und erlauben damit erstmals den Vergleich, welche Festlegungen **verbundübergreifend gleich** sind — der einzige Weg, ohne die KA-Spezifikationen etwas über KA-weite Geltung zu sagen.

@@ -9,54 +9,63 @@ offene_fragen: [O1]
 stand: 2026-10-19
 codes:
   - wert: 1
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Ausgabetransaktion
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 22)
     status: belegt
     verbundspezifisch: true
   - wert: 2
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Entwertung
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 22)
     status: belegt
     verbundspezifisch: true
   - wert: 20
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Sperrtransaktion
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 22)
     status: belegt
     verbundspezifisch: true
   - wert: 21
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Entsperrtransaktion
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 22)
     status: belegt
     verbundspezifisch: true
   - wert: 25
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Rückgabetransaktion
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 23)
     status: belegt
     verbundspezifisch: true
   - wert: 27
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Kontrolle — TXEBER aus Kontrolle
     quelle: Q05
     fundstelle: Kap. 4.4.4 (PDF-S. 23); bestätigt in Q06 Kap. 5.1.2
     status: belegt
     verbundspezifisch: true
   - wert: 37
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXABER – Ausgabe EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
     status: belegt
     verbundspezifisch: true
   - wert: 38
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
     status: belegt
     verbundspezifisch: true
   - wert: 39
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Rückgabetransaktion EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
@@ -109,6 +118,13 @@ Und die immer gleiche Warnung: Diese Zahlen stammen aus dem Pflichtenheft eines 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5, Fußnote 1 (PDF-S. 13): `logTransaktionsTyp` vom Typ `NmTransaktionsTyp_CODE` mit den Werten 37, 38 und 39; Kap. 5.1.2 (PDF-S. 40): `TXEBER` aus Kontrolle mit `IONTransaktionsTyp_CODE` = 059 und `logTransaktionsTyp.code` = 27 · *verbundspezifisch: eTicket RheinMain*
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 4.4.4 (PDF-S. 22 f.): vollständige Liste der „relevanten Transaktionstypcodes“ 1, 2, 20, 21, 25, 27, 37, 38 und 39 · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle der Codelisten)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TX_BASE](tx-base.md)
+- [Ausgabe EFS über Aktionsliste](../aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

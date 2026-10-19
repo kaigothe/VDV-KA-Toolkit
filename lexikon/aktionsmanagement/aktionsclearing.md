@@ -46,6 +46,13 @@ Dasselbe gilt für einen Sperrnachweis: Auch er belegt, dass sich auf dem Medium
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 18 („Aktionsclearing / Action List Clearing“: Bereinigung des Datenbestandes, Bedingung Kontroll- oder Sperrnachweis ohne erwarteten Nachweis, Informationspflicht gegenüber dem beauftragenden KVP), S. 20 f. („Aktionsmanagement“: Regelweg über den Status „ausgeführt“ und das Clearing als Ausnahme)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsliste](aktionsliste.md) (TXAML)
+- [Entsperrnachweis](entsperrnachweis.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

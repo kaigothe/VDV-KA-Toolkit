@@ -54,6 +54,13 @@ Für Datenschutzdiskussionen ist das der entscheidende Punkt: Es nützt wenig, a
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 22 („Applikation / Application“: Definition nach ISO 24014-1:2020 mit Daten, Kommandos, Abläufen, Zuständen, Mechanismen, Algorithmen und Programmcode; Einbindung in die Sicherheitsarchitektur und die Chipkarten-Übertragungsprotokolle; Hinterlegung von Personendaten im Hintergrundsystem gemeinsam mit der Applikationsinstanz-ID; Definition der Anonymität über das Hintergrundsystem; Abkürzung App), S. 24 („Applikations-Kennung / Application Identifier, AID“: Auswahl der richtigen Applikation auf einem Medium mit mehreren Applikationen)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA NM-SPEC, Inventarnummer 7)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Applikationsinstanz-ID](applikationsinstanz-id.md)
+- [Lebenszyklus der Applikation](lebenszyklus-der-applikation.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -49,6 +49,13 @@ Ein Detail für später: In der VDV-KA 1.x darf sich jedes Verkehrsunternehmen s
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.2.5 (`TXAS` als synchrone Anforderung, `TXAML` als Antwort) und Glossarteil (Aktionsliste als KVP-spezifische Liste der Aktionsaufträge) · *verbundspezifisch: eTicket RheinMain*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (TXAML, Verweis auf KA_SPEC_AktM), Kap. 3.2 (einmal täglich erstellt und bereitgestellt), Kap. 3.4 (Aktionsliste herunterladen), Kap. 4.3.1 · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsdifferenzliste](aktionsdifferenzliste.md)
+- [Terminalaktionsliste](terminalaktionsliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

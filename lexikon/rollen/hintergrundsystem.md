@@ -49,6 +49,13 @@ Eine Spezialität am Rand: Nicht jedes Unternehmen muss direkt am landesweiten N
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 1.2 (Datenflüsse zwischen Hintergrundsystem und Terminalmanagementsystemen) · *verbundspezifisch: eTicket RheinMain*
 - [Q13](../../QUELLEN.md#q13) – Krauth Technology, KA Background System · *Herstellerquelle, belegt Marktpraxis, nicht den Standard*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Akzeptanzterminal](akzeptanzterminal.md) (AKT)
+- [Dienstleister](dl.md) (DL)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

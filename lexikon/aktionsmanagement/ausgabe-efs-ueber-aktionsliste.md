@@ -9,18 +9,21 @@ offene_fragen: [O1, O2]
 stand: 2026-10-19
 codes:
   - wert: 37
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXABER – Ausgabe EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
     status: belegt
     verbundspezifisch: true
   - wert: 38
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)
     status: belegt
     verbundspezifisch: true
   - wert: 39
+    codeliste: NmTransaktionsTyp_CODE
     bedeutung: Rückgabetransaktion EFS über Aktionsliste
     quelle: Q06
     fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 13)

@@ -56,6 +56,13 @@ Damit verliert der Baustein seine Monopolstellung. Geräte werden billiger, Kont
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings (`SAM_ID.samNummer` mit 3 Byte, Vergabe im Bestellprozess über das ASM-Tool; Verweise auf KA SAM-Spec_V190 S. 205 und KA NM-SPEC_V190 S. 199) · *Herstellerquelle*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SAM-SPEC Inv. 8, KA SAM-Server-SPEC Inv. 59)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [MAC](mac.md)
+- [Sichtkontrolle](../kontrolle/sichtkontrolle.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

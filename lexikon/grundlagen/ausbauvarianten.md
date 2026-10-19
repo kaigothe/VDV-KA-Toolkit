@@ -2,7 +2,7 @@
 titel: Ausbauvarianten
 englisch: expansion variants
 parent: lexikon/grundlagen.md
-siehe_auch: [lexikon/grundlagen/efm.md, lexikon/aktionsmanagement.md]
+siehe_auch: [lexikon/grundlagen/efm.md, lexikon/aktionsmanagement.md, lexikon/grundlagen/elementarprozess.md]
 quellen: [Q02, Q25]
 status: belegt
 offene_fragen: []
@@ -71,6 +71,14 @@ Für die Bärstädter Verkehrsbetriebe heißt das konkret: Sie haben Variante 2a
 
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, PDF-S. 158 (Anlagenseite 15): Herleitung der Ausbauvarianten aus den Vollausbauvarianten der KA KUSCH-Spec und den Migrationsregelungen; vollständige Liste der Varianten 1, 2, 2a, 2b-1, 2b-2, 3, 3a-1, 3a-2; optionale Ergänzungen MultiBER, AktM, PKM, STB/VDV-Barcode und tarifliche Besonderheiten samt Zulässigkeit; Zusammenfassung der Anwendungsfälle in funktionsorientierten Paketen
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 36 f. (die drei Stufen des EFM)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elektronisches Fahrgeldmanagement](efm.md) (EFM)
+- [Aktionsmanagement](../aktionsmanagement.md) (AktM)
+- [Elementarprozess](elementarprozess.md) (EP)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

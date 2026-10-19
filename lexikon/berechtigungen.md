@@ -65,6 +65,12 @@ Dieser letzte Punkt steht im Glossar des Standards, nicht in einem Zukunftspapie
 - [Statische Berechtigung](berechtigungen/statische-berechtigung.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Produktverantwortlicher](rollen/pv.md) (PV)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

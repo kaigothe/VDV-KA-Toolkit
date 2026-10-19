@@ -49,6 +49,13 @@ Die Kernapplikation bietet für diese Frage sogar einen brauchbaren Maßstab: An
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1, Kap. 5.2.1 „Account“ (Zuordnung einer eindeutigen ID zu jedem Fahrgast, Verbindung mit einem Account im Hintergrundsystem, dort Kunden-, Ticket- und Tarifdaten für Module wie die Fahrpreisberechnung; Account als Konto; mehrere ID-Medien je Account), Kap. 5.2 (die Basisanforderungen 5.2.1 bis 5.2.17)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 16 (Authentifizierung über ein persönliches Identifikationsmittel), S. 22 (Anonymität als Eigenschaft des Hintergrundsystems)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [ID-Token](id-token.md)
+- [Ticket Cloud](ticket-cloud.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

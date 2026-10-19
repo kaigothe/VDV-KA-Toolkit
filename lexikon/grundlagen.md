@@ -77,6 +77,12 @@ Und noch eine Abgrenzung, die im Alltag oft verrutscht: Das **elektronische Fahr
 - [Versionen](grundlagen/versionen.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Rollen](rollen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

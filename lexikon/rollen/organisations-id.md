@@ -52,6 +52,13 @@ Und noch ein praktischer Punkt: Betreiben die BVB zwei Terminalsysteme, dürfen 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 69 („Organisations-ID / Organisation ID“: Eindeutigkeit im Geltungsbereich der Kernapplikation, Vergabe durch die Registrierung des Scheme Manager über das Applikations- und Sicherheitsmanagement beim Abschluss eines eTicket-Vertrages, juristische Personen als Träger, Ausnahme für abgegrenzte Betriebsteile; Abkürzung Org-ID)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 (Org-IDs und Rollencodes im `TX_BASE`, Hinweis auf Mandanten mit mehreren Org-IDs), Kap. 5.3 (`IONTransaktion_ID` aus Org-ID, Rollencode und Sequenznummer; Pflicht zur Bildung von Nummernkreisen) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Rollencodes](rollencodes.md)
+- [Duplikaterkennung](../transaktionen/duplikaterkennung.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

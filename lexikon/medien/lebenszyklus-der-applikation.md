@@ -63,6 +63,14 @@ Ein Hinweis fürs Lesen älterer und neuerer Unterlagen: In der neuen Generation
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 46 f. („Initialisierung der NM-Applikation“: Anlegen der Datenstruktur, Vorbelegung der Felder, Status „Medium_initialisiert“, noch nicht nutzbar; in etiCORE Individualisierung mit Status `INDIVIDUALISED`), S. 27 („Ausgabe der Applikation“: vom Applikationsherausgeber berechtigte Stellen, Ausgabe über den Vertrieb, immer über einen Kundenvertragspartner), S. 17 („Aktivieren der Applikation“: Zusammenhang mit der Ausgabe an den Kunden, Ausgabetransaktion, Status „VDV-Kernapplikation_aktiviert“, zeitliche Gültigkeit, Initialisierung des Statusänderungszählers; in etiCORE Konfiguration mit Status `CONFIGURED`, möglich beim Kartenhersteller), S. 70 („Personalisierung der Applikation“: Aufbringen personengebundener Daten, Kundenprofil und Kundenpräferenzen)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Applikation](applikation.md) (App)
+- [Personengebunden](personengebunden.md)
+- [Kundenvertragspartner](../rollen/kvp.md) (KVP)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

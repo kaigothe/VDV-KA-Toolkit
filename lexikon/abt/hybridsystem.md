@@ -55,6 +55,13 @@ Und zur Ehrlichkeit in der Debatte gehört noch eines: Auch Pias Karte ist kein 
 - [Q01](../../QUELLEN.md#q01) – VDV eTS, Einordnung von Account Based Ticketing, V1.0 (Hybridsysteme zur Minimierung des Datenverlusts bei Konnektivitätsproblemen und ihre Wirkung auf die Wirtschaftlichkeit; Synchronisation beim MBT in der Regel im Laufe von 24 Stunden)
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1, Kap. 4 (die drei Verfahren), Kap. 4.1 (ABT mit vorausbezahlter Fahrtberechtigung), Kap. 4.2 (ABT mit InOut-Verfahren und Preisbildung im Nachhinein), Kap. 4.3 (Mischform samt Vertriebs- und Kontrollprozessen), Kap. 5.2.10 (Zwischenspeicher im Fahrzeug)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Online- und Offline-Kontrolle](online-und-offline-kontrolle.md)
+- [Mediumbasiertes Ticketing](mbt.md) (MBT)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

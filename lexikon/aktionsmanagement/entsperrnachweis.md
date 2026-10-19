@@ -51,6 +51,13 @@ Diese Weitergabe hat eine praktische Folge, die man im Alltag unterschätzt: Geh
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): „Entsperrnachweis bearbeiten nach Aktionsauftrag“, „Entsperrnachweis an PV melden“
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 und Fußnote 1, PDF-S. 13 (TXSNAWB, `logTransaktionsTyp` 38) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Entsperrung über Aktionsliste](entsperrung-ueber-aktionsliste.md)
+- [Aktionsclearing](aktionsclearing.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

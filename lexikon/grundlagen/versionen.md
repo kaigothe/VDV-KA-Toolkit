@@ -68,6 +68,13 @@ Ein Rat aus dieser Konstellation: Die Nachrichtenverarbeitung von Anfang an vers
 - [Q29](../../QUELLEN.md#q29) – itcs-info, Release 1.5.0 · *Sekundärquelle, zu prüfen*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (Unterscheidung `*_1107` und `*_1300`) · *verbundspezifisch*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [VDV-Kernapplikation](vdv-kernapplikation.md) (KA)
+- [txalisber](../transaktionen/txalisber.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

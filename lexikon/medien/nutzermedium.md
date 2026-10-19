@@ -58,6 +58,13 @@ Deshalb heißt es auch nie „Karte 90000042 wurde gesperrt", sondern „Applika
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 66 („Nutzermedium / User Medium“: Träger für eine Berechtigung, die drei Ausprägungen Smartcard bzw. chipbasiert, Smartphone und Sicherheits-Papier mit den jeweils möglichen Berechtigungen; Abkürzungen NM und UM; „Nutzer“ als Besitzer und Reisender nach ISO 24014-1), S. 24 (eindeutige Identifikation des Nutzermediums durch die Applikationsinstanz-ID), S. 92 („Statische Berechtigung“ als signierter, nicht veränderbarer Datensatz)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA NM-SPEC als Inventarnummer 7; Anlagen zum Systemlastenheft Nutzermedium, Inventarnummern 21 bis 28, u. a. Zulassung von Nutzermedien als KA-Medium)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Applikation](applikation.md) (App)
+- [Statische Berechtigung](../berechtigungen/statische-berechtigung.md) (StatBer)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

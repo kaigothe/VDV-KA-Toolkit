@@ -60,6 +60,13 @@ Und ein Datenschutzdetail, das man nicht vermuten würde: In Kontrollnachweisen 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 53 (Kontrollnachweis in 1GSI zusätzlich auf dem Nutzermedium, ab 2GSI nur noch an den Produktverantwortlichen, dadurch Kontrolle ohne SAM möglich), S. 53 (Abrechnung des Dienstleisters über Leistungsnachweise)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TXEBER](../transaktionen/txeber.md)
+- [Sperrnachweis](sperrnachweis.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

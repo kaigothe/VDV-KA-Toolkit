@@ -170,7 +170,7 @@ Diagramme werden als ```` ```mermaid ````-Codeblock eingebettet. GitHub und Obsi
 | **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
 | **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **fertig:** Grundlagen (8), Rollen (10), Aktionsmanagement (12), Transaktionen (12) — 42 Blattartikel plus 4 Kategorieartikel. |
 | **4 — Vertiefung** | restliche P1 | **fertig:** Berechtigungen (10), Medien (5), Datenformate (8), Kontrolle (8), ABT (8), Sicherheit (8). Damit sind alle zehn Kategorien geschrieben. |
-| **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | **als Nächstes.** `check.py` läuft fehlerfrei; zu prüfen bleiben inhaltliche Widerspruchsfreiheit, P2-Artikel und der Backlog. |
+| **5 — Review** | Wortlimits, Querverweise, offene Fragen, Widerspruchsfreiheit | **durchgeführt am 19.10.2026**, Ergebnis in [STRUKTUR.md](STRUKTUR.md), Abschnitt 14. Vier Mängel behoben: unsichtbare Querverweise, fehlende Codelistennamen, sechs unverlinkte Artikel, O11. Vier neue Prüfungen in `check.py`. |
 | **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |
 
 **Reihenfolge innerhalb Phase 2 bis 4:** Zuerst Q02 (Begriffe), dann Q06 (Nachrichten und Codes), dann Q05 (berStatus, EFS-Aufbau), dann Q25 (Spezifikationen, Ausbauvarianten, Elementarprozesse), dann Q01 und Q30 (ABT).
@@ -194,7 +194,6 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 | **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
 | **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. | `transaktionen/txalisber.md` | ALISE-Spezifikation und ALISE-XSD |
-| **O11** | Hat die Bundestags-Drucksache [Q24](QUELLEN.md#q24) überhaupt Bezug zum eTicket? Falls nicht, Quelle streichen. | Quellenverzeichnis | Q24 lesen |
 
 ---
 
@@ -208,6 +207,9 @@ Ein neues Root-Zertifikat gibt es erst für die 2. Generation der Sicherheitsinf
 **O8 — Stand bei 1GSI und 2GSI: geklärt.**
 Die aktive Gültigkeit des Root-Zertifikats der 1GSI ist **zum 1. Dezember 2021 abgelaufen**; damit lassen sich keine neuen Zertifikate mehr erstellen, die bestehenden SubCA-Zertifikate bleiben aber gültig ([Q42](QUELLEN.md#q42)).
 Dazu ein praktisch wichtiger Nebenbefund: Einige Systeme prüfen bei Ausgabe oder Kontrolle, ob das Root-Zertifikat *zu diesem Zeitpunkt* gültig ist. Das ist **falsch** und führt seit dem 1. Dezember 2021 zu Fehlverhalten. Richtig ist die Prüfung, ob das Root-Zertifikat **zum Zeitpunkt der Erstellung des SubCA-Zertifikats** gültig war. Dieser Befund gehört in den Artikel `sicherheit/cv-zertifikat.md` und ist für das Analysewerkzeug eine Prüfregel.
+
+**O11 — eTicket-Bezug der Bundestags-Drucksache: geklärt, Quelle bleibt.**
+[Q24](QUELLEN.md#q24) ist die Antwort der Bundesregierung auf die Kleine Anfrage Drucksache 18/10915 mit dem Titel „Pläne der Bundesregierung für einheitliches elektronisches Ticketing (eTicketing) in Deutschland“ vom 06.02.2017 — am Dokument geprüft. Der Bezug besteht also; die Quelle dokumentiert den politischen Rahmen und wird in `grundlagen/eticket-deutschland.md` zitiert.
 
 **O3 — Berechtigungsstatus-Werte: Werte geklärt.** Die Reichweite bleibt als O3 in der Tabelle oben offen.
 [Q05](QUELLEN.md#q05), Kap. 2.1, nennt `berStatus` mit Datentyp `INT1`, einem Byte und der Codeliste **`WertobjektStatus_CODE`**; als „relevante Werte“ sind aufgeführt: **5** = Zurückgenommen / Cancelled, **7** = Aktiv / entsperrt / o.k., **8** = Neu, aber noch nicht aktiv / New, **19** = Gesperrt / Blocked. Ausgearbeitet in `berechtigungen/berstatus.md`.

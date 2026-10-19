@@ -2,31 +2,35 @@
 titel: berStatus
 englisch: entitlement status
 parent: lexikon/berechtigungen.md
-siehe_auch: [lexikon/berechtigungen/bersynchronnummer.md, lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md]
+siehe_auch: [lexikon/berechtigungen/bersynchronnummer.md, lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md, lexikon/berechtigungen/gueltigkeit.md, lexikon/kontrolle/sperrung.md]
 quellen: [Q02, Q05]
 status: belegt
 offene_fragen: [O3]
 stand: 2026-10-19
 codes:
   - wert: 5
+    codeliste: WertobjektStatus_CODE
     bedeutung: Zurückgenommen — Cancelled
     quelle: Q05
     fundstelle: Kap. 2.1 (PDF-S. 9)
     status: belegt
     verbundspezifisch: true
   - wert: 7
+    codeliste: WertobjektStatus_CODE
     bedeutung: Aktiv / entsperrt — o.k.
     quelle: Q05
     fundstelle: Kap. 2.1 (PDF-S. 9)
     status: belegt
     verbundspezifisch: true
   - wert: 8
+    codeliste: WertobjektStatus_CODE
     bedeutung: Neu, aber noch nicht aktiv — New
     quelle: Q05
     fundstelle: Kap. 2.1 (PDF-S. 9)
     status: belegt
     verbundspezifisch: true
   - wert: 19
+    codeliste: WertobjektStatus_CODE
     bedeutung: Gesperrt — Blocked
     quelle: Q05
     fundstelle: Kap. 2.1 (PDF-S. 9)
@@ -97,6 +101,15 @@ Eine Vorsicht bleibt: Diese vier Werte stehen in einem RMV-Dokument. Allerdings 
 
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (PDF-S. 9): `berStatus` im dynamischen Teil der Berechtigung, Datentyp `INT1` mit einem Byte, Codeliste `WertobjektStatus_CODE`; „relevante Werte“ 5 = Zurückgenommen / Cancelled, 7 = Aktiv / entsperrt / o.k., 8 = Neu, aber noch nicht aktiv / New, 19 = Gesperrt / Blocked · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Berechtigungsstatus“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 38 f. („Entsperrung“), S. 91 („Sperrung“)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [berSynchronNummer](bersynchronnummer.md)
+- [Entsperrung über Aktionsliste](../aktionsmanagement/entsperrung-ueber-aktionsliste.md)
+- [Gültigkeit](gueltigkeit.md)
+- [Sperrung](../kontrolle/sperrung.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

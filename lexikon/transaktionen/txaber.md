@@ -58,6 +58,13 @@ Und eine Besonderheit beim Datenschutz: In Kontrollnachweisen werden Fahrt- und 
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1 „RMV-EFS“ als Quelle des fachlichen Teils
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Ausgabe EFS über Aktionsliste](../aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
+- [logTransaktionsTyp](logtransaktionstyp.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

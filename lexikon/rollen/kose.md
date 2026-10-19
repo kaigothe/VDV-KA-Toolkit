@@ -54,6 +54,13 @@ Ein Blick in die Zukunft lohnt hier: In der neuen Generation wird es diesen zent
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 53 f. („Kontroll- und Sperrlistenservice / Hotlist Service“: die fünf Arten von Sperreinträgen, Bedeutung der Einträge, Berechtigungen zum Hinzufügen und Entfernen, Bearbeitung von Sperrnachweisen im Rahmen von Collecting and Forwarding nach ISO 24014-1, Wegfall der Funktion in (((etiCORE)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 (Rollencode KOSE = 5), Kap. 3.3 (Sperrlisten herunterladen) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Rollencodes](rollencodes.md)
+- [Kundenvertragspartner](kvp.md) (KVP)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

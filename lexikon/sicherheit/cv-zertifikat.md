@@ -10,42 +10,49 @@ offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 1
+    codeliste: keytype in TXCVCERTL
     bedeutung: NM- und SAM-Autorisierungsschlüssel für PKCS#1-Signatur
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 2
+    codeliste: keytype in TXCVCERTL
     bedeutung: SAM-Autorisierungsschlüssel für ISO-9796-2-Signatur
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 3
+    codeliste: keytype in TXCVCERTL
     bedeutung: SAM-Encryption-Schlüssel
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 4
+    codeliste: keytype in TXCVCERTL
     bedeutung: SAM-Signature-Schlüssel
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 5
+    codeliste: keytype in TXCVCERTL
     bedeutung: Keymanagement-Aktivierungsschlüssel
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 6
+    codeliste: keytype in TXCVCERTL
     bedeutung: Keymanagement- und Organisations-Signaturschlüssel
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
     status: belegt
     verbundspezifisch: true
   - wert: 7
+    codeliste: keytype in TXCVCERTL
     bedeutung: Zertifikat einer CA
     quelle: Q06
     fundstelle: Kap. 4.7 (PDF-S. 35)
@@ -104,6 +111,13 @@ Ein Detail für die Praxis: Für den VDV-Barcode braucht es ein eigenes Zertifik
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.7 „Zertifikatsliste TXCVCERTL“ (PDF-S. 35): `IONTransaktionsTyp_CODE` 254; Element `cvcertificate` mit `keytype` und den sieben Bedeutungen 1 bis 7; Feld `data` mit dem Zertifikat als TLV-Struktur und Verweis auf `[KA_SPEC_SAM]` Kapitel 4.3.3; Verweis auf die XML-Strukturdefinition in den Anlagen `KA-vHGS-Schnittstellen-1.107K20120104.zip` und `KA-vHGS-Schnittstellen-1.3.0.zip` · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 100 („ZSAM-Zertifikat / ASAM certificate“: zusätzliches SAM-bezogenes Zertifikat, erforderlich für die Ausgabe eines VDV-Barcodes auf Basis einer statischen Berechtigung), S. 100 („Zertifizierung“ als Rolle des Scheme Manager)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SAM-SPEC, Inventarnummer 8, als Normquelle des Zertifikatsaufbaus)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Public Key Infrastructure](pki.md) (PKI)
+- [Secure Application Module](sam.md) (SAM)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

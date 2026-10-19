@@ -56,6 +56,13 @@ Man sieht daran etwas Grundsätzliches: Wer Zahlungsmittel als Fahrschein nutzt,
 - [Q30](../../QUELLEN.md#q30) – VDV eTS, Weißbuch ABT V1.0.1, Kap. 5.2.9 „Keine Sperrlisten / Schutz gegen Missbrauch“ (Sperrlisten im Sinne der VDV-KA nicht erforderlich wegen Echtzeitabgleich der ID-Token mit dem Kontroll-Hintergrundsystem; Pflicht aller medienausgebenden Institutionen, Sperrungen unverzüglich in den zentralen Systemen abzubilden; Bezug auf gestohlene Kreditkarten)
 - [Q19](../../QUELLEN.md#q19) – Ticketer, „PAR Deny Lists“ (16.02.2024): Deny Lists auf Account-Ebene über die Payment Account Reference gegenüber bisherigen Listen auf Ebene der einzelnen Kartennummer (PAN); Sperrung aller einem Konto zugeordneten Karten unabhängig von der Kartennummer der Mobile-Wallet; Anlass ist das wiederholte Neuregistrieren von Karten in Mobile-Wallets zur Umgehung von Sperren · *Herstellerquelle, belegt Marktpraxis, nicht den Standard*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrliste](../kontrolle/sperrliste.md)
+- [ID-Token](id-token.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -60,6 +60,13 @@ Ein letzter Punkt mit praktischem Wert: Weil Name und Geburtsdatum **auf der Kar
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings (Tag 0xDB „Fahrgast“ mit `efsFahrgastName`, `efsFahrgastGeburtsdatum` und `efsFahrgastGeschlecht`; Kürzungsregel für Namen, Standardwert für fehlende Geburtsdaten) · *Herstellerquelle, belegt Marktpraxis, nicht den Standard*
 - [Q11](../../QUELLEN.md#q11) – ausgewertete Nachricht (Name und Geburtsdatum im produktspezifischen Teil eines Azubi-Abos). **Nicht öffentliche Unterlage.**
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Elektronischer Fahrschein](../berechtigungen/efs.md) (EFS)
+- [Produktspezifischer Teil](../berechtigungen/produktspezifischer-teil.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

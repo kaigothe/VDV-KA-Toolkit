@@ -9,6 +9,7 @@ offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 0
+    codeliste: efsFahrgastGeschlecht
     bedeutung: efsFahrgastGeschlecht — unspecified
     quelle: Q12
     fundstelle: Feldliste und FAQ
@@ -60,6 +61,13 @@ Und ein Satz zum praktischen Nutzen: Weil diese drei Angaben **auf der Karte** l
 
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings: Tag 0xDB „Fahrgast“ nach Anlage TLV EFS V190, S. 9, Abschn. 2.2; `efsFahrgastGeschlecht` fest 0x00 „unspecified“ gemäß Vorgabe VDV-ETS; `efsFahrgastGeburtsdatum` mit Geburtsdatum, sonst 1970-01-01; `efsFahrgastName` als Typ-1-anonymisierter Name, sonst leer; Verweis auf KA HD_BOM-Spec_V190 Abschn. 6.7.2 · *Herstellerquelle, belegt Marktpraxis*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (Anlage TLV EFS, Inventarnummer 2, als Normquelle der Tags)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Kürzungsregel für Namen](kuerzungsregel-fuer-namen.md)
+- [Personengebunden](../medien/personengebunden.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

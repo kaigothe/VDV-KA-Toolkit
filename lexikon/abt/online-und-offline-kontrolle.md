@@ -58,6 +58,13 @@ Eine Folge dieser Verlagerung wird gern übersehen und ist für Beschaffungen be
 - [Q01](../../QUELLEN.md#q01) – VDV eTS, Einordnung von Account Based Ticketing, V1.0 (Konnektivität als entscheidende Anforderung; Hybridsysteme zur Minimierung von Datenverlust)
 - [Q18](../../QUELLEN.md#q18) – Kentkart, „To validate, or not to validate“ (Validierungs- und Kontrollkonzepte im ABT) · *Herstellerquelle, belegt Marktpraxis*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Hybridsystem](hybridsystem.md)
+- [Sichtkontrolle](../kontrolle/sichtkontrolle.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

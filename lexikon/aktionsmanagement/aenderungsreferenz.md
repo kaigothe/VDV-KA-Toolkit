@@ -9,6 +9,7 @@ offene_fragen: [O13]
 stand: 2026-10-19
 codes:
   - wert: 0
+    codeliste: amAenderungsreferenz_ID
     bedeutung: vermutlich keine Vorgänger-Berechtigung, also Neuausgabe
     quelle: Q11
     fundstelle: Feld amAenderungsreferenz_ID im ausgewerteten Datensatz
@@ -50,6 +51,12 @@ Deshalb steht dieser Artikel auf „zu prüfen“. Für ein Auswertungswerkzeug 
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `amAenderungsreferenz_ID` mit dem Wert 0/0, dazu `berSynchronNummer` 1 und `logTransaktionsTyp` 37. **Nicht öffentliche Unterlage**; übernommen sind nur Feldnamen und Werte.
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41, als Normquelle der Feldsemantik)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag zur Änderungsreferenz (geprüft am Inhaltsverzeichnis, S. 2–13)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Auftragstyp](auftragstyp.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

@@ -67,6 +67,13 @@ Für jemanden, der eine solche Nachricht auswertet, heißt das: Fehlt ein Signat
 - [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.3.1 (`TX_BASE` nach KA 1.107; die Signaturattribute werden nicht verwendet und nicht gefüllt), Kap. 3.3.2 (Adressierung über die Sender- und Empfängerattribute) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4; KA XML-Schemata und WSDL, Inventarnummer 5)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Duplikaterkennung](duplikaterkennung.md)
+- [logTransaktionsTyp](logtransaktionstyp.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

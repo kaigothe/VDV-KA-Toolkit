@@ -50,6 +50,13 @@ Eine Fußnote für Nachrichtenleser: Der Rollencode des Applikationsherausgebers
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 23 („Applikationsherausgeber / Application Owner“: Teil des Scheme Manager, Anwendungsvertrag, Autorisierung des Weiterverkaufs, Anwendungsregeln, Gewährung des Teilnahmerechts an PV, KVP und DL, Kennungen und Schlüsselnutzung, Berechtigung der KVP zur Applikationsausgabe, Informationen zur Applikationsinstanz-ID bei defekten Medien, Zertifikatsmanagement, Verweis auf das Hauptdokument; Abkürzungen AH und AO)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Versionshistorie zu v2.2 („In Kap. 4.10 Rollencode für den AH von 5 auf 4 korrigiert“, 16.03.2018), Kap. 4.10 · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Organisations-ID](organisations-id.md) (Org-ID)
+- [Rollencodes](rollencodes.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -67,6 +67,13 @@ Die Unterartikel gehen diese Schritte einzeln durch — und benennen jeweils, wa
 - [XSD und WSDL](datenformate/xsd.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigungen](berechtigungen.md)
+- [Transaktionen](transaktionen.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

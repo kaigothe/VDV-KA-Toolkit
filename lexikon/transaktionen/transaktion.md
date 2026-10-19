@@ -47,6 +47,13 @@ Und bricht es ab, gibt es dafür seit der Version 1.3.0 eine eigene Meldung.
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 96 („Transaktion / Transaction“: Definition als logische Einheit, Forderung „vollständig und fehlerfrei oder gar nicht“, Beschränkung auf Nutzermedium und Akzeptanzterminal unter Mithilfe eines SAM), S. 18 („Aktion“, Abgrenzung)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.2 (`TX*`-Datenstrukturen für den Austausch zwischen Hintergrundsystemen), Kap. 4.5 (`TXTRANSABBRUCH` ab KA 1.3.0) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Nachweis](nachweis.md)
+- [Aktion](../aktionsmanagement/aktion.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

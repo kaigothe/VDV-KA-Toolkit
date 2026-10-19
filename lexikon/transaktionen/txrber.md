@@ -46,6 +46,12 @@ Bei der Zuordnung der Kennzahl 39 zu `TXRBER` ist dieses Lexikon vorsichtig. Das
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (`TXRBER` als einer der drei Transaktionsnachweise aus Aktionsausführung, Kennzeichnung über spezifische KA-Transaktionstyp-Codes; Fußnote 1: Rückgabetransaktion EFS über Aktionsliste = 39; `TXRMBER` ab KA 1.3.0), Kap. 4.3.2 (Struktur aus `[KA_SPEC_SST]`, zusätzlich `[KA_SPEC_AktM]`) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4; KA AktM-SPEC, Inventarnummer 41)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Rücknahme EFS über Aktionsliste](../aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

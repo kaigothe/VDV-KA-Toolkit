@@ -46,6 +46,13 @@ Diese Nullen sind also keine fehlende Angabe und kein Fehler. Sie sind eine Auss
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 (Aufbereitung der Liste über Terminalgruppen und Produkte in KA 1.X)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (spezifische Aktionslisten für einzelne Terminals bzw. Terminalgruppen; zum Systemstart nicht eingesetzt) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsliste](aktionsliste.md) (TXAML)
+- [Aktionsdifferenzliste](aktionsdifferenzliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -47,6 +47,13 @@ Für die Praxis heißt das: Dem Namen nicht trauen, der Dokumentation trauen. We
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 39 („Entsperrnachweis“: Empfängerregel)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4; KA AktM-SPEC, Inventarnummer 41)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Entsperrnachweis](../aktionsmanagement/entsperrnachweis.md)
+- [Entsperrung über Aktionsliste](../aktionsmanagement/entsperrung-ueber-aktionsliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

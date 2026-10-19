@@ -52,6 +52,13 @@ Und noch ein Satz, der beim ersten Lesen leicht untergeht: Ein EFS kann auch **i
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 37 f. („Elektronischer Fahrschein / Electronic Ticket“: Ablage auf Nutzermedium, in der Cloud oder als statische Berechtigung auf dem Smartphone; Festschreibung von EFM-Produkt und Tarifparametern mit Nutzungsbeginn; EFS als Fahrtberechtigung; übertragbar oder personengebunden samt zusätzlicher Identifikationsmittel bei der Kontrolle; Abkürzungen EFS und ET), S. 30 (EFS und eBezahlberechtigung als die beiden Formen in einer Applikation), S. 36 und S. 96 (Ablage der Tarifparameter als TLV-EFS)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigung](berechtigung.md)
+- [Statische Berechtigung](statische-berechtigung.md) (StatBer)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

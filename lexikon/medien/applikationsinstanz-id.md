@@ -53,6 +53,13 @@ Deshalb steht diese ID auch gedruckt auf der Karte.
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 24 („Applikationsinstanz-ID / Application Instance ID“: Lage auf dem Nutzermedium, Identifikation der Instanz, Aufsetzen von Schlüsseln, Zertifikaten und Medienverwaltung auf dieser ID, eindeutige Identifikation des Nutzermediums aus Sicht des EFM), S. 22 (Hinterlegung von Personendaten im Hintergrundsystem gemeinsam mit der ID, Anonymität), S. 23 (Verantwortung des Applikationsherausgebers für Informationen zur Applikationsinstanz-ID bei defekten Nutzermedien, Zertifikatsmanagement), S. 54 (Sperreinträge für Applikationen beim Sperrlistenservice)
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `appInstanz_ID` als Zielmedium der Aktion samt Org-ID des KVP. **Nicht öffentliche Unterlage**; übernommen ist nur der Feldname.
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Nutzermedium](nutzermedium.md) (NM)
+- [Applikationsherausgeber](../rollen/ah.md) (AH)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

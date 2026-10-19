@@ -66,6 +66,13 @@ Und schließlich: Eine Karte ist nicht einfach da und benutzbar. Sie wird angele
 - [Personengebunden](medien/personengebunden.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigungen](berechtigungen.md)
+- [Akzeptanzterminal](rollen/akzeptanzterminal.md) (AKT)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

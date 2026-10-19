@@ -3,13 +3,14 @@ titel: TXEBER
 abkuerzung: TXEBER
 englisch: inspection attestation
 parent: lexikon/transaktionen.md
-siehe_auch: [lexikon/transaktionen/logtransaktionstyp.md, lexikon/transaktionen/nachweis.md]
+siehe_auch: [lexikon/transaktionen/logtransaktionstyp.md, lexikon/transaktionen/nachweis.md, lexikon/kontrolle/kontrollnachweise.md]
 quellen: [Q02, Q06, Q25]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 59
+    codeliste: IONTransaktionsTyp_CODE
     bedeutung: IONTransaktionsTyp_CODE für TXEBER aus Kontrolle
     quelle: Q06
     fundstelle: Kap. 5.1.2 (PDF-S. 40)
@@ -58,6 +59,14 @@ Besonders aufschlussreich ist die Abgrenzung: Für Pias Ausgabenachweis gilt das
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.2.3 (Kontrollnachweise `TXEBER`, `TXEMBER`, `TXKNAWDM`, `TXKNAWA`, `TXKNAWB` aus `[KA_SPEC_SST]`), Kap. 5.1 (Durchführung der Kontrolltransaktion `TXEBER`, `TXEMBER`), Kap. 5.1.2 „Datenschutz“ (PDF-S. 40): Begutachtung durch den Datenschutz des Landes Hessen im November 2016, `IONTransaktionsTyp_CODE` = 059 und `logTransaktionsTyp.code` = 27, die drei zu leerenden Attribute, Ausnahme von der MAC-Validierung, Abgrenzung zum `TXABER` · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 65 („Nachweis“, Kontrolle als Anlass)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4)
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [logTransaktionsTyp](logtransaktionstyp.md)
+- [Nachweis](nachweis.md)
+- [Kontrollnachweise](../kontrolle/kontrollnachweise.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

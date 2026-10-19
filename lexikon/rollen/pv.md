@@ -48,6 +48,13 @@ Und genau deshalb geht Pias Ausgabenachweis am Ende nicht nur an die Verkehrsbet
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 74 („Produktverantwortlicher / Product Owner“: Entwicklung von EFM-Produkten aus den Tarifen, Teilnahmevertrag, Registrierung der Produkte beim Scheme Manager), S. 19 (die Aktionsliste wird vom System des PV bereitgestellt), S. 20 f. (Rolle des PV im Lebenszyklus der Aktion), S. 21 (Aktionslistenservice als Dienst des PV-Systems), S. 53 (Kontrollnachweise an den PV)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 (Rollencode PV = 3) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionslistenservice](alise.md) (ALISE)
+- [Aktionsliste](../aktionsmanagement/aktionsliste.md) (TXAML)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

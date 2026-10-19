@@ -67,6 +67,12 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 - [TXSNAWB](transaktionen/txsnawb.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktionsmanagement](aktionsmanagement.md) (AktM)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

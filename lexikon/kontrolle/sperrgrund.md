@@ -52,6 +52,13 @@ Aus einem aktuellen Branchenpapier kennt man wenigstens die praktisch wichtigen 
 - [Q33](../../QUELLEN.md#q33) – KCD NRW, Ergebnisdokument der Arbeitsgruppe Kontrolle, V1.3, Kap. 7.2 (Kündigung, Stornierung und Zahlungsrückläufer als Anlässe für eine unmittelbare Sperre; Begründung über das wirtschaftliche Schadenspotential von Dauerberechtigungen; Ersatz des Tickets bei unabsichtlichem Verlust), Kap. 4.2 (stornierte bzw. erstattete Tickets, Kauf nach EBE, gekündigte Tickets) · *produktbezogen auf das Deutschlandticket*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle der Codelisten)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrlisteneintrag](sperrlisteneintrag.md)
+- [Sperrliste](sperrliste.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

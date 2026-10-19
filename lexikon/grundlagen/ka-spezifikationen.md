@@ -67,6 +67,13 @@ Daraus folgt eine nützliche Vorsicht: Ein Kurzzeichen wie „KA AktM-SPEC“ al
 - [Q26](../../QUELLEN.md#q26) – VDV eTicket Service, Support: Bereitstellung von Spezifikationen und Releases über das ASM-Tool
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE als öffentlich verfügbares Dokument der Inventarnummer 0
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Versionen](versionen.md)
+- [VDV-Kernapplikation](vdv-kernapplikation.md) (KA)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

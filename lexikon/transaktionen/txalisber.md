@@ -60,6 +60,13 @@ Für das geplante Werkzeug ist das die wichtigste Erkenntnis dieses Lexikons. Ma
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.3.1 (die Aktionsliste heißt dort `TXAML`; `txalisber` wird nicht genannt) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4.3.1.3 f. (nur zwei Versionen gleichzeitig; Releases innerhalb einer Version über den gemeinsamen Namensraum kompatibel), Kap. 4.3.2 f., PDF-S. 114 f. (EBNF der Dateinamen- und Namensraumkonvention; `NamensraumBereich` mit `pv-alise` und `kvp-alise`, WSDL-Bereiche `PV_ALISE` und `KVP_ALISE`; Namensraum endet auf eine Version)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [TXAML](txaml.md)
+- [Auftragstyp](../aktionsmanagement/auftragstyp.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

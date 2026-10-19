@@ -52,6 +52,13 @@ Das ist der unspektakuläre Grund, warum Kontrolle in der Praxis so viel schwier
 - [Q20](../../QUELLEN.md#q20) – Genfare, Hand Held Validator · *Herstellerquelle*
 - [Q16](../../QUELLEN.md#q16) – amcon, Customers & Use Cases · *Herstellerquelle*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sichtkontrolle](sichtkontrolle.md)
+- [Akzeptanzterminal](../rollen/akzeptanzterminal.md) (AKT)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -64,6 +64,13 @@ Dass es zwei Typen der Maskierung gibt und der zweite hier unbekannt bleibt, ist
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings, FAQ „Why is the efsFahrgastname encoded“: Verweis auf KA HD_BOM-Spec_V190, Abschn. 6.7.2 „Kürzungsregel für Namen und Vornamen“; zwei Typen der Anonymisierung, Typ 1 „Maskierter und gekürzter Name“ verwendet, Typ 2 nicht unterstützt; das wörtlich wiedergegebene Beispiel samt Anzeigeform · *Herstellerquelle, belegt Marktpraxis*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle des Abschnitts 6.7.2)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Tag 0xDB Fahrgast](tag-0xdb-fahrgast.md)
+- [Basisobjektmodell](bom.md) (BOM)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

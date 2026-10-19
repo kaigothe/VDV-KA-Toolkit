@@ -3,7 +3,7 @@ titel: TLV-Kodierung
 abkuerzung: TLV
 englisch: TLV encoding
 parent: lexikon/datenformate.md
-siehe_auch: [lexikon/datenformate/bom.md, lexikon/berechtigungen/produktspezifischer-teil.md]
+siehe_auch: [lexikon/datenformate/bom.md, lexikon/berechtigungen/produktspezifischer-teil.md, lexikon/datenformate/nullwerte.md]
 quellen: [Q02, Q05, Q11, Q12, Q25, Q35]
 status: belegt
 offene_fragen: [O6]
@@ -68,6 +68,14 @@ Genau solche Abweichungen soll ein Analysewerkzeug anzeigen statt stillschweigen
 - [Q35](../../QUELLEN.md#q35) – KCD NRW, Produktparameter (Tag 0xDA „Grundlegende Daten“ mit der Verkaufsproduktnummer) · *verbundspezifisch*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (Anlage TLV EFS, Inventarnummer 2)
 - [Q11](../../QUELLEN.md#q11) – ausgewertete Nachricht (Längenangabe 0x57 bei 90 folgenden Byte). **Nicht öffentliche Unterlage.**
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Basisobjektmodell](bom.md) (BOM)
+- [Produktspezifischer Teil](../berechtigungen/produktspezifischer-teil.md)
+- [Nullwerte](nullwerte.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

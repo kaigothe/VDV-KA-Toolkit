@@ -46,6 +46,13 @@ Im Aktionsmanagement gibt es noch zwei Spielarten: den **beauftragenden** und de
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 58 („Kundenvertrag“: Qualifizierung durch die Organisations-ID des KVP; Beginn des Eintrags „Kundenvertragspartner“), S. 59 (deutsche Beschreibung: Zusammensetzung aus sechs ISO-24014-1-Rollen, Verantwortung für Buchhaltung, Ticketing und Abrechnung, Primär- und Fremd-KVP)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 1.2.2 (beauftragender und ausführender KVP, dauerhafte Speicherung beim beauftragenden KVP mit der wirtschaftlichen Verantwortung), Kap. 4.10 (Rollencode KVP = 1) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Produktverantwortlicher](pv.md) (PV)
+- [Rollencodes](rollencodes.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -49,6 +49,13 @@ Ein Satz zum Mitnehmen: Der Auftrag ist der Plan, der Nachweis die Quittung. Wer
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 65 („Nachweis / Attestation“: authentisches Protokoll einer zuvor ausgeführten Transaktion auf Nutzermedium-Ebene, Anlässe, Weiterleitung an die Hintergrundsysteme, Hinweis für (((etiCORE). Eigene Glossareinträge bestehen für Entsperrnachweis (S. 39), Leistungsnachweis (S. 61) und Sperrnachweis (S. 90); die Seitenangaben stammen aus dem Inhaltsverzeichnis, S. 2–13.
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 3.1 (Ablehnung bei negativem Ergebnis der MAC-Prüfung), Kap. 4.2.3 (Kontrollnachweise), Kap. 4.3.2 (Transaktionsnachweise aus Aktionsausführung), Kap. 4.4.1 (Ausgabenachweise aus Verkauf) · *verbundspezifisch: eTicket RheinMain*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Transaktion](transaktion.md)
+- [Entsperrnachweis](../aktionsmanagement/entsperrnachweis.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

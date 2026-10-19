@@ -84,6 +84,13 @@ Eine Beobachtung zum Schluss: Dass eine Berechtigung in einer Cloud liegen darf,
 - [Ticket Cloud](abt/ticket-cloud.md)
 <!-- /GEN:unterartikel -->
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigung](berechtigungen/berechtigung.md)
+- [Kontrolle](kontrolle.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

@@ -2,7 +2,7 @@
 titel: Sperrliste
 englisch: Hotlist
 parent: lexikon/kontrolle.md
-siehe_auch: [lexikon/kontrolle/sperrlisteneintrag.md, lexikon/rollen/kose.md]
+siehe_auch: [lexikon/kontrolle/sperrlisteneintrag.md, lexikon/rollen/kose.md, lexikon/kontrolle/sperrung.md]
 quellen: [Q02, Q06, Q33]
 status: belegt
 offene_fragen: []
@@ -53,6 +53,14 @@ Das ist der eigentliche Grund: Ein Deutschlandticket ist eine Dauerberechtigung.
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 89 („Sperrliste / Hotlist“: Name aus der EN übernommen, Menge von Sperrlisteneinträgen je Objektart, Verteilung in Systeme und Terminals, physische gegenüber logischer Sperre)
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 3.2 (Sperr- und Aktionslisten nur einmal täglich erstellt und bereitgestellt), Kap. 3.3 (Sperrlisten herunterladen), Kap. 4.1 (Nachrichtentypen im Manifest: `TXSLNM`/`TXSLNMRESP`, `TXSLOS`/`TXSLORGRESP`/`TXSLSAMRESP`, `TXSLK`/`TXSLKASYMRESP`/`TXSLKSYMRESP`), Kap. 4.2.1 (ältere Strukturen aus KA_SPEC_SST_1107, `*RESP`-Varianten aus KA_SPEC_SST_1300) · *verbundspezifisch: eTicket RheinMain*
 - [Q33](../../QUELLEN.md#q33) – KCD NRW, Ergebnisdokument der Arbeitsgruppe Kontrolle, V1.3 (Pflicht zur gemeinsamen bundesweiten Sperrliste; Beschlussvorschlag zum Aufbau einer neartime- bzw. Online-Sperrliste für das Deutschlandticket; Kap. 7.2 zum Sperrmanagement) · *produktbezogen auf das Deutschlandticket*
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Sperrlisteneintrag](sperrlisteneintrag.md)
+- [Kontroll- und Sperrlistenservice](../rollen/kose.md) (KOSE)
+- [Sperrung](sperrung.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

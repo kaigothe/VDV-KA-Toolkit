@@ -60,6 +60,13 @@ Diese Verschiebung ist auch der Grund, warum Account Based Ticketing so viel Auf
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 36 f. („Elektronisches Fahrgeld Management“: Oberbegriff, die drei Maßnahmenbereiche, die drei Stufen I bis III mit ihren Inhalten; auch „EFM Produkt“), S. 48 („IN-OUT System“: Ausbaustufe III, CICO, BIBO und CIBO als Systemvertreter)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 (Ausbauvarianten 1 bis 3)
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Ausbauvarianten](ausbauvarianten.md)
+- [VDV-Kernapplikation](vdv-kernapplikation.md) (KA)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

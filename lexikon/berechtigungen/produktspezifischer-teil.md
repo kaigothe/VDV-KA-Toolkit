@@ -2,7 +2,7 @@
 titel: Produktspezifischer Teil
 englisch: product specific part
 parent: lexikon/berechtigungen.md
-siehe_auch: [lexikon/berechtigungen/berechtigung.md, lexikon/berechtigungen/produkt.md]
+siehe_auch: [lexikon/berechtigungen/berechtigung.md, lexikon/berechtigungen/produkt.md, lexikon/datenformate/nullwerte.md]
 quellen: [Q02, Q05, Q11, Q12, Q35]
 status: belegt
 offene_fragen: [O6]
@@ -58,6 +58,14 @@ Eine Auffälligkeit aus der Praxis: In einer echten Nachricht gab die Länge 87 
 - [Q12](../../QUELLEN.md#q12) – TapConnect, VDV Barcode Field Mappings (Tag 0xDB „Fahrgast“ mit `efsFahrgastName`, `efsFahrgastGeburtsdatum`, `efsFahrgastGeschlecht`; Verweis auf die Anlage TLV EFS) · *Herstellerquelle*
 - [Q35](../../QUELLEN.md#q35) – KCD NRW, Produktparameter (Tag 0xDA mit der Verkaufsproduktnummer) · *verbundspezifisch: NRW*
 - [Q11](../../QUELLEN.md#q11) – ausgewertete Nachricht (Längenangabe 0x57 bei 90 folgenden Byte). **Nicht öffentliche Unterlage.**
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Berechtigung](berechtigung.md)
+- [Produkt](produkt.md)
+- [Nullwerte](../datenformate/nullwerte.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

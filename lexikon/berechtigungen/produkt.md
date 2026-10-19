@@ -47,6 +47,13 @@ Und schließlich: Die Produktnummer allein genügt nie. Produkt 2001 heißt beim
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 73 („Produkt“ als Tarifprodukt oder EFM-Produkt), S. 36 („EFM Produkt“: Definition durch den PV, Abbildung eines oder mehrerer Tarifprodukte, Eindeutigkeit der Nummer je PV und gemeinsam mit der Org-ID im gesamten EFM-System, Definition über Nutzungsregeln und Preisbildung, Produkt-Template für die Ablage der Tarifparameter als TLV-EFS, die drei ermöglichten Funktionen), S. 94 („Tarifprodukt“)
 - [Q35](../../QUELLEN.md#q35) – KCD NRW, Produktparameter der Tarife in NRW, V1.0 (Tarifproduktnummer bzw. Verkaufsproduktnummer je PV, im VRS „Servicenummer“, im WestfalenTarif „TicketArtCode“; EFM-Produktnummer; Zusammenfassung mehrerer Tarifprodukte zu einem EFM-Produkt) · *verbundspezifisch: NRW*
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Produktnummer](produktnummer.md)
+- [Produktverantwortlicher](../rollen/pv.md) (PV)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

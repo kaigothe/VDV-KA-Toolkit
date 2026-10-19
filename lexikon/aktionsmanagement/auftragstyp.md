@@ -9,6 +9,7 @@ offene_fragen: [O2, O9]
 stand: 2026-10-19
 codes:
   - wert: 13
+    codeliste: amAuftragsTyp
     bedeutung: vermutlich Ausgabe einer Berechtigung über die Aktionsliste
     quelle: Q11
     fundstelle: Feld amAuftragsTyp im ausgewerteten Datensatz
@@ -52,6 +53,13 @@ Deshalb trägt dieser Artikel den Status „zu prüfen“, und die Frage steht a
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `amAuftragsTyp` mit dem Wert 13. **Nicht öffentliche Unterlage**; übernommen sind nur Feldname und Wert, keine weiteren Inhalte.
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 (die vier möglichen Aktionen einer Aktionsliste)
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41, als Normquelle der Codeliste); Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsauftrag …“
+
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktion](aktion.md)
+- [Ausgabe EFS über Aktionsliste](ausgabe-efs-ueber-aktionsliste.md)
+<!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->
 ---

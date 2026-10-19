@@ -51,6 +51,14 @@ Eine Einschränkung zum Schluss, die für dieses Lexikon typisch ist: Die Nachri
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [Aktion](aktion.md)
+- [Aktionsliste](aktionsliste.md) (TXAML)
+- [Aktionslistenservice](../rollen/alise.md) (ALISE)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

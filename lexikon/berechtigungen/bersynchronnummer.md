@@ -54,6 +54,13 @@ Was offen bleibt: Ob eine Sperrung den Zähler erhöht, lässt sich aus den vorl
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Synchronnummer“ (geprüft am Inhaltsverzeichnis, S. 2–13)
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `berSynchronNummer` mit dem Wert 1 bei leerer Änderungsreferenz und Status 7. **Nicht öffentliche Unterlage**; übernommen sind nur Feldname und Wert.
 
+<!-- GEN:siehe_auch -->
+## Siehe auch
+
+- [berStatus](berstatus.md)
+- [Änderungsreferenz](../aktionsmanagement/aenderungsreferenz.md)
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 
