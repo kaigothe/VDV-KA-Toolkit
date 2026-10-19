@@ -1,0 +1,234 @@
+# Plan: VDV-KA-Lexikon
+
+**Stand:** 2026-10-19 · **Status:** Planung, wartet auf Freigabe
+
+Dieses Dokument hält das Konzept des Lexikons, die getroffenen Entscheidungen samt Begründung, die offenen Fragen und die Umsetzungsphasen fest. Die dauerhaften Arbeitsregeln stehen in [CLAUDE.md](CLAUDE.md), der Begriffsbaum in [STRUKTUR.md](STRUKTUR.md).
+
+---
+
+## 1. Ziel und Zweck
+
+Ein Lexikon zur **VDV-Kernapplikation 1.x**, zu **eTicket Deutschland** und zu **Account Based Ticketing** als reines Markdown-Repository. Jeder Fachbegriff bekommt einen eigenen kleinen Artikel mit zwei Ebenen: einer präzisen fachlichen Erklärung und einem Beispiel aus der fiktiven Welt Bärstadt.
+
+Das Lexikon ist die **erste Stufe** des VDV-KA-Toolkits. Die zweite Stufe ist ein Werkzeug, das ALISE-Nachrichten visualisiert und offensichtliche Fehler kennzeichnet. Diese Reihenfolge ist richtig: Das Werkzeug braucht genau das, was das Lexikon erarbeitet — Feldbedeutungen, Codelisten und die Unterscheidung zwischen belegtem Wissen und Vermutung. Das Lexikon ist deshalb bewusst so angelegt, dass es später **maschinenlesbar** ausgewertet werden kann (siehe Entscheidung E8).
+
+---
+
+## 2. Ausgangslage nach der Quellenbeschaffung
+
+Alle erreichbaren Quellen liegen jetzt in [QUELLEN/](QUELLEN/) und sind in [QUELLEN.md](QUELLEN.md) verzeichnet: **19 PDFs und 19 HTML-Seiten**, zusammen rund 27 MB.
+
+**Was dabei gewonnen wurde:**
+
+- **Q06** (RMV PH 06-02, 46 Seiten) lag lokal vor und ist identifiziert. Die ergiebigste Quelle für Nachrichten, Rollencodes und Abläufe.
+- **Q05, Q07, Q08, Q25** waren auf `mtv-unternehmen.de` gelöscht (HTTP 404) und wurden aus dem Internet Archive geholt. Damit ist auch **Q05** verfügbar — die einzige Quelle für die berStatus-Codes, die bisher überall nur zitiert wurden.
+- **Q25** (eTicket-Regelwerk, 273 Seiten) ist der wichtigste Neuzugang. Es enthält das **vollständige Verzeichnis der KA-Spezifikationen mit Inventarnummern**, die **Ausbauvarianten** und die **Elementarprozesslisten je Rolle** — alles öffentlich belegbar.
+- **Q30–Q36** wurden über die Downloadseite des KCD NRW neu gefunden, darunter das **Weißbuch ABT** des VDV eTS und mit **Q31** ein Dokument mit Stand April 2026.
+- **Q02** (Glossar, 101 Seiten) ist als Begriffsgerüst ausgewertet: **138 zweisprachige Definitionen** mit Seitenzahl, jeweils mit deutscher und englischer Abkürzung. Das deckt die Felder `titel`, `englisch` und `abkuerzung` im Frontmatter direkt aus einer Primärquelle.
+
+**Was weiterhin fehlt:** die KA-Spezifikationen selbst (BOM, SST, AktM, XSD) und damit die vollständigen Codelisten. Sie sind nur über das ASM-Tool des VDV eTS zu bekommen ([Q26](QUELLEN.md#q26)). Das ist die größte inhaltliche Schranke des Projekts und der Grund für die Statuskennzeichnung (Entscheidung E5).
+
+**Werkzeug:** Auf dem Rechner war weder `pdftotext` noch eine Python-PDF-Bibliothek verfügbar. Es gibt daher [tools/pdftext.py](tools/pdftext.py), einen Extraktor allein mit der Standardbibliothek. Er setzt Zeilen über die Textposition zusammen, wertet Schriftgröße und Kerning aus und gibt den Text **seitenweise mit Seitenmarkern** aus. Letzteres ist der eigentliche Zweck: Ohne verlässliche Seitenzahlen sind die geforderten Fundstellen nicht zu belegen.
+
+---
+
+## 2a. Korrekturen gegenüber den Rechercheakten
+
+Beim Prüfen der Fundstellen an den Dokumenten selbst haben sich drei Punkte ergeben, die von den bisherigen Notizen in [Quellen_LBV.md](Quellen_LBV.md) und [QUELLEN_ALISE.md](QUELLEN_ALISE.md) abweichen. Sie sind wichtig, weil sie in Artikel und später ins Analysewerkzeug eingehen.
+
+**K1 — Der Rollencode 31 für ALISE gilt nicht pauschal.**
+Bisherige Notiz: „ALISE ist eine eigene KA-Rolle mit dem Rollen-Code 31“. Tatsächlich steht in [Q06](QUELLEN.md#q06), Fußnote 7 (PDF-S. 39): In der Schnittstellenversion KA 1.1.07 wurde 31 *alternativ* akzeptiert. Ab KA 1.3.0 ist 31 „für einen aus dem PVS ausgelagerten eigenständigen zentralen ALISE-Server reserviert“; ist ALISE in das PV-System integriert, ist die **Rolle 3** zu verwenden — und in der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen **zwingend der Rollencode 3** zu verwenden. Die Versionshistorie des Dokuments führt das als „Wegfall des Rollen-Code 31 ALISE in KA 1.3.0“. Für die Interpretation einer Nachricht heißt das: Aus dem Rollencode allein lässt sich nicht auf ALISE schließen, und 31 ist ein Hinweis auf eine ältere Schnittstellenversion.
+
+**K2 — Die Aktionsliste kennt vier Aktionen, nicht drei.**
+Bisher wurden drei genannt (Ausgabe EFS, Entsperren, Rücknahme). [Q02](QUELLEN.md#q02), S. 19, nennt als vierte: **„Nur für (((etiCORE: Sperren einer Berechtigung auf Grundlage der ID des Aktionsauftrags“**. Die Rücknahme gilt dort außerdem für den EFS *oder* eine eBezahlberechtigung.
+
+**K3 — KA 1.X und etiCORE unterscheiden sich bei der Aktionsliste.**
+[Q02](QUELLEN.md#q02), S. 19: In etiCORE erhält jeder anfordernde ausführende KVP **dieselbe** Aktionsliste. In **KA 1.X** kann der ausführende KVP die Liste über die Konfiguration von Terminalgruppen und Produkten für sich aufbereiten, sodass eine **spezifische Aktionsliste je ausführendem KVP** entsteht. Das ist ein belegter Versionsunterschied und erklärt, warum die Felder `amTerminalGruppe_ID` und `amTerminal_ID` überhaupt existieren.
+
+Zusätzlich bestätigt [Q02](QUELLEN.md#q02), S. 20 f., ein **Statusmodell der Aktion** („bestellt“ → „aktiv“ → „ausgeführt“), das in den Notizen fehlte und den Kern des Kategorieartikels bildet.
+
+---
+
+## 3. Entscheidungen
+
+### E1 — Ein Baum, Kategorieartikel neben dem Ordner
+
+Die Forderung „von jedem Artikel zu Home, Parent und allen Children“ erzwingt **genau einen Parent je Artikel**. Der Kategorieartikel liegt **neben** seinem Ordner, nicht darin:
+
+```
+lexikon/aktionsmanagement.md          ← Kategorieartikel
+lexikon/aktionsmanagement/
+    aktionsliste.md                   ← Unterartikel
+    auftragstyp.md
+```
+
+**Begründung:** Der Breadcrumb eines Unterartikels wird damit genau so kurz wie gefordert — `[Home](../../README.md) › [Aktionsmanagement](../aktionsmanagement.md) › Aktionsliste`. Die Alternative `index.md` im Ordner wurde verworfen: Zehn gleichnamige Dateien machen Editor-Tabs und die Obsidian-Schnellsuche unbrauchbar. Das Muster lässt sich beliebig tief fortsetzen.
+
+### E2 — Dateinamen: streng aus dem Titel abgeleitet
+
+Kleinbuchstaben, ASCII, Bindestriche, Umlaute ausgeschrieben (`ä` → `ae`), `ß` → `ss`.
+
+Für Feldnamen gilt dieselbe Regel, ohne Sonderbehandlung von Binnenmajuskeln: `berSynchronNummer` → `bersynchronnummer.md`. Das ist weniger schön als `berSynchronNummer.md`, aber gemischte Groß- und Kleinschreibung in Dateinamen ist zwischen macOS (gleichgültig) und Linux (unterscheidend) eine verlässliche Fehlerquelle; der korrekt geschriebene Begriff steht ohnehin in `titel` und in der H1.
+
+Der Dateiname ist damit **berechenbar**: `dateiname == slug(titel)`. [tools/check.py](tools/check.py) prüft das, statt sich auf Disziplin zu verlassen.
+
+### E3 — Navigation wird generiert
+
+Breadcrumb, Unterartikel-Liste, Navigationszeile, [REGISTER.md](REGISTER.md) und [ABKUERZUNGEN.md](ABKUERZUNGEN.md) erzeugt [tools/gen.py](tools/gen.py) aus dem Frontmatter. Von Hand gepflegt wird nur `parent`, `siehe_auch` und der Fließtext.
+
+**Begründung:** Bei 60 Artikeln gibt es rund 180 Navigationslinks. Jede Umbenennung oder Verschiebung müsste sonst an drei Stellen je Artikel nachgezogen werden — das hält kein Mensch fehlerfrei durch. Außerdem ist `children` dann keine zweite Wahrheit: Es wird **aus** `parent` berechnet, womit sich Eltern- und Kindangabe nicht mehr widersprechen können.
+
+**Abweichung von der Vorgabe „kein HTML“:** Die generierten Blöcke werden durch HTML-Kommentare begrenzt (`<!-- GEN:breadcrumb -->` … `<!-- /GEN:breadcrumb -->`). Sie sind in GitHub, VS Code und Obsidian unsichtbar und ändern die Darstellung nicht; die Anforderung „funktioniert in jedem Viewer“ bleibt also erfüllt. Die Alternative — Generieren anhand von Textpositionen — wäre brittle und würde bei jeder Textänderung Inhalt zerstören. Falls das unerwünscht ist, bitte sagen; dann werden die Blöcke an sichtbaren Überschriften verankert.
+
+### E4 — Anker im Quellenverzeichnis: Überschrift ist nur die Q-Nummer
+
+In [QUELLEN.md](QUELLEN.md) lautet jede Überschrift ausschließlich `## Q06`; der Titel steht als Fettzeile darunter.
+
+**Begründung:** GitHub, VS Code und Obsidian erzeugen Anker aus dem **Überschriftentext**. Explizite Anker (`{#q06}`) funktionieren auf GitHub nicht, HTML-Anker sind ausgeschlossen. Nur eine Überschrift, die allein aus der Q-Nummer besteht, ergibt in allen drei Umgebungen denselben stabilen Anker `#q06`. Ein Titel in der Überschrift würde ihn bei jeder Titelkorrektur zerstören.
+
+### E5 — Statuskennzeichnung auf Satzebene, nicht nur im Frontmatter
+
+`status:` im Frontmatter nennt den **schwächsten** Beleg des Artikels. Zusätzlich wird im Text jede Aussage gekennzeichnet, die nicht `belegt` ist:
+
+- **belegt** — mit Quelle und Seite oder Kapitel; Standardfall, wird im Text nicht markiert, sondern durch die Quellenangabe getragen.
+- **abgeleitet** — Schlussfolgerung aus belegten Fakten. Markierung: `(abgeleitet)`.
+- **zu prüfen** — unsicher oder nur sekundär belegt. Markierung: `(zu prüfen)` und Eintrag in Abschnitt 5 dieses Dokuments.
+
+**Begründung:** Ein Artikel enthält typischerweise belegte *und* abgeleitete Sätze. Ein einziger Status je Artikel würde entweder zu viel versprechen oder belegtes Wissen entwerten. Diese Trennung ist zugleich die Vorarbeit für das Analysewerkzeug, das pro Feld „bestätigt / abgeleitet / unbekannt“ anzeigen soll.
+
+### E6 — Verbundspezifisches wird immer gekennzeichnet
+
+Aussagen aus Q05–Q10 und Q31–Q36 stammen aus Verbunddokumenten (RMV, AVV, NRW). Sie werden als verbundspezifisch gekennzeichnet, auch wenn sie plausibel allgemein gelten. Konkret heißt das für die meistzitierten Fakten:
+
+- Die Transaktionstypen **37/38/39** sind über [Q06](QUELLEN.md#q06) belegt — aber als Festlegung im eTicket RheinMain. Ob sie KA-weit gelten, ist `zu prüfen`.
+- Die **berStatus-Codes** 5/7/8/19 stammen aus dem RMV-EFS ([Q05](QUELLEN.md#q05)) und sind ausdrücklich RMV-Codes.
+- Die **Rollencodes** KVP = 1 … ALISE = 31 stehen in [Q06](QUELLEN.md#q06), Kap. 4.10.
+
+Wo zwei Verbünde unabhängig dasselbe festlegen (z. B. RMV und Westfalen-Tarif), wird das vermerkt — das ist ein starkes Indiz für eine KA-weite Festlegung, aber kein Beleg.
+
+### E7 — Granularität: eigener Artikel, wenn es eigene Belege gibt
+
+Ein Begriff bekommt einen eigenen Artikel, wenn mindestens eines zutrifft:
+
+1. Er hat einen **eigenen Glossareintrag** in [Q02](QUELLEN.md#q02) — das sind 138 Begriffe und damit die verlässlichste Granularitätsgrenze, weil sie vom Standardgeber selbst gezogen wurde.
+2. Er hat eine **eigene Codeliste oder einen eigenen Wertebereich** (`berStatus`, `logTransaktionsTyp`, `amAuftragsTyp`).
+3. Er wird im Analysewerkzeug **einzeln angezeigt** — jedes Feld der Beispieltransaktion.
+
+Gebündelt werden dagegen Felder ohne eigene Semantik: Die drei Schlüsselreferenzen `amMKPV-NM-MAC_ID`, `amMKKVP-NM-MAC_ID` und `amMKERF-NM-MAC_ID` erklärt **ein** Artikel „Schlüsselreferenz“, weil sie sich nur im Inhaber unterscheiden. Ebenso bilden `berGueltigkeitsbeginn` und `berGueltigkeitsende` einen Artikel „Gültigkeit“.
+
+`berSynchronNummer` bekommt dagegen einen eigenen Artikel, obwohl das Glossar den Begriff **nicht** enthält: Das Feld trägt eine eigene Logik (Versionszähler, Erkennung veralteter Stände) und ist in der Praxis eine häufige Verwechslungsquelle mit `berStatus`.
+
+### E8 — Frontmatter ist die Datenquelle, nicht Dekoration
+
+Das YAML-Frontmatter wird vollständig und maschinenlesbar geführt, inklusive `codes:` für Codelisten:
+
+```yaml
+codes:
+  - wert: 37
+    bedeutung: Ausgabe EFS über Aktionsliste
+    quelle: Q06
+    fundstelle: Kap. 2.1.5, Fußnote 1
+    status: belegt
+```
+
+**Begründung:** Daraus erzeugt das spätere Analysewerkzeug seine Codelisten-Auflösung samt Belegstatus, ohne dass die Fakten doppelt gepflegt werden. Das Lexikon wird so zur Datenbasis des Werkzeugs und nicht zu einem zweiten, konkurrierenden Wissensstand.
+
+### E9 — Die Beispielwelt ist verbindlich und vollständig fiktiv
+
+Alle Beispiele spielen in **Bärstadt im Bärenland**, festgelegt in [welt/baerstadt.md](welt/baerstadt.md). Fiktive Org-IDs liegen im Bereich **9000–9099**, der sich nicht mit den realen IDs aus [Q11](QUELLEN.md#q11) überschneidet und erkennbar künstlich ist.
+
+Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der **fachlichen** Erklärung sind reale Beispiele erlaubt, wenn sie belegt sind (etwa „im eTicket RheinMain“).
+
+### E10 — Quellendateien bleiben lokal
+
+`QUELLEN/` enthält Dokumente mit dem Vermerk „Vertraulich“ ([Q06](QUELLEN.md#q06): „Cubic Transportation Systems (Deutschland) GmbH, Vertraulich“). Der Ordner wird per `.gitignore` ausgeschlossen. Im Repository stehen nur Exzerpte mit Fundstelle. Die LVB-Bewerberaufgabe ([Q11](QUELLEN.md#q11)) kommt gar nicht ins Repository, weil sie personenbezogene Daten im produktspezifischen Teil enthält.
+
+**Das Repository wird öffentlich** (Entscheidung vom 19.10.2026). Damit ist diese Regel keine Vorsichtsmaßnahme mehr, sondern zwingend: Jede Datei im Repository ist für jeden lesbar. Vor dem ersten Push ist zu klären, was mit den drei Rechercheakten im Wurzelverzeichnis geschieht — siehe Abschnitt 8.
+
+---
+
+## 4. Umsetzungsphasen
+
+| Phase | Inhalt | Ergebnis |
+|---|---|---|
+| **0 — Planung** | dieses Dokument, [STRUKTUR.md](STRUKTUR.md), [CLAUDE.md](CLAUDE.md), Vorlagen, Welt-Bibel, Werkzeuge, Quellenbeschaffung | **fertig** |
+| **1 — Gerüst** | Ordner, alle P1-Artikel als Rumpf mit Frontmatter | **angefangen:** Ordner, Startseite, Werkzeugkette und die zwei Musterartikel stehen; `gen.py` und `check.py` laufen fehlerfrei. Die übrigen Rümpfe folgen nach Freigabe des Tons. |
+| **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
+| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement fertig** (12 Artikel, Ton freigegeben am 19.10.2026). Als Nächstes: Transaktionen, dann Rollen, dann Grundlagen. |
+| **4 — Vertiefung** | restliche P1 sowie P2 nach Bedarf: Berechtigungen, Kontrolle, Sicherheit, Datenformate, ABT | rund 60 Artikel |
+| **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | Stand 1.0 |
+| **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |
+
+**Reihenfolge innerhalb Phase 2 bis 4:** Zuerst Q02 (Begriffe), dann Q06 (Nachrichten und Codes), dann Q05 (berStatus, EFS-Aufbau), dann Q25 (Spezifikationen, Ausbauvarianten, Elementarprozesse), dann Q01 und Q30 (ABT).
+
+---
+
+## 5. Offene Fragen
+
+Fachliche Punkte, die nicht aus den vorhandenen Quellen zu klären sind. Jeder Artikel, der einen dieser Punkte berührt, trägt dort `(zu prüfen)`.
+
+| Nr. | Frage | Betrifft | Klärung über |
+|---|---|---|---|
+| **O1** | Gelten die Transaktionstypen 37/38/39 KA-weit oder nur im eTicket RheinMain? | `transaktionen/logtransaktionstyp.md` und die drei Aktionstyp-Artikel | KA SST-SPEC, KA AktM-SPEC |
+| **O2** | Was bedeutet `amAuftragsTyp` = 13? Die Indizienkette (TX 37, Änderungsreferenz 0, SynchronNummer 1) spricht für „Ausgabe einer Berechtigung“, belegt ist das nicht. | `aktionsmanagement/auftragstyp.md` | KA AktM-SPEC |
+| **O3** | Sind die berStatus-Codes 5/7/8/19 RMV-spezifisch oder KA-weit? Und warum hat „neu“ (8) einen höheren Code als „aktiv“ (7)? | `berechtigungen/berstatus.md` | [Q05](QUELLEN.md#q05) auswerten, dann KA BOM-SPEC |
+| **O4** | Welche Spezifikations- und Schemaversion gehört zum Namespace `http://vdv/ka/alise/2`? Aus der `2` lässt sich das Release nicht ableiten. | `datenformate/namespace.md`, Werkzeug | ALISE-XSD anfragen |
+| **O5** | Erhöht ein reiner Statuswechsel die `berSynchronNummer`? | `berechtigungen/bersynchronnummer.md` | KA BOM-SPEC, KA AktM-SPEC |
+| **O6** | Im produktspezifischen Teil der LVB-Transaktion gibt die TLV-Länge 0x57 = 87 Byte an, es folgen aber 90 Byte. Füllbytes, Übertragungsfehler oder falsche TLV-Annahme? | `datenformate/tlv.md` | Anlage TLV EFS, vollständiger Originaldatensatz |
+| **O7** | Stimmt die Zeitschiene für (((etiCORE als KA-Version 3 (Einführung 2026, Parallelbetrieb bis 2031)? Bisher nur Sekundärangabe. | `grundlagen/eticore.md`, `grundlagen/versionen.md` | [Q27](QUELLEN.md#q27) auswerten |
+| **O8** | Das Glossar datiert 1GSI „bis 2026 bzw. 2031“ und 2GSI „ab 2026“. Wie ist der Stand heute (Oktober 2026)? | `sicherheit/sicherheitsebenen.md` | [Q02](QUELLEN.md#q02) S. 14 f., VDV eTS |
+| **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
+| **O12** | Was bewirkt die **Aktionsfreigabe** genau? Belegt ist nur, dass es die Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ gibt; das Glossar kennt den Begriff nicht. | `aktionsmanagement/aktionsfreigabe.md` | KA AktM-SPEC |
+| **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
+| **O11** | Hat die Bundestags-Drucksache [Q24](QUELLEN.md#q24) überhaupt Bezug zum eTicket? Falls nicht, Quelle streichen. | Quellenverzeichnis | Q24 lesen |
+
+---
+
+## 6. Qualitätsregeln
+
+Vollständig in [CLAUDE.md](CLAUDE.md). Die vier wichtigsten:
+
+1. **Keine erfundenen Fakten.** Codewerte, Feldbedeutungen und Abläufe nur mit Quelle. Was nicht belegt ist, wird markiert und hier in Abschnitt 5 eingetragen.
+2. **Fundstelle statt Dokumentname.** Nicht „laut Q06“, sondern „[Q06](QUELLEN.md#q06), Kap. 2.1.5“.
+3. **Das Beispiel darf vereinfachen, aber der fachlichen Erklärung nicht widersprechen.** Es darf nichts behaupten, was dort nicht steht.
+4. **Urheberrecht.** Keine Volltexte aus vertraulichen Dokumenten, nur kurze Exzerpte mit Fundstelle.
+
+---
+
+## 7. Was als Nächstes passiert
+
+Die **zwei Musterartikel** liegen vor und sind der eigentliche Gegenstand der Freigabe:
+
+- Kategorieartikel: [lexikon/aktionsmanagement.md](lexikon/aktionsmanagement.md)
+- Blattartikel: [lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md) (Transaktionstyp 37)
+
+Sie sind absichtlich zuerst entstanden, obwohl sie laut Phasenplan später kämen: Ohne zwei echte Artikel lässt sich weder der Ton beurteilen noch die Werkzeugkette prüfen. Beides ist jetzt belegt — `check.py` erfasst Wortlimits, Links, Anker, Baum, Dateinamen und veraltete Navigationsblöcke, geprüft an einem absichtlich fehlerhaften Testartikel.
+
+**Erst nach Freigabe des Tons** entstehen die restlichen 64 Artikel der Startmenge. Diese Reihenfolge ist wichtig, weil eine Korrektur an Aufbau oder Tonfall sonst 66 Dateien betrifft.
+
+Zur Freigabe gehören drei Fragen:
+
+1. Stimmen **Länge und Tonfall** der beiden Abschnitte? Das Beispiel ist mit rund 320 Wörtern deutlich kürzer als erlaubt — bewusst, es ließe sich auch ausführlicher anlegen.
+2. Ist der **Schnitt der Startmenge** richtig ([STRUKTUR.md](STRUKTUR.md), Abschnitt 11): zuerst die sechs Kategorien, die das Analysewerkzeug braucht, und Medien, Kontrolle, Sicherheit sowie ABT später?
+3. Wie wird mit den drei Rechercheakten umgegangen (Abschnitt 8)?
+
+---
+
+## 8. Die drei Rechercheakten
+
+**Entscheidung vom 19.10.2026:** Alle drei Dateien bleiben im öffentlichen Repository, `Quellen_LBV.md` jedoch nur **bereinigt**.
+
+Durchgeführt:
+
+- In [Quellen_LBV.md](Quellen_LBV.md) sind alle Werte des Originaldatensatzes durch die fiktiven Entsprechungen aus [welt/baerstadt.md](welt/baerstadt.md) ersetzt: Organisations-IDs, Berechtigungs- und Applikationsnummer, Produktnummer, die drei Schlüsselnummern sowie Name und Geburtsdatum im produktspezifischen Teil. Das Geburtsdatum ist maskiert, der codierte Bezahlmittel-Wert entfernt. Ein Hinweis am Dateianfang sagt das. Die fachliche Argumentation ist unverändert.
+- Spekulationen darüber, welche realen Unternehmen hinter den IDs stehen, sind entfernt — mit fiktiven IDs wären sie ohnehin sinnlos.
+- Dieselben Werte waren auch in [QUELLEN.md](QUELLEN.md), [STRUKTUR.md](STRUKTUR.md), [CLAUDE.md](CLAUDE.md), [welt/baerstadt.md](welt/baerstadt.md), [QUELLEN_VDV-KA.md](QUELLEN_VDV-KA.md) und [QUELLEN_ALISE.md](QUELLEN_ALISE.md) enthalten — teilweise in den Regeln, die ihre Verwendung verbieten. Auch dort sind sie durch abstrakte Formulierungen ersetzt. Eine Regel, die ihr eigenes Verbot unterläuft, taugt nicht.
+- Die Zitate aus den Verbunddokumenten sind durchweg kurze Exzerpte mit Fundstelle und bleiben unverändert.
+
+**Dauerhafte Regel:** Originalwerte aus [Q11](QUELLEN.md#q11) kommen nicht ins Repository, auch nicht beispielhaft, auch nicht in Kommentaren oder Regeltexten. Übernommen werden nur Feldnamen und Strukturen; Werte liefert die Welt-Bibel. Vor einem Push lohnt die Gegenprobe:
+
+```sh
+grep -rn --include='*.md' -E '<die betreffenden Werte>' .
+```
+
+[QUELLEN_VDV-KA.md](QUELLEN_VDV-KA.md) und [QUELLEN_ALISE.md](QUELLEN_ALISE.md) bleiben als Arbeitsstand erhalten. Sie sind durch [QUELLEN.md](QUELLEN.md) inhaltlich überholt und werden nicht zitiert.
