@@ -3,7 +3,7 @@ titel: txalisber
 englisch: alise entitlement transaction
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/transaktionen/txaml.md, lexikon/aktionsmanagement/auftragstyp.md]
-quellen: [Q06, Q11]
+quellen: [Q06, Q11, Q25]
 status: zu prüfen
 offene_fragen: [O4, O14]
 stand: 2026-10-19
@@ -22,9 +22,13 @@ codes: []
 
 Aus dem Namen liegt die Lesart „ALISE-Eintrag Berechtigung“ nahe (abgeleitet). Wie sich `txalisber` zu `TXAML` verhält, ist offen: ob es ein Element **innerhalb** einer `TXAML` ist, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante (zu prüfen, O14).
 
-Auch die Versionszuordnung ist offen. Aus der `2` am Ende des Namespace lässt sich **nicht** auf eine KA-Releaseversion schließen; die Ziffer ist Bestandteil des Namensraums (zu prüfen, O4). Für eine belastbare Auswertung wären die ALISE-XSD und die fachliche ALISE-Spezifikation nötig, die beide nicht öffentlich sind.
+Zur **Versionszuordnung** gibt es eine belegte Konvention: [Q25](../../QUELLEN.md#q25), Kap. 4.3.3, definiert den Namensraum in EBNF, endend auf `NamensraumBereich, ["types"], "/", Version`. Die letzte Pfadstelle ist also eine **Version**, nicht ein Release. Dazu Kap. 4.3.1.4: „Innerhalb einer Version sind die Releases hinsichtlich des gemeinsamen Namensraumes kompatibel“; unterstützt werden nur zwei Versionen (Kap. 4.3.1.3).
 
-Belegt ist nur, dass das Präfix `am…` bei mehreren Feldern des Datensatzes auftritt (`amAuftragsTyp`, `amAenderungsreferenz_ID`, `amTerminalGruppe_ID`) und sich sinnvoll als Aktionsmanagement-Merkmal lesen lässt (abgeleitet).
+Die `2` in `http://vdv/ka/alise/2` ist damit sehr wahrscheinlich die **Namensraum-Version** (abgeleitet). Auf das KA-Release — 1.1.07, 1.3.0 oder neuer — lässt sich daraus weiterhin **nicht** schließen, weil mehrere Releases denselben Namensraum teilen (zu prüfen, O4).
+
+Die Bereichsliste derselben Konvention nennt `pv-alise` und `kvp-alise`, die WSDL-Bereiche entsprechend `PV_ALISE` und `KVP_ALISE` ([Q25](../../QUELLEN.md#q25), Kap. 4.3.2 f.). Es gibt also **zwei** ALISE-Schnittstellen, was die Frage nach der Zuordnung von `txalisber` verschärft (zu prüfen, O14).
+
+Das Präfix `am…` mehrerer Felder (`amAuftragsTyp`, `amAenderungsreferenz_ID`, `amTerminalGruppe_ID`) liest sich als Aktionsmanagement-Merkmal (abgeleitet).
 
 **Dieser Artikel ist der Ausgangspunkt des geplanten Analysewerkzeugs** und gleichzeitig seine größte Lücke.
 
@@ -54,6 +58,7 @@ Für das geplante Werkzeug ist das die wichtigste Erkenntnis dieses Lexikons. Ma
 
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht: Elementname, Namespace `http://vdv/ka/alise/2`, Felder mit dem Präfix `am…`. **Nicht öffentliche Unterlage**; übernommen sind nur Elementname, Namespace und Feldnamen.
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.3.1 (die Aktionsliste heißt dort `TXAML`; `txalisber` wird nicht genannt) · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 4.3.1.3 f. (nur zwei Versionen gleichzeitig; Releases innerhalb einer Version über den gemeinsamen Namensraum kompatibel), Kap. 4.3.2 f., PDF-S. 114 f. (EBNF der Dateinamen- und Namensraumkonvention; `NamensraumBereich` mit `pv-alise` und `kvp-alise`, WSDL-Bereiche `PV_ALISE` und `KVP_ALISE`; Namensraum endet auf eine Version)
 
 <!-- GEN:navigation -->
 ---

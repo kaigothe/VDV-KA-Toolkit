@@ -2,10 +2,10 @@
 titel: Aktionsfreigabe
 englisch: action release
 parent: lexikon/aktionsmanagement.md
-siehe_auch: [lexikon/aktionsmanagement/aktion.md, lexikon/aktionsmanagement/aktionsliste.md]
-quellen: [Q02, Q25]
-status: zu prüfen
-offene_fragen: [O12]
+siehe_auch: [lexikon/aktionsmanagement/aktion.md, lexikon/aktionsmanagement/aktionsliste.md, lexikon/rollen/alise.md]
+quellen: [Q02, Q25, Q39]
+status: belegt
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -16,37 +16,39 @@ codes: []
 
 # Aktionsfreigabe
 
-Die Aktionsfreigabe ist ein Schritt im Aktionsmanagement, der neben Beauftragung und Ausführung steht. Belegt ist bislang nur, **dass** es ihn gibt, nicht was er genau bewirkt (zu prüfen, O12).
+Die Aktionsfreigabe ist ein eigener Schritt im Aktionsmanagement, neben Beauftragung und Ausführung. Das eTicket-Regelwerk führt dafür zwei Anwendungsfälle des Kundenvertragspartner-Systems: „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ ([Q25](../../QUELLEN.md#q25), Anlage 2, Kap. 5.1.2, Tabelle 38).
 
-Das eTicket-Regelwerk führt für das Kundenvertragspartner-System im Paket Aktionsmanagement zwei Anwendungsfälle: „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ ([Q25](../../QUELLEN.md#q25), Anlage 2, Kap. 5.1.2, Tabelle 38).
+[Q39](../../QUELLEN.md#q39), Kap. 3.2.5, benennt die zugehörigen **Nachrichten** und ihre Richtung · *verbundspezifisch*:
 
-Dass beide Richtungen aufgeführt sind — senden und entgegennehmen —, zeigt einen zweiseitigen Austausch zwischen Kundenvertragspartner und Produktverantwortlichem (abgeleitet).
+| Nachricht | Richtung | Bedeutung |
+|---|---|---|
+| `TXAFREIBER` | KVP → PV/ALISE | Aktionsfreigabeauftrag des Verkehrsunternehmens als **beauftragender** KVP, asynchron |
+| `TXAFREIMITBER` | PV/ALISE → KVP | Aktionsfreigabemitteilung des ALISE an den beauftragenden KVP, asynchron |
 
-Das Glossar [Q02](../../QUELLEN.md#q02) enthält **keinen** Eintrag „Aktionsfreigabe“; geprüft am Inhaltsverzeichnis, S. 2–13. Damit fehlt die begriffliche Definition des Standardgebers. Normquelle ist die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41).
+Die Freigabe ist damit ein **zweiseitiger Vorgang zwischen beauftragendem Kundenvertragspartner und ALISE** und vom Aktionsauftrag getrennt: Die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER` und `TXEAUFBER` stehen in derselben Tabelle als eigene Nachrichten daneben ([Q39](../../QUELLEN.md#q39), Kap. 3.2.5).
 
-Das in [Q02](../../QUELLEN.md#q02), S. 20 f., beschriebene Statusmodell der Aktion — „bestellt“, „aktiv“, „ausgeführt“ — nennt die Freigabe nicht. Sie ist also entweder ein Schritt innerhalb des Übergangs von „bestellt“ zu „aktiv“ oder ein davon unabhängiger Vorgang; beides ist aus den öffentlichen Quellen nicht zu entscheiden (zu prüfen, O12).
+Das Glossar [Q02](../../QUELLEN.md#q02) enthält **keinen** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13), und das dort beschriebene Statusmodell der Aktion — „bestellt“, „aktiv“, „ausgeführt“ ([Q02](../../QUELLEN.md#q02), S. 20 f.) — nennt die Freigabe nicht. Wo genau sie in diesem Modell ansetzt, ist aus den öffentlichen Quellen nicht zu entscheiden (abgeleitet: zwischen „bestellt“ und „aktiv“).
 
-**Vor einer Verwendung in Entwurf oder Implementierung ist dieser Artikel zu verifizieren.**
+Normquelle bleibt die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
-Dieser Artikel ist ein Platzhalter mit Ansage — und das Beispiel soll zeigen, warum er trotzdem hier steht.
+Zwischen „die Bärstädter Verkehrsbetriebe bestellen etwas“ und „der Auftrag steht in der Aktionsliste“ liegt ein weiterer Handgriff: die Freigabe.
 
-Bekannt ist: Im Aktionsmanagement gibt es einen Vorgang namens Aktionsfreigabe, und das Kundenvertragspartner-System kann eine solche Freigabe senden und eine Freigabemitteilung empfangen. Mehr sagen die öffentlichen Unterlagen nicht.
+Der Ablauf hat damit drei Nachrichten statt einer. Zuerst schickt die BVB den **Auftrag**: „Schreibe Produkt 2001 auf die Karte 90000042.“ Dann schickt sie die **Freigabe**: „Dieser Auftrag darf wirksam werden.“ Und schließlich bekommt sie eine **Mitteilung** vom Aktionslistenservice zurück: „Freigabe verarbeitet.“
 
-Was man daraus vorsichtig lesen kann: Zwischen „die BVB bestellt einen Auftrag“ und „der Auftrag steht in der Aktionsliste“ scheint es einen weiteren Handgriff zu geben. Dass es für beide Richtungen einen eigenen Anwendungsfall gibt, deutet auf ein Hin und Her hin — jemand gibt frei, jemand nimmt die Mitteilung darüber zur Kenntnis.
+Warum zwei Schritte für eine Sache? Weil Bestellen und Gültigmachen verschiedene Zeitpunkte haben können. Bodo Bärlauch kann Pias Abo im Juli erfassen, obwohl ihre Ausbildung erst am 1. September beginnt. Oder ein Abo ist erfasst, aber die erste Abbuchung noch nicht bestätigt — dann will man den Auftrag vorbereitet haben, ohne ihn schon scharf zu stellen.
 
-Man könnte sich das plausibel so vorstellen: Bodo Bärlauch erfasst Pias Abo-Auftrag heute, aber er soll erst zum Ausbildungsbeginn am 1. September wirksam werden. Eine Freigabe wäre der Schalter, der sagt: jetzt gilt er.
+Die Trennung gibt also Kontrolle über das **Wann**. Der Auftrag beschreibt, *was* passieren soll. Die Freigabe entscheidet, *ab wann*.
 
-Das ist eine **Vermutung**, und es wäre falsch, sie in diesem Lexikon als Erklärung auszugeben. Eine Spezifikation, die nicht vorliegt, lässt sich nicht erraten — und bei einem Begriff, der zwischen zwei Organisationen etwas auslöst, wäre eine falsche Vorstellung besonders teuer.
+Dass es für die Rückmeldung eine eigene Nachricht gibt, ist ebenfalls folgerichtig. Die BVB hat die Freigabe abgeschickt, aber asynchron — also ohne sofortige Antwort. Ohne Rückmeldung wüsste sie nicht, ob die Freigabe angekommen und verarbeitet ist. Und das muss sie wissen, denn sie hat Pia versprochen, dass das Abo zum 1. September gilt.
 
-Warum dann überhaupt ein Artikel? Weil die Lücke selbst eine nützliche Information ist. Wer eine Aktionsmanagement-Schnittstelle entwirft oder eine Nachricht auswertet und über diesen Begriff stolpert, soll hier sofort sehen: Das ist kein Nebenschauplatz, den man überlesen darf, sondern eine echte Wissenslücke mit einem Eintrag in der Liste der offenen Fragen.
-
-Geklärt wird sie mit der KA AktM-SPEC — oder mit einer Rückfrage beim VDV eTicket Service.
+Eine Einschränkung zum Schluss, die für dieses Lexikon typisch ist: Die Nachrichtennamen und ihre Richtung sind belegt — aber aus dem Pflichtenheft **eines** Verbunds. Dass die Freigabe dort als eigener Schritt existiert, heißt nicht zwingend, dass jedes KA-System sie so einsetzt. Und was das Statusmodell des Standards dazu sagt, bleibt offen: Das Glossar kennt den Begriff gar nicht.
 
 ## Quellen
 
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2 „KA Migrationsszenarien“ V1.6.0, Kap. 5.1.2, Tabelle 38 „Aktionsmanagement für das Kundenvertragspartner-System“ (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6 „Konzept Externer Mandant“, Kap. 3.2.5 (PDF-S. 51 f.): `TXAFREIBER` als Aktionsfreigabeauftrag des beauftragenden KVP und `TXAFREIMITBER` als Aktionsfreigabemitteilung des ALISE, beide asynchron; daneben die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER`, `TXEAUFBER` · *verbundspezifisch: eTicket RheinMain*
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 238): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion
 
 <!-- GEN:navigation -->

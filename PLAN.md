@@ -174,16 +174,29 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 | **O1** | Gelten die Transaktionstypen 37/38/39 KA-weit oder nur im eTicket RheinMain? | `transaktionen/logtransaktionstyp.md` und die drei Aktionstyp-Artikel | KA SST-SPEC, KA AktM-SPEC |
 | **O2** | Was bedeutet `amAuftragsTyp` = 13? Die Indizienkette (TX 37, Änderungsreferenz 0, SynchronNummer 1) spricht für „Ausgabe einer Berechtigung“, belegt ist das nicht. | `aktionsmanagement/auftragstyp.md` | KA AktM-SPEC |
 | **O3** | Sind die berStatus-Codes 5/7/8/19 RMV-spezifisch oder KA-weit? Und warum hat „neu“ (8) einen höheren Code als „aktiv“ (7)? | `berechtigungen/berstatus.md` | [Q05](QUELLEN.md#q05) auswerten, dann KA BOM-SPEC |
-| **O4** | Welche Spezifikations- und Schemaversion gehört zum Namespace `http://vdv/ka/alise/2`? Aus der `2` lässt sich das Release nicht ableiten. | `datenformate/namespace.md`, Werkzeug | ALISE-XSD anfragen |
+| **O4** | *Teilweise geklärt:* Die letzte Pfadstelle eines KA-Namensraums ist laut [Q25](QUELLEN.md#q25), Kap. 4.3.3, eine **Version**, und Releases innerhalb einer Version teilen den Namensraum (Kap. 4.3.1.4). Die `2` in `http://vdv/ka/alise/2` ist damit die Namensraum-Version. **Offen bleibt**, welches Release bzw. welche Schemafassung konkret zugrunde liegt. | `transaktionen/txalisber.md`, `datenformate/namespace.md`, Werkzeug | ALISE-XSD |
 | **O5** | Erhöht ein reiner Statuswechsel die `berSynchronNummer`? | `berechtigungen/bersynchronnummer.md` | KA BOM-SPEC, KA AktM-SPEC |
 | **O6** | Im produktspezifischen Teil der LVB-Transaktion gibt die TLV-Länge 0x57 = 87 Byte an, es folgen aber 90 Byte. Füllbytes, Übertragungsfehler oder falsche TLV-Annahme? | `datenformate/tlv.md` | Anlage TLV EFS, vollständiger Originaldatensatz |
-| **O7** | Stimmt die Zeitschiene für (((etiCORE als KA-Version 3 (Einführung 2026, Parallelbetrieb bis 2031)? Bisher nur Sekundärangabe. | `grundlagen/eticore.md`, `grundlagen/versionen.md` | [Q27](QUELLEN.md#q27) auswerten |
-| **O8** | Das Glossar datiert 1GSI „bis 2026 bzw. 2031“ und 2GSI „ab 2026“. Wie ist der Stand heute (Oktober 2026)? | `sicherheit/sicherheitsebenen.md` | [Q02](QUELLEN.md#q02) S. 14 f., VDV eTS |
 | **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
-| **O12** | Was bewirkt die **Aktionsfreigabe** genau? Belegt ist nur, dass es die Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ gibt; das Glossar kennt den Begriff nicht. | `aktionsmanagement/aktionsfreigabe.md` | KA AktM-SPEC |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
 | **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. | `transaktionen/txalisber.md` | ALISE-Spezifikation und ALISE-XSD |
 | **O11** | Hat die Bundestags-Drucksache [Q24](QUELLEN.md#q24) überhaupt Bezug zum eTicket? Falls nicht, Quelle streichen. | Quellenverzeichnis | Q24 lesen |
+
+---
+
+## 5a. Inzwischen geklärte Fragen
+
+Hier bleiben die Antworten stehen, damit die Nummern nachvollziehbar sind und nicht erneut gefragt wird.
+
+**O7 — Zeitschiene für (((etiCORE als KA-Version 3: geklärt.**
+Ein neues Root-Zertifikat gibt es erst für die 2. Generation der Sicherheitsinfrastruktur, „mit der Einführung der VDV-Kernapplikation 3.0 mit dem neuen Namen (((etiCORE zum **1. Dezember 2026**“. Die aktuellen SubCA-Zertifikate sind zehn Jahre bis zum **1. Dezember 2031** gültig, „also bis zum Ende der VDV-Kernapplikation 1.x“. Im Übergangszeitraum 2026 bis 2031 sind beide Zertifikate gültig und ermöglichen den **Parallelbetrieb von VDV-KA 1.x (1GSI) und (((etiCORE (2GSI)** ([Q42](QUELLEN.md#q42)). *Sekundärquelle — für verbindliche Aussagen beim VDV eTS bestätigen lassen.*
+
+**O8 — Stand bei 1GSI und 2GSI: geklärt.**
+Die aktive Gültigkeit des Root-Zertifikats der 1GSI ist **zum 1. Dezember 2021 abgelaufen**; damit lassen sich keine neuen Zertifikate mehr erstellen, die bestehenden SubCA-Zertifikate bleiben aber gültig ([Q42](QUELLEN.md#q42)).
+Dazu ein praktisch wichtiger Nebenbefund: Einige Systeme prüfen bei Ausgabe oder Kontrolle, ob das Root-Zertifikat *zu diesem Zeitpunkt* gültig ist. Das ist **falsch** und führt seit dem 1. Dezember 2021 zu Fehlverhalten. Richtig ist die Prüfung, ob das Root-Zertifikat **zum Zeitpunkt der Erstellung des SubCA-Zertifikats** gültig war. Dieser Befund gehört in den Artikel `sicherheit/cv-zertifikat.md` und ist für das Analysewerkzeug eine Prüfregel.
+
+**O12 — Wirkung der Aktionsfreigabe: geklärt, verbundspezifisch.**
+[Q39](QUELLEN.md#q39), Kap. 3.2.5, nennt die Nachrichten und ihre Richtung: `TXAFREIBER` ist der Aktionsfreigabeauftrag des beauftragenden KVP an PV bzw. ALISE, `TXAFREIMITBER` die Aktionsfreigabemitteilung des ALISE zurück an den beauftragenden KVP, beide asynchron. Ausgearbeitet in `aktionsmanagement/aktionsfreigabe.md`. **Offen bleibt**, wo die Freigabe im Statusmodell des Standards ansetzt — das Glossar kennt den Begriff nicht.
 
 ---
 

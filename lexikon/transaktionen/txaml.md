@@ -4,7 +4,7 @@ abkuerzung: TXAML
 englisch: action list transaction
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/aktionsmanagement/aktionsliste.md, lexikon/transaktionen/tx-base.md]
-quellen: [Q06, Q25]
+quellen: [Q06, Q25, Q39]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -18,6 +18,8 @@ codes: []
 # TXAML
 
 `TXAML` ist die Nachricht, mit der eine [Aktionsliste](../aktionsmanagement/aktionsliste.md) übertragen wird. Die Struktur ist der nicht öffentlichen KA AktM-SPEC zu entnehmen ([Q06](../../QUELLEN.md#q06), Kap. 4.3.1; [Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41). `TXAML` ist damit die einzige der hier behandelten Nachrichten, deren Struktur **nicht** aus der KA SST-SPEC stammt.
+
+Angefordert wird sie mit der Nachricht `TXAS`; `TXAML` ist die Antwort darauf, und der Austausch läuft **synchron** ([Q39](../../QUELLEN.md#q39), Kap. 3.2.5) · *verbundspezifisch*.
 
 Sie wird nicht zugestellt, sondern **abgeholt**. Der Ablauf ([Q06](../../QUELLEN.md#q06), Kap. 3.1) · *verbundspezifisch*:
 
@@ -52,6 +54,7 @@ Und noch eine Besonderheit: `TXAML` ist die einzige Nachricht dieser Kategorie, 
 ## Quellen
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.3.1 (`TXAML` aus `[KA_SPEC_AktM]`), Kap. 3.1 (Ablauf des Nachrichtenabrufs über das Manifest), Kap. 3.2 (Manifest, Intervall einmal täglich, Ablehnung bei permanentem Abruf), Kap. 3.4 (Aktionsliste herunterladen, Nachricht-ID), Kap. 4.10 (Rolle PV = 3 als Empfänger im Anwendungsfall „Aktionsliste herunterladen“) · *verbundspezifisch: eTicket RheinMain*
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.2.5 (`TXAS` als Anforderung, `TXAML` als synchrone Antwort) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 
 <!-- GEN:navigation -->

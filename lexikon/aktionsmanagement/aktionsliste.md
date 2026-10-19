@@ -4,7 +4,7 @@ abkuerzung: TXAML
 englisch: action list
 parent: lexikon/aktionsmanagement.md
 siehe_auch: [lexikon/aktionsmanagement/aktionsdifferenzliste.md, lexikon/aktionsmanagement/terminalaktionsliste.md]
-quellen: [Q02, Q06]
+quellen: [Q02, Q06, Q39]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -23,7 +23,9 @@ Die Aktionsliste bildet den **kompletten derzeit gültigen Bestand** an Aktionsa
 
 Hier unterscheiden sich die Versionen: In (((etiCORE erhält jeder beim Produktverantwortlichen anfordernde ausführende Kundenvertragspartner **dieselbe** Aktionsliste. In **KA 1.X** kann der ausführende Kundenvertragspartner die Liste über die Konfiguration von Terminalgruppen und Produkten für sich aufbereiten, sodass eine **spezifische Aktionsliste je ausführendem Kundenvertragspartner** entsteht ([Q02](../../QUELLEN.md#q02), S. 19).
 
-Übertragen wird die Liste als Nachricht `TXAML`; die Spezifikation dazu ist die nicht öffentliche KA AktM-SPEC ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, 4.3.1).
+Übertragen wird die Liste als Nachricht `TXAML`; die Spezifikation dazu ist die nicht öffentliche KA AktM-SPEC ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, 4.3.1). Angefordert wird sie mit `TXAS`, und zwar **synchron** — Anforderung und Antwort gehören zu einem Vorgang ([Q39](../../QUELLEN.md#q39), Kap. 3.2.5).
+
+[Q39](../../QUELLEN.md#q39) definiert die Aktionsliste knapp als „vom ALISE erstellte **KVP-spezifische** Liste der Aktionsaufträge“ (Glossarteil) und bestätigt damit für die Praxis, was [Q02](../../QUELLEN.md#q02), S. 19, als Möglichkeit der KA 1.X beschreibt · *verbundspezifisch*.
 
 Im eTicket RheinMain werden Sperr- und Aktionslisten **nur einmal täglich** erstellt und bereitgestellt; entsprechend ist das Abfrageintervall für die Manifest-Datei auf einmal täglich festgelegt ([Q06](../../QUELLEN.md#q06), Kap. 3.2) · *verbundspezifisch*.
 
@@ -44,6 +46,7 @@ Ein Detail für später: In der VDV-KA 1.x darf sich jedes Verkehrsunternehmen s
 ## Quellen
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 19 („Aktionsliste“: Definition, Bereitstellung durch den PV, Abruf durch die ausführenden KVP, vollständiger Bestand, Unterschied KA 1.X zu (((etiCORE)
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.2.5 (`TXAS` als synchrone Anforderung, `TXAML` als Antwort) und Glossarteil (Aktionsliste als KVP-spezifische Liste der Aktionsaufträge) · *verbundspezifisch: eTicket RheinMain*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (TXAML, Verweis auf KA_SPEC_AktM), Kap. 3.2 (einmal täglich erstellt und bereitgestellt), Kap. 3.4 (Aktionsliste herunterladen), Kap. 4.3.1 · *verbundspezifisch: eTicket RheinMain*
 
 <!-- GEN:navigation -->

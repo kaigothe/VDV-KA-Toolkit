@@ -4,7 +4,7 @@ abkuerzung: AktM
 englisch: action management
 parent: README.md
 siehe_auch: []
-quellen: [Q02, Q06, Q25]
+quellen: [Q02, Q06, Q25, Q39]
 status: belegt
 offene_fragen: [O9]
 stand: 2026-10-19
@@ -26,6 +26,8 @@ Es löst ein grundlegendes Problem: Ein Hintergrundsystem kann eine Berechtigung
 Vier Aktionen sind vorgesehen ([Q02](../QUELLEN.md#q02), S. 19): Ausgabe eines elektronischen Fahrscheins, Entsperren einer Berechtigung, Rücknahme einer Berechtigung sowie — nur für (((etiCORE — Sperren einer Berechtigung anhand der ID des Aktionsauftrags.
 
 Das Aktionsmanagement ist eine **optionale Ergänzung** und nur zu den Ausbauvarianten 2, 2a, 2b-1 und 2b-2 zulässig ([Q25](../QUELLEN.md#q25), Anlage 2, PDF-S. 158). Normquelle ist die nicht öffentliche KA AktM-SPEC, Inventarnummer 41 ([Q25](../QUELLEN.md#q25), Kap. 3).
+
+Im Nachrichtenfluss stehen eigene **Auftragsnachrichten** neben den Nachweisen: `TXAAUFBER` (Ausgabe), `TXRAUFBER` (Rücknahme), `TXEAUFBER` (Entsperrung) sowie `TXAFREIBER` und `TXAFREIMITBER` für die [Aktionsfreigabe](aktionsmanagement/aktionsfreigabe.md) ([Q39](../QUELLEN.md#q39), Kap. 3.2.5) · *verbundspezifisch*.
 
 Wie sich „Aktionstyp“ und das Nachrichtenfeld `amAuftragsTyp` zueinander verhalten, ist nicht belegt (zu prüfen, O9).
 
@@ -51,6 +53,7 @@ Für Pia bedeutet das vor allem eines: Zwischen Bodos Genehmigung und dem fertig
 
 - [Q02](../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 18 („Aktion“, „Aktionsclearing“), S. 19 („Aktionsliste“, Aufzählung der vier Aktionen), S. 20 f. („Aktionsmanagement“, Lebenszyklus, Abkürzung AktM), S. 21 („Aktionslistenservice“)
 - [Q06](../QUELLEN.md#q06) – RMV PH 06-02, Kap. 1.2.2 (Datenfluss, dauerhafte Speicherung beim beauftragenden KVP), Kap. 2.1.5 (Aktionsausführung) · *verbundspezifisch: eTicket RheinMain*
+- [Q39](../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6, Kap. 3.2.5 (Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER`, `TXEAUFBER`, Freigabenachrichten `TXAFREIBER` und `TXAFREIMITBER`, Anforderung `TXAS` mit Antwort `TXAML`, Nachweise und ihre Weiterleitung an den beauftragenden KVP) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC als Inventarnummer 41), Anlage 2 Migrationsszenarien, PDF-S. 158 (AktM als optionale Ergänzung zu den Ausbauvarianten 2, 2a, 2b-1, 2b-2), Kap. 5 (Elementarprozesse je Rolle)
 
 <!-- GEN:unterartikel -->

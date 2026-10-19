@@ -4,7 +4,7 @@ abkuerzung: TX_BASE
 englisch: transaction base
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/transaktionen/duplikaterkennung.md, lexikon/transaktionen/logtransaktionstyp.md]
-quellen: [Q06, Q25]
+quellen: [Q06, Q25, Q39]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -39,6 +39,8 @@ Bekannte Attribute aus den öffentlichen Quellen:
 | `transSignaturZertifikat` | optional |
 | `transSignatur` | optional |
 
+[Q39](../../QUELLEN.md#q39), Kap. 3.3.1, geht weiter: Dort wird `TX_BASE` nach KA-Spezifikationsversion 1.107 verwendet, und die drei Signaturattribute `transSignaturTyp`, `transSignaturZertifikat` und `transSignatur` werden **nicht verwendet und nicht gefüllt** · *verbundspezifisch*. Ein fehlendes Signaturfeld ist dort also der Normalfall, nicht ein Fehler.
+
 ## Einfach erklärt – Beispiel aus Bärstadt
 
 Jede Nachricht in der VDV-KA hat einen Briefkopf, und der heißt `TX_BASE`. Er ist bei allen Nachrichten gleich aufgebaut — egal ob eine Ausgabe gemeldet wird, eine Kontrolle oder eine Rücknahme.
@@ -62,6 +64,7 @@ Für jemanden, der eine solche Nachricht auswertet, heißt das: Fehlt ein Signat
 ## Quellen
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.6, 4.7, 4.9 (`txbase`-Element mit Verweis auf die KA SST-SPEC, `IONTransaktionsTyp_CODE`), Kap. 4.10 (in `TX_BASE` verwendete Rollencodes und Org-IDs, Sender- und Empfängerattribute), Kap. 5.3 (`transTransaktion_ID` als `IONTransaktion_ID` aus Org-ID, Rollen-Code und Sequenznummer; `transWiederholungsZaehler`), Kap. 5.4 (ab KA 1.3.0 optionale Attribute samt Handhabung im RMV) · *verbundspezifisch: eTicket RheinMain*
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Kap. 3.3.1 (`TX_BASE` nach KA 1.107; die Signaturattribute werden nicht verwendet und nicht gefüllt), Kap. 3.3.2 (Adressierung über die Sender- und Empfängerattribute) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA SST-SPEC, Inventarnummer 4; KA XML-Schemata und WSDL, Inventarnummer 5)
 
 <!-- GEN:navigation -->
