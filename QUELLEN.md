@@ -329,6 +329,48 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 - **Stichworte:** eTarif, CiCo, Bestpreis, Vertrieb, Luftlinientarif
 - **URL:** https://www.kcd-nrw.de/fileadmin/user_upload/2026-08-12_vertriebliche_Umsetzung_der_eTarife_in_NRW_-_V_1.8_clean.pdf
 
+## Q38
+
+**bwtarif – Vertriebskonzept mit technischen Anlagen**
+
+- **Datei:** `QUELLEN/Q38_bwtarif_Vertriebskonzept_v2.5_2024-08-08.pdf` (158 Seiten)
+- **Typ:** Projekt · **Herkunft:** Original · **Auswertung:** offen
+- **Stand:** v2.5, 08.08.2024, bwtarif GmbH
+- **Inhalt:** Vertriebskonzept des landesweiten Tarifs in Baden-Württemberg mit technischen Vorgaben zu Aktionsmanagement, Multiberechtigungen, PKM und statischen Berechtigungen. **Jüngstes Projektdokument neben [Q31](#q31)** und damit nützlich als Vergleichsquelle zu den älteren RMV-Unterlagen: Wo bwtarif und RMV unabhängig dasselbe festlegen, ist das ein starkes Indiz für eine KA-weite Festlegung.
+- **Stichworte:** Aktionsmanagement, Multiberechtigung, PKM, statische Berechtigung, Vertrieb
+- **URL:** https://www.bwtarif.gmbh/wp-content/uploads/2024/09/240808-bwtarif-Vertriebskonzept-v2.5.pdf
+
+## Q39
+
+**RMV – vHGS-Vertrag mit Anlagen (Muster), darin Anlage 6 „Konzept Externer Mandant“**
+
+- **Datei:** `QUELLEN/Q39_RMV_vHGS-Vertrag-mit-Anlagen_2021-10-01.pdf` (135 Seiten)
+- **Typ:** Projekt · **Herkunft:** Webarchiv (Original 404) · **Auswertung:** teilweise — Kap. 3.2.5, 3.2.6, 3.3.1, 3.3.2 und der Glossarteil sind am Dokument geprüft
+- **Stand:** Vertrag Stand 01.10.2021; Anlage 6 „Konzept Externer Mandant“ v1.4, 04.10.2011, Cubic Transportation Systems
+- **Inhalt — nach [Q06](#q06) die zweite tragende RMV-Quelle, mit teils neuen Informationen:**
+  - **Vollständiger Nachrichtenfluss des Aktionsmanagements** (Kap. 3.2.5, PDF-S. 51 f.) mit **Auftragsnachrichten**, die in [Q06](#q06) fehlen: `TXAAUFBER` (Berechtigung-Ausgabe), `TXRAUFBER` (Rücknahme), `TXEAUFBER` (Entsperrung), `TXAFREIBER` (Aktionsfreigabeauftrag des beauftragenden KVP), `TXAFREIMITBER` (Aktionsfreigabemitteilung des ALISE an den beauftragenden KVP), `TXAS` (Anforderung der Aktionsliste, synchron, Antwort `TXAML`) sowie `TXABER`, `TXRBER`, `TXSNAWB` als Nachweise und deren Weiterleitung an den beauftragenden KVP.
+  - **ALISE-Definition:** „Der ALISE ist eine **Spezialisierung der Rolle PV**, die bei Anwendung des Aktionsmanagements die entsprechende Funktionalität eines Aktionslistenservice-Systems (ALISES) in ihrem PVS vorzuhalten hat.“ (Glossarteil)
+  - **Rollentabelle:** „vHGS als ALISE PV … **Rollencode 3**“ (Kap. 3.3.2, PDF-S. 53) — **unabhängige Bestätigung** des Befunds aus [Q06](#q06), Fußnote 7.
+  - **Aktionsliste:** „Vom ALISE erstellte **KVP-spezifische** Liste der Aktionsaufträge.“ (Glossarteil)
+  - **Aktionsmanagement:** Vorgänge werden „an einem beliebigen Vertriebsterminal“ beauftragt und später automatisch ausgeführt; im eTicket RheinMain läuft z. B. der Verkauf im TicketShop darüber. Möglich sind auch **Rückgabe, Änderung oder Sperrung** von Berechtigungen und die Sperrung der Applikation. (Glossarteil)
+  - **TX_BASE:** verwendet nach KA-Spezifikationsversion 1.107; die Signaturattribute `transSignaturTyp`, `transSignaturZertifikat` und `transSignatur` werden **nicht verwendet und nicht gefüllt** (Kap. 3.3.1).
+  - `TXA`/`TXB` werden in einem eigenen Kommunikationsvorgang gesendet; zunächst quittiert nur der HTTP-Rückgabewert (Kap. 3.2.6).
+  - Weitere Nachrichtennamen im Dokument: `TXSAUFA`, `TXSAUFB`, `TXSFREIA`, `TXSFREIB`, `TXSNAWA`, `TXAGB`, `TXAGBBER`, `TXAGBKUNDE`, `TXAGBPINPUC`, `TXAA`, `TXKNAWDM`, `TXSLNM`, `TXSLK`, `TXSLOS`.
+- **Stichworte:** Auftragsnachrichten, Aktionsfreigabe, ALISE als PV-Spezialisierung, TXAS/TXAML, TX_BASE-Signatur
+- **Rechte:** „Cubic Transportation Systems Deutschland GmbH, **Vertraulich**“. Nur kurze Exzerpte mit Fundstelle.
+- **URL (tot, 404):** https://mtv-unternehmen.de/fileadmin/user_upload/E_Anlage_26_EFM_vHGS-Vertrag_mAnl_Muster_Stand_211001_MVU_211206.pdf
+
+## Q40
+
+**KCD NRW – Rahmenlastenheft DL-System**
+
+- **Datei:** `QUELLEN/Q40_KCD-NRW_Rahmenlastenheft-DL-System_v2.4.pdf` (44 Seiten)
+- **Typ:** Projekt · **Herkunft:** Original (Archivbereich kcd-nrw.de) · **Auswertung:** offen
+- **Stand:** Version 2.4
+- **Inhalt:** Rahmenlastenheft für ein Dienstleister-System; Kontroll- und Sperrprozesse. Verweist durchgehend auf KA-Dokumente der **Version 1.107** (13 Fundstellen, am Dokument geprüft) und ist damit ein Beleg für die ältere Schnittstellenversion.
+- **Stichworte:** DL-System, Kontrolle, Sperrprozesse, Transaktionsprüfung, Version 1.107
+- **URL:** https://www.kcd-nrw.de/fileadmin/03_KC_Seiten/KCD/Downloads/Technische_Dokumente/Archiv/Rahmenlastenheft_DL-System_2_4.pdf
+
 ---
 
 # 3. Hersteller- und Anbieterquellen
@@ -422,6 +464,31 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 - **Stichworte:** Kontrollgerät, Offline-Validierung
 - **URL:** https://genfare.com/products/hand-held-validator/
 
+## Q37
+
+**cetecom advanced – Prüfbericht Akzeptanzterminal PM95**
+
+- **Datei:** `QUELLEN/Q37_CETECOM_Pruefbericht-Akzeptanzterminal-PM95.pdf` (8 Seiten)
+- **Typ:** Hersteller / Zulassungsprüfung · **Herkunft:** Original (carema.de) · **Auswertung:** teilweise — die Spezifikationsliste auf S. 4 ist am Dokument geprüft
+- **Stand:** Prüfbericht 1-8334/24-01-02_TR1-R01 (2024)
+- **Inhalt — wichtigster Versionsnachweis der Sammlung:** Der Bericht einer Zulassungsprüfung für ein Akzeptanzterminal listet die zugrunde gelegten Spezifikationen mit Version. **Alle zwölf Einträge tragen die Version 1.12.0:**
+  1. KA SysLH PbKVPRT — Systemlastenheft Personalbediente KVP-ReferenzTerminals
+  2. KA SysLH DLRT — Systemlastenheft DL-ReferenzTerminals
+  3. **KA HD_BOM-SPEC** — Hauptdokument mit Basisobjektmodell
+  4. **KA SAM-SPEC**
+  5. **KA NM-SPEC**
+  6. **KA MultiBER-SPEC** — „Performanceverbesserung bei der EFS-Ausgabe … Spezifikation zur Multi-Berechtigungsausgabe“
+  7. **KA AktM-SPEC** — „Aktionsmanagement für die Berechtigungsart EFS **und Entsperrung von AF…**“ (vollständigerer Titel als in [Q25](#q25))
+  8. **KA SST-SPEC** — „Schnittstellenspezifikationen der Referenzsysteme … Applikationsherausgeber (AH), Sperrlistenservice (KOSE)“
+  9. **KA STB-SPEC** — statische Berechtigungen für 2D-Barcode-Tickets
+  10. **KA STB-SPEC mobile plus** — „Kryptographischer Kopierschutz für statische Berechtigungen VDV-Barcode mobile+“
+  11. Motics — „Verification of Copy Protection and Entitlement Data“
+  12. **KA XML-Schemata und WSDL** der TX-Transaktionen sowie KA-XML-Schema der KA-NM-Lieferliste
+- **Bedeutung:** Damit ist eine **Version 1.12.0** der KA-Spezifikationen belegt — deutlich neuer als die bisher bekannten 1.1.07, 1.3.0 und 1.5.0. Daraus folgt **nicht**, welches Release heute verbindlich unterstützt wird; der Bericht belegt nur, wogegen dieses Terminal 2024 geprüft wurde. Konsequenz für die Beschaffung: Die Anfrage muss auch Version 1.12.0 nennen, siehe [BESCHAFFUNG.md](BESCHAFFUNG.md).
+- **Stichworte:** KA-Versionen, 1.12.0, Zulassung von Akzeptanzterminals, vollständige Spezifikationstitel
+- **Rechte:** „geistiges Eigentum der cetecom advanced GmbH“, bestimmt zur Beantragung einer Akzeptanzterminalzulassung bei der Zulassungsstelle des VDV eTS. Nur Verweis und Kurzexzerpt.
+- **URL:** https://www.carema.de/wp-content/uploads/2024/10/CETECOM-Test-Report-Akzeptanzterminal-PM95.pdf
+
 ---
 
 # 4. Sekundärquellen
@@ -483,6 +550,32 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 - **Inhalt:** Meldung zu Änderungen in Release 1.5.0, u. a. beim Aktionsmanagement und bei der Verarbeitung von Berechtigungen. Einziger Beleg für Release 1.5.0 in der Sammlung, aber **Sekundärquelle** — Aussagen als `zu prüfen` führen.
 - **Stichworte:** KA-Versionen, Release 1.5.0, Versionsunterschiede
 - **URL:** https://www.itcs-info.de/index.php/news/145-e-ticket/490-vdv-ka-release-1-5-0-veroeffentlicht
+
+## Q41
+
+**VDV-Schrift 436-1 – Offene Mobilitätsplattform, Rollenmodell**
+
+- **Datei:** `QUELLEN/Q41_VDV-Schrift-436-1_Offene-Mobilitaetsplattform-Rollenmodell.pdf` (26 Seiten)
+- **Typ:** Primär (VDV-Schrift) · **Herkunft:** Original (vdv.de) · **Auswertung:** **nicht möglich**
+- **Inhalt (unverifiziert):** Soll im Quellenverzeichnis die **KA BOM-SPEC Version 1.5.0 von 2016** nennen. Das ist **nicht geprüft**.
+- **Technischer Hinweis:** Die Datei ist **AES-256-verschlüsselt** (`/CFM /AESV3`). `tools/pdftext.py` kann daraus keinen Text gewinnen; eine AES-Implementierung mit der Standardbibliothek wäre für diesen Zweck unverhältnismäßig. In einem PDF-Betrachter lässt sich das Dokument öffnen — die Angabe auf der gedruckten Seite 20 ist dort **von Hand zu prüfen**, bevor sie zitiert wird.
+- **Stichworte:** Rollenmodell, Versionsnachweis BOM 1.5.0 (zu prüfen)
+- **URL:** https://www.vdv.de/downloads/4016/436%201%20%20SDS%281%29/forced
+
+## Q42
+
+**KCD NRW – Newsletterarchiv**
+
+- **Datei:** `QUELLEN/Q42_KCD-NRW_Newsletterarchiv.html`
+- **Typ:** Sekundär · **Herkunft:** Original · **Auswertung:** teilweise — die Zertifikats- und Zeitangaben sind in der Seite geprüft
+- **Inhalt — klärt zwei offene Fragen:** Das Archiv gibt die Teilnehmerinformationen des (((eTicket Service wieder und nennt dabei harte Daten zur Sicherheitsinfrastruktur:
+  - Die aktuellen SubCA-Zertifikate sind die letzten, die mit dem **Root-Zertifikat der 1. Generation (1GSI)** erstellt wurden. Die aktive Gültigkeit dieses Root-Zertifikats ist **planmäßig zum 1. Dezember 2021 abgelaufen**; neue Zertifikate lassen sich damit nicht mehr erstellen, die SubCA-Zertifikate bleiben aber gültig.
+  - **Häufiger Implementierungsfehler:** Einige Systeme prüfen bei Ausgabe oder Kontrolle, ob das Root-Zertifikat *zu diesem Zeitpunkt* gültig ist. Das ist falsch und führt seit dem 1. Dezember 2021 zu Fehlverhalten. Richtig ist die Prüfung, ob das Root-Zertifikat **zum Zeitpunkt der Erstellung des SubCA-Zertifikats** gültig war.
+  - Ein neues Root-Zertifikat gibt es erst für die **2. Generation (2GSI)**, und zwar mit der Einführung der **VDV-Kernapplikation 3.0 unter dem Namen (((etiCORE zum 1. Dezember 2026**.
+  - Die aktuellen SubCA-Zertifikate sind **10 Jahre bis zum 1. Dezember 2031** gültig — „also bis zum Ende der VDV-Kernapplikation 1.x“. Im Übergangszeitraum 2026 bis 2031 sind beide Zertifikate gültig und ermöglichen den **Parallelbetrieb von VDV-KA 1.x (1GSI) und (((etiCORE (2GSI)**.
+- **Quellenkritik:** Sekundärquelle. Das KCD NRW gibt Informationen des (((eTicket Service wieder; die Angaben sind konkret und datiert, stammen aber nicht aus einer Primärquelle. Für verbindliche Aussagen beim VDV eTS bestätigen lassen.
+- **Stichworte:** 1GSI, 2GSI, Root- und SubCA-Zertifikate, etiCORE, KA 3.0, Parallelbetrieb, 01.12.2026, 01.12.2031
+- **URL:** https://www.kcd-nrw.de/service/newsletter/archiv.html
 
 ---
 
