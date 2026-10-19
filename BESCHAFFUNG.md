@@ -164,7 +164,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**15 nicht öffentliche Dokumente** werden derzeit in 81 Artikeln als Normquelle genannt, nach Häufigkeit:
+**15 nicht öffentliche Dokumente** werden derzeit in 90 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -206,7 +206,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
 | **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
-*Erzeugt aus 81 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 90 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

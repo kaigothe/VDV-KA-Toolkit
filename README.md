@@ -32,9 +32,9 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 7. **[Kontrolle](lexikon/kontrolle.md)** — Sperrung, Sperrliste, Sperrlisteneintrag, Sperrgrund, Sperrnachweis, Kontrollnachweise, Sichtkontrolle, Kontrollgerät
 8. **Sicherheit und Schlüssel** — MAC, Schlüsselreferenzen, SAM, CV-Zertifikate, Sicherheitsebenen
 9. **[Datenformate](lexikon/datenformate.md)** — Basisobjektmodell, TLV, Tag 0xDB, Kürzungsregel für Namen, Nullwerte, XSD und WSDL, XML-Namensraum, VDV-Barcode
-10. **Account Based Ticketing** — ABT und MBT, ID-Token, Ticket Cloud, Offline-Kontrolle, Deny List
+10. **[Account Based Ticketing](lexikon/abt.md)** — MBT, Account, ID-Token, Ticket Cloud, Online- und Offline-Kontrolle, Hybridsystem, Deny List, ABT in der Kernapplikation
 
-> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). **[Datenformate](lexikon/datenformate.md)** (8) und **[Kontrolle](lexikon/kontrolle.md)** (8) sind ebenfalls fertig. Es fehlen noch Sicherheit und ABT; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
+> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). **[Datenformate](lexikon/datenformate.md)** (8) und **[Kontrolle](lexikon/kontrolle.md)** (8) sind ebenfalls fertig. **[ABT](lexikon/abt.md)** (8) ist ebenfalls fertig. Es fehlt nur noch Sicherheit; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
 
 ---
 

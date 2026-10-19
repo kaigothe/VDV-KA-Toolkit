@@ -2,11 +2,14 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-81 Eintragräge
+90 Eintragräge
 
 
 ## A
 
+- [ABT in der Kernapplikation](lexikon/abt/abt-in-der-kernapplikation.md)
+- [Account](lexikon/abt/account.md)
+- [Account Based Ticketing](lexikon/abt.md) — ABT
 - [Aktion](lexikon/aktionsmanagement/aktion.md)
 - [Aktionsclearing](lexikon/aktionsmanagement/aktionsclearing.md)
 - [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md)
@@ -34,6 +37,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## D
 
 - [Datenformate](lexikon/datenformate.md)
+- [Deny List](lexikon/abt/deny-list.md)
 - [Dienstleister](lexikon/rollen/dl.md) — DL
 - [Duplikaterkennung](lexikon/transaktionen/duplikaterkennung.md)
 
@@ -54,9 +58,11 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## H
 
 - [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) — HGS
+- [Hybridsystem](lexikon/abt/hybridsystem.md)
 
 ## I
 
+- [ID-Token](lexikon/abt/id-token.md)
 - [Interoperabilität](lexikon/grundlagen/interoperabilitaet.md)
 
 ## K
@@ -77,6 +83,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## M
 
 - [Medien](lexikon/medien.md)
+- [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) — MBT
 - [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
 
 ## N
@@ -87,6 +94,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## O
 
+- [Online- und Offline-Kontrolle](lexikon/abt/online-und-offline-kontrolle.md)
 - [Organisations-ID](lexikon/rollen/organisations-id.md) — Org-ID
 
 ## P
@@ -117,6 +125,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md)
 - [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md)
+- [Ticket Cloud](lexikon/abt/ticket-cloud.md)
 - [TLV-Kodierung](lexikon/datenformate/tlv.md) — TLV
 - [Transaktion](lexikon/transaktionen/transaktion.md)
 - [Transaktionen](lexikon/transaktionen.md)

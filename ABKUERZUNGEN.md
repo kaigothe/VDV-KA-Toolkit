@@ -2,10 +2,11 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-28 Abkürzungen.
+30 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
+| **ABT** | [Account Based Ticketing](lexikon/abt.md) | Account Based Ticketing |
 | **AH** | [Applikationsherausgeber](lexikon/rollen/ah.md) | Application Owner |
 | **AKT** | [Akzeptanzterminal](lexikon/rollen/akzeptanzterminal.md) | Medium Access Device |
 | **AktM** | [Aktionsmanagement](lexikon/aktionsmanagement.md) | action management |
@@ -20,6 +21,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
 | **KOSE** | [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) | Hotlist Service |
 | **KVP** | [Kundenvertragspartner](lexikon/rollen/kvp.md) | Customer Contract Partner |
+| **MBT** | [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) | medium based ticketing |
 | **MultiBER** | [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) | multi entitlement |
 | **NM** | [Nutzermedium](lexikon/medien/nutzermedium.md) | User Medium |
 | **Org-ID** | [Organisations-ID](lexikon/rollen/organisations-id.md) | Organisation ID |
