@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-72 Eintragräge
+81 Eintragräge
 
 
 ## A
@@ -63,6 +63,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md)
 - [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) — KOSE
+- [Kontrolle](lexikon/kontrolle.md)
+- [Kontrollgerät](lexikon/kontrolle/kontrollgeraet.md)
+- [Kontrollnachweise](lexikon/kontrolle/kontrollnachweise.md)
 - [Kundenvertragspartner](lexikon/rollen/kvp.md) — KVP
 - [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md)
 
@@ -102,6 +105,12 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## S
 
+- [Sichtkontrolle](lexikon/kontrolle/sichtkontrolle.md)
+- [Sperrgrund](lexikon/kontrolle/sperrgrund.md)
+- [Sperrliste](lexikon/kontrolle/sperrliste.md)
+- [Sperrlisteneintrag](lexikon/kontrolle/sperrlisteneintrag.md)
+- [Sperrnachweis](lexikon/kontrolle/sperrnachweis.md)
+- [Sperrung](lexikon/kontrolle/sperrung.md)
 - [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) — StatBer
 
 ## T

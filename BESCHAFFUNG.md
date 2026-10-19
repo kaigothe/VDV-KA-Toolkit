@@ -164,14 +164,14 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**15 nicht öffentliche Dokumente** werden derzeit in 72 Artikeln als Normquelle genannt, nach Häufigkeit:
+**15 nicht öffentliche Dokumente** werden derzeit in 81 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
 | 29 | 41 | **KA AktM-SPEC** | [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md), [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
-| 22 | 4 | **KA SST-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Rollen](lexikon/rollen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXEBER](lexikon/transaktionen/txeber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
+| 28 | 4 | **KA SST-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kontrollnachweise](lexikon/kontrolle/kontrollnachweise.md), [Rollen](lexikon/rollen.md), [Sperrliste](lexikon/kontrolle/sperrliste.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXEBER](lexikon/transaktionen/txeber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
+| 12 | 1 | **KA BOM-SPEC** | [Basisobjektmodell](lexikon/datenformate/bom.md), [berStatus](lexikon/berechtigungen/berstatus.md), [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Sperrgrund](lexikon/kontrolle/sperrgrund.md) |
 | 11 | 2 | **Anlage TLV EFS** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md), [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md), [TLV-Kodierung](lexikon/datenformate/tlv.md) |
-| 10 | 1 | **KA BOM-SPEC** | [Basisobjektmodell](lexikon/datenformate/bom.md), [berStatus](lexikon/berechtigungen/berstatus.md), [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md) |
 | 10 | 5 | **KA XML-Schemata und WSDL** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [XSD und WSDL](lexikon/datenformate/xsd.md) |
 | 6 | 42 | **KA STB-Spec** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md), [VDV-Barcode](lexikon/datenformate/vdv-barcode.md) |
 | 5 | 7 | **KA NM-SPEC** | [Applikation](lexikon/medien/applikation.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Nutzermedium](lexikon/medien/nutzermedium.md) |
@@ -206,7 +206,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
 | **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
-*Erzeugt aus 72 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 81 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

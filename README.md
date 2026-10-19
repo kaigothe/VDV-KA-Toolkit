@@ -29,12 +29,12 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 4. **[Berechtigungen](lexikon/berechtigungen.md)** — Berechtigung, EFS, Produkt, Produktnummer, berStatus, berSynchronNummer, Gültigkeit, produktspezifischer Teil, statische Berechtigung, Multiberechtigung
 5. **[Transaktionen](lexikon/transaktionen.md)** — TX_BASE, `logTransaktionsTyp`, TXABER, TXRBER, TXSNAWB, TXEBER, TXAML, `txalisber`, TXA/TXB, Duplikaterkennung
 6. **[Aktionsmanagement](lexikon/aktionsmanagement.md)** — Aktion, Aktionsliste, Auftragstyp, Ausgabe und Rücknahme über Aktionsliste
-7. **Sperr- und Kontrollmanagement** — Sperrlisten, Sperrnachweise, Kontrollnachweise, Sichtkontrolle
+7. **[Kontrolle](lexikon/kontrolle.md)** — Sperrung, Sperrliste, Sperrlisteneintrag, Sperrgrund, Sperrnachweis, Kontrollnachweise, Sichtkontrolle, Kontrollgerät
 8. **Sicherheit und Schlüssel** — MAC, Schlüsselreferenzen, SAM, CV-Zertifikate, Sicherheitsebenen
 9. **[Datenformate](lexikon/datenformate.md)** — Basisobjektmodell, TLV, Tag 0xDB, Kürzungsregel für Namen, Nullwerte, XSD und WSDL, XML-Namensraum, VDV-Barcode
 10. **Account Based Ticketing** — ABT und MBT, ID-Token, Ticket Cloud, Offline-Kontrolle, Deny List
 
-> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). **[Datenformate](lexikon/datenformate.md)** (8) ist ebenfalls fertig. Es fehlen noch Kontrolle, Sicherheit und ABT; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
+> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). **[Datenformate](lexikon/datenformate.md)** (8) und **[Kontrolle](lexikon/kontrolle.md)** (8) sind ebenfalls fertig. Es fehlen noch Sicherheit und ABT; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
 
 ---
 
