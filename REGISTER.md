@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-63 Eintragräge
+72 Eintragräge
 
 
 ## A
@@ -25,6 +25,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## B
 
+- [Basisobjektmodell](lexikon/datenformate/bom.md) — BOM
 - [Berechtigung](lexikon/berechtigungen/berechtigung.md)
 - [Berechtigungen](lexikon/berechtigungen.md)
 - [berStatus](lexikon/berechtigungen/berstatus.md)
@@ -32,6 +33,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## D
 
+- [Datenformate](lexikon/datenformate.md)
 - [Dienstleister](lexikon/rollen/dl.md) — DL
 - [Duplikaterkennung](lexikon/transaktionen/duplikaterkennung.md)
 
@@ -62,6 +64,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md)
 - [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) — KOSE
 - [Kundenvertragspartner](lexikon/rollen/kvp.md) — KVP
+- [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md)
 
 ## L
 
@@ -76,6 +79,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## N
 
 - [Nachweis](lexikon/transaktionen/nachweis.md)
+- [Nullwerte](lexikon/datenformate/nullwerte.md)
 - [Nutzermedium](lexikon/medien/nutzermedium.md) — NM
 
 ## O
@@ -102,7 +106,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## T
 
+- [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md)
 - [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md)
+- [TLV-Kodierung](lexikon/datenformate/tlv.md) — TLV
 - [Transaktion](lexikon/transaktionen/transaktion.md)
 - [Transaktionen](lexikon/transaktionen.md)
 - [TX_BASE](lexikon/transaktionen/tx-base.md) — TX_BASE
@@ -116,8 +122,14 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## V
 
+- [VDV-Barcode](lexikon/datenformate/vdv-barcode.md)
 - [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) — KA
 - [Versionen](lexikon/grundlagen/versionen.md)
+
+## X
+
+- [XML-Namensraum](lexikon/datenformate/xml-namensraum.md)
+- [XSD und WSDL](lexikon/datenformate/xsd.md) — XSD
 
 ---
 

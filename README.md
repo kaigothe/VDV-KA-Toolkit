@@ -31,10 +31,10 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 6. **[Aktionsmanagement](lexikon/aktionsmanagement.md)** — Aktion, Aktionsliste, Auftragstyp, Ausgabe und Rücknahme über Aktionsliste
 7. **Sperr- und Kontrollmanagement** — Sperrlisten, Sperrnachweise, Kontrollnachweise, Sichtkontrolle
 8. **Sicherheit und Schlüssel** — MAC, Schlüsselreferenzen, SAM, CV-Zertifikate, Sicherheitsebenen
-9. **Datenformate und Kodierung** — XSD, TLV, Nullwerte, VDV-Barcode, Basisobjektmodell
+9. **[Datenformate](lexikon/datenformate.md)** — Basisobjektmodell, TLV, Tag 0xDB, Kürzungsregel für Namen, Nullwerte, XSD und WSDL, XML-Namensraum, VDV-Barcode
 10. **Account Based Ticketing** — ABT und MBT, ID-Token, Ticket Cloud, Offline-Kontrolle, Deny List
 
-> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). Es fehlen noch Datenformate, Kontrolle, Sicherheit und ABT; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
+> **Stand der Arbeit:** Fertig sind **[Grundlagen](lexikon/grundlagen.md)** (8 Artikel), **[Rollen](lexikon/rollen.md)** (10), **[Berechtigungen](lexikon/berechtigungen.md)** (10), **[Medien](lexikon/medien.md)** (5), **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12) und **[Transaktionen](lexikon/transaktionen.md)** (12). **[Datenformate](lexikon/datenformate.md)** (8) ist ebenfalls fertig. Es fehlen noch Kontrolle, Sicherheit und ABT; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
 
 ---
 
