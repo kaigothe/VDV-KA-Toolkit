@@ -19,6 +19,7 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 | [Abkürzungsverzeichnis](ABKUERZUNGEN.md) | TXAML, KVP, PV, SAM, ALISE … |
 | [Bärstadt in Bärenland](welt/baerstadt.md) | die Beispielwelt mit dem durchgehenden Beispielfall |
 | [Quellenverzeichnis](QUELLEN.md) | alle Quellen Q01–Q36 mit Fundstellen |
+| [Benötigte Dokumentation](BESCHAFFUNG.md) | was an nicht öffentlichen KA-Spezifikationen fehlt, wofür, und ein fertiger Anfragetext |
 
 ## Kategorien
 

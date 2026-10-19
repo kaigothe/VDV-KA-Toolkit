@@ -139,6 +139,7 @@ codes: []               # Codelisten, siehe unten
 ## 11. Arbeitsweise
 
 - **Erst Beleg, dann Artikel.** Wenn die Quelle nicht vorliegt, den Artikel nicht schreiben, sondern den Bedarf in [PLAN.md](PLAN.md) notieren.
+- Wird ein **nicht öffentliches KA-Dokument** als Normquelle genannt, prüfen, ob es in [BESCHAFFUNG.md](BESCHAFFUNG.md) steht; der Verwendungsnachweis dort entsteht aus dem Artikeltext und wird von `gen.py` erzeugt.
 - **Nicht raten, um eine Lücke zu schließen.** Eine ehrliche Lücke mit `(zu prüfen)` ist wertvoller als ein glatter Text, der im Werkzeug zu falschen Interpretationen führt.
 - Keine Artikel außerhalb von [STRUKTUR.md](STRUKTUR.md) anlegen. Neue Begriffe zuerst dort mit Pfad, Quelle und Priorität eintragen.
 - Bestehende Artikel beim Erweitern **nicht umstrukturieren**. Die Abschnittsfolge aus Regel 5 ist fest.

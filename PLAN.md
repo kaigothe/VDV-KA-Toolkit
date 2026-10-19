@@ -167,6 +167,8 @@ Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der
 
 Fachliche Punkte, die nicht aus den vorhandenen Quellen zu klären sind. Jeder Artikel, der einen dieser Punkte berührt, trägt dort `(zu prüfen)`.
 
+Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifikationen klären. Welche Dokumente das sind, wofür sie gebraucht werden und wo sie im Lexikon zitiert werden, steht in **[BESCHAFFUNG.md](BESCHAFFUNG.md)** — dort auch ein fertiger Anfragetext für den VDV eTicket Service. Der Verwendungsnachweis in Abschnitt 9a dieser Datei wird von `tools/gen.py` aus den Artikeln erzeugt.
+
 | Nr. | Frage | Betrifft | Klärung über |
 |---|---|---|---|
 | **O1** | Gelten die Transaktionstypen 37/38/39 KA-weit oder nur im eTicket RheinMain? | `transaktionen/logtransaktionstyp.md` und die drei Aktionstyp-Artikel | KA SST-SPEC, KA AktM-SPEC |

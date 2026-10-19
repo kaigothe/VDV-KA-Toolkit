@@ -498,6 +498,8 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 | IVU „reference for e-ticketing“ | Marktübersicht | online und im Archiv nicht verfügbar |
 | UITP-Bericht (Volltext zu [Q22](#q22)) | internationale Begriffe | nur gegen Registrierung |
 
+**Vollständige Anfrageliste mit Begründung je Dokument:** [BESCHAFFUNG.md](BESCHAFFUNG.md)
+
 **Anfrage beim VDV eTicket Service** ([Q26](#q26), service@eticket-deutschland.de) für: KA AktM-SPEC, ALISE-Schnittstellenbeschreibung, ALISE-XSD samt Abhängigkeiten, KA SST-SPEC, KA BOM-SPEC, Codelisten, Dokumentation der logischen Transaktionstypen, Beispielnachrichten. Dabei ausdrücklich nach den Versionen **1.3.0 und 1.5.0** sowie dem aktuell unterstützten Release fragen.
 
 ---
