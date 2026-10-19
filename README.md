@@ -24,7 +24,7 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 ## Kategorien
 
 1. **Grundlagen** — VDV-KA, eTicket Deutschland, Versionen, Ausbauvarianten, Verzeichnis der Spezifikationen
-2. **Rollen und Organisationen** — KVP, DL, PV, AH, KOSE, ALISE, Rollencodes, Organisations-ID
+2. **[Rollen](lexikon/rollen.md)** — KVP, DL, PV, AH, KOSE, ALISE, Rollencodes, Organisations-ID, Hintergrundsystem, Akzeptanzterminal
 3. **Medien und Applikationen** — Nutzermedium, Applikation, Applikationsinstanz, Lebenszyklus
 4. **Berechtigungen und Produkte** — Berechtigung, EFS, Produkt, berStatus, berSynchronNummer, Gültigkeit
 5. **[Transaktionen](lexikon/transaktionen.md)** — TX_BASE, `logTransaktionsTyp`, TXABER, TXRBER, TXSNAWB, TXEBER, TXAML, `txalisber`, TXA/TXB, Duplikaterkennung
@@ -34,7 +34,7 @@ Das Repository hat zwei Stufen. Stufe 1 ist dieses **Lexikon**: ein Nachschlagew
 9. **Datenformate und Kodierung** — XSD, TLV, Nullwerte, VDV-Barcode, Basisobjektmodell
 10. **Account Based Ticketing** — ABT und MBT, ID-Token, Ticket Cloud, Offline-Kontrolle, Deny List
 
-> **Stand der Arbeit:** Die Kategorien **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12 Artikel) und **[Transaktionen](lexikon/transaktionen.md)** (12 Artikel) sind fertig. Die übrigen acht Kategorien folgen; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
+> **Stand der Arbeit:** Fertig sind **[Aktionsmanagement](lexikon/aktionsmanagement.md)** (12 Artikel), **[Transaktionen](lexikon/transaktionen.md)** (12) und **[Rollen](lexikon/rollen.md)** (10). Die übrigen sieben Kategorien folgen; der vollständige Bauplan mit Quellen und Prioritäten steht in [STRUKTUR.md](STRUKTUR.md), der Arbeitsstand in [PLAN.md](PLAN.md).
 
 ---
 
