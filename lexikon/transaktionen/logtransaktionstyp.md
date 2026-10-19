@@ -3,15 +3,45 @@ titel: logTransaktionsTyp
 englisch: logical transaction type
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/transaktionen/tx-base.md, lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md]
-quellen: [Q06, Q25]
+quellen: [Q05, Q06, Q25]
 status: belegt
 offene_fragen: [O1]
 stand: 2026-10-19
 codes:
+  - wert: 1
+    bedeutung: Ausgabetransaktion
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 22)
+    status: belegt
+    verbundspezifisch: true
+  - wert: 2
+    bedeutung: Entwertung
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 22)
+    status: belegt
+    verbundspezifisch: true
+  - wert: 20
+    bedeutung: Sperrtransaktion
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 22)
+    status: belegt
+    verbundspezifisch: true
+  - wert: 21
+    bedeutung: Entsperrtransaktion
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 22)
+    status: belegt
+    verbundspezifisch: true
+  - wert: 25
+    bedeutung: Rückgabetransaktion
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 23)
+    status: belegt
+    verbundspezifisch: true
   - wert: 27
-    bedeutung: TXEBER aus Kontrolle
-    quelle: Q06
-    fundstelle: Kap. 5.1.2 (PDF-S. 40)
+    bedeutung: Kontrolle — TXEBER aus Kontrolle
+    quelle: Q05
+    fundstelle: Kap. 4.4.4 (PDF-S. 23); bestätigt in Q06 Kap. 5.1.2
     status: belegt
     verbundspezifisch: true
   - wert: 37
@@ -44,16 +74,19 @@ Das Feld `logTransaktionsTyp` kennzeichnet den Transaktionstyp auf Nutzermedium-
 
 **Es ist nicht dasselbe wie `transTransaktionsTyp` im [`TX_BASE`](tx-base.md)**, das die Codeliste `IONTransaktionsTyp_CODE` nutzt. Beide Felder können in derselben Nachricht stehen und unterschiedliche Werte tragen: Ein `TXEBER` aus Kontrolle hat `IONTransaktionsTyp_CODE` = 059 **und** `logTransaktionsTyp.code` = 27 ([Q06](../../QUELLEN.md#q06), Kap. 5.1.2). Diese Verwechslung ist beim Auswerten einer Nachricht eine naheliegende Fehlerquelle.
 
-Belegte Werte aus dem eTicket RheinMain:
+[Q05](../../QUELLEN.md#q05), Kap. 4.4.4, nennt die „relevanten Transaktionstypcodes“ vollständig; [Q06](../../QUELLEN.md#q06) bestätigt 27 und 37 bis 39:
 
-| Wert | Bedeutung | Fundstelle |
-|---:|---|---|
-| **27** | `TXEBER` aus Kontrolle | Kap. 5.1.2 |
-| **37** | `TXABER` – Ausgabe EFS über Aktionsliste | Kap. 2.1.5, Fußnote 1 |
-| **38** | `TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste | Kap. 2.1.5, Fußnote 1 |
-| **39** | Rückgabetransaktion EFS über Aktionsliste | Kap. 2.1.5, Fußnote 1 |
+| Wert | Bedeutung | | Wert | Bedeutung |
+|---:|---|---|---:|---|
+| **1** | Ausgabetransaktion | | **25** | Rückgabetransaktion |
+| **2** | Entwertung | | **27** | Kontrolle |
+| **20** | Sperrtransaktion | | **37** | Ausgabe EFS über Aktionsliste |
+| **21** | Entsperrtransaktion | | **38** | Entsperrtransaktion EFS über Aktionsliste |
+| | | | **39** | Rückgabetransaktion EFS über Aktionsliste |
 
-Alle vier Werte sind Festlegungen eines Verbunds. Ob sie KA-weit gelten, ist nicht belegt (zu prüfen, O1) · *verbundspezifisch*.
+**Die Systematik ist aufschlussreich:** Drei Vorgänge treten paarweise auf — Ausgabe als 1 und 37, Entsperrung als 21 und 38, Rückgabe als 25 und 39. Der niedrige Wert bezeichnet den direkten Vorgang, der hohe denselben Vorgang **über die Aktionsliste** (abgeleitet). Entwertung (2), Sperrung (20) und Kontrolle (27) haben keine Aktionslisten-Entsprechung.
+
+Alle Werte stammen aus Verbunddokumenten. Ob sie KA-weit gelten, ist nicht belegt (zu prüfen, O1) · *verbundspezifisch*.
 
 Die vollständige Codeliste steht in der nicht öffentlichen KA BOM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 1).
 
@@ -74,6 +107,7 @@ Und die immer gleiche Warnung: Diese Zahlen stammen aus dem Pflichtenheft eines 
 ## Quellen
 
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5, Fußnote 1 (PDF-S. 13): `logTransaktionsTyp` vom Typ `NmTransaktionsTyp_CODE` mit den Werten 37, 38 und 39; Kap. 5.1.2 (PDF-S. 40): `TXEBER` aus Kontrolle mit `IONTransaktionsTyp_CODE` = 059 und `logTransaktionsTyp.code` = 27 · *verbundspezifisch: eTicket RheinMain*
+- [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 4.4.4 (PDF-S. 22 f.): vollständige Liste der „relevanten Transaktionstypcodes“ 1, 2, 20, 21, 25, 27, 37, 38 und 39 · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle der Codelisten)
 
 <!-- GEN:navigation -->
