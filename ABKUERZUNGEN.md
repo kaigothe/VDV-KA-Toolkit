@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-30 Abkürzungen.
+35 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -13,19 +13,24 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **ALISE** | [Aktionslistenservice](lexikon/rollen/alise.md) | Action List Service |
 | **App** | [Applikation](lexikon/medien/applikation.md) | Application |
 | **BOM** | [Basisobjektmodell](lexikon/datenformate/bom.md) | Basic Object Model |
+| **CVC** | [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) | card verifiable certificate |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |
 | **EFM** | [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) | Electronic Fare Management |
 | **EFS** | [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) | Electronic Ticket |
 | **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
 | **HGS** | [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) | Backoffice System |
 | **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
+| **KM** | [Keymanagement](lexikon/sicherheit/keymanagement.md) | Key Management |
 | **KOSE** | [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) | Hotlist Service |
 | **KVP** | [Kundenvertragspartner](lexikon/rollen/kvp.md) | Customer Contract Partner |
+| **MAC** | [MAC](lexikon/sicherheit/mac.md) | Message Authentication Code |
 | **MBT** | [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) | medium based ticketing |
 | **MultiBER** | [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) | multi entitlement |
 | **NM** | [Nutzermedium](lexikon/medien/nutzermedium.md) | User Medium |
 | **Org-ID** | [Organisations-ID](lexikon/rollen/organisations-id.md) | Organisation ID |
+| **PKI** | [Public Key Infrastructure](lexikon/sicherheit/pki.md) | Public Key Infrastructure |
 | **PV** | [Produktverantwortlicher](lexikon/rollen/pv.md) | Product Owner |
+| **SAM** | [Secure Application Module](lexikon/sicherheit/sam.md) | Secure Application Module |
 | **StatBer** | [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) | Static Entitlement |
 | **TLV** | [TLV-Kodierung](lexikon/datenformate/tlv.md) | TLV encoding |
 | **TX_BASE** | [TX_BASE](lexikon/transaktionen/tx-base.md) | transaction base |

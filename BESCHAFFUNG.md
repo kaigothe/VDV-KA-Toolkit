@@ -164,7 +164,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**15 nicht öffentliche Dokumente** werden derzeit in 90 Artikeln als Normquelle genannt, nach Häufigkeit:
+**15 nicht öffentliche Dokumente** werden derzeit in 99 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -173,16 +173,16 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | 12 | 1 | **KA BOM-SPEC** | [Basisobjektmodell](lexikon/datenformate/bom.md), [berStatus](lexikon/berechtigungen/berstatus.md), [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Sperrgrund](lexikon/kontrolle/sperrgrund.md) |
 | 11 | 2 | **Anlage TLV EFS** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md), [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md), [TLV-Kodierung](lexikon/datenformate/tlv.md) |
 | 10 | 5 | **KA XML-Schemata und WSDL** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [XSD und WSDL](lexikon/datenformate/xsd.md) |
+| 8 | 8 | **KA SAM-SPEC** | [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Keymanagement](lexikon/sicherheit/keymanagement.md), [Secure Application Module](lexikon/sicherheit/sam.md), [Sicherheit](lexikon/sicherheit.md) |
 | 6 | 42 | **KA STB-Spec** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md), [VDV-Barcode](lexikon/datenformate/vdv-barcode.md) |
-| 5 | 7 | **KA NM-SPEC** | [Applikation](lexikon/medien/applikation.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Nutzermedium](lexikon/medien/nutzermedium.md) |
+| 6 | 7 | **KA NM-SPEC** | [Applikation](lexikon/medien/applikation.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Nutzermedium](lexikon/medien/nutzermedium.md), [Secure Application Module](lexikon/sicherheit/sam.md) |
+| 4 | 6 | **KA SEC-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Keymanagement](lexikon/sicherheit/keymanagement.md), [Sicherheit](lexikon/sicherheit.md) |
 | 3 | 40 | **KA MultiBER-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) |
 | 2 | 12–21 | **KA SysLH** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 2 | 35 | **KA PROD_ID-ANW** | [Produktnummer](lexikon/berechtigungen/produktnummer.md) |
 | 2 | 9 | **KA ION-SPEC** | [Interoperabilität](lexikon/grundlagen/interoperabilitaet.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 1 | 11 | **KA KOSES-Spec** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 1 | 33 | **KA TXx-Prüfungs-ANW** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
-| 1 | 6 | **KA SEC-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
-| 1 | 8 | **KA SAM-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 
 ### Artikel, die ohne diese Dokumente unvollständig bleiben
 
@@ -206,7 +206,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
 | **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
-*Erzeugt aus 90 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 99 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

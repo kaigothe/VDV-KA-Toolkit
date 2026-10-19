@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-90 Eintragräge
+99 Eintragräge
 
 
 ## A
@@ -33,6 +33,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Berechtigungen](lexikon/berechtigungen.md)
 - [berStatus](lexikon/berechtigungen/berstatus.md)
 - [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) *(abgeleitet)*
+
+## C
+
+- [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) — CVC
 
 ## D
 
@@ -68,6 +72,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## K
 
 - [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md)
+- [Keymanagement](lexikon/sicherheit/keymanagement.md) — KM
 - [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) — KOSE
 - [Kontrolle](lexikon/kontrolle.md)
 - [Kontrollgerät](lexikon/kontrolle/kontrollgeraet.md)
@@ -82,6 +87,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## M
 
+- [MAC](lexikon/sicherheit/mac.md) — MAC
 - [Medien](lexikon/medien.md)
 - [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) — MBT
 - [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
@@ -104,6 +110,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Produktnummer](lexikon/berechtigungen/produktnummer.md)
 - [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md)
 - [Produktverantwortlicher](lexikon/rollen/pv.md) — PV
+- [Public Key Infrastructure](lexikon/sicherheit/pki.md) — PKI
 
 ## R
 
@@ -113,6 +120,11 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## S
 
+- [Schlüsselarten](lexikon/sicherheit/schluesselarten.md)
+- [Schlüsselreferenz](lexikon/sicherheit/schluesselreferenz.md)
+- [Secure Application Module](lexikon/sicherheit/sam.md) — SAM
+- [Sicherheit](lexikon/sicherheit.md)
+- [Sicherheitsebenen](lexikon/sicherheit/sicherheitsebenen.md)
 - [Sichtkontrolle](lexikon/kontrolle/sichtkontrolle.md)
 - [Sperrgrund](lexikon/kontrolle/sperrgrund.md)
 - [Sperrliste](lexikon/kontrolle/sperrliste.md)
