@@ -15,6 +15,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from lexikon import (ARTIKEL_WURZELN, BEISPIEL_H2, GEN_BLOECKE, HOME,
+                     ohne_gen_bloecke,
                      LIMIT_BEISPIEL, LIMIT_FACHLICH, QUELLEN_DATEI, REPO,
                      abschnitte, baue_baum, lade_artikel, lade_offene_fragen,
                      lade_q_nummern, lies_block, parse_frontmatter,
@@ -55,7 +56,7 @@ def pruefe_frontmatter(a):
         if not isinstance(c, dict):
             F(a.pfad, f"codes[{i}] ist kein Objekt")
             continue
-        for key in ("wert", "bedeutung", "quelle", "status"):
+        for key in ("wert", "codeliste", "bedeutung", "quelle", "status"):
             if key not in c:
                 F(a.pfad, f"codes[{i}] ('{c.get('bedeutung', '?')}'): '{key}' fehlt")
 
@@ -250,6 +251,7 @@ def pruefe_siehe_auch(a, artikel):
 def pruefe_gen_bloecke(a, artikel):
     inhalte = {
         "breadcrumb": gen.breadcrumb(a, artikel),
+        "siehe_auch": gen.siehe_auch(a, artikel),
         "unterartikel": gen.unterartikel(a),
         "navigation": gen.navigation(a, artikel),
     }
@@ -258,10 +260,80 @@ def pruefe_gen_bloecke(a, artikel):
         if ist is None:
             if name == "unterartikel" and not a.kinder:
                 continue
+            if name == "siehe_auch" and not inhalte[name]:
+                continue
             F(a.pfad, f"Block GEN:{name} fehlt")
             continue
         if ist.strip() != inhalte[name].strip():
             F(a.pfad, f"Block GEN:{name} nicht aktuell — 'python3 tools/gen.py' ausführen")
+
+
+WELT_DATEI = "welt/baerstadt.md"
+# Muster, die eindeutig Beispielwelt-Kennungen bezeichnen. Bewusst eng
+# gewählt: Ein Muster wie \b9[0-9]{3}\b würde ISO-9796-2 und die
+# Deutschlandticket-Produktnummern 9995/9998/9999 fälschlich melden.
+WELT_MUSTER = [
+    (r"\bT-[0-9]{4}\b", "Terminal"),
+    (r"\bTG-[0-9]{2}\b", "Terminalgruppe"),
+    (r"\b900000[0-9]{2}\b", "Applikationsinstanz"),
+    (r"\bSAM-9[0-9]{3}-[0-9]+\b", "SAM"),
+    (r"\b(?:Pia|Olli|Petra|Bodo) [A-ZÄÖÜ][a-zäöüß]+\b", "Figur"),
+]
+
+
+def pruefe_weltbibel(artikel):
+    """Beispiele dürfen nur Kennungen und Figuren der Welt-Bibel verwenden.
+
+    Erfundene Namen oder IDs in Beispielen brechen die Zusage, dass die
+    Beispielwelt über alle Artikel hinweg gleich bleibt (CLAUDE.md, Regel 8).
+
+    Grenze der Prüfung: Figuren werden nur an den bekannten Vornamen erkannt.
+    Eine vollständig erfundene Figur fällt nicht auf. Die Muster sind bewusst
+    eng, weil weitere Treffer zu Fehlalarmen führen.
+    """
+    pfad = os.path.join(REPO, WELT_DATEI)
+    if not os.path.isfile(pfad):
+        return
+    with open(pfad, encoding="utf-8") as f:
+        welt = f.read()
+    for a in sorted(artikel.values(), key=lambda x: x.pfad):
+        text = ohne_gen_bloecke(a.rumpf)
+        for muster, art in WELT_MUSTER:
+            for treffer in sorted(set(re.findall(muster, text))):
+                # Deutscher Genitiv: "Olli Tapsigs" verweist auf "Olli Tapsig"
+                if treffer in welt or treffer.rstrip("s") in welt:
+                    continue
+                if True:
+                    F(a.pfad, f"{art} '{treffer}' steht nicht in "
+                              f"{WELT_DATEI} — Beispielwelt erweitern "
+                              "oder Beispiel anpassen")
+
+
+def pruefe_codelisten(artikel):
+    """Derselbe Wert in derselben Codeliste muss überall dasselbe bedeuten.
+
+    Ohne diese Prüfung driften Formulierungen auseinander, und das spätere
+    Analysewerkzeug bekäme für einen Codewert zwei verschiedene Auskünfte.
+    """
+    belegung = {}
+    for a in sorted(artikel.values(), key=lambda x: x.pfad):
+        for c in (a.fm.get("codes") or []):
+            if not isinstance(c, dict):
+                continue
+            liste, wert = c.get("codeliste"), c.get("wert")
+            if liste is None or wert is None:
+                continue
+            schluessel = (str(liste), str(wert))
+            bedeutung = str(c.get("bedeutung"))
+            if schluessel in belegung:
+                andere_pfad, andere_bed = belegung[schluessel]
+                if andere_bed != bedeutung:
+                    F(a.pfad, f"Codeliste '{liste}', Wert {wert}: Bedeutung "
+                              f"weicht von {andere_pfad} ab\n"
+                              f"             hier:  {bedeutung}\n"
+                              f"             dort:  {andere_bed}")
+            else:
+                belegung[schluessel] = (a.pfad, bedeutung)
 
 
 def pruefe_verwaiste_dateien(artikel):
@@ -303,6 +375,8 @@ def main():
 
     pruefe_verwaiste_dateien(artikel)
     pruefe_baum(artikel)
+    pruefe_codelisten(artikel)
+    pruefe_weltbibel(artikel)
 
     summe_fachlich = summe_beispiel = 0
     for a in sorted(artikel.values(), key=lambda x: x.pfad):

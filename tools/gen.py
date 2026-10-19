@@ -50,6 +50,27 @@ def breadcrumb(a, artikel):
     return " › ".join(teile)
 
 
+def siehe_auch(a, artikel):
+    """Querverweise aus dem Frontmatter als sichtbaren Abschnitt.
+
+    Die Titel kommen aus den Zielartikeln, bleiben also bei Umbenennungen
+    korrekt. Ohne Eintraege bleibt der Block leer.
+    """
+    ziele = [str(z) for z in (a.fm.get("siehe_auch") or []) if str(z).strip()]
+    if not ziele:
+        return ""
+    zeilen = ["## Siehe auch", ""]
+    for ziel in ziele:
+        andere = artikel.get(ziel)
+        if andere is None:
+            zeilen.append(f"- [{ziel}]({a.rel(ziel)})")
+            continue
+        kuerzel = andere.fm.get("abkuerzung")
+        zusatz = f" ({kuerzel})" if kuerzel and str(kuerzel) != andere.titel else ""
+        zeilen.append(f"- [{andere.titel}]({a.rel(ziel)}){zusatz}")
+    return "\n".join(zeilen)
+
+
 def unterartikel(a):
     if not a.kinder:
         return ""
@@ -184,10 +205,17 @@ def main():
     for a in sorted(artikel.values(), key=lambda x: x.pfad):
         inhalte = {
             "breadcrumb": breadcrumb(a, artikel),
+            "siehe_auch": siehe_auch(a, artikel),
             "unterartikel": unterartikel(a),
             "navigation": navigation(a, artikel),
         }
         text = a.roh
+        # Einmalige Migration: fehlende Blöcke vor der Navigation einfügen
+        for name in ("siehe_auch",):
+            if inhalte[name] and f"GEN:{name}" not in text and "<!-- GEN:navigation -->" in text:
+                text = text.replace(
+                    "<!-- GEN:navigation -->",
+                    f"<!-- GEN:{name} -->\n<!-- /GEN:{name} -->\n\n<!-- GEN:navigation -->", 1)
         for name in GEN_BLOECKE:
             alt = lies_block(text, name)
             if alt is None:

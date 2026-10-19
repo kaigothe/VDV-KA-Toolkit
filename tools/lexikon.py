@@ -22,7 +22,7 @@ LIMIT_FACHLICH = 250
 LIMIT_BEISPIEL = 600
 BEISPIEL_H2 = "## Einfach erklärt"
 
-GEN_BLOECKE = ("breadcrumb", "unterartikel", "navigation")
+GEN_BLOECKE = ("breadcrumb", "siehe_auch", "unterartikel", "navigation")
 
 UMLAUTE = {
     "ä": "ae", "ö": "oe", "ü": "ue",

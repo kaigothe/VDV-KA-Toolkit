@@ -105,12 +105,14 @@ codes: []               # Codelisten, siehe unten
   ```yaml
   codes:
     - wert: 37
+      codeliste: NmTransaktionsTyp_CODE
       bedeutung: Ausgabe EFS über Aktionsliste
       quelle: Q06
       fundstelle: Kap. 2.1.5, Fußnote 1
       status: belegt
       verbundspezifisch: true
   ```
+- **`codeliste` ist Pflicht.** Dieselbe Zahl bedeutet in verschiedenen Codelisten Verschiedenes: Die 5 ist in `WertobjektStatus_CODE` „zurückgenommen“, als KA-Rollencode der KOSE und als `keytype` der Keymanagement-Aktivierungsschlüssel. Ohne Listennamen ist ein Codewert für das Analysewerkzeug unbrauchbar. Wo kein offizieller Listenname belegt ist, wird der Feldname eingetragen.
 - `stand:` bei jeder inhaltlichen Änderung auf das aktuelle Datum setzen.
 
 ## 8. Die Beispielwelt
