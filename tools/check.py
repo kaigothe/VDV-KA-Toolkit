@@ -68,6 +68,18 @@ def pruefe_dateiname(a):
                   f"'{a.titel}' — erwartet '{erwartet}.md'")
 
 
+def pruefe_h1(a):
+    """Die H1 muss wortgleich zum Frontmatter-Titel sein.
+
+    Sonst weichen Breadcrumb, Register und Seitentitel voneinander ab.
+    """
+    m = re.search(r"^#\s+(.+?)\s*$", a.rumpf, re.MULTILINE)
+    if not m:
+        F(a.pfad, "keine H1 gefunden")
+    elif m.group(1).strip() != str(a.titel).strip():
+        F(a.pfad, f"H1 '{m.group(1).strip()}' weicht vom Titel '{a.titel}' ab")
+
+
 def pruefe_baum(artikel):
     for a in artikel.values():
         if a.parent is None:
@@ -248,6 +260,7 @@ def main():
     for a in sorted(artikel.values(), key=lambda x: x.pfad):
         pruefe_frontmatter(a)
         pruefe_dateiname(a)
+        pruefe_h1(a)
         n1, n2 = pruefe_wortlimits(a)
         summe_fachlich += n1
         summe_beispiel += n2
