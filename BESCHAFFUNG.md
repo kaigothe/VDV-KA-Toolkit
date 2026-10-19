@@ -39,9 +39,9 @@ Falls vom **Glossar eine neuere Fassung** existiert, wäre sie willkommen — de
 
 | Inv.-Nr. | Kurzzeichen | Titel | Wofür konkret |
 |---:|---|---|---|
-| **41** | **KA AktM-SPEC** | Aktionsmanagement für die Berechtigungsart EFS | **Das wichtigste Dokument der Liste**, mit Abstand am häufigsten als Normquelle genannt (siehe Abschnitt 9a). Klärt vier der offenen Fragen: die Codeliste des Auftragstyps, das Verhältnis von Aktionstyp und Auftragstyp, die Bedeutung der Aktionsfreigabe und die Semantik der Änderungsreferenz. Außerdem die Struktur der `TXAML`. |
-| **4** | **KA SST-SPEC** | Schnittstellenspezifikation der Referenzsysteme | Struktur von `TX_BASE`, `TXABER`, `TXRBER`, `TXSNAWB`, `TXEBER`, `TXEMBER`, `TXKNAWA/B/DM`, `TXTRANSABBRUCH`. Nach der KA AktM-SPEC das zweithäufigst genannte Dokument (siehe Abschnitt 9a). |
-| **1** | **KA BOM-SPEC** | Hauptdokument mit Basisobjektmodell (BOM) | Die Codelisten selbst: `IONTransaktionsTyp_CODE`, `NmTransaktionsTyp_CODE`, `AblehnungsTyp_CODE`, Berechtigungsstatus. Damit ließe sich endlich entscheiden, welche Codewerte KA-weit gelten und welche verbundspezifisch sind. |
+| **41** | **KA AktM-SPEC** | Aktionsmanagement für die Berechtigungsart EFS und Entsperrung von AF… (vollständiger Titel nach [Q37](QUELLEN.md#q37)) | **Das wichtigste Dokument der Liste**, mit Abstand am häufigsten als Normquelle genannt (siehe Abschnitt 9a). Klärt vier der offenen Fragen: die Codeliste des Auftragstyps, das Verhältnis von Aktionstyp und Auftragstyp, die Bedeutung der Aktionsfreigabe und die Semantik der Änderungsreferenz. Außerdem die Struktur der `TXAML`. |
+| **4** | **KA SST-SPEC** | Schnittstellenspezifikationen der Referenzsysteme, einschließlich Applikationsherausgeber (AH) und Sperrlistenservice (KOSE) | Struktur von `TX_BASE`, `TXABER`, `TXRBER`, `TXSNAWB`, `TXEBER`, `TXEMBER`, `TXKNAWA/B/DM`, `TXTRANSABBRUCH`. Nach der KA AktM-SPEC das zweithäufigst genannte Dokument (siehe Abschnitt 9a). |
+| **1** | **KA BOM-SPEC** / **KA HD_BOM-SPEC** | Hauptdokument mit Basisobjektmodell (BOM) | Die Codelisten selbst: `IONTransaktionsTyp_CODE`, `NmTransaktionsTyp_CODE`, `AblehnungsTyp_CODE`, Berechtigungsstatus. Damit ließe sich endlich entscheiden, welche Codewerte KA-weit gelten und welche verbundspezifisch sind. |
 | **5** | **KA XML-Schemata und WSDL** | XSD der TX-Transaktionen, einschließlich Abhängigkeiten | Ohne Schema ist keine Validierung möglich. Benötigt werden die **vollständigen** Schemadateien mit allen Includes und Imports, nicht einzelne Dateien. |
 | — | **ALISE** | ALISE-Schnittstellenbeschreibung und ALISE-XSD | Siehe Abschnitt 6: die Nachricht `txalisber` ist in keiner öffentlichen Quelle dokumentiert. |
 
@@ -92,7 +92,21 @@ Offen ist deshalb:
 2. **Welche Schema- und Spezifikationsversion gehört zum Namespace `http://vdv/ka/alise/2`?** Aus der Ziffer 2 lässt sich kein Release ableiten, sie ist Bestandteil des Namensraums.
 3. **Gibt es eine eigenständige ALISE-Schnittstellenbeschreibung** neben der KA AktM-SPEC — etwa für einen aus dem PV-System ausgelagerten zentralen ALISE-Server, für den laut RMV PH 06-02 ab KA 1.3.0 der Rollencode 31 reserviert ist?
 
-Benötigt werden: die **ALISE-Schnittstellenbeschreibung**, die **ALISE-XSD samt allen Abhängigkeiten** und, falls vorhanden, **Beispielnachrichten**.
+Dank der Namenskonvention im eTicket-Regelwerk lässt sich die Bitte **präzise** formulieren. [Q25](QUELLEN.md#q25), Kap. 4.3.2 f. (PDF-S. 114 f.), definiert Dateinamen und Namensräume in EBNF. Dort erscheinen ausdrücklich:
+
+- **WSDL-Bereiche** `PV_ALISE` und `KVP_ALISE`
+- **Namensraum-Bereiche** `pv-alise` und `kvp-alise`
+- der Namensraum endet auf `NamensraumBereich, ["types"], "/", Version`
+
+Es gibt also offenbar **zwei** ALISE-Schnittstellen — eine zum Produktverantwortlichen und eine zum Kundenvertragspartner.
+
+**Konkret benötigt:**
+
+1. die **WSDL** für die Bereiche `PV_ALISE` und `KVP_ALISE`,
+2. die zugehörigen **XSD samt allen Includes und Imports** für die Namensraum-Bereiche `pv-alise` und `kvp-alise`,
+3. die fachliche **ALISE-Schnittstellenbeschreibung**,
+4. **Beispielnachrichten** zu beiden Bereichen,
+5. die Auskunft, welcher **Version** im Sinne der Namensraumkonvention die Angabe `http://vdv/ka/alise/2` entspricht und welche Releases unter dieser Version geführt werden.
 
 ---
 
@@ -113,10 +127,13 @@ Benötigt werden: die **ALISE-Schnittstellenbeschreibung**, die **ALISE-XSD samt
 
 Für die Schnittstellen- und Objektmodell-Dokumente werden **mehrere Versionen** gebraucht, weil die vorliegenden Projektdokumente ausdrücklich zwischen ihnen unterscheiden und Nachrichten aus verschiedenen Releases auftreten können:
 
-- **KA 1.1.07** — die ältere Schnittstellenversion, in den Projektdokumenten als `*_1107` referenziert
-- **KA 1.3.0** — in den Projektdokumenten als `*_1300` referenziert; bringt Multiberechtigungen, die `*RESP`-Sperrlistenvarianten und geänderte Pflichtfelder im `TX_BASE`
+- **KA 1.12.0** — **die wichtigste Bitte.** Ein Zulassungs-Prüfbericht von 2024 führt zwölf KA-Spezifikationen samt XML-Schemata und WSDL durchgehend in dieser Version auf ([Q37](QUELLEN.md#q37)), darunter KA AktM-SPEC, KA SST-SPEC, KA HD_BOM-SPEC und KA XML-Schemata. Sie ist damit deutlich neuer als alles, was in den öffentlichen Projektdokumenten referenziert wird.
+- **KA 1.1.07** — die ältere Schnittstellenversion, in den Projektdokumenten als `*_1107` referenziert und dort weiterhin maßgeblich
+- **KA 1.3.0** — als `*_1300` referenziert; bringt Multiberechtigungen, die `*RESP`-Sperrlistenvarianten und geänderte Pflichtfelder im `TX_BASE`
 - **KA 1.5.0** — Änderungen u. a. beim Aktionsmanagement, bisher nur über eine Sekundärquelle bekannt
-- **das aktuell unterstützte Release** sowie, falls abweichend, das für Neuanbindungen vorgesehene
+- **das aktuell verbindlich unterstützte Release** sowie, falls abweichend, das für Neuanbindungen vorgesehene
+
+Hilfreich wäre außerdem eine **Einordnung des Verhältnisses von „Version“ und „Release“**. [Q25](QUELLEN.md#q25), Kap. 4.3.1.3 f., beschreibt, dass nur zwei Versionen gleichzeitig unterstützt werden und Releases innerhalb einer Version über den gemeinsamen Namensraum kompatibel bleiben. Wie sich dazu die Nummern 1.1.07, 1.3.0, 1.5.0 und 1.12.0 verhalten, ist von außen nicht erkennbar.
 
 ---
 
@@ -129,17 +146,16 @@ Die Nummern entsprechen der Liste „Offene Fragen“ in [PLAN.md](PLAN.md), Abs
 | **O1** | Gelten die Transaktionstypen 37, 38 und 39 für Ausgabe, Entsperrung und Rücknahme über Aktionsliste KA-weit oder nur im eTicket RheinMain? | KA BOM-SPEC (Inv. 1), KA SST-SPEC (Inv. 4), KA AktM-SPEC (Inv. 41) |
 | **O2** | Was bedeutet `amAuftragsTyp` = 13? | KA AktM-SPEC (Inv. 41) |
 | **O3** | Sind die Berechtigungsstatus-Werte 5, 7, 8 und 19 KA-weit festgelegt? Warum hat „neu“ einen höheren Code als „aktiv“? | KA BOM-SPEC (Inv. 1) |
-| **O4** | Welche Spezifikations- und Schemaversion gehört zu `http://vdv/ka/alise/2`? | ALISE-XSD, KA XML-Schemata (Inv. 5) |
+| **O4** | *Teilweise geklärt:* Die letzte Pfadstelle ist laut Namensraumkonvention eine Version. **Offen:** welches Release bzw. welche Schemafassung dahintersteht. | ALISE-XSD, KA XML-Schemata (Inv. 5) |
 | **O5** | Erhöht ein reiner Statuswechsel die `berSynchronNummer`? | KA BOM-SPEC (Inv. 1), KA AktM-SPEC (Inv. 41) |
 | **O6** | In einem vorliegenden produktspezifischen Teil gibt die TLV-Länge 87 Byte an, es folgen 90 Byte. Füllbytes, Übertragungsfehler oder falsche TLV-Annahme? | Anlage TLV EFS (Inv. 2) |
-| **O7** | Zeitschiene für (((etiCORE als KA-Version 3 und Dauer des Parallelbetriebs? | Release-/Versionsübersicht |
-| **O8** | Aktueller Stand bei 1GSI und 2GSI? | KA SEC-SPEC (Inv. 6), aktuelle Fassung des Glossars |
 | **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“ — synonym oder zwei Ebenen? | KA AktM-SPEC (Inv. 41) |
-| **O12** | Was bewirkt die „Aktionsfreigabe“? Das Glossar kennt den Begriff nicht, das Regelwerk nennt nur die Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“. | KA AktM-SPEC (Inv. 41) |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer tatsächlichen Änderung, und nimmt es Berechtigungsnummer samt Organisation des Vorgängers auf? | KA AktM-SPEC (Inv. 41), Beispielnachrichten |
 | **O14** | Wie verhält sich `txalisber` zu `TXAML`? | ALISE-Schnittstellenbeschreibung, KA AktM-SPEC (Inv. 41) |
 
-**Zusammengefasst:** Die **KA AktM-SPEC** allein würde sechs der zwölf Fragen klären, zusammen mit **KA BOM-SPEC** und den **XML-Schemata** zehn von zwölf.
+Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentlichen Quellen geklärt, siehe [PLAN.md](PLAN.md), Abschnitt 5a.
+
+**Zusammengefasst:** Die **KA AktM-SPEC** allein würde von den verbleibenden Fragen die Mehrzahl klären, zusammen mit **KA BOM-SPEC** und den **XML-Schemata** nahezu alle.
 
 ---
 
@@ -148,21 +164,19 @@ Die Nummern entsprechen der Liste „Offene Fragen“ in [PLAN.md](PLAN.md), Abs
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**5 nicht öffentliche Dokumente** werden derzeit in 37 Artikeln als Normquelle genannt, nach Häufigkeit:
+**4 nicht öffentliche Dokumente** werden derzeit in 37 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
-| 27 | 41 | **KA AktM-SPEC** | [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md), [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
+| 26 | 41 | **KA AktM-SPEC** | [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md), [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
 | 21 | 4 | **KA SST-SPEC** | [Rollen](lexikon/rollen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXEBER](lexikon/transaktionen/txeber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
 | 4 | 1 | **KA BOM-SPEC** | [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md) |
 | 4 | 5 | **KA XML-Schemata und WSDL** | [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md) |
-| 1 | — | **ALISE-Schnittstelle und ALISE-XSD** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
 ### Artikel, die ohne diese Dokumente unvollständig bleiben
 
 | Artikel | offene Fragen |
 |---|---|
-| [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) | O12 |
 | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) | O13 |
 | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) | O2, O9 |
 | [txalisber](lexikon/transaktionen/txalisber.md) | O4, O14 |
@@ -176,7 +190,6 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O3** | [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md) |
 | **O4** | [txalisber](lexikon/transaktionen/txalisber.md) |
 | **O9** | [Aktion](lexikon/aktionsmanagement/aktion.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) |
-| **O12** | [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) |
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
 | **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
@@ -207,7 +220,11 @@ Der folgende Text lässt sich direkt verwenden — per E-Mail an `service@eticke
 >
 > Besonders zu ALISE habe ich eine konkrete Frage: Mir liegt eine Nachricht mit dem Element `txalisber` im Namespace `http://vdv/ka/alise/2` vor. Dieses Element finde ich in keiner öffentlichen Unterlage; im RMV-Pflichtenheft PH 06-02 heißt die Aktionsliste `TXAML`. Ist `txalisber` ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine herstellerspezifische Variante? Und welche Spezifikations- und Schemaversion gehört zu diesem Namespace?
 >
-> Weiter wären hilfreich: Codelisten in maschinenlesbarer Form, Beispielnachrichten je Nachrichtentyp sowie eine Übersicht der aktuell unterstützten Releases. Bei den Schnittstellendokumenten benötige ich die Versionen **1.1.07** und **1.3.0** — die Projektdokumente unterscheiden ausdrücklich zwischen beiden — sowie **1.5.0** und das aktuell unterstützte Release.
+> Zur **Version**: Ein Zulassungs-Prüfbericht für ein Akzeptanzterminal von 2024 führt zwölf KA-Spezifikationen einschließlich XML-Schemata und WSDL durchgehend in **Version 1.12.0** auf. Diese Fassung wäre mir am wichtigsten. Daneben benötige ich **1.1.07** und **1.3.0**, weil die öffentlichen Projektdokumente ausdrücklich zwischen beiden unterscheiden, sowie die Auskunft, welches Release heute verbindlich unterstützt wird.
+>
+> Zu ALISE kann ich die Bitte dank der Namenskonvention im eTicket-Regelwerk (Kapitel 4.3.2 f.) genauer fassen: Dort erscheinen die WSDL-Bereiche `PV_ALISE` und `KVP_ALISE` sowie die Namensraum-Bereiche `pv-alise` und `kvp-alise`. Ich bräuchte die WSDL beider Bereiche und die zugehörigen XSD mit allen Includes und Imports — und die Auskunft, welcher Version im Sinne dieser Konvention die Angabe `http://vdv/ka/alise/2` entspricht.
+>
+> Weiter wären hilfreich: Codelisten in maschinenlesbarer Form und Beispielnachrichten je Nachrichtentyp.
 >
 > Eine Anlage mit der vollständigen Liste, der Begründung je Dokument und den konkreten offenen Fragen kann ich gern beifügen.
 >
