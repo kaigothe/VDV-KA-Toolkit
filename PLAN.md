@@ -139,6 +139,20 @@ Alle Beispiele spielen in **Bärstadt im Bärenland**, festgelegt in [welt/baers
 
 Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der **fachlichen** Erklärung sind reale Beispiele erlaubt, wenn sie belegt sind (etwa „im eTicket RheinMain“).
 
+### E11 — Mermaid-Diagramme, sparsam und nur wo sie etwas zeigen
+
+Diagramme werden als ```` ```mermaid ````-Codeblock eingebettet. GitHub und Obsidian rendern das nativ; die Vorschau von VS Code braucht je nach Version eine Erweiterung.
+
+**Begründung und Abwägung:** Ein Mermaid-Block ist ein gewöhnlicher Codeblock. Wo er nicht gerendert wird, erscheint er als Quelltext — unschön, aber lesbar, und er zerstört nichts. Das ist ein echter, aber begrenzter Verstoß gegen „funktioniert in jedem Viewer“ (E3). Der Gegenwert: Schichten, Zeitachsen und Varianten­bäume sind als Text mühsam und als Bild sofort erfassbar.
+
+**Regeln dazu:**
+
+- Nur wo ein Diagramm **mehr zeigt als der Satz daneben**. Kein Diagramm als Dekoration.
+- Jedes Diagramm bleibt **ohne Bild verständlich**: Was es zeigt, steht auch im Text.
+- **Keine Klammern in Knotenbeschriftungen** — `(((etiCORE` bricht die Mermaid-Syntax. In Diagrammen heißt es `etiCORE`.
+- Codeblöcke zählen **nicht** zu den Wortlimits, weil `zaehle_woerter` sie entfernt. Das ist Absicht für Code und Diagramme, darf aber nicht dazu dienen, Fließtext in Blöcke auszulagern.
+- `check.py` prüft, ob jeder Mermaid-Block mit einem bekannten Diagrammtyp beginnt.
+
 ### E10 — Quellendateien bleiben lokal
 
 `QUELLEN/` enthält Dokumente mit dem Vermerk „Vertraulich“ ([Q06](QUELLEN.md#q06): „Cubic Transportation Systems (Deutschland) GmbH, Vertraulich“). Der Ordner wird per `.gitignore` ausgeschlossen. Im Repository stehen nur Exzerpte mit Fundstelle. Die LVB-Bewerberaufgabe ([Q11](QUELLEN.md#q11)) kommt gar nicht ins Repository, weil sie personenbezogene Daten im produktspezifischen Teil enthält.
@@ -154,7 +168,7 @@ Echte Unternehmen, Verbünde und Personen kommen in Beispielen nicht vor. In der
 | **0 — Planung** | dieses Dokument, [STRUKTUR.md](STRUKTUR.md), [CLAUDE.md](CLAUDE.md), Vorlagen, Welt-Bibel, Werkzeuge, Quellenbeschaffung | **fertig** |
 | **1 — Gerüst** | Ordner, alle P1-Artikel als Rumpf mit Frontmatter | **angefangen:** Ordner, Startseite, Werkzeugkette und die zwei Musterartikel stehen; `gen.py` und `check.py` laufen fehlerfrei. Die übrigen Rümpfe folgen nach Freigabe des Tons. |
 | **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
-| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **Aktionsmanagement (12), Transaktionen (12) und Rollen (10) fertig.** Als Nächstes: Grundlagen, danach Berechtigungen und Datenformate. |
+| **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **fertig:** Grundlagen (8), Rollen (10), Aktionsmanagement (12), Transaktionen (12) — 42 Blattartikel plus 4 Kategorieartikel. |
 | **4 — Vertiefung** | restliche P1 sowie P2 nach Bedarf: Berechtigungen, Kontrolle, Sicherheit, Datenformate, ABT | rund 60 Artikel |
 | **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | Stand 1.0 |
 | **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |
