@@ -65,6 +65,13 @@ Vorlagen: [vorlagen/artikel.md](vorlagen/artikel.md) für Blattartikel, [vorlage
 
 **Wortlimits sind harte Grenzen.** `tools/check.py` bricht ab, wenn sie überschritten sind. Lieber einen Unterartikel anlegen als den Text dehnen.
 
+## 5a. Diagramme
+
+- Diagramme als ```` ```mermaid ````-Block, **sparsam** und nur wo sie mehr zeigen als der Satz daneben.
+- Jedes Diagramm muss **ohne Bild verständlich** bleiben: Der Text nennt, was es zeigt.
+- **Keine runden Klammern in Knotenbeschriftungen** — `(((etiCORE` bricht die Syntax. In Diagrammen `etiCORE` schreiben.
+- Diagramme zählen nicht zu den Wortlimits. Fließtext darf deshalb **nicht** in Blöcke ausgelagert werden, um Limits zu umgehen.
+
 ## 6. Navigation und Dateinamen
 
 - **Nur relative Links.** Keine Wiki-Links `[[…]]`, kein HTML, keine generierte Website. Das Lexikon muss in GitHub, VS Code und Obsidian funktionieren.

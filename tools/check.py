@@ -79,6 +79,43 @@ def pruefe_dateiname(a):
                   " oder ".join(f"'{e}.md'" for e in erlaubt))
 
 
+MERMAID_TYPEN = ("graph", "flowchart", "sequenceDiagram", "classDiagram",
+                 "stateDiagram", "erDiagram", "journey", "gantt", "pie",
+                 "gitGraph", "mindmap", "timeline", "quadrantChart",
+                 "sankey-beta", "block-beta", "xychart-beta")
+
+
+def pruefe_mermaid(a):
+    """Jeder Mermaid-Block muss mit einem bekannten Diagrammtyp beginnen.
+
+    Fängt Tippfehler im Diagrammtyp ab, die sonst erst im Browser als leere
+    Fläche auffallen. Zusätzlich: runde Klammern in Knotenbeschriftungen
+    brechen die Syntax, siehe CLAUDE.md Abschnitt 5a.
+    """
+    for block in re.findall(r"```mermaid\s*\n(.*?)```", a.rumpf, re.DOTALL):
+        zeilen = [z.strip() for z in block.split("\n") if z.strip()
+                  and not z.strip().startswith("%%")]
+        if not zeilen:
+            F(a.pfad, "leerer Mermaid-Block")
+            continue
+        if not zeilen[0].startswith(MERMAID_TYPEN):
+            F(a.pfad, f"Mermaid-Block beginnt mit '{zeilen[0][:40]}' — "
+                      "kein bekannter Diagrammtyp")
+        if "(((" in block:
+            F(a.pfad, "Mermaid-Block enthält '(((' — bricht die Syntax, "
+                      "siehe CLAUDE.md Abschnitt 5a")
+        # Unbalancierte Klammern und Anführungszeichen je Zeile: typische
+        # Tippfehler, die sonst erst im Browser als leere Fläche auffallen.
+        for nr, zeile in enumerate(zeilen, 1):
+            if zeile.count('"') % 2:
+                F(a.pfad, f"Mermaid, Zeile {nr}: ungerade Zahl von "
+                          f'Anführungszeichen — {zeile[:50]}')
+            for auf, zu in (("[", "]"), ("{", "}")):
+                if zeile.count(auf) != zeile.count(zu):
+                    F(a.pfad, f"Mermaid, Zeile {nr}: '{auf}' und '{zu}' "
+                              f"unbalanciert — {zeile[:50]}")
+
+
 def pruefe_h1(a):
     """Die H1 muss wortgleich zum Frontmatter-Titel sein.
 
@@ -272,6 +309,7 @@ def main():
         pruefe_frontmatter(a)
         pruefe_dateiname(a)
         pruefe_h1(a)
+        pruefe_mermaid(a)
         n1, n2 = pruefe_wortlimits(a)
         summe_fachlich += n1
         summe_beispiel += n2
