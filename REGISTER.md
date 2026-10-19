@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-57 Eintragräge
+63 Eintragräge
 
 
 ## A
@@ -16,7 +16,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Aktionsmanagement](lexikon/aktionsmanagement.md) — AktM
 - [Akzeptanzterminal](lexikon/rollen/akzeptanzterminal.md) — AKT
 - [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) *(zu prüfen)*
+- [Applikation](lexikon/medien/applikation.md) — App
 - [Applikationsherausgeber](lexikon/rollen/ah.md) — AH
+- [Applikationsinstanz-ID](lexikon/medien/applikationsinstanz-id.md)
 - [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) *(zu prüfen)*
 - [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
@@ -63,15 +65,18 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## L
 
+- [Lebenszyklus der Applikation](lexikon/medien/lebenszyklus-der-applikation.md)
 - [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md)
 
 ## M
 
+- [Medien](lexikon/medien.md)
 - [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
 
 ## N
 
 - [Nachweis](lexikon/transaktionen/nachweis.md)
+- [Nutzermedium](lexikon/medien/nutzermedium.md) — NM
 
 ## O
 
@@ -79,6 +84,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## P
 
+- [Personengebunden](lexikon/medien/personengebunden.md)
 - [Produkt](lexikon/berechtigungen/produkt.md)
 - [Produktnummer](lexikon/berechtigungen/produktnummer.md)
 - [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md)

@@ -164,7 +164,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**15 nicht öffentliche Dokumente** werden derzeit in 57 Artikeln als Normquelle genannt, nach Häufigkeit:
+**15 nicht öffentliche Dokumente** werden derzeit in 63 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -172,6 +172,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | 22 | 4 | **KA SST-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Rollen](lexikon/rollen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXEBER](lexikon/transaktionen/txeber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
 | 6 | 1 | **KA BOM-SPEC** | [berStatus](lexikon/berechtigungen/berstatus.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md) |
 | 6 | 5 | **KA XML-Schemata und WSDL** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md) |
+| 5 | 7 | **KA NM-SPEC** | [Applikation](lexikon/medien/applikation.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Nutzermedium](lexikon/medien/nutzermedium.md) |
 | 3 | 2 | **Anlage TLV EFS** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md) |
 | 3 | 40 | **KA MultiBER-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) |
 | 3 | 42 | **KA STB-Spec** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) |
@@ -181,7 +182,6 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | 1 | 11 | **KA KOSES-Spec** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 1 | 33 | **KA TXx-Prüfungs-ANW** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 1 | 6 | **KA SEC-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
-| 1 | 7 | **KA NM-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | 1 | 8 | **KA SAM-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 
 ### Artikel, die ohne diese Dokumente unvollständig bleiben
@@ -206,7 +206,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
 | **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
 
-*Erzeugt aus 57 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 63 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

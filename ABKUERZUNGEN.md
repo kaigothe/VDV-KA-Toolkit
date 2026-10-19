@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-23 Abkürzungen.
+25 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -10,6 +10,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **AKT** | [Akzeptanzterminal](lexikon/rollen/akzeptanzterminal.md) | Medium Access Device |
 | **AktM** | [Aktionsmanagement](lexikon/aktionsmanagement.md) | action management |
 | **ALISE** | [Aktionslistenservice](lexikon/rollen/alise.md) | Action List Service |
+| **App** | [Applikation](lexikon/medien/applikation.md) | Application |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |
 | **EFM** | [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) | Electronic Fare Management |
 | **EFS** | [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) | Electronic Ticket |
@@ -19,6 +20,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **KOSE** | [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) | Hotlist Service |
 | **KVP** | [Kundenvertragspartner](lexikon/rollen/kvp.md) | Customer Contract Partner |
 | **MultiBER** | [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) | multi entitlement |
+| **NM** | [Nutzermedium](lexikon/medien/nutzermedium.md) | User Medium |
 | **Org-ID** | [Organisations-ID](lexikon/rollen/organisations-id.md) | Organisation ID |
 | **PV** | [Produktverantwortlicher](lexikon/rollen/pv.md) | Product Owner |
 | **StatBer** | [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) | Static Entitlement |
