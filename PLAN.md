@@ -169,7 +169,7 @@ Diagramme werden als ```` ```mermaid ````-Codeblock eingebettet. GitHub und Obsi
 | **1 — Gerüst** | Ordner, alle P1-Artikel als Rumpf mit Frontmatter | **angefangen:** Ordner, Startseite, Werkzeugkette und die zwei Musterartikel stehen; `gen.py` und `check.py` laufen fehlerfrei. Die übrigen Rümpfe folgen nach Freigabe des Tons. |
 | **2 — Exzerpte** | `exzerpte/Q06.md`, `Q02.md`, `Q05.md`, `Q25.md` mit Begriffen, Codes und Seitenangaben | Belegbasis; danach muss kein Artikel mehr raten |
 | **3 — Kernbegriffe** | P1-Artikel der Kategorien Grundlagen, Rollen, Aktionsmanagement, Transaktionen | **fertig:** Grundlagen (8), Rollen (10), Aktionsmanagement (12), Transaktionen (12) — 42 Blattartikel plus 4 Kategorieartikel. |
-| **4 — Vertiefung** | restliche P1: Sicherheit, ABT | **fertig:** Berechtigungen (10), Medien (5), Datenformate (8), Kontrolle (8). Offen: Sicherheit (7), ABT (7). |
+| **4 — Vertiefung** | restliche P1: Sicherheit | **fertig:** Berechtigungen (10), Medien (5), Datenformate (8), Kontrolle (8), ABT (8). Offen: nur noch Sicherheit (7). |
 | **5 — Review** | Wortlimits, Querverweise, offene Fragen abarbeiten, Beispiele auf Widerspruchsfreiheit prüfen | Stand 1.0 |
 | **6 — Übergabe ans Werkzeug** | `codes:` aus dem Frontmatter nach JSON exportieren | Datenbasis für den ALISE-Explorer |
 
