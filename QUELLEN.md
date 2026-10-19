@@ -383,7 +383,14 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 
 - **Datei:** `QUELLEN/Q12_TapConnect_VDV-Barcode-Field-Mappings.html`
 - **Typ:** Hersteller · **Herkunft:** Original · **Auswertung:** teilweise
-- **Inhalt:** Zuordnung von Feldern zum VDV-Barcode. **Tag 0xDB „Fahrgast“** mit `efsFahrgastGeschlecht`, `efsFahrgastGeburtsdatum` (Standardwert 1970-01-01) und `efsFahrgastName` (Typ-1-Anonymisierung). Verweist auf Anlage TLV EFS V1.90 und HD_BOM Abschnitt 6.7.2 „Kürzungsregel für Namen“.
+- **Inhalt — weit ergiebiger als der Titel vermuten lässt:** eine **feldweise Abbildung des VDV-Barcodes** mit **seitengenauen Verweisen in die nicht öffentlichen Spezifikationen**, jeweils in der Fassung **V190**:
+  - **KA HD_BOM-Spec_V190:** S. 50 Tab. 6-10 (`dateTimeCompact`), S. 84 Tab. 6-69 (OrtTyp), S. 92 Tab. 6-85 (TerminalTyp), S. 104 Tab. 6-103 (Produkt-ID-Struktur), S. 110 Tab. 6-123 (`Ort_ID`), S. 112 Tab. 6-127 (`Terminal_ID`), S. 113 Tab. 6-130, S. 130 Tab. 6-152, S. 132 Tab. 6-158, S. 140 Tab. 6-162, Abschn. **6.7.2 „Kürzungsregel für Namen und Vornamen“**
+  - **Anlage TLV EFS_V190:** S. 9 Abschn. 2.2 (Tag 0xDB „Fahrgast“), S. 18 Tab. 2-8 (Variante D, `0x0F`)
+  - **KA STB-SPEC_V190:** Tab. 3-1, S. 12 (Kennung „VDV“, Version `0x19 0x00`, Füllbytes auf mindestens 111 Byte)
+  - **KA SAM-Spec_V190** S. 205 und **KA NM-SPEC_V190** S. 199 Tab. 5-12 (`SAM_ID.samNummer`, 3 Byte)
+  - **Technische Anforderung Deutschlandticket V1.7:** S. 5 (Produktnummern 9999 regulär, 9998 Jobticket, 9995 Schüler), S. 15 Kap. 4.3 (Feldliste)
+  - Belegte Werte: `efsFahrgastGeschlecht` fest `0x00`; `efsFahrgastGeburtsdatum` sonst 1970-01-01; `efsFahrgastName` Typ-1-anonymisiert mit **wörtlichem Beispiel**; Tag `0x8A` als leerer Transaktion produktspezifischer Teil; TerminalTyp `0x11` = Online Ticket Server; OrtTyp `0xC9` = Massenpersonalisierer; `prodProdukt_ID` als 2 Byte Produktnummer + 2 Byte Org-ID (Beispiel `0x270f0bb8`)
+  - Nennt mit **V190 = 1.9.0** eine weitere Spezifikationsversion neben 1.1.07, 1.3.0, 1.5.0 und 1.12.0.
 - **Stichworte:** VDV-Barcode, TLV, Tag 0xDB, Fahrgastdaten, Namenskürzung
 - **URL:** https://documentation.tapconnect.io/public/specs/vdv-barcode-field-mappings.html
 
