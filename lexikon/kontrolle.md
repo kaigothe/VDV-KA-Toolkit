@@ -67,6 +67,7 @@ Interessant ist der Blick nach vorn. Heute schreibt das Kontrollgerät einen Nac
 <!-- GEN:unterartikel -->
 ## Unterartikel
 
+- [Hotlist Service](kontrolle/hotlist-service.md)
 - [Kontrollgerät](kontrolle/kontrollgeraet.md)
 - [Kontrollnachweise](kontrolle/kontrollnachweise.md)
 - [Sichtkontrolle](kontrolle/sichtkontrolle.md)

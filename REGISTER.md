@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-113 Eintragräge
+114 Eintragräge
 
 
 ## A
@@ -66,6 +66,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## H
 
 - [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) — HGS
+- [Hotlist Service](lexikon/kontrolle/hotlist-service.md)
 - [Hybridsystem](lexikon/abt/hybridsystem.md)
 
 ## I
