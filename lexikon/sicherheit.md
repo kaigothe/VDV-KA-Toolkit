@@ -70,6 +70,7 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 - [MOTICS](sicherheit/motics.md)
 - [Public Key Infrastructure](sicherheit/pki.md)
 - [Schlüsselarten](sicherheit/schluesselarten.md)
+- [Schlüsselobjekte (ASN.1)](sicherheit/schluesselobjekte-asn-1.md)
 - [Schlüsselreferenz](sicherheit/schluesselreferenz.md)
 - [Secure Application Module](sicherheit/sam.md)
 - [Sicherheitsebenen](sicherheit/sicherheitsebenen.md)

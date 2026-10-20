@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-117 Eintragräge
+123 Eintragräge
 
 
 ## A
@@ -24,6 +24,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Applikationsherausgeber](lexikon/rollen/ah.md) — AH
 - [Applikationsinstanz-ID](lexikon/medien/applikationsinstanz-id.md)
 - [ASM](lexikon/sicherheit/asm.md) — ASM
+- [ASN.1-Typen in etiCORE](lexikon/datenformate/asn-1-typen-in-eticore.md) *(abgeleitet)*
 - [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) *(zu prüfen)*
 - [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
@@ -65,6 +66,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## G
 
+- [Geräte, Orte und Subjekte (ASN.1)](lexikon/datenformate/geraete-orte-und-subjekte-asn-1.md)
 - [Grundlagen](lexikon/grundlagen.md)
 - [Gültigkeit](lexikon/berechtigungen/gueltigkeit.md)
 
@@ -114,6 +116,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## O
 
 - [Online- und Offline-Kontrolle](lexikon/abt/online-und-offline-kontrolle.md)
+- [Organisation und Produkt (ASN.1)](lexikon/datenformate/organisation-und-produkt-asn-1.md) *(abgeleitet)*
 - [Organisations-ID](lexikon/rollen/organisations-id.md) — Org-ID
 
 ## P
@@ -135,7 +138,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## S
 
+- [SAM-Aktionsdaten (ASN.1)](lexikon/datenformate/sam-aktionsdaten-asn-1.md)
 - [Schlüsselarten](lexikon/sicherheit/schluesselarten.md)
+- [Schlüsselobjekte (ASN.1)](lexikon/sicherheit/schluesselobjekte-asn-1.md)
 - [Schlüsselreferenz](lexikon/sicherheit/schluesselreferenz.md)
 - [Secure Application Module](lexikon/sicherheit/sam.md) — SAM
 - [Sicherheit](lexikon/sicherheit.md)
@@ -186,6 +191,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## Z
 
+- [Zähler, Zeit und Versionen (ASN.1)](lexikon/datenformate/zaehler-zeit-und-versionen-asn-1.md) *(abgeleitet)*
 - [zSAM](lexikon/sicherheit/zsam.md) — zSAM
 
 ---

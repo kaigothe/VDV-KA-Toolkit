@@ -371,3 +371,35 @@ Die Schnittstellendokumentation der etiCORE-Spezifikation ([Q50](QUELLEN.md#q50)
 **Neue offene Frage:** O20 (`TXAFREIBER` wird in etiCORE zu `cancelOrder`).
 
 **Stand 2026-10-20:** geschrieben sind *Nachrichten in KA 1.x und etiCORE*, *Aktionsmanagement in etiCORE*, *Hotlist Service* und *ESH*; damit stehen **117 Artikel**. Dazu kamen *Statische Berechtigung in etiCORE* und *Fehlercodes (etiCORE)* mit 38 Codes (Aktionsverwaltung, allgemein, PO). Nachgezogen wurden außerdem [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) und [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md).
+
+---
+
+## 17. Erweiterung aus Q51: die ASN.1-Typen (2026-10-20)
+
+Das Modul `ste` ist mit [Statische Berechtigung in etiCORE](lexikon/berechtigungen/statische-berechtigung-in-eticore.md) abgedeckt. Die übrigen **216 Typen** der neun Module werden nicht einzeln beschrieben, sondern **nach Gegenstand gebündelt**: Ein Artikel behandelt einen Typenkreis, die Aufzählungen und Tags stehen strukturiert im Frontmatter. So bleibt jeder Typ auffindbar, ohne dass 216 Artikel entstehen.
+
+Die Artikel stehen dort, wo ihr Gegenstand liegt, nicht in einer eigenen ASN.1-Kategorie. Die Namen der Typen, Tags und Aufzählungswerte sind außerdem in [exzerpte/Q51.md](exzerpte/Q51.md) verzeichnet.
+
+| Artikel | Pfad | Quelle | Grund für diesen Platz | Prio |
+|---|---|---|---|---|
+| **ASN.1-Typen in etiCORE** | `datenformate/asn-1-typen-in-eticore.md` | Q51, Index und Typbeschreibung | Überblick über Notation, Module und Aufbau der Typbeschreibung. | P2 |
+| **Organisation und Produkt (ASN.1)** | `datenformate/organisation-und-produkt-asn-1.md` | Q51, Modul common | Kennungen von Organisation, Produkt und Berechtigung. | P2 |
+| **Geräte, Orte und Subjekte (ASN.1)** | `datenformate/geraete-orte-und-subjekte-asn-1.md` | Q51, Modul common | Kennungen von App-Instanz, Terminal und Ort samt Aufzählungen. | P2 |
+| **Zähler, Zeit und Versionen (ASN.1)** | `datenformate/zaehler-zeit-und-versionen-asn-1.md` | Q51, Modul common | Zähler, Zeitstempel und Versionsangaben. | P2 |
+| **Schlüsselobjekte (ASN.1)** | `sicherheit/schluesselobjekte-asn-1.md` | Q51, Modul common | Schlüssel, Schlüsselverzeichnisse und Signaturverfahren; Gegenstand ist Kryptografie. | P2 |
+| **SAM-Aktionsdaten (ASN.1)** | `datenformate/sam-aktionsdaten-asn-1.md` | Q51, Modul common | Skripte und Befehle, die ein SAM für eine Aktion liefert. | P2 |
+| **CV-Zertifikat in etiCORE** | `sicherheit/cv-zertifikat-in-eticore.md` | Q51, Modul cv-certificates | Aufbau des Zertifikats; Geschwister von [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md). | P2 |
+| **SAM-Datenobjekte (ASN.1)** | `sicherheit/sam-datenobjekte-asn-1.md` | Q51, Modul sam | Rechte, Token und Schlüssel im SAM. | P2 |
+| **MOTICS-Authentifizierungsdaten** | `sicherheit/motics-authentifizierungsdaten.md` | Q51, Modul motics | Datenobjekt des Kopierschutzes; Geschwister von [MOTICS](lexikon/sicherheit/motics.md). | P2 |
+| **Gültigkeitsbereich (ASN.1)** | `berechtigungen/gueltigkeitsbereich-asn-1.md` | Q51, Modul et | Räumlicher Geltungsbereich in neun Varianten. | P2 |
+| **Fahrgast, Linie und Identifikationsmedium (ASN.1)** | `berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md` | Q51, Modul et | Weitere Angaben des elektronischen Fahrscheins. | P2 |
+| **Zahlungsmittel (ASN.1)** | `datenformate/zahlungsmittel-asn-1.md` | Q51, Modul payment | Aufzählung der Zahlungsmittel und die Parameter zum Aufladen und Abbuchen. | P2 |
+| **Fahrtdaten (ASN.1)** | `datenformate/fahrtdaten-asn-1.md` | Q51, Modul payment | Angaben zu Fahrtabschnitt, Linie und Haltestelle. | P2 |
+| **Tarifaufzählungen (ASN.1)** | `datenformate/tarifaufzaehlungen-asn-1.md` | Q51, Modul tariff | Beförderungsklasse, Verkehrsmittel, Fahrgastart und Sprache. | P2 |
+| **Bescheinigungen zu Berechtigungen (ASN.1)** | `transaktionen/bescheinigungen-zu-berechtigungen-asn-1.md` | Q51, Modul user-medium | Vom Medium signierte Nachweise zu Berechtigungen; Geschwister von [Nachweis](lexikon/transaktionen/nachweis.md). | P2 |
+| **Bescheinigungen zu Applikationen (ASN.1)** | `transaktionen/bescheinigungen-zu-applikationen-asn-1.md` | Q51, Modul user-medium | Nachweise zu Sperrung, Entsperrung und Beendigung einer Applikation. | P2 |
+| **Bescheinigungen zu Zahlungsmitteln (ASN.1)** | `transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md` | Q51, Modul user-medium | Nachweise zu Guthaben, Konto und Check-in. | P2 |
+| **Verzeichnisse auf dem Medium (ASN.1)** | `medien/verzeichnisse-auf-dem-medium-asn-1.md` | Q51, Modul user-medium | Aufbau der Datenstruktur auf dem Nutzermedium. | P2 |
+| **Schlüssel auf dem Medium (ASN.1)** | `sicherheit/schluessel-auf-dem-medium-asn-1.md` | Q51, Modul user-medium | Schlüssel und Zertifikatsketten im Medium. | P2 |
+| **Kundendaten und Parameter (ASN.1)** | `datenformate/kundendaten-und-parameter-asn-1.md` | Q51, Modul user-medium | Kunde, Favoriten, Ermäßigung, Kennwort und Produktparameter. | P2 |
+| **Basistypen des Mediums (ASN.1)** | `datenformate/basistypen-des-mediums-asn-1.md` | Q51, Modul user-medium | Status, Zeitangaben und einfache Zahlentypen. | P2 |

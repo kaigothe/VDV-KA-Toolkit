@@ -57,15 +57,20 @@ Die Unterartikel gehen diese Schritte einzeln durch — und benennen jeweils, wa
 <!-- GEN:unterartikel -->
 ## Unterartikel
 
+- [ASN.1-Typen in etiCORE](datenformate/asn-1-typen-in-eticore.md)
 - [Basisobjektmodell](datenformate/bom.md)
+- [Geräte, Orte und Subjekte (ASN.1)](datenformate/geraete-orte-und-subjekte-asn-1.md)
 - [Kürzungsregel für Namen](datenformate/kuerzungsregel-fuer-namen.md)
 - [Nullwerte](datenformate/nullwerte.md)
+- [Organisation und Produkt (ASN.1)](datenformate/organisation-und-produkt-asn-1.md)
+- [SAM-Aktionsdaten (ASN.1)](datenformate/sam-aktionsdaten-asn-1.md)
 - [Tag 0xDB Fahrgast](datenformate/tag-0xdb-fahrgast.md)
 - [TLV-Kodierung](datenformate/tlv.md)
 - [UIC-Barcode](datenformate/uic-barcode.md)
 - [VDV-Barcode](datenformate/vdv-barcode.md)
 - [XML-Namensraum](datenformate/xml-namensraum.md)
 - [XSD und WSDL](datenformate/xsd.md)
+- [Zähler, Zeit und Versionen (ASN.1)](datenformate/zaehler-zeit-und-versionen-asn-1.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->
