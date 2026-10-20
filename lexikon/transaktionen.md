@@ -54,6 +54,7 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 ## Unterartikel
 
 - [Duplikaterkennung](transaktionen/duplikaterkennung.md)
+- [Fehlercodes (etiCORE)](transaktionen/fehlercodes-eticore.md)
 - [logTransaktionsTyp](transaktionen/logtransaktionstyp.md)
 - [Nachrichten in KA 1.x und etiCORE](transaktionen/nachrichten-in-ka-1-x-und-eticore.md)
 - [Nachweis](transaktionen/nachweis.md)

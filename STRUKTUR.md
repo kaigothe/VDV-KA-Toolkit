@@ -369,4 +369,4 @@ Die Schnittstellendokumentation der etiCORE-Spezifikation ([Q50](QUELLEN.md#q50)
 
 **Neue offene Frage:** O20 (`TXAFREIBER` wird in etiCORE zu `cancelOrder`).
 
-**Stand 2026-10-20:** geschrieben sind *Nachrichten in KA 1.x und etiCORE*, *Aktionsmanagement in etiCORE*, *Hotlist Service* und *ESH*; damit stehen **115 Artikel**. Offen ist *Fehlercodes in etiCORE*. Nachgezogen wurden außerdem [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) und [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md).
+**Stand 2026-10-20:** geschrieben sind *Nachrichten in KA 1.x und etiCORE*, *Aktionsmanagement in etiCORE*, *Hotlist Service* und *ESH*; damit stehen **116 Artikel**. Dazu kam *Fehlercodes (etiCORE)* mit 38 Codes (Aktionsverwaltung, allgemein, PO). Nachgezogen wurden außerdem [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) und [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md).

@@ -28,7 +28,7 @@ Das Feld `amAenderungsreferenz_ID` steht in einem Aktionslisteneintrag. In der a
 
 Einen Hinweis geben die etiCORE-Schnittstellen. Dort ist `amAenderungsreferenz_ID` der Altname von `groupId`. Das Feld besteht aus der Organisations-ID des bestellenden CCP und einer Gruppennummer. Es gruppiert Einträge „logically“, damit sie „in a single transaction“ ausgeführt werden, und ist optional ([Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`, Typ `ActionListEntryBaseInformation`).
 
-Danach wäre die Änderungsreferenz eine **Gruppenzugehörigkeit** und kein Verweis auf eine Vorgänger-Berechtigung (abgeleitet, O13). Das passt zu den zwei Teilen des Werts; 0/0 hieße „keine Gruppe“ (abgeleitet).
+Danach wäre die Änderungsreferenz eine **Gruppenzugehörigkeit** und kein Verweis auf eine Vorgänger-Berechtigung (abgeleitet, O13). Den Verweis auf eine ersetzte Berechtigung führt etiCORE als eigenes Feld `replacedEntitlementId`, neu seit 3.0.0 und ohne Altnamen ([Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`). Das passt zu den zwei Teilen des Werts; 0/0 hieße „keine Gruppe“ (abgeleitet).
 
 Ungeklärt bleibt, ob die KA 1.x das Feld ebenso verwendet und welchen Wert es bei einer tatsächlichen Gruppierung trägt (zu prüfen, O13). Die etiCORE-Angaben stammen aus einem Release-Kandidaten (3.0.0-rc.6).
 
