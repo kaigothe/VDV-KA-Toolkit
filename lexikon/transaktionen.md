@@ -53,6 +53,9 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 <!-- GEN:unterartikel -->
 ## Unterartikel
 
+- [Bescheinigungen zu Applikationen (ASN.1)](transaktionen/bescheinigungen-zu-applikationen-asn-1.md)
+- [Bescheinigungen zu Berechtigungen (ASN.1)](transaktionen/bescheinigungen-zu-berechtigungen-asn-1.md)
+- [Bescheinigungen zu Zahlungsmitteln (ASN.1)](transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md)
 - [Duplikaterkennung](transaktionen/duplikaterkennung.md)
 - [Fehlercodes (etiCORE)](transaktionen/fehlercodes-eticore.md)
 - [logTransaktionsTyp](transaktionen/logtransaktionstyp.md)

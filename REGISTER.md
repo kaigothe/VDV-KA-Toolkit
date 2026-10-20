@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-126 Eintragräge
+134 Eintragräge
 
 
 ## A
@@ -36,6 +36,9 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Berechtigungen](lexikon/berechtigungen.md)
 - [berStatus](lexikon/berechtigungen/berstatus.md) *(abgeleitet)*
 - [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) *(abgeleitet)*
+- [Bescheinigungen zu Applikationen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-applikationen-asn-1.md) *(abgeleitet)*
+- [Bescheinigungen zu Berechtigungen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-berechtigungen-asn-1.md) *(abgeleitet)*
+- [Bescheinigungen zu Zahlungsmitteln (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md)
 
 ## C
 
@@ -63,6 +66,8 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## F
 
+- [Fahrgast, Linie und Identifikationsmedium (ASN.1)](lexikon/berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md)
+- [Fahrtdaten (ASN.1)](lexikon/datenformate/fahrtdaten-asn-1.md) *(abgeleitet)*
 - [Fehlercodes (etiCORE)](lexikon/transaktionen/fehlercodes-eticore.md) *(abgeleitet)*
 
 ## G
@@ -70,6 +75,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Geräte, Orte und Subjekte (ASN.1)](lexikon/datenformate/geraete-orte-und-subjekte-asn-1.md)
 - [Grundlagen](lexikon/grundlagen.md)
 - [Gültigkeit](lexikon/berechtigungen/gueltigkeit.md)
+- [Gültigkeitsbereich (ASN.1)](lexikon/berechtigungen/gueltigkeitsbereich-asn-1.md) *(zu prüfen)*
 
 ## H
 
@@ -161,6 +167,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## T
 
 - [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md)
+- [Tarifaufzählungen (ASN.1)](lexikon/datenformate/tarifaufzaehlungen-asn-1.md)
 - [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) *(zu prüfen)*
 - [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md)
 - [Ticket Cloud](lexikon/abt/ticket-cloud.md)
@@ -195,6 +202,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## Z
 
 - [Zähler, Zeit und Versionen (ASN.1)](lexikon/datenformate/zaehler-zeit-und-versionen-asn-1.md) *(abgeleitet)*
+- [Zahlungsmittel (ASN.1)](lexikon/datenformate/zahlungsmittel-asn-1.md)
 - [zSAM](lexikon/sicherheit/zsam.md) — zSAM
 
 ---
