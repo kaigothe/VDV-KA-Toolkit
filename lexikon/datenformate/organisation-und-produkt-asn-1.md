@@ -17,28 +17,28 @@ codes:
     verbundspezifisch: false
   - wert: 2
     codeliste: ProductTypeEnum
-    bedeutung: interoperableAccountBasedPaymentMethod — Interoperable account-based (((ePaymentMethod
+    bedeutung: interoperableAccountBasedPaymentMethod — Interoperable account-based ePaymentMethod
     quelle: Q51
     fundstelle: Modul common, Typ ProductTypeEnum
     status: belegt
     verbundspezifisch: false
   - wert: 3
     codeliste: ProductTypeEnum
-    bedeutung: nonInteroperableAccountBasedPaymentMethod — Non-interoperable account-based (((ePaymentMethod for local use
+    bedeutung: nonInteroperableAccountBasedPaymentMethod — Non-interoperable account-based ePaymentMethod for local use
     quelle: Q51
     fundstelle: Modul common, Typ ProductTypeEnum
     status: belegt
     verbundspezifisch: false
   - wert: 4
     codeliste: ProductTypeEnum
-    bedeutung: interoperableStoredValuePaymentMethod — Interoperable stored value (((ePaymentMethod
+    bedeutung: interoperableStoredValuePaymentMethod — Interoperable stored value ePaymentMethod
     quelle: Q51
     fundstelle: Modul common, Typ ProductTypeEnum
     status: belegt
     verbundspezifisch: false
   - wert: 5
     codeliste: ProductTypeEnum
-    bedeutung: nonInteroperableStoredValuePaymentMethod — Non-interoperable stored value (((ePaymentMethod for local use
+    bedeutung: nonInteroperableStoredValuePaymentMethod — Non-interoperable stored value ePaymentMethod for local use
     quelle: Q51
     fundstelle: Modul common, Typ ProductTypeEnum
     status: belegt

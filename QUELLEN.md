@@ -481,7 +481,7 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 **VDV eTicket Service – etiCORE ASN.1 Data Type Description**
 
 - **Datei:** `QUELLEN/Q49_etiCORE-Spezifikation_3.0.0-rc.6/md/asn.1/` — Einstieg `index-asn1.md`
-- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** offen — Struktur geprüft, Typen noch nicht ausgewertet
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** vollständig — alle 220 Typen sind einem Artikel zugeordnet ([exzerpte/Q51.md](exzerpte/Q51.md)); die Beschreibungstexte sind nach Typenkreisen zusammengefasst
 - **Stand:** Version **3.0.0-rc.6**, geladen am 2026-10-20
 - **Fundstelle:** Modul und Typname, etwa „`ste`, Typ `StaticElectronicTicketParameters`“.
 - **Rechte:** wie [Q49](#q49).

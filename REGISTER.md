@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-134 Eintragräge
+138 Eintragräge
 
 
 ## A
@@ -32,6 +32,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## B
 
 - [Basisobjektmodell](lexikon/datenformate/bom.md) — BOM
+- [Basistypen des Mediums (ASN.1)](lexikon/datenformate/basistypen-des-mediums-asn-1.md)
 - [Berechtigung](lexikon/berechtigungen/berechtigung.md)
 - [Berechtigungen](lexikon/berechtigungen.md)
 - [berStatus](lexikon/berechtigungen/berstatus.md) *(abgeleitet)*
@@ -97,6 +98,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Kontrolle](lexikon/kontrolle.md)
 - [Kontrollgerät](lexikon/kontrolle/kontrollgeraet.md)
 - [Kontrollnachweise](lexikon/kontrolle/kontrollnachweise.md)
+- [Kundendaten und Parameter (ASN.1)](lexikon/datenformate/kundendaten-und-parameter-asn-1.md)
 - [Kundenvertragspartner](lexikon/rollen/kvp.md) — KVP
 - [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md)
 
@@ -148,6 +150,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [SAM-Aktionsdaten (ASN.1)](lexikon/datenformate/sam-aktionsdaten-asn-1.md)
 - [SAM-Datenobjekte (ASN.1)](lexikon/sicherheit/sam-datenobjekte-asn-1.md)
+- [Schlüssel auf dem Medium (ASN.1)](lexikon/sicherheit/schluessel-auf-dem-medium-asn-1.md)
 - [Schlüsselarten](lexikon/sicherheit/schluesselarten.md)
 - [Schlüsselobjekte (ASN.1)](lexikon/sicherheit/schluesselobjekte-asn-1.md)
 - [Schlüsselreferenz](lexikon/sicherheit/schluesselreferenz.md)
@@ -193,6 +196,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [VDV-Barcode mobile+](lexikon/sicherheit/vdv-barcode-mobile.md)
 - [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) — KA
 - [Versionen](lexikon/grundlagen/versionen.md)
+- [Verzeichnisse auf dem Medium (ASN.1)](lexikon/medien/verzeichnisse-auf-dem-medium-asn-1.md) *(abgeleitet)*
 
 ## X
 

@@ -403,3 +403,5 @@ Die Artikel stehen dort, wo ihr Gegenstand liegt, nicht in einer eigenen ASN.1-K
 | **Schlüssel auf dem Medium (ASN.1)** | `sicherheit/schluessel-auf-dem-medium-asn-1.md` | Q51, Modul user-medium | Schlüssel und Zertifikatsketten im Medium. | P2 |
 | **Kundendaten und Parameter (ASN.1)** | `datenformate/kundendaten-und-parameter-asn-1.md` | Q51, Modul user-medium | Kunde, Favoriten, Ermäßigung, Kennwort und Produktparameter. | P2 |
 | **Basistypen des Mediums (ASN.1)** | `datenformate/basistypen-des-mediums-asn-1.md` | Q51, Modul user-medium | Status, Zeitangaben und einfache Zahlentypen. | P2 |
+
+**Stand 2026-10-20:** Alle 21 Artikel sind geschrieben, damit stehen **138 Artikel**. [exzerpte/Q51.md](exzerpte/Q51.md) ordnet jedem der 220 Typen seinen Artikel zu. Die Sprachliste `LanguageEnum` (188 Werte) steht nur im Modul selbst. Neue offene Frage: O21 (`AlternativeValidityAreaList`).

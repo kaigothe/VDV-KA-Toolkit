@@ -72,6 +72,7 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 - [MOTICS-Authentifizierungsdaten](sicherheit/motics-authentifizierungsdaten.md)
 - [Public Key Infrastructure](sicherheit/pki.md)
 - [SAM-Datenobjekte (ASN.1)](sicherheit/sam-datenobjekte-asn-1.md)
+- [Schlüssel auf dem Medium (ASN.1)](sicherheit/schluessel-auf-dem-medium-asn-1.md)
 - [Schlüsselarten](sicherheit/schluesselarten.md)
 - [Schlüsselobjekte (ASN.1)](sicherheit/schluesselobjekte-asn-1.md)
 - [Schlüsselreferenz](sicherheit/schluesselreferenz.md)

@@ -64,6 +64,7 @@ Und schließlich: Eine Karte ist nicht einfach da und benutzbar. Sie wird angele
 - [Lebenszyklus der Applikation](medien/lebenszyklus-der-applikation.md)
 - [Nutzermedium](medien/nutzermedium.md)
 - [Personengebunden](medien/personengebunden.md)
+- [Verzeichnisse auf dem Medium (ASN.1)](medien/verzeichnisse-auf-dem-medium-asn-1.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

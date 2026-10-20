@@ -59,8 +59,10 @@ Die Unterartikel gehen diese Schritte einzeln durch — und benennen jeweils, wa
 
 - [ASN.1-Typen in etiCORE](datenformate/asn-1-typen-in-eticore.md)
 - [Basisobjektmodell](datenformate/bom.md)
+- [Basistypen des Mediums (ASN.1)](datenformate/basistypen-des-mediums-asn-1.md)
 - [Fahrtdaten (ASN.1)](datenformate/fahrtdaten-asn-1.md)
 - [Geräte, Orte und Subjekte (ASN.1)](datenformate/geraete-orte-und-subjekte-asn-1.md)
+- [Kundendaten und Parameter (ASN.1)](datenformate/kundendaten-und-parameter-asn-1.md)
 - [Kürzungsregel für Namen](datenformate/kuerzungsregel-fuer-namen.md)
 - [Nullwerte](datenformate/nullwerte.md)
 - [Organisation und Produkt (ASN.1)](datenformate/organisation-und-produkt-asn-1.md)
