@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-40 Abkürzungen.
+42 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -21,6 +21,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
 | **ESH** | [ESH](lexikon/sicherheit/esh.md) | e-Ticket Security Hub |
 | **HGS** | [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) | Backoffice System |
+| **ION** | [Interoperabilitätsnetzwerk](lexikon/transaktionen/ion.md) | interoperability network |
 | **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
 | **KID** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) | key identifier |
 | **KM** | [Keymanagement](lexikon/sicherheit/keymanagement.md) | Key Management |
@@ -46,6 +47,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **TXSNAWB** | [TXSNAWB](lexikon/transaktionen/txsnawb.md) | unblock attestation transaction |
 | **XSD** | [XSD und WSDL](lexikon/datenformate/xsd.md) | XML schema and WSDL |
 | **zSAM** | [zSAM](lexikon/sicherheit/zsam.md) | additional SAM for barcode tickets |
+| **ZVM** | [Zentrale Vermittlungsstelle](lexikon/rollen/zentrale-vermittlungsstelle.md) | central routing engine |
 
 ---
 
