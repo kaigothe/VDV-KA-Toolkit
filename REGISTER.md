@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-147 Eintragräge
+156 Eintragräge
 
 
 ## A
@@ -28,6 +28,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) *(zu prüfen)*
 - [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
+- [Authentifizierung](lexikon/sicherheit/authentifizierung.md)
 
 ## B
 
@@ -40,6 +41,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Bescheinigungen zu Applikationen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-applikationen-asn-1.md) *(abgeleitet)*
 - [Bescheinigungen zu Berechtigungen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-berechtigungen-asn-1.md) *(abgeleitet)*
 - [Bescheinigungen zu Zahlungsmitteln (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md)
+- [Bezahlart](lexikon/berechtigungen/bezahlart.md)
 
 ## C
 
@@ -56,11 +58,13 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## E
 
+- [eBezahlberechtigung](lexikon/berechtigungen/ebezahlberechtigung.md) — eBezBer
 - [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) — EFS
 - [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) — EFM
 - [Elementarprozess](lexikon/grundlagen/elementarprozess.md) — EP
 - [Entsperrnachweis](lexikon/aktionsmanagement/entsperrnachweis.md)
 - [Entsperrung über Aktionsliste](lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md)
+- [Entwertung](lexikon/kontrolle/entwertung.md)
 - [ESH](lexikon/sicherheit/esh.md) — ESH *(abgeleitet)*
 - [eTicket Deutschland](lexikon/grundlagen/eticket-deutschland.md)
 - [etiCORE](lexikon/grundlagen/eticore.md)
@@ -68,6 +72,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## F
 
 - [Fahrgast, Linie und Identifikationsmedium (ASN.1)](lexikon/berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md)
+- [Fahrtberechtigung](lexikon/berechtigungen/fahrtberechtigung.md)
 - [Fahrtdaten (ASN.1)](lexikon/datenformate/fahrtdaten-asn-1.md) *(abgeleitet)*
 - [Fehlercodes (etiCORE)](lexikon/transaktionen/fehlercodes-eticore.md) *(abgeleitet)*
 - [Fehlercodes der Terminalanteile](lexikon/transaktionen/fehlercodes-der-terminalanteile.md) *(abgeleitet)*
@@ -146,6 +151,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## R
 
+- [Referenz-Berechtigung](lexikon/berechtigungen/referenz-berechtigung.md)
 - [Rollen](lexikon/rollen.md)
 - [Rollencodes](lexikon/rollen/rollencodes.md) *(abgeleitet)*
 - [Rollennamen in etiCORE](lexikon/rollen/rollennamen-in-eticore.md)
@@ -177,6 +183,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## T
 
 - [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md)
+- [Tarif](lexikon/berechtigungen/tarif.md)
 - [Tarifaufzählungen (ASN.1)](lexikon/datenformate/tarifaufzaehlungen-asn-1.md)
 - [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) *(zu prüfen)*
 - [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md)
@@ -208,6 +215,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## W
 
 - [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) *(zu prüfen)*
+- [Werteinheitenberechtigung](lexikon/berechtigungen/werteinheitenberechtigung.md) — WEB
 
 ## X
 
@@ -219,6 +227,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Zähler, Zeit und Versionen (ASN.1)](lexikon/datenformate/zaehler-zeit-und-versionen-asn-1.md) *(abgeleitet)*
 - [Zahlungsmittel (ASN.1)](lexikon/datenformate/zahlungsmittel-asn-1.md)
 - [Zentrale Vermittlungsstelle](lexikon/rollen/zentrale-vermittlungsstelle.md) — ZVM
+- [Zertifizierung](lexikon/grundlagen/zertifizierung.md) *(zu prüfen)*
 - [zSAM](lexikon/sicherheit/zsam.md) — zSAM
 
 ---

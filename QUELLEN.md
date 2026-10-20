@@ -528,7 +528,7 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 **eos.uptrade – eos.ticketingsuite VDV-KA-zertifiziert**
 
 - **Datei:** `QUELLEN/Q14_eos-uptrade_VDV-KA-zertifiziert.html`
-- **Typ:** Hersteller · **Herkunft:** Webarchiv (Original 404) · **Auswertung:** offen
+- **Typ:** Hersteller · **Herkunft:** Webarchiv (Original 404) · **Auswertung:** teilweise — Aussagen zur Zertifizierung (Testprogramm, Sperrlisten, ungültige SAMs) ausgewertet
 - **Stichworte:** Zertifizierung, Marktübersicht
 - **URL:** https://www.eos-uptrade.de/en/company/news/article/eos-ticketingsuite-vdv-ka-certified
 
@@ -537,7 +537,7 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 **IVU – VDV-KA-Zertifizierung für Hard- und Software**
 
 - **Datei:** `QUELLEN/Q15b_IVU_VDV-KA-Certification.html`
-- **Typ:** Hersteller · **Herkunft:** Webarchiv (Original 404) · **Auswertung:** offen
+- **Typ:** Hersteller · **Herkunft:** Webarchiv (Original 404) · **Auswertung:** teilweise — Aussagen zur Zertifizierung (Testfälle, Notfallschlüssel, ungültige SAMs) ausgewertet
 - **Hinweis:** Die zweite IVU-Seite („reference for e-ticketing“) ist weder online noch im Archiv verfügbar — **nicht beschafft**.
 - **Stichworte:** Zertifizierung, Marktübersicht
 - **URL:** https://www.ivu.com/all-references/references/vdv-ka-certification-for-ivu-hardware-and-software

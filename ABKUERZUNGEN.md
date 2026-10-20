@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-42 Abkürzungen.
+44 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -16,6 +16,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **BOM** | [Basisobjektmodell](lexikon/datenformate/bom.md) | Basic Object Model |
 | **CVC** | [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) | card verifiable certificate |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |
+| **eBezBer** | [eBezahlberechtigung](lexikon/berechtigungen/ebezahlberechtigung.md) | ePaymentMethod |
 | **EFM** | [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) | Electronic Fare Management |
 | **EFS** | [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) | Electronic Ticket |
 | **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
@@ -45,6 +46,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **TXEBER** | [TXEBER](lexikon/transaktionen/txeber.md) | inspection attestation |
 | **TXRBER** | [TXRBER](lexikon/transaktionen/txrber.md) | termination attestation |
 | **TXSNAWB** | [TXSNAWB](lexikon/transaktionen/txsnawb.md) | unblock attestation transaction |
+| **WEB** | [Werteinheitenberechtigung](lexikon/berechtigungen/werteinheitenberechtigung.md) | stored value payment method |
 | **XSD** | [XSD und WSDL](lexikon/datenformate/xsd.md) | XML schema and WSDL |
 | **zSAM** | [zSAM](lexikon/sicherheit/zsam.md) | additional SAM for barcode tickets |
 | **ZVM** | [Zentrale Vermittlungsstelle](lexikon/rollen/zentrale-vermittlungsstelle.md) | central routing engine |

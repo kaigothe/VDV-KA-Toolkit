@@ -62,6 +62,7 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 ## Unterartikel
 
 - [ASM](sicherheit/asm.md)
+- [Authentifizierung](sicherheit/authentifizierung.md)
 - [CV-Zertifikat](sicherheit/cv-zertifikat.md)
 - [CV-Zertifikat in etiCORE](sicherheit/cv-zertifikat-in-eticore.md)
 - [ESH](sicherheit/esh.md)

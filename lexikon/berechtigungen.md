@@ -56,16 +56,22 @@ Dieser letzte Punkt steht im Glossar des Standards, nicht in einem Zukunftspapie
 - [Berechtigung](berechtigungen/berechtigung.md)
 - [berStatus](berechtigungen/berstatus.md)
 - [berSynchronNummer](berechtigungen/bersynchronnummer.md)
+- [Bezahlart](berechtigungen/bezahlart.md)
+- [eBezahlberechtigung](berechtigungen/ebezahlberechtigung.md)
 - [Elektronischer Fahrschein](berechtigungen/efs.md)
 - [Fahrgast, Linie und Identifikationsmedium (ASN.1)](berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md)
+- [Fahrtberechtigung](berechtigungen/fahrtberechtigung.md)
 - [Gültigkeit](berechtigungen/gueltigkeit.md)
 - [Gültigkeitsbereich (ASN.1)](berechtigungen/gueltigkeitsbereich-asn-1.md)
 - [Multiberechtigung](berechtigungen/multiberechtigung.md)
 - [Produkt](berechtigungen/produkt.md)
 - [Produktnummer](berechtigungen/produktnummer.md)
 - [Produktspezifischer Teil](berechtigungen/produktspezifischer-teil.md)
+- [Referenz-Berechtigung](berechtigungen/referenz-berechtigung.md)
 - [Statische Berechtigung](berechtigungen/statische-berechtigung.md)
 - [Statische Berechtigung in etiCORE](berechtigungen/statische-berechtigung-in-eticore.md)
+- [Tarif](berechtigungen/tarif.md)
+- [Werteinheitenberechtigung](berechtigungen/werteinheitenberechtigung.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

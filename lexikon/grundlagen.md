@@ -79,6 +79,7 @@ Und noch eine Abgrenzung, die im Alltag oft verrutscht: Das **elektronische Fahr
 - [Teilnahmevertrag](grundlagen/teilnahmevertrag.md)
 - [VDV-Kernapplikation](grundlagen/vdv-kernapplikation.md)
 - [Versionen](grundlagen/versionen.md)
+- [Zertifizierung](grundlagen/zertifizierung.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

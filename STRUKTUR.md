@@ -419,3 +419,13 @@ Die Artikel stehen dort, wo ihr Gegenstand liegt, nicht in einer eigenen ASN.1-K
 | **Fehlercodes und Warnungen des CCP** | `transaktionen/fehlercodes-und-warnungen-des-ccp.md` | Q50, `ccp-event-enums_xsd`, `ccp-ste-event-enums_xsd` | Meldungen der CCP-Systeme zu Sperranforderungen, Check-in/Check-out und Zählern. | P2 |
 | **Fehlercodes der Terminalanteile** | `transaktionen/fehlercodes-der-terminalanteile.md` | Q50, `eui-`, `esi-`, `personalisation-event-enums_xsd` | Fehler der Ausführungseinheit, der Personalisierung und der Fremdsystem-Schnittstelle. | P2 |
 | **Warnungen in etiCORE** | `transaktionen/warnungen-in-eticore.md` | Q50, `common-event-enums_xsd`, `po-event-enums_xsd`, `po-ste-event-enums_xsd` | Die Plausibilitätsprüfungen der Empfängersysteme; Grundlage jeder Fehlererkennung. | P2 |
+
+---
+
+## 19. Artikel aus dem Glossar und aus Q50/Q51 (2026-10-20)
+
+Aus dem Backlog (Abschnitt 13) rückt die **eBezahlberechtigung** auf, weil die ASN.1-Typen und das Glossar sie tragen.
+
+| Artikel | Pfad | Quelle | Grund für diesen Platz | Prio |
+|---|---|---|---|---|
+| **eBezahlberechtigung** | `berechtigungen/ebezahlberechtigung.md` | [Q02](QUELLEN.md#q02) S. 15 f., S. 28 f.; [Q51](QUELLEN.md#q51) | Eine Berechtigung mit Zahlungsfunktion; Geschwister von [Berechtigung](lexikon/berechtigungen/berechtigung.md) und [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md). | P2 |
