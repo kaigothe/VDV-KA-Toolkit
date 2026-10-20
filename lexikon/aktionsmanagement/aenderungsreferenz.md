@@ -2,17 +2,17 @@
 titel: Änderungsreferenz
 englisch: change reference
 parent: lexikon/aktionsmanagement.md
-siehe_auch: [lexikon/aktionsmanagement/auftragstyp.md]
-quellen: [Q02, Q11, Q25]
+siehe_auch: [lexikon/aktionsmanagement/auftragstyp.md, lexikon/aktionsmanagement/aktionsmanagement-in-eticore.md]
+quellen: [Q02, Q11, Q25, Q50]
 status: zu prüfen
 offene_fragen: [O13]
-stand: 2026-10-19
+stand: 2026-10-20
 codes:
   - wert: 0
     codeliste: amAenderungsreferenz_ID
-    bedeutung: vermutlich keine Vorgänger-Berechtigung, also Neuausgabe
-    quelle: Q11
-    fundstelle: Feld amAenderungsreferenz_ID im ausgewerteten Datensatz
+    bedeutung: vermutlich keine Gruppe (in etiCORE ist das Nachfolgefeld groupId optional)
+    quelle: Q50
+    fundstelle: po-oa-management_xsd, Typ ActionListEntryBaseInformation, Element groupId
     status: abgeleitet
 ---
 
@@ -22,32 +22,31 @@ codes:
 
 # Änderungsreferenz
 
-Das Feld `amAenderungsreferenz_ID` in einem Aktionslisteneintrag verweist auf eine Berechtigung, die durch die beauftragte Aktion ersetzt oder geändert wird. In der ausgewerteten `txalisber`-Nachricht trägt es den Wert **0** in beiden Teilen, also Nummer und Organisation ([Q11](../../QUELLEN.md#q11)).
+Das Feld `amAenderungsreferenz_ID` steht in einem Aktionslisteneintrag. In der ausgewerteten `txalisber`-Nachricht trägt es den Wert **0** in beiden Teilen, Nummer und Organisation ([Q11](../../QUELLEN.md#q11)).
 
-**Die Bedeutung ist nicht belegt** (zu prüfen, O13). Die Codeliste und die Feldsemantik stehen in der nicht öffentlichen KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41). Das Glossar [Q02](../../QUELLEN.md#q02) enthält keinen entsprechenden Eintrag; geprüft am Inhaltsverzeichnis, S. 2–13.
+**Die Bedeutung ist in den Quellen zur KA 1.x nicht belegt** (zu prüfen, O13). Die Feldsemantik steht in der nicht öffentlichen KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41). Das Glossar [Q02](../../QUELLEN.md#q02) enthält keinen Eintrag; geprüft am Inhaltsverzeichnis, S. 2–13.
 
-Aus Feldname und Wert liegt folgende Lesart nahe (abgeleitet): Eine Änderungsreferenz von 0 bedeutet, dass es keine Vorgänger-Berechtigung gibt. Die Aktion ist dann eine **Neuausgabe** und keine Änderung einer bestehenden Berechtigung.
+Einen Hinweis geben die etiCORE-Schnittstellen. Dort ist `amAenderungsreferenz_ID` der Altname von `groupId`. Das Feld besteht aus der Organisations-ID des bestellenden CCP und einer Gruppennummer. Es gruppiert Einträge „logically“, damit sie „in a single transaction“ ausgeführt werden, und ist optional ([Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`, Typ `ActionListEntryBaseInformation`).
 
-Diese Lesart wird von zwei weiteren Feldern derselben Nachricht gestützt: Die `berSynchronNummer` ist 1, also der erste Stand der Berechtigung, und der `logTransaktionsTyp` ist 37, also Ausgabe EFS über Aktionsliste. Drei Felder, die unabhängig voneinander auf eine Neuausgabe deuten, bilden eine belastbare Indizienkette — aber keinen Beleg.
+Danach wäre die Änderungsreferenz eine **Gruppenzugehörigkeit** und kein Verweis auf eine Vorgänger-Berechtigung (abgeleitet, O13). Das passt zu den zwei Teilen des Werts; 0/0 hieße „keine Gruppe“ (abgeleitet).
 
-Ungeklärt bleibt, welchen Wert das Feld bei einer **tatsächlichen** Änderung trägt und ob es dann die Berechtigungsnummer samt Organisation des Vorgängers aufnimmt (zu prüfen, O13).
+Ungeklärt bleibt, ob die KA 1.x das Feld ebenso verwendet und welchen Wert es bei einer tatsächlichen Gruppierung trägt (zu prüfen, O13). Die etiCORE-Angaben stammen aus einem Release-Kandidaten (3.0.0-rc.6).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
-In Pias Auftrag steht an einer Stelle eine Null — genauer gesagt zwei Nullen, eine für eine Nummer und eine für eine Organisation. Das Feld heißt Änderungsreferenz.
+In Pias Auftrag steht an einer Stelle eine Null — genauer: zwei Nullen, eine für eine Nummer und eine für eine Organisation. Das Feld heißt Änderungsreferenz.
 
-Der Name legt die Bedeutung nahe: Es ist ein Verweis auf etwas Früheres. Wenn eine Berechtigung eine andere ersetzt, kann man hier eintragen, welche das war. Eine Null heißt dann: Es gibt nichts Früheres. Pias ABO Azubi wird neu ausgegeben und tritt nicht an die Stelle eines anderen Abos.
+Der Name legt eine Deutung nahe: ein Verweis auf etwas Früheres, die Berechtigung, die ersetzt wird. Diese Deutung tragen die etiCORE-Unterlagen nicht. Dort heißt das Feld **Gruppe**. Es besteht aus der Organisation des Bestellers und einer Nummer, die bei diesem Besteller eindeutig ist. Einträge mit derselben Gruppe sollen zusammen in einer Transaktion ausgeführt werden.
 
-Warum ist das überhaupt nützlich? Weil Berechtigungen im Lauf der Zeit ersetzt werden. Pia verliert ihre Karte und bekommt eine Ersatzkarte — die neue Berechtigung darauf ist dann die Nachfolgerin der alten. Ohne einen Verweis wüsste niemand, dass die beiden zusammengehören. Mit ihm kann man die Kette nachvollziehen: Diese Berechtigung ist aus jener entstanden.
+Denkbar ist das so: Pia wechselt von ihrem ABO Azubi auf eine Monatskarte Bärstadt. Die BVB bestellt die Rücknahme des alten Produkts und die Ausgabe des neuen. Beides soll gemeinsam geschehen, sonst stünde Pia kurz mit zwei Produkten oder mit keinem da. Tragen beide Einträge dieselbe Gruppe, kann das Terminal sie in einem Zug abarbeiten. Das ist eine Veranschaulichung, keine Beschreibung der Nachricht.
 
-Nun das Wichtige: Diese Erklärung ist eine **Deutung**, keine belegte Tatsache. Sie stammt aus dem Feldnamen und daraus, dass zwei andere Felder in dieselbe Richtung zeigen — der Versionszähler steht auf 1, und die Transaktion ist als Ausgabe gekennzeichnet. Drei Hinweise, die zusammenpassen, machen eine Deutung wahrscheinlich. Sie machen sie nicht wahr.
+Pias Auftrag trägt zweimal die Null. Wenn die Null „keine Gruppe“ heißt, steht der Eintrag für sich allein: Er ist eine einzelne Ausgabe ohne Partner. Dazu passt, dass die beiden anderen Felder derselben Nachricht auf eine einfache Neuausgabe zeigen.
 
-Besonders offen ist die Gegenprobe. Niemand hier hat eine Nachricht gesehen, in der das Feld **nicht** null ist. Wie eine echte Änderungsreferenz aussieht — ob dort die Berechtigungsnummer der Vorgängerin steht, ob zusätzlich deren Organisation, in welchem Format —, lässt sich aus dem einen vorliegenden Beispiel nicht sagen.
-
-Deshalb steht dieser Artikel auf „zu prüfen“. Für ein Auswertungswerkzeug heißt das: Eine Null darf als „Neuausgabe“ angezeigt werden, aber mit dem Hinweis, dass diese Deutung erschlossen ist.
+Wichtig bleibt die Grenze: Auch diese Lesart ist erschlossen, aus den Angaben eines Release-Kandidaten und nicht aus einer KA-1.x-Quelle. Niemand hier hat eine Nachricht gesehen, in der das Feld nicht null ist. Deshalb steht der Artikel weiter auf „zu prüfen“. Ein Auswertungswerkzeug darf die Null als „keine Gruppe“ anzeigen, aber mit dem Hinweis, dass diese Deutung erschlossen ist.
 
 ## Quellen
 
+- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management_xsd`: Typ `ActionListEntryBaseInformation`, Element `groupId` mit `meta:old` = `amAenderungsreferenz_ID`; Typ `GroupId` · *Release-Kandidat*
 - [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `amAenderungsreferenz_ID` mit dem Wert 0/0, dazu `berSynchronNummer` 1 und `logTransaktionsTyp` 37. **Nicht öffentliche Unterlage**; übernommen sind nur Feldnamen und Werte.
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41, als Normquelle der Feldsemantik)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag zur Änderungsreferenz (geprüft am Inhaltsverzeichnis, S. 2–13)
@@ -56,6 +55,7 @@ Deshalb steht dieser Artikel auf „zu prüfen“. Für ein Auswertungswerkzeug 
 ## Siehe auch
 
 - [Auftragstyp](auftragstyp.md)
+- [Aktionsmanagement in etiCORE](aktionsmanagement-in-eticore.md)
 <!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->

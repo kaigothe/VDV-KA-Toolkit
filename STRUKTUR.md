@@ -149,7 +149,7 @@ lexikon/aktionsmanagement/…         ← Unterartikel
 | Aktionsfreigabe | `aktionsfreigabe.md` | Q25 Kap. 5 („Aktionsfreigabe senden“, „Aktionsfreigabemitteilung entgegennehmen“) | **P1** |
 | Aktionsclearing | `aktionsclearing.md` | Q02 S. 18 | **P1** |
 | Entsperrnachweis | `entsperrnachweis.md` | Q02 S. 39; Q25 Kap. 5 („Entsperrnachweis bearbeiten“, „… an PV melden“) | **P1** |
-| Änderungsreferenz | `aenderungsreferenz.md` | Q11 (`amAenderungsreferenz_ID` = 0/0, kein Vorgänger) — Deutung **abgeleitet** | **P1** |
+| Änderungsreferenz | `aenderungsreferenz.md` | Q11 (`amAenderungsreferenz_ID` = 0/0); Q50 (etiCORE: `groupId`, Gruppe von Einträgen) — Deutung **abgeleitet** | **P1** |
 | Terminalgruppe | `terminalgruppe.md` | Q25 Kap. 5 („TG_Terminal anlegen/entfernen/ändern“); Q11 (`amTerminalGruppe_ID`, `amTerminal_ID` = 0) | P2 |
 | Lebenszyklus einer Aktion | `lebenszyklus-aktion.md` | Q02 S. 20 (Aktionen haben einen Lebenszyklus); Q06 Kap. 1.2.2 (Datenfluss) | P2 |
 

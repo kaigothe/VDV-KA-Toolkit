@@ -1,6 +1,6 @@
 ---
 titel: Bärstadt in Bärenland
-stand: 2026-10-19
+stand: 2026-10-20
 hinweis: Referenzseite, kein Lexikonartikel — Navigation wird hier von Hand gepflegt
 ---
 
@@ -119,7 +119,7 @@ Die Nachricht ist dem Aufbau eines `txalisber`-Datensatzes nachempfunden ([Q11](
 | `berGueltigkeitsende` | **31.08.2029 23:59:58** | Ende der dreijährigen Ausbildung |
 | `berStatus` | **7** | aktiv / entsperrt *(im Bärenland wie im eTicket RheinMain, vgl. [Q05](../QUELLEN.md#q05); verbundspezifisch, [O3](../PLAN.md))* |
 | `berSynchronNummer` | **1** | erster Stand der Berechtigung |
-| `amAenderungsreferenz_ID` | **0** / **0** | keine Vorgänger-Berechtigung, also Neuausgabe |
+| `amAenderungsreferenz_ID` | **0** / **0** | vermutlich keine Gruppe: Der Eintrag steht für sich *(abgeleitet, [O13](../PLAN.md); in etiCORE heißt das Feld `groupId`)* |
 | `amTerminalGruppe_ID` | **0** | an keine Terminalgruppe gebunden |
 | `amTerminal_ID` | **0** | an kein bestimmtes Terminal gebunden |
 | `berBezahlArt` | **0** | nicht angegeben; Bezahlung läuft im Vertragssystem |
@@ -144,7 +144,7 @@ Der Fall ist absichtlich stimmig gebaut, damit Artikel zur Plausibilitätsprüfu
 - Produktorganisation = Inhaber des PV-MAC-Schlüssels → **9020**
 - Schlüsselstelle = Inhaber des ERF-MAC-Schlüssels → **9060**
 - Gültigkeitsbeginn liegt vor dem Gültigkeitsende
-- Neuausgabe: Änderungsreferenz 0, SynchronNummer 1 und Status 7 passen zusammen
+- Neuausgabe: SynchronNummer 1 und Status 7 passen zusammen; die Änderungsreferenz 0/0 heißt vermutlich „keine Gruppe“
 
 ### 6.4 Der Ablauf
 
@@ -184,7 +184,7 @@ Damit nicht jeder Artikel eine neue Geschichte erfindet, sind diese Nebenfälle 
 | Fall | Beschreibung | Nützlich für |
 |---|---|---|
 | **F1 — Neuausgabe** | Pias ABO Azubi, der durchgehende Fall aus Abschnitt 6 | Ausgabe EFS, TX 37, Aktionsliste, berStatus, SynchronNummer, Gültigkeit |
-| **F2 — Verlust und Sperrung** | Pia verliert die BärenKarte. Bodo sperrt die Applikationsinstanz 90000042; der Eintrag geht über den KSB (9040) in die Sperrliste. Pia erhält die Ersatzkarte mit `appInstanz_ID` **90000043**, die Berechtigung wird neu ausgegeben, diesmal mit `amAenderungsreferenz_ID` auf 400815 und SynchronNummer 2. | Sperrliste, Sperrgrund, Sperrnachweis, Änderungsreferenz, SynchronNummer |
+| **F2 — Verlust und Sperrung** | Pia verliert die BärenKarte. Bodo sperrt die Applikationsinstanz 90000042; der Eintrag geht über den KSB (9040) in die Sperrliste. Pia erhält die Ersatzkarte mit `appInstanz_ID` **90000043**, die Berechtigung wird neu ausgegeben, diesmal gemeinsam mit der Rücknahme der alten Berechtigung 400815 in einer Gruppe (gesetzte `amAenderungsreferenz_ID`, Deutung offen, O13) und mit SynchronNummer 2. | Sperrliste, Sperrgrund, Sperrnachweis, Änderungsreferenz, SynchronNummer |
 | **F3 — Prüfung ohne Nachweis** | Pia hat die Karte dabei, aber keinen Ausbildungsnachweis. Petra Pranke liest den personalisierten EFS, Name und Geburtsdatum stimmen, der Ausweis fehlt. | Personengebunden, Sichtkontrolle, produktspezifischer Teil, Tag 0xDB |
 | **F4 — Entsperrung über Aktionsliste** | Eine Berechtigung liegt mit Status 8 (neu/nicht aktiv) auf der Karte und wird nach der Prüfung über die Aktion „Entsperren“ aktiviert, Transaktionstyp 38. | TX 38, Entsperrung, Entsperrnachweis, berStatus |
 | **F5 — Rücknahme** | Pia bricht die Ausbildung ab. Das ABO Azubi wird über die Aktionsliste zurückgenommen, Transaktionstyp 39, Zielstatus 5. | TX 39, Rücknahme EFS, berStatus |
