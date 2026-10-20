@@ -13,7 +13,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Aktion](lexikon/aktionsmanagement/aktion.md)
 - [Aktionsclearing](lexikon/aktionsmanagement/aktionsclearing.md)
 - [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md)
-- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) *(abgeleitet)*
+- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) *(zu prüfen)*
 - [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md) — TXAML
 - [Aktionslistenservice](lexikon/rollen/alise.md) — ALISE
 - [Aktionsmanagement](lexikon/aktionsmanagement.md) — AktM

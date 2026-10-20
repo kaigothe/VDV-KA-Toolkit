@@ -55,7 +55,12 @@ PROBEN = [
     ("Q25", 239, r"Tabelle 38"),
     ("Q37",   4, r"1\.12\.0"),
     ("Q39",  52, r"TXAAUFBER"),
+    ("Q39",  50, r"TXSFREIB"),
+    ("Q39",  51, r"TXSFREIA"),
+    ("Q39",  52, r"TXAFREIBER"),
     ("Q39",  53, r"vHGS als ALISE"),
+    ("Q40",  16, r"EP_Sperrfreigabeauftrag"),
+    ("Q40",  20, r"Sperrfreigabemitteilun"),
     # Q43 bis Q48: ergaenzt mit den Artikeln zu etiCORE, Datenschutz und Barcode
     ("Q43",   4, r"Release Kandidat 6"),
     ("Q43",  23, r"daraus exportierte Dok"),

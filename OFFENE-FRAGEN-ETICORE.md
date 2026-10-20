@@ -10,15 +10,17 @@
 
 ## F1 — Was ist die „Aktionsfreigabe“? (O20, berührt O12)
 
-**Frage:** Ist `TXAFREIBER` in der KA 1.x die **Stornierung** eines Auftrags, oder gibt sie einen vorbereiteten Auftrag erst **frei**?
+**Frage:** Ist `TXAFREIBER` in der KA 1.x die **Stornierung** eines Auftrags, oder gibt sie einen vorbereiteten Auftrag erst **frei**? *(Unsere Antwort nach eigener Prüfung: Stornierung — Begründung unten. Wir suchen die Bestätigung.)*
 
 **Was wir wissen:**
-- Eine NRW-Quelle ([Q39](QUELLEN.md#q39), Kap. 3.2.5) nennt `TXAFREIBER` „Aktionsfreigabeauftrag“ des beauftragenden KVP an PV bzw. ALISE und `TXAFREIMITBER` „Aktionsfreigabemitteilung“ des ALISE zurück, beide asynchron. Das Glossar ([Q02](QUELLEN.md#q02)) kennt den Begriff nicht.
+- Eine **RMV**-Quelle ([Q39](QUELLEN.md#q39), Kap. 3.2.5, PDF-S. 52) nennt `TXAFREIBER` „Aktionsfreigabeauftrag“ des beauftragenden KVP an PV bzw. ALISE und `TXAFREIMITBER` „Aktionsfreigabemitteilung“ des ALISE zurück, beide asynchron. Die Kapitelüberschrift lautet „Aktionsmanagement RMV-EFS“. *(Eine frühere Fassung dieses Dokuments nannte Q39 eine NRW-Quelle — das war falsch.)* Das Glossar ([Q02](QUELLEN.md#q02)) kennt den Begriff nicht.
 - In etiCORE trägt `cancelOrder` den Altbezeichner `TXAFREIBER` (Namensraum `http://vdv/ka/alise/2`). Es hat ein einziges Feld, `orderId` („Cancel an order“).
 - `TXAFREIMITBER` ist der Altbezeichner von `notifyOrderSeemsToBeObsolete`: Meldung des PO-Systems an den bestellenden CCP, dass ein Entsperrauftrag auf anderer Grundlage (einer Inspektionsbescheinigung) erledigt scheint.
-- Beide Richtungen passen zur NRW-Tabelle. Unser Artikel [aktionsfreigabe.md](lexikon/aktionsmanagement/aktionsfreigabe.md) führt die Freigabe bisher als Schritt, der einen Auftrag „wirksam werden“ lässt. Das ist eine Lesart aus dem Namen, nicht belegt.
+- Beide Richtungen passen zur Tabelle in [Q39](QUELLEN.md#q39).
+- **Neu, und aus unserer Sicht entscheidend: Das Benennungsmuster der KA spricht für die Stornierung.** Im Sperrmanagement steht dem Sperrauftrag `TXSAUFB` der Sperrfreigabeauftrag `TXSFREIB` gegenüber, der NmApplikation entsprechend `TXSAUFA` und `TXSFREIA` ([Q39](QUELLEN.md#q39), Kap. 3.2.1 f., PDF-S. 50 f.). Eine „Freigabe“ nimmt dort zurück, was der Auftrag bewirkt hat. Ein **NRW**-Rahmenlastenheft bestätigt die Paarung ausdrücklich: Es nennt „Sperraufhebungsanforderungen“ und „die zugehörigen … Sperrfreigabemitteilungen“ in einem Satz ([Q40](QUELLEN.md#q40), PDF-S. 20) und führt Elementarprozesse `EP_Sperrfreigabeauftrag_*` neben `EP_Sperraufhebungsanforderung_*` ([Q40](QUELLEN.md#q40), PDF-S. 16). „Freigabe“ heißt in dieser Begriffswelt also **Aufhebung**, nicht Erlaubnis.
+- Unser Artikel [aktionsfreigabe.md](lexikon/aktionsmanagement/aktionsfreigabe.md) führt die Freigabe deshalb jetzt als **Rücknahme eines noch nicht ausgeführten Auftrags** (abgeleitet). Die frühere Lesart — ein Schritt, der einen Auftrag „wirksam werden“ lässt — ist aufgegeben: Sie stützte sich allein auf den Alltagssinn des Wortes.
 
-**Was wir brauchen:** die Beschreibung der Nachricht in der KA AktM-SPEC (oder SST-SPEC), mit Feldliste, und wenn möglich ein Beispiel.
+**Was wir brauchen:** die Beschreibung der Nachricht in der KA AktM-SPEC (oder SST-SPEC), mit Feldliste, und wenn möglich ein Beispiel. Die Frage ist damit **nicht mehr offen in beide Richtungen** — gesucht ist die Bestätigung, dass `TXAFREIBER` einen Auftrag zurücknimmt, und die Auskunft, worauf sich die Freigabe bezieht: auf den Auftrag selbst oder auf die Berechtigung, die er betrifft.
 
 ## F2 — Was bedeutet `amAuftragsTyp`? (O2, O9)
 

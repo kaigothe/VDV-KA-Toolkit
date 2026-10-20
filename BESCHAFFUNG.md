@@ -218,6 +218,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 
 | Artikel | offene Fragen |
 |---|---|
+| [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) | O20 |
 | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) | O13 |
 | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) | O2, O9 |
 | [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) | O14, O20 |
