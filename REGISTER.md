@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-146 Eintragräge
+147 Eintragräge
 
 
 ## A
@@ -164,6 +164,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Sicherheit](lexikon/sicherheit.md)
 - [Sicherheitsebenen](lexikon/sicherheit/sicherheitsebenen.md)
 - [Sichtkontrolle](lexikon/kontrolle/sichtkontrolle.md)
+- [Sperranforderung](lexikon/kontrolle/sperranforderung.md)
 - [Sperrgrund](lexikon/kontrolle/sperrgrund.md)
 - [Sperrliste](lexikon/kontrolle/sperrliste.md)
 - [Sperrlisteneintrag](lexikon/kontrolle/sperrlisteneintrag.md)

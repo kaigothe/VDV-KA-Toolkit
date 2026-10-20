@@ -72,6 +72,7 @@ Interessant ist der Blick nach vorn. Heute schreibt das Kontrollgerät einen Nac
 - [Kontrollgerät](kontrolle/kontrollgeraet.md)
 - [Kontrollnachweise](kontrolle/kontrollnachweise.md)
 - [Sichtkontrolle](kontrolle/sichtkontrolle.md)
+- [Sperranforderung](kontrolle/sperranforderung.md)
 - [Sperrgrund](kontrolle/sperrgrund.md)
 - [Sperrliste](kontrolle/sperrliste.md)
 - [Sperrlisteneintrag](kontrolle/sperrlisteneintrag.md)

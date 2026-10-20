@@ -2,7 +2,7 @@
 titel: Aktionsfreigabe
 englisch: action release
 parent: lexikon/aktionsmanagement.md
-siehe_auch: [lexikon/aktionsmanagement/aktion.md, lexikon/aktionsmanagement/aktionsliste.md, lexikon/rollen/alise.md, lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md]
+siehe_auch: [lexikon/kontrolle/sperranforderung.md, lexikon/aktionsmanagement/aktion.md, lexikon/aktionsmanagement/aktionsliste.md, lexikon/rollen/alise.md, lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md]
 quellen: [Q02, Q25, Q39, Q40, Q49, Q50]
 status: zu prüfen
 offene_fragen: [O20]
@@ -27,11 +27,11 @@ Die Aktionsfreigabe ist ein eigener Schritt im Aktionsmanagement, neben Beauftra
 
 Die Freigabe ist damit ein **zweiseitiger Vorgang zwischen beauftragendem Kundenvertragspartner und ALISE** und vom Aktionsauftrag getrennt: Die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER` und `TXEAUFBER` stehen in derselben Tabelle daneben.
 
-**Was „Freigabe“ meint, zeigt das Benennungsmuster der KA.** Im Sperrmanagement steht dem Sperrauftrag `TXSAUFB` der **Sperrfreigabeauftrag** `TXSFREIB` gegenüber, bei der NmApplikation entsprechend `TXSAUFA` und `TXSFREIA` ([Q39](../../QUELLEN.md#q39), Kap. 3.2.1 f., PDF-S. 50 f.). Eine „Freigabe“ **nimmt dort zurück, was der Auftrag bewirkt hat**. Ein Rahmenlastenheft aus NRW bestätigt die Paarung: Es nennt „Sperraufhebungsanforderungen“ und „die zugehörigen … Sperrfreigabemitteilungen“ in einem Satz ([Q40](../../QUELLEN.md#q40), PDF-S. 20) und führt Elementarprozesse `EP_Sperrfreigabeauftrag_*` neben `EP_Sperraufhebungsanforderung_*` ([Q40](../../QUELLEN.md#q40), PDF-S. 16) · *verbundspezifisch: NRW*.
+**Was „Freigabe“ meint, zeigt das Benennungsmuster der KA.** Im Sperrmanagement steht dem Sperrauftrag `TXSAUFB` der **Sperrfreigabeauftrag** `TXSFREIB` gegenüber, bei der NmApplikation entsprechend `TXSAUFA` und `TXSFREIA` ([Q39](../../QUELLEN.md#q39), Kap. 3.2.1 f., PDF-S. 50 f.). Eine „Freigabe“ **nimmt dort zurück, was der Auftrag bewirkt hat**; das Glossar definiert den Sperrfreigabeauftrag als Auftrag, „ein Objekt von der jeweiligen Sperrliste zu nehmen“ ([Q02](../../QUELLEN.md#q02), S. 87 f.; [Sperranforderung](../kontrolle/sperranforderung.md)). Ein NRW-Rahmenlastenheft führt Sperraufhebungsanforderung und Sperrfreigabeauftrag als Paar ([Q40](../../QUELLEN.md#q40), PDF-S. 16 und 20) · *verbundspezifisch: NRW*.
 
-**Dazu passt etiCORE.** `cancelOrder` — „Cancel an order“, einziges Feld `orderId` — trägt den Altbezeichner `TXAFREIBER` ([Q50](../../QUELLEN.md#q50)); im Modell wird der Auftrag „im Auftragsbestand als storniert markiert und aus der nächsten Aktionsliste entfernt“ ([Q49](../../QUELLEN.md#q49)). Dasselbe Muster gilt dort bei der Sperre: `TXSAUFB` heißt `addEntitlementToHotlist`, `TXSFREIB` heißt `removeEntitlementFromHotlist` ([Q50](../../QUELLEN.md#q50), `hotlist-messaging_xsd`).
+**Dazu passt etiCORE.** `cancelOrder` — „Cancel an order“, einziges Feld `orderId` — trägt den Altbezeichner `TXAFREIBER` ([Q50](../../QUELLEN.md#q50)); im Modell wird der Auftrag „im Auftragsbestand als storniert markiert und aus der nächsten Aktionsliste entfernt“ ([Q49](../../QUELLEN.md#q49)). Auch `TXSFREIB` heißt dort `removeEntitlementFromHotlist` ([Q50](../../QUELLEN.md#q50), `hotlist-messaging_xsd`).
 
-Danach ist die Aktionsfreigabe die **Rücknahme eines noch nicht ausgeführten Auftrags** und nicht dessen Scharfstellen (abgeleitet). Eine ausdrückliche Definition fehlt in allen vorliegenden Quellen; das Glossar [Q02](../../QUELLEN.md#q02) kennt den Begriff nicht (zu prüfen, O20). Normquelle bleibt die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41).
+Danach ist die Aktionsfreigabe die **Rücknahme eines noch nicht ausgeführten Auftrags** und nicht dessen Scharfstellen (abgeleitet). Eine ausdrückliche Definition fehlt in allen vorliegenden Quellen; das Glossar [Q02](../../QUELLEN.md#q02) kennt den Begriff Aktionsfreigabe nicht (zu prüfen, O20). Normquelle bleibt die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
@@ -58,11 +58,12 @@ Und wie immer bei diesen Nachrichten gilt der Vorbehalt des Verbunds: Dass die F
 - [Q49](../../QUELLEN.md#q49) – etiCORE-Spezifikationsmodell, *Ordered action management › Ordering › Cancel order*: Markierung als storniert im Auftragsbestand und Entfernen aus der nächsten Aktionsliste
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
 - [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management-messaging_xsd` (Element `cancelOrder`) und `ccp-oa-ordering-messaging_xsd` (Element `notifyOrderSeemsToBeObsolete`), jeweils mit `meta:old` · *Release-Kandidat*
-- [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion
+- [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion; S. 87 f. *Sperrfreigabeauftrag / Hotlisting Removal Order*
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch
 
+- [Sperranforderung](../kontrolle/sperranforderung.md)
 - [Aktion](aktion.md)
 - [Aktionsliste](aktionsliste.md) (TXAML)
 - [Aktionslistenservice](../rollen/alise.md) (ALISE)
