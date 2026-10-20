@@ -3,7 +3,7 @@ titel: Sicherheitsebenen
 englisch: security levels
 parent: lexikon/sicherheit.md
 siehe_auch: [lexikon/sicherheit/pki.md, lexikon/grundlagen/versionen.md]
-quellen: [Q02, Q42]
+quellen: [Q02, Q42, Q45]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -20,15 +20,17 @@ Zwei Einteilungen tragen ähnliche Namen und bedeuten Verschiedenes. Sie auseina
 
 **Die Sicherheitsebenen (Level 1 bis 3)** sind Umgebungen ([Q02](../../QUELLEN.md#q02), S. 62 f.):
 
-| Ebene | Bedeutung |
-|---|---|
-| **Level 1** | Development Environment |
-| **Level 2** | Staging Environment — „hier sind alle Sicherheitskomponenten zur durchgängigen Sicherung der Teilnehmerinteressen geschützt und nicht für Dritte zugänglich“ |
-| **Level 3** | Production Environment — „dem Wirkbetrieb vorbehalten“ |
+| Ebene | Bedeutung | Organisations-IDs und Zweck ([Q45](../../QUELLEN.md#q45), S. 23 f.) |
+|---|---|---|
+| **Level 1** | Development Environment | stark eingegrenzte Zahl von IDs, beispielhaft für Teilnehmer in ihren Rollen bei der Zertifizierung von Systemkomponenten; so konstruiert, dass **kein Wirksystem sie anerkennt**; empfohlen für allererste Tests |
+| **Level 2** | Staging Environment — „hier sind alle Sicherheitskomponenten zur durchgängigen Sicherung der Teilnehmerinteressen geschützt und nicht für Dritte zugänglich“ | Erzeugung und Nutzung aller Sicherheitskomponenten — Schlüssel, SAM, Nutzermedien — mit IDs, die als Gegenstück zu den Wirk-IDs vergeben werden |
+| **Level 3** | Production Environment — „dem Wirkbetrieb vorbehalten“ | dieselben Vorgänge mit den Wirk-IDs, die der Teilnehmer zur Identifizierung, Authentifizierung, Verschlüsselung und Transaktionssicherung nutzt |
 
 Für Level 3 gilt eine strenge Regel: „Im Wirkbetrieb des eTicket Deutschland werden **ausschließlich** Wertobjekte verwendet und anerkannt, die mit **Level-3-Organisations-IDs** erstellt wurden. Für den etiCORE-Standard dürfen zusammen mit den Level-3-Organisations-IDs **nur Level-3-Zertifikate** verwendet werden.“ ([Q02](../../QUELLEN.md#q02), S. 63)
 
 Die Trennung reicht also bis in die [Organisations-ID](../rollen/organisations-id.md) hinein: Eine Test-ID kann im Wirkbetrieb nichts Gültiges erzeugen (abgeleitet).
+
+Daraus folgt eine Festlegung, die man kennen muss: **Ein teilnehmendes Unternehmen erhält zwei Organisations-IDs** — je eine für Level 2 und Level 3 ([Q45](../../QUELLEN.md#q45), S. 31).
 
 **Die Generationen (1GSI und 2GSI)** sind dagegen Technikstände ([Q02](../../QUELLEN.md#q02), S. 14 f.):
 
@@ -61,6 +63,8 @@ Für Bärstadt heißt das: Ein System, das 2026 gebaut wird, muss beide Generati
 
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 62 f. („Level-1 Development Environment“, „Level-2 Staging Environment“ mit dem Schutz aller Sicherheitskomponenten, „Level-3 Production Environment“ als dem Wirkbetrieb vorbehalten; ausschließliche Verwendung und Anerkennung von Wertobjekten mit Level-3-Organisations-IDs im Wirkbetrieb; für etiCORE nur Level-3-Zertifikate zusammen mit Level-3-Organisations-IDs), S. 14 f. („1GSI“ als erste Generation der Sicherheitsinfrastruktur mit Algorithmen und Schlüsseln im Format von 2006 und seit 2006 eingesetzter Schlüsselverwaltung und PKI, heutige Variante bis 2026 bzw. 2031; „2GSI“ als zweite Generation ab 2026), S. 81 („Sicherheitsebenen / Security Levels“: drei Sicherheitsebenen in der Sicherheitsarchitektur)
 - [Q42](../../QUELLEN.md#q42) – KCD NRW, Newsletterarchiv (neues Root-Zertifikat zur Einführung von etiCORE am 01.12.2026, SubCA-Gültigkeit bis 01.12.2031, Parallelbetrieb im Übergangszeitraum) · *Sekundärquelle*
+
+- [Q45](../../QUELLEN.md#q45) – ASM-Tool Glossar, S. 23 f. (Level 1 mit eingegrenzter Zahl von OrgIDs für die Zertifizierung von Systemkomponenten, von keinem Wirksystem anerkannt, Empfehlung für erste Tests; Level 2 mit allen Sicherheitskomponenten als Gegenstück zu den Wirk-IDs; Level 3 mit den Wirk-IDs für Identifizierung, Authentifizierung, Verschlüsselung und Transaktionssicherung), S. 31 (zwei OrgIDs je teilnehmendem Unternehmen, eine für Level 2 und eine für Level 3)
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

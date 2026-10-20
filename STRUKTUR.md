@@ -328,7 +328,7 @@ Für die P2-Artikel des Bauplans sind vor allem Q31, Q32 und Q38 die nächsten S
 
 ## 15. Erweiterung aus den Quellen Q43 bis Q49 (2026-10-20)
 
-Sechs neue Dokumente und das öffentlich erreichbare etiCORE-Spezifikationsmodell haben **zehn Artikel** möglich gemacht. Damit stehen **109 Artikel** — 10 Kategorieartikel und 99 Blattartikel.
+Sechs neue Dokumente und das öffentlich erreichbare etiCORE-Spezifikationsmodell haben **zwölf Artikel** möglich gemacht. Damit stehen **111 Artikel** — 10 Kategorieartikel und 101 Blattartikel.
 
 | Artikel | Pfad | Quelle | Grund für diesen Platz |
 |---|---|---|---|
@@ -342,9 +342,11 @@ Sechs neue Dokumente und das öffentlich erreichbare etiCORE-Spezifikationsmodel
 | **MOTICS** | `sicherheit/motics.md` | [Q46](QUELLEN.md#q46), [Q43](QUELLEN.md#q43) | Dienst und Container des Kopierschutzes. |
 | **zSAM** | `sicherheit/zsam.md` | [Q45](QUELLEN.md#q45) | Sonderform des SAM; steht bei den Sicherheitsmodulen. |
 | **Key-Identifier** | `sicherheit/key-identifier.md` | [Q45](QUELLEN.md#q45) | Eigener Artikel statt Abschnitt in [Schlüsselarten](lexikon/sicherheit/schluesselarten.md): Die Tabelle samt Erläuterung hätte dort das Wortlimit um 90 Wörter überschritten. |
+| **ASM** | `sicherheit/asm.md` | [Q45](QUELLEN.md#q45), [Q43](QUELLEN.md#q43) | Applikations- und Sicherheitsmanagement-System samt ASM-Tool. Steht bei der Sicherheit, weil Gegenstand die Verwaltung von Schlüsseln, SAMs und Zertifikaten ist. |
+| **Teilnahmevertrag** | `grundlagen/teilnahmevertrag.md` | [Q45](QUELLEN.md#q45), [Q46](QUELLEN.md#q46) | Die Vertragsarten und der Kundenstatus entscheiden, welche Organisations-IDs eine Organisation erhält. Das ist eine Grundlage, keine Sicherheitsfunktion. |
 
-**Erweitert** wurden [versionen.md](lexikon/grundlagen/versionen.md) (Release 1.12.1), [ka-spezifikationen.md](lexikon/grundlagen/ka-spezifikationen.md) (drei Anlagen zur KA STB-Spec, Bezugsweg), [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) (Signatur, Sperrbarkeit, Identifikationsmerkmal) und [schluesselarten.md](lexikon/sicherheit/schluesselarten.md) (Verweis auf den Key-Identifier).
+**Erweitert** wurden [versionen.md](lexikon/grundlagen/versionen.md) (Release 1.12.1), [ka-spezifikationen.md](lexikon/grundlagen/ka-spezifikationen.md) (drei Anlagen zur KA STB-Spec, Bezugsweg), [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) (Signatur, Sperrbarkeit, Identifikationsmerkmal) und [schluesselarten.md](lexikon/sicherheit/schluesselarten.md) (Verweis auf den Key-Identifier) sowie [sicherheitsebenen.md](lexikon/sicherheit/sicherheitsebenen.md) (Zweck der Organisations-IDs je Ebene, zwei IDs je Teilnehmer).
 
 **Eine Korrektur:** [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) behauptete im Beispielteil, ein Barcode lasse sich nicht sperren. [Q46](QUELLEN.md#q46), Kap. 4.1, PDF-S. 9, sagt das Gegenteil: Ein gesperrtes Barcodeticket wird bei der Kontrolle erkannt und muss abgewiesen werden. Unveränderlich ist der **Inhalt des Barcodes**, nicht die Sperrbarkeit des Tickets.
 
-**Neue offene Fragen:** O15 (Füllwert nicht benutzter Datenelemente), O16 (Zugang zu den Spezifikationen über das ASM-Tool), O17 (Datensatz im UIC 918-9\*), O18 (konkrete Schlüsselnummern in den Key-Identifier-Bereichen).
+**Neue offene Fragen:** O15 (Füllwert nicht benutzter Datenelemente), O16 (Zugang zu den Spezifikationen über das ASM-Tool), O17 (Datensatz im UIC 918-9\*), O18 (konkrete Schlüsselnummern in den Key-Identifier-Bereichen), O19 (Bedeutung des Kürzels „FU“ im Kundenstatus).

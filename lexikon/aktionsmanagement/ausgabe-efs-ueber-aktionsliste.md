@@ -77,6 +77,9 @@ Ein Wort der Vorsicht: Diese drei Zahlen sind so im Pflichtenheft des eTicket Rh
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 2.1.5 (KVP-Aktionen über Aktionsliste; TXAML hinein, TXABER/TXRBER/TXSNAWB heraus; Kennzeichnung über spezifische KA-Transaktionstyp-Codes), Kap. 2.1.5 Fußnote 1, PDF-S. 14 (Codes 37/38/39), Fußnote 7, PDF-S. 40 (Rollencode 31 bzw. 3) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA AktM-SPEC, Inventarnummer 41 „Aktionsmanagement für die Berechtigungsart EFS“)
 
+<!-- GEN:siehe_auch -->
+<!-- /GEN:siehe_auch -->
+
 <!-- GEN:navigation -->
 ---
 

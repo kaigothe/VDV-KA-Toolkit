@@ -76,6 +76,7 @@ Und noch eine Abgrenzung, die im Alltag oft verrutscht: Das **elektronische Fahr
 - [Interoperabilität](grundlagen/interoperabilitaet.md)
 - [KA-Spezifikationen](grundlagen/ka-spezifikationen.md)
 - [Spezifikationsmodell](grundlagen/spezifikationsmodell.md)
+- [Teilnahmevertrag](grundlagen/teilnahmevertrag.md)
 - [VDV-Kernapplikation](grundlagen/vdv-kernapplikation.md)
 - [Versionen](grundlagen/versionen.md)
 <!-- /GEN:unterartikel -->

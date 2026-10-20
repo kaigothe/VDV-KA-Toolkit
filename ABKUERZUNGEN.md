@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-38 Abkürzungen.
+39 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -12,6 +12,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **AktM** | [Aktionsmanagement](lexikon/aktionsmanagement.md) | action management |
 | **ALISE** | [Aktionslistenservice](lexikon/rollen/alise.md) | Action List Service |
 | **App** | [Applikation](lexikon/medien/applikation.md) | Application |
+| **ASM** | [ASM](lexikon/sicherheit/asm.md) | application and security management system |
 | **BOM** | [Basisobjektmodell](lexikon/datenformate/bom.md) | Basic Object Model |
 | **CVC** | [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) | card verifiable certificate |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |

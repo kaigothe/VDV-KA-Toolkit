@@ -61,6 +61,7 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 <!-- GEN:unterartikel -->
 ## Unterartikel
 
+- [ASM](sicherheit/asm.md)
 - [CV-Zertifikat](sicherheit/cv-zertifikat.md)
 - [Key-Identifier](sicherheit/key-identifier.md)
 - [Keymanagement](sicherheit/keymanagement.md)

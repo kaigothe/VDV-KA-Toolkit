@@ -30,8 +30,36 @@ Damit nichts doppelt angefragt wird:
 | eTicket-Regelwerk / Teilnahmevertrag mit Anlagen, V1.27 | öffentlich auffindbar |
 | RMV vHGS Pflichtenhefte PH 05-A1, PH 06-02, EFM-Integration, Statische Berechtigung | öffentlich auffindbar |
 | Technische Dokumente des KCD NRW (Deutschlandticket, Abbildung und Kontrolle, Produktparameter, Weißbuch ABT) | öffentlich auf kcd-nrw.de |
+| etiCORE Release Letter 3.0.0-rc.6 (24.11.2025) und 3.0.0-rc.1 | liegt vor |
+| ASM-Tool, Glossar und Abkürzungsverzeichnis V1.03 (20.07.2016) | liegt vor |
+| Whitepaper „Barcodes im ÖPNV“ (2021) | liegt vor |
+| Teilnehmerbrief Datenschutz (22.12.2014), geschwärzt | liegt vor |
+| etiCORE-Spezifikationsmodell samt ASN.1- und WSDL/XSD-Dokumentation | öffentlich auf modell.eticket-deutschland.de |
 
-Falls vom **Glossar eine neuere Fassung** existiert, wäre sie willkommen — der vorliegenden fehlen die Einträge „Synchronnummer“, „Berechtigungsstatus“ und „Aktionsfreigabe“.
+**Vom Glossar existiert eine neuere Fassung, und zwar belegt.** Vorliegend ist „KA 1.12.0 and etiCORE 3.0.0-rc.2“, zuletzt geändert am 18.01.2024. Der Release Letter vom 24.11.2025 führt das Glossar dagegen in **1.12.1 / 3.0.0-rc.2** ([Q43](QUELLEN.md#q43), Kap. 2.1, PDF-S. 23). Der vorliegenden Fassung fehlen die Einträge „Synchronnummer“, „Berechtigungsstatus“ und „Aktionsfreigabe“.
+
+Ergänzend hilfreich: Der Release Letter vermerkt, das Glossar sei „nicht mehr dem CR-Verfahren unterworfen“. Was das für seine Verbindlichkeit bedeutet, wäre eine nützliche Auskunft.
+
+---
+
+## 2a. Was sich durch sechs neue Quellen geändert hat (Stand 20.10.2026)
+
+Drei Erkenntnisse verändern die Anfrage erheblich — zwei verkleinern sie, eine erweitert sie.
+
+**Erstens: Die etiCORE-Spezifikation muss nicht angefragt werden. Sie ist öffentlich.** Unter `modell.eticket-deutschland.de/LATEST/EA/index.html` liegt das vollständige Spezifikationsmodell, aus dem die Spezifikationsdokumente exportiert werden; unter `…/LATEST/index-asn1.html` und `…/LATEST/index-interfaces.html` die ASN.1-Datentypen und die WSDL/XSD-Schnittstellen ([Q43](QUELLEN.md#q43), Kap. 5, PDF-S. 30 ff.). Die Anfrage kann sich daher auf **KA 1.x** beschränken — also auf genau den Stand, mit dem heutige Systeme arbeiten.
+
+**Zweitens: Der Bezugsweg ist benannt.** Das Whitepaper „Barcodes im ÖPNV“ nennt das ASM-Tool ausdrücklich als Downloadort der Spezifikationen und die Registrierung als kostenlos; die Vertragsunterlagen liegen unter `oepnv.eticket-deutschland.de/produkte-und-services`, der Vertragsabschluss selbst ist kostenlos ([Q46](QUELLEN.md#q46), Kap. 6.1, PDF-S. 15). Daraus folgt die wohl wichtigste Frage an den Kontakt, siehe **O16**: Setzt der Download einen Teilnahmevertrag voraus, oder genügt die Registrierung? Wenn letzteres zutrifft, erledigt sich der größte Teil dieser Liste von selbst.
+
+**Drittens: Vier Dokumente lassen sich jetzt beim Namen nennen.** Der Release Letter führt sie mit Dateinamen und Version auf:
+
+| Dokument | Warum | Fundstelle |
+|---|---|---|
+| **`Anlage TLV EFS_v1121.pdf`** — „Hauptdokument mit Basisobjektmodell – Definition des TLV EFS“ | **Das zentrale Dokument für das geplante Werkzeug.** Der TLV-EFS ist die Kodierung, die jede Berechtigung auf Chipkarte und im Barcode trägt; das Lexikon rekonstruiert sie derzeit aus einer Herstellerdokumentation und einem Verbundpflichtenheft. Gilt unverändert auch unter etiCORE. | [Q43](QUELLEN.md#q43), Kap. 3, PDF-S. 27 |
+| **`Mapping-old-new-spec.xlsx`**, **`-binary.xlsx`**, **`-xml.xlsx`** | Gegenüberstellung der Begriffe aus Spezifikationen, aus SAM und Nutzermedium sowie aus den ION-Schnittstellen und weiteren XSD. Das ist das Wörterbuch zwischen KA 1.x und etiCORE — und damit die Voraussetzung dafür, Aussagen aus dem öffentlichen Modell überhaupt auf KA 1.x übertragen zu dürfen. | [Q43](QUELLEN.md#q43), Kap. 7.1, PDF-S. 35 |
+| **Beispieldaten-Paket**, Unterordner `asn1`, `soap`, `terminal` | Beispielnachrichten für Transaktionsnachweise, Kontrolle, Sperren, Aktionsmanagement und statische Berechtigungen — im ION über SOAP, einschließlich der SOAP-Anteile im unverschlüsselten Format, dazu DER-kodierte Beispiele. Genau das Material, das Stufe 2 zum Testen braucht. Nicht Bestandteil des Spezifikationspakets, aber einem Release zugeordnet. | [Q43](QUELLEN.md#q43), Kap. 7.2, PDF-S. 36 |
+| **`KA STB-SPEC CIBO-STB`** (Anlage 2 zur KA STB-Spec), **`KA KUSCH-SPEC`**, **`Anlage Datenschutz_v1121.pdf`** | Die CIBO-STB regelt die Nutzung der statischen Berechtigung in IN/OUT-Systemen und war bisher nicht einmal namentlich bekannt. Die KUSCH-SPEC betrifft die einheitliche Kundenschnittstelle, die Anlage Datenschutz die Rahmenrichtlinie zu den Transaktionsinhalten. | [Q46](QUELLEN.md#q46), Kap. 4, PDF-S. 7; [Q43](QUELLEN.md#q43), Kap. 3, PDF-S. 27 |
+
+**Eine Nebenfrage:** Die „Motics Specification“ (`etiCORE SPEC-MOTICS`) zum Kopierschutzcontainer ist im Release 3.0.0-rc.6 ausdrücklich **nicht enthalten** ([Q43](QUELLEN.md#q43), Kap. 2.2, PDF-S. 26). Wann sie erscheint, wäre eine nützliche Auskunft.
 
 ---
 
@@ -127,7 +155,8 @@ Es gibt also offenbar **zwei** ALISE-Schnittstellen — eine zum Produktverantwo
 
 Für die Schnittstellen- und Objektmodell-Dokumente werden **mehrere Versionen** gebraucht, weil die vorliegenden Projektdokumente ausdrücklich zwischen ihnen unterscheiden und Nachrichten aus verschiedenen Releases auftreten können:
 
-- **KA 1.12.0** — **die wichtigste Bitte.** Ein Zulassungs-Prüfbericht von 2024 führt zwölf KA-Spezifikationen samt XML-Schemata und WSDL durchgehend in dieser Version auf ([Q37](QUELLEN.md#q37)), darunter KA AktM-SPEC, KA SST-SPEC, KA HD_BOM-SPEC und KA XML-Schemata. Sie ist damit deutlich neuer als alles, was in den öffentlichen Projektdokumenten referenziert wird.
+- **KA 1.12.1** — **die wichtigste Bitte.** Der etiCORE Release Letter vom 24.11.2025 führt die aus KA 1.x übernommenen Dokumente durchgehend in **1.12.1** auf ([Q43](QUELLEN.md#q43), Kap. 3, PDF-S. 27), mit den Dateinamen `KA PKM-BOM-Daten_v1121.pdf`, `KA PKM-EP_AW-SPEC_v1121.pdf`, `KA PKM-Fachdaten-SPEC_v1121.pdf`, `KA PKM-Fachfunktionen-SPEC_v1121.pdf`, `KA PKM-Tech-SPEC_v1121.pdf`, `Anlage Datenschutz_v1121.pdf` und `Anlage TLV EFS_v1121.pdf`. Das ist der höchste belegte Stand der KA 1.x.
+- **KA 1.12.0** — ein Zulassungs-Prüfbericht von 2024 führt zwölf KA-Spezifikationen samt XML-Schemata und WSDL durchgehend in dieser Version auf ([Q37](QUELLEN.md#q37)), darunter KA AktM-SPEC, KA SST-SPEC, KA HD_BOM-SPEC und KA XML-Schemata. Falls einzelne Dokumente nicht in 1.12.1 vorliegen, ist 1.12.0 die nächstbeste Fassung.
 - **KA 1.1.07** — die ältere Schnittstellenversion, in den Projektdokumenten als `*_1107` referenziert und dort weiterhin maßgeblich
 - **KA 1.3.0** — als `*_1300` referenziert; bringt Multiberechtigungen, die `*RESP`-Sperrlistenvarianten und geänderte Pflichtfelder im `TX_BASE`
 - **KA 1.5.0** — Änderungen u. a. beim Aktionsmanagement, bisher nur über eine Sekundärquelle bekannt
@@ -164,7 +193,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**16 nicht öffentliche Dokumente** werden derzeit in 109 Artikeln als Normquelle genannt, nach Häufigkeit:
+**16 nicht öffentliche Dokumente** werden derzeit in 111 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -191,6 +220,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 |---|---|
 | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) | O13 |
 | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) | O2, O9 |
+| [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) | O19 |
 | [txalisber](lexikon/transaktionen/txalisber.md) | O4, O14 |
 
 ### Offene Fragen und die betroffenen Artikel
@@ -210,8 +240,9 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O16** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | **O17** | [UIC-Barcode](lexikon/datenformate/uic-barcode.md) |
 | **O18** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) |
+| **O19** | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) |
 
-*Erzeugt aus 109 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 111 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---
@@ -235,10 +266,13 @@ Der folgende Text lässt sich direkt verwenden — per E-Mail an `service@eticke
 > 3. **KA BOM-SPEC** (Inventarnummer 1, Hauptdokument mit Basisobjektmodell) — vor allem wegen der Codelisten
 > 4. **KA XML-Schemata und WSDL** (Inventarnummer 5), vollständig mit allen Abhängigkeiten
 > 5. **ALISE-Schnittstellenbeschreibung und ALISE-XSD**
+> 6. **Anlage TLV EFS** in Version 1.12.1 (Dateiname `Anlage TLV EFS_v1121.pdf`), das Hauptdokument mit dem Basisobjektmodell und der Definition des TLV EFS
+> 7. die drei Gegenüberstellungen **`Mapping-old-new-spec.xlsx`**, **`-binary.xlsx`** und **`-xml.xlsx`** aus dem etiCORE-Release, als Wörterbuch zwischen KA 1.x und etiCORE
+> 8. das **Beispieldaten-Paket** zum Release, besonders die Unterordner `asn1`, `soap` und `terminal`
 >
 > Besonders zu ALISE habe ich eine konkrete Frage: Mir liegt eine Nachricht mit dem Element `txalisber` im Namespace `http://vdv/ka/alise/2` vor. Dieses Element finde ich in keiner öffentlichen Unterlage; im RMV-Pflichtenheft PH 06-02 heißt die Aktionsliste `TXAML`. Ist `txalisber` ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine herstellerspezifische Variante? Und welche Spezifikations- und Schemaversion gehört zu diesem Namespace?
 >
-> Zur **Version**: Ein Zulassungs-Prüfbericht für ein Akzeptanzterminal von 2024 führt zwölf KA-Spezifikationen einschließlich XML-Schemata und WSDL durchgehend in **Version 1.12.0** auf. Diese Fassung wäre mir am wichtigsten. Daneben benötige ich **1.1.07** und **1.3.0**, weil die öffentlichen Projektdokumente ausdrücklich zwischen beiden unterscheiden, sowie die Auskunft, welches Release heute verbindlich unterstützt wird.
+> Zur **Version**: Der etiCORE Release Letter 3.0.0-rc.6 vom 24.11.2025 führt die aus KA 1.x übernommenen Dokumente durchgehend in **1.12.1** auf; ein Zulassungs-Prüfbericht von 2024 nennt zwölf KA-Spezifikationen einschließlich XML-Schemata und WSDL in **1.12.0**. Am wichtigsten wäre mir der jeweils neueste Stand, also 1.12.1, wo er existiert. Daneben benötige ich **1.1.07** und **1.3.0**, weil die öffentlichen Projektdokumente ausdrücklich zwischen beiden unterscheiden, sowie die Auskunft, welches Release heute verbindlich unterstützt wird.
 >
 > Zu ALISE kann ich die Bitte dank der Namenskonvention im eTicket-Regelwerk (Kapitel 4.3.2 f.) genauer fassen: Dort erscheinen die WSDL-Bereiche `PV_ALISE` und `KVP_ALISE` sowie die Namensraum-Bereiche `pv-alise` und `kvp-alise`. Ich bräuchte die WSDL beider Bereiche und die zugehörigen XSD mit allen Includes und Imports — und die Auskunft, welcher Version im Sinne dieser Konvention die Angabe `http://vdv/ka/alise/2` entspricht.
 >
@@ -248,7 +282,7 @@ Der folgende Text lässt sich direkt verwenden — per E-Mail an `service@eticke
 >
 > Zur Nutzung: Die Dokumente verwende ich ausschließlich zum Verstehen und Prüfen. Mein Nachschlagewerk ist öffentlich, enthält aber nur Verweise und kurze Exzerpte mit Fundstelle, keine Volltexte und keine Dateien. Falls das zu weit geht oder Sie eine andere Handhabung wünschen, richte ich mich danach — sagen Sie mir gern, in welchem Umfang ich zitieren darf.
 >
-> Falls der Zugang über das ASM-Tool oder eine Lizenznehmerschaft läuft: Können Sie mir sagen, welche Voraussetzungen dafür gelten und ob es für Einzelpersonen oder für Mitarbeitende eines Verkehrsunternehmens einen Weg gibt?
+> Zum **Zugang**: Das Whitepaper „Barcodes im ÖPNV“ nennt das ASM-Tool als Downloadort der Spezifikationen und die Registrierung dort als kostenlos. Mir ist nicht klar, ob der Download einen Teilnahmevertrag voraussetzt oder ob die Registrierung genügt. Können Sie mir sagen, welche Voraussetzungen gelten und ob es für Einzelpersonen oder für Mitarbeitende eines Verkehrsunternehmens einen Weg gibt? Die etiCORE-Spezifikation selbst habe ich über das öffentliche Spezifikationsmodell gefunden — mein Bedarf betrifft ausdrücklich KA 1.x.
 >
 > Vielen Dank und freundliche Grüße
 

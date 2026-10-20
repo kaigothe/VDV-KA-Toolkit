@@ -198,6 +198,7 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 | **O16** | Setzt der Download der KA-Spezifikationen im ASM-Tool einen Teilnahmevertrag voraus? [Q46](QUELLEN.md#q46), Kap. 6.1, nennt die Registrierung kostenlos und das ASM-Tool als Downloadort, ohne das Verhältnis zum Vertrag zu klären. | `grundlagen/ka-spezifikationen.md`, [BESCHAFFUNG.md](BESCHAFFUNG.md) | VDV eTicket Service |
 | **O17** | Welcher Datensatz tritt im UIC 918-9\* an die Stelle des Datensatzes 0080BL? [Q46](QUELLEN.md#q46), Kap. 5, nennt den Wechsel, der Name ist in der Textextraktion verloren und am PDF zu prüfen. | `datenformate/uic-barcode.md` | [Q46](QUELLEN.md#q46) im Original, UIC 918-9 |
 | **O18** | Welche konkreten Schlüsselnummern vergibt eine Organisation innerhalb der Key-Identifier-Bereiche 30, 40, 50, 60, 70 und 91? [Q45](QUELLEN.md#q45), S. 19, nennt nur die Bereiche und ihren Einsatzzweck. | `sicherheit/key-identifier.md` | KA SEC-SPEC, KA KM-Dokumentation |
+| **O19** | Was bedeutet das Kürzel „FU“ im Kundenstatus „Teilnehmer Level-3“? [Q45](QUELLEN.md#q45), S. 10 und S. 22, nennt einen „FU-eTicket-Vertrag“ als Gegenstück zum eTicket-Ready-Vertrag; die Auflösung ist in der Textextraktion nicht enthalten. | `grundlagen/teilnahmevertrag.md` | [Q45](QUELLEN.md#q45) im Original, VDV eTicket Service |
 
 ---
 
