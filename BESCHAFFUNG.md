@@ -1,6 +1,12 @@
 # Benötigte VDV-KA-Dokumentation
 
-**Stand:** 2026-10-19 · **Zweck:** Anfrageliste für den VDV eTicket Service bzw. für Kontakte, die Zugang zu den KA-Spezifikationen haben.
+**Stand:** 2026-10-20 · **Zweck:** Anfrageliste für den VDV eTicket Service bzw. für Kontakte, die Zugang zu den KA-Spezifikationen haben.
+
+> **Diese Liste ist am 20.10.2026 stark geschrumpft.** Die KA-Spezifikationen 1.12.0 liegen vor,
+> siehe Abschnitt 2c. Was noch fehlt, steht in **Abschnitt 3** — im Kern die XML-Schemata und
+> WSDL, die ALISE-Schnittstellenbeschreibung, die Systemlastenhefte und Beispielnachrichten. Die
+> Abschnitte 1, 6 bis 8 und 10 bis 11 sind noch nicht durchgängig auf diesen Stand gezogen; wer
+> die Anfrage verschickt, prüft den Text in Abschnitt 10 gegen Abschnitt 3.
 
 Diese Liste ist zum Weitergeben gedacht. Sie nennt zu jedem Dokument, **warum** es gebraucht wird und **welche konkrete Frage** es klärt — das erleichtert die Entscheidung auf der Gegenseite und zeigt, dass nicht pauschal „alles“ angefragt wird.
 
@@ -77,44 +83,66 @@ Drei Erkenntnisse verändern die Anfrage erheblich — zwei verkleinern sie, ein
 
 ---
 
-## 3. Priorität 1 — ohne diese Dokumente bleiben zentrale Artikel unbelegt
+## 2c. Die KA-Spezifikationen liegen vor (Stand 20.10.2026)
 
-| Inv.-Nr. | Kurzzeichen | Titel | Wofür konkret |
-|---:|---|---|---|
-| **41** | **KA AktM-SPEC** | Aktionsmanagement für die Berechtigungsart EFS und Entsperrung von AF… (vollständiger Titel nach [Q37](QUELLEN.md#q37)) | **Das wichtigste Dokument der Liste**, mit Abstand am häufigsten als Normquelle genannt (siehe Abschnitt 9a). Klärt vier der offenen Fragen: die Codeliste des Auftragstyps, das Verhältnis von Aktionstyp und Auftragstyp, die Bedeutung der Aktionsfreigabe und die Semantik der Änderungsreferenz. Außerdem die Struktur der `TXAML`. |
-| **4** | **KA SST-SPEC** | Schnittstellenspezifikationen der Referenzsysteme, einschließlich Applikationsherausgeber (AH) und Sperrlistenservice (KOSE) | Struktur von `TX_BASE`, `TXABER`, `TXRBER`, `TXSNAWB`, `TXEBER`, `TXEMBER`, `TXKNAWA/B/DM`, `TXTRANSABBRUCH`. Nach der KA AktM-SPEC das zweithäufigst genannte Dokument (siehe Abschnitt 9a). |
-| **1** | **KA BOM-SPEC** / **KA HD_BOM-SPEC** | Hauptdokument mit Basisobjektmodell (BOM) | Die Codelisten selbst: `IONTransaktionsTyp_CODE`, `NmTransaktionsTyp_CODE`, `AblehnungsTyp_CODE`, Berechtigungsstatus. Damit ließe sich endlich entscheiden, welche Codewerte KA-weit gelten und welche verbundspezifisch sind. |
-| **5** | **KA XML-Schemata und WSDL** | XSD der TX-Transaktionen, einschließlich Abhängigkeiten | Ohne Schema ist keine Validierung möglich. Benötigt werden die **vollständigen** Schemadateien mit allen Includes und Imports, nicht einzelne Dateien. |
-| — | **ALISE** | ALISE-Schnittstellenbeschreibung und ALISE-XSD | Siehe Abschnitt 6: die Nachricht `txalisber` ist in keiner öffentlichen Quelle dokumentiert. |
+**Die frühere Priorität-1- und Priorität-2-Liste ist weitgehend erledigt.** Am 20.10.2026 wurden
+**51 PDF** beschafft, darunter 21 KA-Spezifikationen der Version 1.12.0, sechs
+Anwendungshinweise, die Releaseunterlagen und 19 etiCORE-Dokumente. Sie sind als **Q52 bis Q88**
+aufgenommen ([QUELLEN.md](QUELLEN.md), Abschnitte 2 und 3) und liegen thematisch geordnet in
+`QUELLEN/KA-1.12.0/` und `QUELLEN/etiCORE-*/`.
 
----
+Was damit erledigt ist, nach Inventarnummern der früheren Liste:
 
-## 4. Priorität 2 — für geplante Kategorien des Lexikons
-
-| Inv.-Nr. | Kurzzeichen | Titel | Wofür |
-|---:|---|---|---|
-| 2 | Anlage TLV EFS | Anlage 1 zur technischen Spezifikation (TLV-Struktur des EFS) | TLV-Tags des produktspezifischen Teils, u. a. Tag 0xDB „Fahrgast“. Klärt eine Längenabweichung in einem vorliegenden Datensatz. |
-| 40 | KA MultiBER-SPEC | Multiberechtigungen | `TXAMBER`, `TXEMBER`, `TXRMBER` |
-| 8 | KA SAM-SPEC | Spezifikation des SAM | MAC-Bildung, Schlüsselreferenzen, CV-Zertifikate und ihre Keytypes |
-| 6 | KA SEC-SPEC | Technisches Konzept Sicherheit | Sicherheitsebenen, Schlüsselhierarchie, Verhältnis von 1GSI und 2GSI |
-| 11 | KA KOSES-Spec | Funktionale Spezifikation Sperrlistenmanagementsystem | Sperrlisten `TXSLNM`, `TXSLK`, `TXSLOS` und die `*RESP`-Varianten ab KA 1.3.0 |
-| 42 | KA STB-Spec | Statische Berechtigungen für 2D-Barcode-Tickets | VDV-Barcode, Abgrenzung zum UIC-Barcode |
-| 33 | KA TXx-Prüfungs-ANW | Verfahrensanweisung zur Prüfung von Transaktionen in EFM-Systemen | Direkt relevant für das Werkzeug: welche Prüfungen sind vorgesehen und in welcher Reihenfolge |
-| 3 | Anlage Datenschutz | Anlage 2 zum Hauptdokument | Welche Attribute dürfen bzw. müssen reduziert werden, und wie verhält sich das zur MAC-Validierung |
-
----
-
-## 5. Priorität 3 — Vollständigkeit
-
-| Inv.-Nr. | Kurzzeichen | Wofür |
+| Inv.-Nr. | Dokument | jetzt |
 |---:|---|---|
-| 7 | KA NM-SPEC | Nutzermedium, Applikation, Speicheraufbau |
-| 9 | KA ION-SPEC | Datenaustausch im Interoperabilitätsnetzwerk |
-| 12–21 | KA SysLH (HD, PVS, KVPS, KVPRT, DLS, DLRT, NM) | Terminalabläufe, Kontrolltransaktion, `EXECUTE TRANSACTION` |
-| 35 | KA PROD_ID-ANW | Vergabe von Produkt-IDs und Nummernräume |
-| 37 | KA App-Ber-Sperr-ANW | Nutzung der Applikations- und Berechtigungssperre |
-| 53–57 | KA PKM-… | Produkt-, Kontroll- und Tarifmodule |
-| 59 | KA SAM-Server-SPEC | SAM-Server-Schnittstelle |
+| 41 | KA AktM-SPEC | [Q55](QUELLEN.md#q55) |
+| 4 | KA SST-SPEC | [Q54](QUELLEN.md#q54) |
+| 1 | KA HD_BOM-SPEC | [Q52](QUELLEN.md#q52) |
+| 2 | Anlage TLV EFS | [Q70](QUELLEN.md#q70) |
+| 3 | Anlage Datenschutz | [Q71](QUELLEN.md#q71) |
+| 6 | KA SEC-SPEC | [Q56](QUELLEN.md#q56) |
+| 7 | KA NM-SPEC | [Q53](QUELLEN.md#q53) |
+| 8 | KA SAM-SPEC | [Q57](QUELLEN.md#q57) |
+| 9 | KA ION-SPEC | [Q60](QUELLEN.md#q60) |
+| 11 | KA KOSES-SPEC | [Q58](QUELLEN.md#q58) |
+| 33 | KA TXx_Prüfungs-ANW | [Q72](QUELLEN.md#q72) |
+| 35 | KA Produkt_ID-ANW | [Q75](QUELLEN.md#q75) |
+| 37 | KA App-Berr-Sperre-ANW | [Q77](QUELLEN.md#q77) |
+| 40 | KA MultiBER-SPEC | [Q59](QUELLEN.md#q59) |
+| 42 | KA STB-SPEC | [Q67](QUELLEN.md#q67) |
+| 59 | KA SAM-Server-SPEC | [Q65](QUELLEN.md#q65) |
+
+Dazu nicht auf der Liste geführte, aber mitgelieferte Dokumente: KA IONA-SPEC, KA WSS-SPEC,
+KA PE-SPEC, KA AM-SPEC, KA Fremdsystem-SPEC, KA STB-SPEC CIBO-STB, KA STB-SPEC mobile plus,
+Motics-Spezifikation, Release Letter 1.12.0, Release Notes Schnittstellen 1.11.1 und die
+Migrationsszenarien.
+
+**Acht offene Fachfragen sind damit beantwortet** — O1, O2, O3, O5, O9, O14, O20 und O21, siehe
+[PLAN.md](PLAN.md), Abschnitt 5a.
+
+---
+
+## 3. Was weiterhin fehlt
+
+Nach der Beschaffung bleiben vier Lücken. Die erste ist die wichtigste.
+
+| Gesucht | Wofür | Warum es nicht ersetzbar ist |
+|---|---|---|
+| **KA XML-Schemata und WSDL** (Inv. 5), vollständig mit allen Includes und Imports | Validierung von TX-Nachrichten | **Blockiert den geplanten ALISE-Decoder.** [Q54](QUELLEN.md#q54) beschreibt die Nachrichten fachlich, [Q79](QUELLEN.md#q79) die Schnittstellen-Releases — die Schemadateien selbst sind in keinem der beschafften Dokumente enthalten. Ohne Schema keine Validierung. |
+| **ALISE-Schnittstellenbeschreibung und ALISE-XSD** | Aufbau der Aktionslisten-Nachrichten | [Q55](QUELLEN.md#q55), Kap. 6.2.3.1, klärt inzwischen, **was** `txalisber` ist — ein Eintrag in der Aktionsliste. Der Aufbau der Schnittstelle und die Zuordnung zu `pv-alise` bzw. `kvp-alise` bleiben offen. Siehe Abschnitt 6. |
+| **KA SysLH** (Inv. 12–21): Systemlastenhefte HD, PVS, KVPS, KVPRT, DLS, DLRT, NM | Terminalabläufe, Kontrolltransaktion, `EXECUTE TRANSACTION` | Nicht im beschafften Satz enthalten. [Q37](QUELLEN.md#q37) belegt deren Existenz in Version 1.12.0 (Positionen 1 und 2 der Prüfgrundlagen). |
+| **KA PKM-…** (Inv. 53–57): Produkt-, Kontroll- und Tarifmodule | Produkt- und Kontrollmodule | Nicht im beschafften Satz. [Q52](QUELLEN.md#q52) verweist an mehreren Stellen auf eine „KA PKM-Tech-SPEC“. |
+
+Dazu drei Unterlagen aus dem etiCORE-Release, die weiterhin nützlich wären:
+
+- die drei Gegenüberstellungen **`Mapping-old-new-spec.xlsx`**, **`-binary.xlsx`** und **`-xml.xlsx`**
+  als Wörterbuch zwischen KA 1.x und etiCORE. Teilweise ersetzbar über die `meta:old`-Vermerke in
+  [Q50](QUELLEN.md#q50), aber eben nur teilweise.
+- das **Beispieldaten-Paket** zum Release, besonders die Unterordner `asn1`, `soap` und `terminal`.
+  **Ohne echte Beispielnachrichten bleibt O13 offen**, und das Prüfwerkzeug hat keine Testdaten.
+- die **Version 1.12.1** der Spezifikationen. Vorliegend ist 1.12.0; dass 1.12.1 existiert, belegt
+  [Q43](QUELLEN.md#q43), Kap. 3. Für Codelisten und Abläufe ist der Unterschied unerheblich, für
+  Versionsaussagen nicht.
 
 ---
 
@@ -182,23 +210,31 @@ Hilfreich wäre außerdem eine **Einordnung des Verhältnisses von „Version“
 
 ## 9. Offene Fachfragen und das jeweils klärende Dokument
 
-Die Nummern entsprechen der Liste „Offene Fragen“ in [PLAN.md](PLAN.md), Abschnitt 5. Jede dieser Fragen ist in mindestens einem Lexikonartikel sichtbar als `zu prüfen` gekennzeichnet.
+Die Nummern entsprechen der Liste „Offene Fragen“ in [PLAN.md](PLAN.md), Abschnitt 5. Jede dieser
+Fragen ist in mindestens einem Lexikonartikel sichtbar als `zu prüfen` gekennzeichnet.
+
+**Stand 20.10.2026:** Von ursprünglich zwölf und später 18 Fragen sind **zehn offen**. Acht wurden
+mit den beschafften Spezifikationen geklärt (O1, O2, O3, O5, O9, O14, O20, O21), drei früher aus
+öffentlichen Quellen (O7, O8, O12) — alle in [PLAN.md](PLAN.md), Abschnitt 5a.
 
 | Nr. | Frage | Klärendes Dokument |
 |---|---|---|
-| **O1** | Gelten die Transaktionstypen 37, 38 und 39 für Ausgabe, Entsperrung und Rücknahme über Aktionsliste KA-weit oder nur im eTicket RheinMain? | KA BOM-SPEC (Inv. 1), KA SST-SPEC (Inv. 4), KA AktM-SPEC (Inv. 41) |
-| **O2** | Was bedeutet `amAuftragsTyp` = 13? | KA AktM-SPEC (Inv. 41) |
-| **O3** | Sind die Berechtigungsstatus-Werte 5, 7, 8 und 19 KA-weit festgelegt? Warum hat „neu“ einen höheren Code als „aktiv“? | KA BOM-SPEC (Inv. 1) |
-| **O4** | *Teilweise geklärt:* Die letzte Pfadstelle ist laut Namensraumkonvention eine Version. **Offen:** welches Release bzw. welche Schemafassung dahintersteht. | ALISE-XSD, KA XML-Schemata (Inv. 5) |
-| **O5** | Erhöht ein reiner Statuswechsel die `berSynchronNummer`? | KA BOM-SPEC (Inv. 1), KA AktM-SPEC (Inv. 41) |
-| **O6** | In einem vorliegenden produktspezifischen Teil gibt die TLV-Länge 87 Byte an, es folgen 90 Byte. Füllbytes, Übertragungsfehler oder falsche TLV-Annahme? | Anlage TLV EFS (Inv. 2) |
-| **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“ — synonym oder zwei Ebenen? | KA AktM-SPEC (Inv. 41) |
-| **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer tatsächlichen Änderung, und nimmt es Berechtigungsnummer samt Organisation des Vorgängers auf? | KA AktM-SPEC (Inv. 41), Beispielnachrichten |
-| **O14** | Wie verhält sich `txalisber` zu `TXAML`? | ALISE-Schnittstellenbeschreibung, KA AktM-SPEC (Inv. 41) |
+| **O4** | Welches Release bzw. welche Schemafassung steht hinter `http://vdv/ka/alise/2`? Dass die letzte Pfadstelle eine Version ist, ist geklärt. | **ALISE-XSD, KA XML-Schemata (Inv. 5)** |
+| **O6** | In einem vorliegenden produktspezifischen Teil gibt die TLV-Länge 87 Byte an, es folgen 90 Byte. Füllbytes, Übertragungsfehler oder falsche TLV-Annahme? Die Tagstruktur ist mit [Q70](QUELLEN.md#q70) geklärt; der Hinweis, Tag 0x85 sei als primitives Tag kodiert, ist ein Kandidat für die Erklärung. | **vollständiger Originaldatensatz** |
+| **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer tatsächlichen Änderung? | **Beispielnachrichten**; dazu [Q55](QUELLEN.md#q55), Kap. 4.1.2.7, noch nicht ausgewertet |
+| **O15** | Welcher Füllwert gilt für nicht benutzte Datenelemente einer Transaktion? | [Q53](QUELLEN.md#q53), [Q52](QUELLEN.md#q52) — liegen vor, noch nicht ausgewertet |
+| **O16** | Setzt der Download im ASM-Tool einen Teilnahmevertrag voraus? | VDV eTicket Service |
+| **O17** | Welcher Datensatz tritt im UIC 918-9\* an die Stelle des 0080BL? | [Q46](QUELLEN.md#q46) im Original, UIC 918-9 |
+| **O18** | Welche Schlüsselnummern vergibt eine Organisation in den Key-Identifier-Bereichen? | [Q56](QUELLEN.md#q56), [Q76](QUELLEN.md#q76) — liegen vor, noch nicht ausgewertet |
+| **O19** | Was bedeutet das Kürzel „FU“ im Kundenstatus „Teilnehmer Level-3“? | [Q45](QUELLEN.md#q45) im Original, VDV eTicket Service |
+| **O22** | Welche Prüfung meint `W_CO_ENTITLEMENT_ISSUED_WITH_INVALID_ACTION_COUNTER`? | etiCORE-Spezifikation, spätere Fassung |
+| **O23** | Wie läuft die Zertifizierung unter etiCORE ab, und wer prüft? | VDV eTicket Service, Zulassungsstelle |
 
-Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentlichen Quellen geklärt, siehe [PLAN.md](PLAN.md), Abschnitt 5a.
-
-**Zusammengefasst:** Die **KA AktM-SPEC** allein würde von den verbleibenden Fragen die Mehrzahl klären, zusammen mit **KA BOM-SPEC** und den **XML-Schemata** nahezu alle.
+**Zusammengefasst hat sich die Lage umgekehrt.** Vorher klärte ein einziges Dokument — die
+KA AktM-SPEC — die Mehrzahl der Fragen. Jetzt sind fünf der zehn offenen Fragen **mit vorliegenden
+Quellen zu klären** und brauchen nur Auswertungsarbeit (O6 teilweise, O13 teilweise, O15, O18).
+Von den übrigen hängen zwei an den **XML-Schemata** (O4) bzw. an **Beispielnachrichten** (O13), und
+drei sind Rückfragen an den VDV eTicket Service (O16, O19, O23).
 
 ---
 
@@ -274,14 +310,15 @@ Der folgende Text lässt sich direkt verwenden — per E-Mail an `service@eticke
 >
 > Ich würde daher gern Zugang zu folgenden Dokumenten erhalten, in dieser Reihenfolge der Dringlichkeit:
 >
-> 1. **KA AktM-SPEC** (Inventarnummer 41, „Aktionsmanagement für die Berechtigungsart EFS“)
-> 2. **KA SST-SPEC** (Inventarnummer 4, Schnittstellenspezifikation der Referenzsysteme)
-> 3. **KA BOM-SPEC** (Inventarnummer 1, Hauptdokument mit Basisobjektmodell) — vor allem wegen der Codelisten
-> 4. **KA XML-Schemata und WSDL** (Inventarnummer 5), vollständig mit allen Abhängigkeiten
-> 5. **ALISE-Schnittstellenbeschreibung und ALISE-XSD**
-> 6. **Anlage TLV EFS** in Version 1.12.1 (Dateiname `Anlage TLV EFS_v1121.pdf`), das Hauptdokument mit dem Basisobjektmodell und der Definition des TLV EFS
-> 7. die drei Gegenüberstellungen **`Mapping-old-new-spec.xlsx`**, **`-binary.xlsx`** und **`-xml.xlsx`** aus dem etiCORE-Release, als Wörterbuch zwischen KA 1.x und etiCORE
-> 8. das **Beispieldaten-Paket** zum Release, besonders die Unterordner `asn1`, `soap` und `terminal`
+> 1. **KA XML-Schemata und WSDL** (Inventarnummer 5), vollständig mit allen Includes und Imports
+> 2. **ALISE-Schnittstellenbeschreibung und ALISE-XSD**
+> 3. das **Beispieldaten-Paket** zum Release, besonders die Unterordner `asn1`, `soap` und `terminal`
+> 4. die **Systemlastenhefte KA SysLH** (Inventarnummern 12 bis 21)
+> 5. die Dokumente zu den **Produkt-, Kontroll- und Tarifmodulen (KA PKM)**, Inventarnummern 53 bis 57
+> 6. die drei Gegenüberstellungen **`Mapping-old-new-spec.xlsx`**, **`-binary.xlsx`** und **`-xml.xlsx`** aus dem etiCORE-Release, als Wörterbuch zwischen KA 1.x und etiCORE
+> 7. die Fassung **1.12.1** der Spezifikationen, soweit sie von 1.12.0 abweicht
+>
+> Die KA-Spezifikationen der Version **1.12.0** liegen mir inzwischen vor — AktM-SPEC, SST-SPEC, HD_BOM-SPEC, NM-SPEC, SEC-SPEC, SAM-SPEC, KOSES-SPEC, STB-SPEC, die Anlagen und die Anwendungshinweise. Dafür vielen Dank; die Liste oben ist entsprechend kürzer als eine frühere Fassung dieser Anfrage.
 >
 > Besonders zu ALISE habe ich eine konkrete Frage: Mir liegt eine Nachricht mit dem Element `txalisber` im Namespace `http://vdv/ka/alise/2` vor. Dieses Element finde ich in keiner öffentlichen Unterlage; im RMV-Pflichtenheft PH 06-02 heißt die Aktionsliste `TXAML`. Ist `txalisber` ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine herstellerspezifische Variante? Und welche Spezifikations- und Schemaversion gehört zu diesem Namespace?
 >
