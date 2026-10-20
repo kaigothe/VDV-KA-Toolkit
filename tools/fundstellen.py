@@ -94,13 +94,43 @@ PROBEN = [
     ("Q48",  12, r"PIN - Eingabe"),
     ("Q48",  13, r"Datenschutz - Grund"),
     ("Q48",  16, r"Landesbeauftragter"),
+
+    # Die KA-Spezifikationen 1.12.0, beschafft am 20.10.2026. Bei allen
+    # Dokumenten mit Seitenfuss ist die PDF-Seite gleich der gedruckten --
+    # geprueft an den Seitenfuessen. Diese Proben halten das fest.
+    ("Q52",  69, r"Aktionsauftrag Ausgabe"),          # Tab. 6-43 AuftragsTyp_CODE
+    ("Q52",  86, r"Ausgabetransaktion"),              # Tab. 6-65 NmTransaktionsTyp_CODE
+    ("Q52",  87, r"Ausgabe EFS .{0,4}ber"),           # dto., Werte 37 bis 40
+    ("Q52", 102, r"WertobjektStatus_CODE"),           # Tab. 6-91
+    ("Q53",   1, r"Spezifikation Nutzermedium"),
+    ("Q54",  30, r"SST_SAM=RT"),
+    ("Q55",  28, r"Beauftragung mit berSynchronNummer"),   # Kap. 4.1.2.2, O5
+    ("Q55",  48, r"Aktionsfreigabeauftrag"),               # Kap. 4.2.2.3, O20
+    ("Q55",  49, r"Aktionsclearing"),                      # Kap. 4.2.4
+    ("Q55",  96, r"TXAFREIBER"),                           # Kap. 6.4.4.1
+    ("Q56",   1, r"Technisches Konzept Sicherheit"),
+    ("Q57",   1, r"Spezifikation des SAM"),
+    ("Q58",   1, r"KOSES"),
+    ("Q67",   1, r"2D Barcode"),
+    ("Q70",   6, r"primitives Tag"),                       # Kap. 1, Fussnote 1
+    ("Q70",   7, r"Transaktion Produktspezifischer Teil"),  # Tab. 2-1
+    ("Q70",  18, r"alternativer Geltungsbereich"),          # Kap. 2.5, O21
+    ("Q72",   1, r"Transaktionspr.{0,3}fung"),
+    ("Q78",   1, r"Release Letter"),
+    ("Q80",   1, r"Migrationsszenarien"),
 ]
 
 
 def quelle_pfad(q):
-    treffer = sorted(glob.glob(os.path.join(REPO, "QUELLEN", f"{q}_*.pdf")))
-    if not treffer:   # auch der Unterordner QUELLEN/docs/ ist zugelassen
-        treffer = sorted(glob.glob(os.path.join(REPO, "QUELLEN", "docs", f"{q}_*.pdf")))
+    """Die Datei zur Q-Nummer, gleich in welchem Unterordner von QUELLEN/.
+
+    Die Adresse einer Quelle ist ihre Q-Nummer, nicht ihr Pfad: Seit die 51
+    Spezifikationen vom 20.10.2026 thematisch in `KA-1.12.0/…` und
+    `etiCORE-…/` liegen, muss die Suche rekursiv sein. Dateinamen beginnen
+    deshalb unverändert mit der Q-Nummer — davon hängt diese Suche ab.
+    """
+    treffer = sorted(glob.glob(os.path.join(REPO, "QUELLEN", "**", f"{q}_*.pdf"),
+                               recursive=True))
     return treffer[0] if treffer else None
 
 
