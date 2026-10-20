@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-35 Abkürzungen.
+38 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -20,11 +20,13 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
 | **HGS** | [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) | Backoffice System |
 | **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
+| **KID** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) | key identifier |
 | **KM** | [Keymanagement](lexikon/sicherheit/keymanagement.md) | Key Management |
 | **KOSE** | [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) | Hotlist Service |
 | **KVP** | [Kundenvertragspartner](lexikon/rollen/kvp.md) | Customer Contract Partner |
 | **MAC** | [MAC](lexikon/sicherheit/mac.md) | Message Authentication Code |
 | **MBT** | [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) | medium based ticketing |
+| **MOTICS** | [MOTICS](lexikon/sicherheit/motics.md) | Mobile Ticketing Crypto Service |
 | **MultiBER** | [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) | multi entitlement |
 | **NM** | [Nutzermedium](lexikon/medien/nutzermedium.md) | User Medium |
 | **Org-ID** | [Organisations-ID](lexikon/rollen/organisations-id.md) | Organisation ID |
@@ -41,6 +43,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **TXRBER** | [TXRBER](lexikon/transaktionen/txrber.md) | termination attestation |
 | **TXSNAWB** | [TXSNAWB](lexikon/transaktionen/txsnawb.md) | unblock attestation transaction |
 | **XSD** | [XSD und WSDL](lexikon/datenformate/xsd.md) | XML schema and WSDL |
+| **zSAM** | [zSAM](lexikon/sicherheit/zsam.md) | additional SAM for barcode tickets |
 
 ---
 

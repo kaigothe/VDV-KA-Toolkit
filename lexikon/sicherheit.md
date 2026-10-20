@@ -62,13 +62,17 @@ Und eine Entwicklung, die Beschaffungen betrifft: In der neuen Generation wird d
 ## Unterartikel
 
 - [CV-Zertifikat](sicherheit/cv-zertifikat.md)
+- [Key-Identifier](sicherheit/key-identifier.md)
 - [Keymanagement](sicherheit/keymanagement.md)
 - [MAC](sicherheit/mac.md)
+- [MOTICS](sicherheit/motics.md)
 - [Public Key Infrastructure](sicherheit/pki.md)
 - [Schlüsselarten](sicherheit/schluesselarten.md)
 - [Schlüsselreferenz](sicherheit/schluesselreferenz.md)
 - [Secure Application Module](sicherheit/sam.md)
 - [Sicherheitsebenen](sicherheit/sicherheitsebenen.md)
+- [VDV-Barcode mobile+](sicherheit/vdv-barcode-mobile.md)
+- [zSAM](sicherheit/zsam.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

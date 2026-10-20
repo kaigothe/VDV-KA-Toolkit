@@ -29,7 +29,7 @@ Die Inhalte der Transaktionen sind in der **KA NM-SPEC** spezifiziert und „not
 | Berechtigungs-Nr. | **Muss-Element** |
 | Daten der MAC-Sicherung | **Muss-Elemente** |
 
-Dazu der Grundsatz: „Alle weiteren Informationen werden nur dann gefüllt (ungleich `0x00`), wenn sie im Geschäftsprozess zwingend erforderlich sind“ ([Q48](../../QUELLEN.md#q48), S. 7).
+Dazu der Grundsatz: Alle weiteren Informationen werden „nur dann gefüllt …, wenn sie im Geschäftsprozess zwingend erforderlich sind“ ([Q48](../../QUELLEN.md#q48), S. 7). Der Füllwert für nicht benutzte Datenelemente ist dort mit `0x00` angegeben.
 
 Das ist für eine Auswertung die wichtigste Aussage des Artikels: **Ein leeres Feld ist der Normalfall, kein Fehler.** Fehlt dagegen eines der fünf Muss-Elemente, ist die Transaktion unvollständig (abgeleitet).
 

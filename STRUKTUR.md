@@ -323,3 +323,28 @@ Alle zehn Kategorien sind geschrieben: **99 Artikel** — 10 Kategorieartikel un
 - **Nicht auswertbar:** [Q41](QUELLEN.md#q41) (AES-256-verschlüsselt)
 
 Für die P2-Artikel des Bauplans sind vor allem Q31, Q32 und Q38 die nächsten Schritte: Sie decken Tarifabbildung, Produktparameter und Kontrolle in drei weiteren Verbünden ab und erlauben damit erstmals den Vergleich, welche Festlegungen **verbundübergreifend gleich** sind — der einzige Weg, ohne die KA-Spezifikationen etwas über KA-weite Geltung zu sagen.
+
+---
+
+## 15. Erweiterung aus den Quellen Q43 bis Q49 (2026-10-20)
+
+Sechs neue Dokumente und das öffentlich erreichbare etiCORE-Spezifikationsmodell haben **zehn Artikel** möglich gemacht. Damit stehen **109 Artikel** — 10 Kategorieartikel und 99 Blattartikel.
+
+| Artikel | Pfad | Quelle | Grund für diesen Platz |
+|---|---|---|---|
+| **Datenschutz** | `grundlagen/datenschutz.md` | [Q48](QUELLEN.md#q48) | Querschnittsthema über alle Rollen und Nachrichten; es gehört zu den Grundlagen, nicht in eine Fachkategorie. |
+| **Pflichtelemente einer Transaktion** | `transaktionen/pflichtelemente-einer-transaktion.md` | [Q48](QUELLEN.md#q48) | Gegenstand sind die Inhalte einer Transaktion. Der Platz bei den Transaktionen ist eindeutig; der Datenschutzbezug läuft über `siehe_auch`. |
+| **etiCORE** | `grundlagen/eticore.md` | [Q43](QUELLEN.md#q43) | Eine Version des Standards, also ein Grundlagenbegriff neben [Versionen](lexikon/grundlagen/versionen.md). |
+| **Spezifikationsmodell** | `grundlagen/spezifikationsmodell.md` | [Q43](QUELLEN.md#q43), [Q49](QUELLEN.md#q49) | Form der Spezifikation, Geschwister von [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md). |
+| **Rollennamen in etiCORE** | `rollen/rollennamen-in-eticore.md` | [Q43](QUELLEN.md#q43), [Q45](QUELLEN.md#q45) | Eine Übersetzungstabelle der Rollen. Sie gehört zu den Rollen, nicht zu etiCORE — sonst müsste jeder Rollenartikel dorthin verweisen. |
+| **UIC-Barcode** | `datenformate/uic-barcode.md` | [Q46](QUELLEN.md#q46) | Ein zweites Datenformat neben dem VDV-Barcode, beide im selben Zweig. |
+| **VDV-Barcode mobile+** | `sicherheit/vdv-barcode-mobile.md` | [Q46](QUELLEN.md#q46) | Gegenstand ist der Kopierschutz, also eine Sicherheitsfunktion — nicht das Format. Dateiname ohne `+`, weil der Slug Sonderzeichen entfernt. |
+| **MOTICS** | `sicherheit/motics.md` | [Q46](QUELLEN.md#q46), [Q43](QUELLEN.md#q43) | Dienst und Container des Kopierschutzes. |
+| **zSAM** | `sicherheit/zsam.md` | [Q45](QUELLEN.md#q45) | Sonderform des SAM; steht bei den Sicherheitsmodulen. |
+| **Key-Identifier** | `sicherheit/key-identifier.md` | [Q45](QUELLEN.md#q45) | Eigener Artikel statt Abschnitt in [Schlüsselarten](lexikon/sicherheit/schluesselarten.md): Die Tabelle samt Erläuterung hätte dort das Wortlimit um 90 Wörter überschritten. |
+
+**Erweitert** wurden [versionen.md](lexikon/grundlagen/versionen.md) (Release 1.12.1), [ka-spezifikationen.md](lexikon/grundlagen/ka-spezifikationen.md) (drei Anlagen zur KA STB-Spec, Bezugsweg), [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) (Signatur, Sperrbarkeit, Identifikationsmerkmal) und [schluesselarten.md](lexikon/sicherheit/schluesselarten.md) (Verweis auf den Key-Identifier).
+
+**Eine Korrektur:** [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) behauptete im Beispielteil, ein Barcode lasse sich nicht sperren. [Q46](QUELLEN.md#q46), Kap. 4.1, PDF-S. 9, sagt das Gegenteil: Ein gesperrtes Barcodeticket wird bei der Kontrolle erkannt und muss abgewiesen werden. Unveränderlich ist der **Inhalt des Barcodes**, nicht die Sperrbarkeit des Tickets.
+
+**Neue offene Fragen:** O15 (Füllwert nicht benutzter Datenelemente), O16 (Zugang zu den Spezifikationen über das ASM-Tool), O17 (Datensatz im UIC 918-9\*), O18 (konkrete Schlüsselnummern in den Key-Identifier-Bereichen).

@@ -146,6 +146,7 @@ codes: []               # Codelisten, siehe unten
 - Nach jeder inhaltlichen Änderung: `python3 tools/gen.py && python3 tools/check.py`. Erst wenn `check.py` fehlerfrei durchläuft, ist die Arbeit fertig.
 - **Nach jeder Änderung an `tools/pdftext.py` zusätzlich `python3 tools/fundstellen.py` ausführen.** Seitenangaben hängen daran, wie der Extraktor den Seitenbaum liest. Als die Unterstützung komprimierter Objektströme ergänzt wurde, verschob sich die Zählung mehrerer Quellen um eine Seite, und 77 Fundstellen im Lexikon waren still falsch. Wer eine Fundstelle in einem bisher ungeprüften Seitenbereich zitiert, ergänzt in `fundstellen.py` eine Probe.
 - `tools/pdftext.py` braucht bei [Q07](QUELLEN.md#q07) die Option `--shift=29` (verschobene Zeichenkodierung). Bei [Q25](QUELLEN.md#q25) fehlen in manchen Schriften Umlaute — Zitate von dort gegen das PDF prüfen.
+- **Wörtlich zitiert wird nur, was im Rohtext der Extraktion wörtlich steht.** [Q45](QUELLEN.md#q45) und [Q46](QUELLEN.md#q46) verlieren Umlaute und ganze Wortteile; aus `f` ein `für` oder aus `igt` ein `benötigt` zu machen, ist eine Rekonstruktion und kein Zitat. In solchen Fällen paraphrasieren und nur unzweifelhafte Fragmente in Anführungszeichen setzen. In [Q43](QUELLEN.md#q43) stehen zusätzlich die Sprachmarken `de-DE` und `en-GB` mitten im Text, teils innerhalb eines Wortes — Suchmuster und Zitate daran ausrichten.
 
 ## 11. Arbeitsweise
 

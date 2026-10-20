@@ -2,7 +2,7 @@
 titel: Schlüsselarten
 englisch: key types
 parent: lexikon/sicherheit.md
-siehe_auch: [lexikon/sicherheit/keymanagement.md, lexikon/sicherheit/pki.md]
+siehe_auch: [lexikon/sicherheit/keymanagement.md, lexikon/sicherheit/pki.md, lexikon/sicherheit/key-identifier.md]
 quellen: [Q02]
 status: belegt
 offene_fragen: []
@@ -59,6 +59,7 @@ Und eine letzte Feinheit: Aus einem Startschlüssel lassen sich für jede einzel
 
 - [Keymanagement](keymanagement.md) (KM)
 - [Public Key Infrastructure](pki.md) (PKI)
+- [Key-Identifier](key-identifier.md) (KID)
 <!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->

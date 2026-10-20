@@ -325,7 +325,12 @@ def extract(content, shift=0, ygap=2.0, xgap=0.28, fontkarten=None):
     if cur:
         lines.append("".join(cur))
     out = "\n".join(re.sub(r"[ \t]{2,}", " ", l).strip() for l in lines)
-    return re.sub(r"\n{3,}", "\n\n", out).strip()
+    text = re.sub(r"\n{3,}", "\n\n", out).strip()
+    # Steuerzeichen entfernen. CID- und UTF-16-kodierte Zeichenketten
+    # hinterlassen NUL- und andere Steuerbytes im Text. Bleiben sie darin,
+    # halten grep, file und Editoren die Ausgabe für eine Binärdatei und
+    # verweigern die Arbeit.
+    return "".join(c for c in text if c in "\n\t" or ord(c) >= 32)
 
 
 def main():

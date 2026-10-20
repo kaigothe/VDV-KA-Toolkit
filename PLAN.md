@@ -196,6 +196,8 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 | **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. | `transaktionen/txalisber.md` | ALISE-Spezifikation und ALISE-XSD |
 | **O15** | Welcher Füllwert gilt für nicht benutzte Datenelemente einer Transaktion? [Q48](QUELLEN.md#q48), S. 7, nennt `0x00`; die Nullwert-Konvention der Datenformate sieht für andere Typen andere Füllwerte vor. Gilt `0x00` nur für die dort genannten Felder? | `transaktionen/pflichtelemente-einer-transaktion.md`, `datenformate/nullwerte.md` | KA NM-SPEC, KA BOM-SPEC |
 | **O16** | Setzt der Download der KA-Spezifikationen im ASM-Tool einen Teilnahmevertrag voraus? [Q46](QUELLEN.md#q46), Kap. 6.1, nennt die Registrierung kostenlos und das ASM-Tool als Downloadort, ohne das Verhältnis zum Vertrag zu klären. | `grundlagen/ka-spezifikationen.md`, [BESCHAFFUNG.md](BESCHAFFUNG.md) | VDV eTicket Service |
+| **O17** | Welcher Datensatz tritt im UIC 918-9\* an die Stelle des Datensatzes 0080BL? [Q46](QUELLEN.md#q46), Kap. 5, nennt den Wechsel, der Name ist in der Textextraktion verloren und am PDF zu prüfen. | `datenformate/uic-barcode.md` | [Q46](QUELLEN.md#q46) im Original, UIC 918-9 |
+| **O18** | Welche konkreten Schlüsselnummern vergibt eine Organisation innerhalb der Key-Identifier-Bereiche 30, 40, 50, 60, 70 und 91? [Q45](QUELLEN.md#q45), S. 19, nennt nur die Bereiche und ihren Einsatzzweck. | `sicherheit/key-identifier.md` | KA SEC-SPEC, KA KM-Dokumentation |
 
 ---
 
@@ -233,6 +235,25 @@ Gefunden wurde das zufällig beim Vergleich zweier Kopien desselben Dokuments. D
 **Behoben:** alle 77 Angaben korrigiert, verifiziert an den Seitenfüßen der Dokumente, die ihre eigene Seitenzahl nennen. Neu ist [tools/fundstellen.py](tools/fundstellen.py) mit 25 Stichproben; `CLAUDE.md`, Regel 10, verlangt den Lauf nach jeder Änderung am Extraktor.
 
 **Lehre für künftige Werkzeugänderungen:** Ein Regressionstest auf Textmenge genügt nicht. Geprüft werden muss, was die Artikel tatsächlich zitieren.
+
+### Zwei Nachträge vom 20.10.2026
+
+**Der Steuerzeichenfilter, der nur in der Commit-Nachricht stand.** Der Commit `aadeeb8` nennt als
+Behebung einen Filter, der Steuerzeichen aus der Extraktion entfernt. Im Code war er nie vorhanden —
+die Änderung ging zwischen Beschreibung und Umsetzung verloren, und die Nachricht blieb unkorrigiert
+stehen. Aufgefallen ist es, als eine neue Fundstellenprobe auf [Q48](QUELLEN.md#q48), S. 16,
+scheiterte: Die Seite liefert UTF-16-kodierten Text, dessen NUL-Bytes jedes Suchmuster zerschneiden.
+Der Filter steht jetzt am Ende von `extract()`; `tools/fundstellen.py` prüft seither 55 statt 25
+Fundstellen und läuft fehlerfrei. **Lehre:** Eine Commit-Nachricht ist kein Beleg. Was sie behauptet,
+muss im Code stehen — und geprüft sein.
+
+**Rekonstruierte Zitate.** Für die Artikel zu [Q45](QUELLEN.md#q45) und [Q46](QUELLEN.md#q46) wurde
+zunächst aus der gesäuberten Extraktion zitiert. Diese Quellen verlieren aber Umlaute und ganze
+Wortteile; aus `f` wird beim Lesen stillschweigend `für`, aus `igt` ein `benötigt`. Das Ergebnis liest
+sich wie ein wörtliches Zitat, ist aber eine Rekonstruktion. Die betroffenen Stellen in
+`zsam.md`, `key-identifier.md`, `uic-barcode.md`, `vdv-barcode-mobile.md` und
+`pflichtelemente-einer-transaktion.md` wurden in Paraphrasen umgeschrieben; in Anführungszeichen
+steht nur noch, was im Rohtext wörtlich steht. [CLAUDE.md](CLAUDE.md), Regel 10, hält das fest.
 
 ---
 

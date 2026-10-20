@@ -2,8 +2,8 @@
 titel: VDV-Barcode
 englisch: VDV barcode
 parent: lexikon/datenformate.md
-siehe_auch: [lexikon/berechtigungen/statische-berechtigung.md, lexikon/datenformate/tlv.md]
-quellen: [Q02, Q07, Q10, Q12, Q25, Q34, Q37]
+siehe_auch: [lexikon/berechtigungen/statische-berechtigung.md, lexikon/datenformate/tlv.md, lexikon/datenformate/uic-barcode.md, lexikon/sicherheit/vdv-barcode-mobile.md]
+quellen: [Q02, Q07, Q10, Q12, Q25, Q34, Q37, Q45, Q46]
 status: belegt
 offene_fragen: []
 stand: 2026-10-19
@@ -16,18 +16,18 @@ codes: []
 
 # VDV-Barcode
 
-Der VDV-Barcode ist die Ausgabeform einer [statischen Berechtigung](../berechtigungen/statische-berechtigung.md) als 2D-Barcode ([Q02](../../QUELLEN.md#q02), S. 92). Normquelle ist die nicht öffentliche **KA STB-Spec**, „Spezifikation statischer Berechtigungen für 2D-Barcode-Tickets“, Inventarnummer 42 ([Q25](../../QUELLEN.md#q25), Kap. 3); für den Kopierschutz tritt die **KA STB-SPEC mobile plus** hinzu, „Kryptographischer Kopierschutz für statische Berechtigungen VDV-Barcode mobile+“ ([Q37](../../QUELLEN.md#q37)).
+Der VDV-Barcode ist die Ausgabeform einer [statischen Berechtigung](../berechtigungen/statische-berechtigung.md) als 2D-Barcode ([Q02](../../QUELLEN.md#q02), S. 92). Normquelle ist die nicht öffentliche **KA STB-Spec**, „Spezifikation statischer Berechtigungen für 2D-Barcode-Tickets“, Inventarnummer 42 ([Q25](../../QUELLEN.md#q25), Kap. 3); für den Kopierschutz tritt die **KA STB-SPEC mobile+** hinzu ([Q37](../../QUELLEN.md#q37)).
 
 Der Aufbau ist über eine Herstellerdokumentation im Detail belegt ([Q12](../../QUELLEN.md#q12)) · *Herstellerquelle*:
 
-- Der Datensatz beginnt mit der **Kennung „VDV“** als OctetString und einer **Version** — im belegten Fall `0x19 0x00` für die Fassung 1.9.0.0 der KA-STB-Spec (Tabelle 3-1, S. 12).
+- Der Datensatz beginnt mit der **Kennung „VDV“** als OctetString und einer **Version**, im belegten Fall `0x19 0x00` für die KA-STB-Spec 1.9.0.0 (Tabelle 3-1, S. 12).
 - Er enthält dieselben Datenelemente wie eine Berechtigung auf der Chipkarte: `berBerechtigung_ID`, `prodProdukt_ID`, `berGueltigkeitsbeginn`, `berGueltigkeitsende`, den [statischen produktspezifischen Teil](../berechtigungen/produktspezifischer-teil.md) mit [Tag 0xDB](tag-0xdb-fahrgast.md), dazu Angaben zu Terminal, Ort und SAM.
 - Am Ende stehen **Füllbytes** `0x00`, damit das Ticket mindestens **111 Byte** lang ist.
-- Der **Transaktion produktspezifische Teil** bleibt leer (`0x8A 0x00`), weil er beim TLV-EFS nicht benutzt wird.
+- Der **Transaktion produktspezifische Teil** bleibt leer (`0x8A 0x00`).
 
-Daran ist die Verwandtschaft ablesbar: Der Barcode ist **kein eigenes Format**, sondern dieselbe TLV-Struktur in einem anderen Träger, ergänzt um Kennung, Version, Signatur und Auffüllung (abgeleitet).
+**Sicherung:** Bei der Ausgabe wird eine digitale Signatur über die Ticketdaten gebildet, wofür ein [SAM](../sicherheit/sam.md) mit geheimem Signaturschlüssel nötig ist; geprüft wird sie über Signaturzertifikate, die eTicket Deutschland bereitstellt. Gegen Vervielfältigung schützt der Barcode nicht — deshalb ist zusätzlich ein **Identifikationsmerkmal** zu prüfen ([Q46](../../QUELLEN.md#q46), Kap. 4.1, PDF-S. 8), siehe [VDV-Barcode mobile+](../sicherheit/vdv-barcode-mobile.md). **Sperren ist dagegen möglich:** Ein gesperrtes Barcodeticket wird bei der Kontrolle erkannt und muss abgewiesen werden (PDF-S. 9). Als Nachweis der Fahrtanmeldung in IN/OUT-Systemen dient die Anlage **CIBO-STB** (PDF-S. 7).
 
-Als Beispiel der Anwendung sind die Produktnummern des Deutschlandtickets belegt: **9999** für das reguläre Ticket, **9998** für das Jobticket, **9995** für Schüler ([Q12](../../QUELLEN.md#q12), gestützt auf die Technische Anforderung Deutschlandticket; vgl. [Q10](../../QUELLEN.md#q10)). Zur Abgrenzung gegenüber dem UIC-Barcode siehe [Q34](../../QUELLEN.md#q34).
+Belegt sind die Produktnummern des Deutschlandtickets: **9999** regulär, **9998** Jobticket, **9995** Schüler ([Q12](../../QUELLEN.md#q12); vgl. [Q10](../../QUELLEN.md#q10)). Zur Abgrenzung siehe [UIC-Barcode](uic-barcode.md).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
@@ -47,7 +47,7 @@ Der Grund dürfte in der Signatur liegen: Kryptografische Verfahren arbeiten mit
 
 Ein Beispiel aus der Praxis, das man sich merken kann: Beim Deutschlandticket hat das reguläre Produkt die Nummer **9999**, das Jobticket **9998**, das Schülerticket **9995**. Wer solche Nummern in einem Barcode sieht, weiß sofort, um welches Produkt es geht.
 
-Und ein letzter Punkt, der Olli Tapsig betrifft: Weil der Barcode nicht veränderbar ist, kann man ihn nicht sperren. Deshalb gibt es inzwischen eine eigene Spezifikation für den Kopierschutz — ein Datensatz, der sich beliebig vervielfältigen lässt, wäre sonst eine offene Flanke.
+Und ein letzter Punkt, der Olli Tapsig betrifft. Der Inhalt eines Barcodes kann nach der Erzeugung nicht mehr verändert werden — eine Entwertung, eine Sperrung oder eine Stornierung hinterlässt dort keine Spur. Gesperrt werden kann das Ticket trotzdem, nur eben nicht auf dem Papier: Es kommt auf die Sperrliste, und das Kontrollgerät erkennt es dort und weist es ab. Was der Barcode von sich aus nicht verhindern kann, ist das Kopieren. Deshalb gibt es für Tickets auf dem Handy eine eigene Spezifikation für den Kopierschutz, und deshalb verlangt die Kontrolle eines gewöhnlichen Barcodes zusätzlich ein Identifikationsmerkmal.
 
 ## Quellen
 
@@ -59,11 +59,16 @@ Und ein letzter Punkt, der Olli Tapsig betrifft: Weil der Barcode nicht verände
 - [Q34](../../QUELLEN.md#q34) – KCD NRW, Ergebnisdokument Deutschlandticket / UIC (Abgrenzung zum UIC-Barcode) · *Auswertung offen*
 - [Q07](../../QUELLEN.md#q07) – RMV, Statische Berechtigung RMV-EFS, Datenlayout · *verbundspezifisch, Auswertung offen*
 
+- [Q46](../../QUELLEN.md#q46) – Whitepaper Barcodes im ÖPNV (2021), Kap. 4, PDF-S. 7 (KA STB-Spec und ihre Anlagen; CIBO-STB für IN/OUT-Systeme), Kap. 4.1, PDF-S. 8 (digitale Signatur über die Ticketdaten bei der Ausgabe, SAM mit geheimem Signaturschlüssel, Prüfung über Signaturzertifikate von eTicket Deutschland, Vervielfältigung nicht verhinderbar, Identifikationsmerkmal bei der Kontrolle zu prüfen), Kap. 4.1, PDF-S. 9 (Sperrung von Barcodetickets, Erkennung und Abweisung bei der Kontrolle)
+- [Q45](../../QUELLEN.md#q45) – ASM-Tool Glossar, S. 10 („2D-Barcode“: Ticketdaten und Sicherheitselemente im Barcode; generell ein statisches Element, dessen Inhalt nach der Generierung nicht mehr verändert werden kann, auch nicht durch Entwertung, Sperrung oder Stornierung)
+
 <!-- GEN:siehe_auch -->
 ## Siehe auch
 
 - [Statische Berechtigung](../berechtigungen/statische-berechtigung.md) (StatBer)
 - [TLV-Kodierung](tlv.md) (TLV)
+- [UIC-Barcode](uic-barcode.md)
+- [VDV-Barcode mobile+](../sicherheit/vdv-barcode-mobile.md)
 <!-- /GEN:siehe_auch -->
 
 <!-- GEN:navigation -->

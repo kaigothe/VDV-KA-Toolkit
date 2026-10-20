@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-104 Eintragräge
+109 Eintragräge
 
 
 ## A
@@ -74,6 +74,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## K
 
 - [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md)
+- [Key-Identifier](lexikon/sicherheit/key-identifier.md) — KID
 - [Keymanagement](lexikon/sicherheit/keymanagement.md) — KM
 - [Kontroll- und Sperrlistenservice](lexikon/rollen/kose.md) — KOSE
 - [Kontrolle](lexikon/kontrolle.md)
@@ -92,6 +93,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [MAC](lexikon/sicherheit/mac.md) — MAC
 - [Medien](lexikon/medien.md)
 - [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) — MBT
+- [MOTICS](lexikon/sicherheit/motics.md) — MOTICS
 - [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
 
 ## N
@@ -155,9 +157,14 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [TXRBER](lexikon/transaktionen/txrber.md) — TXRBER
 - [TXSNAWB](lexikon/transaktionen/txsnawb.md) — TXSNAWB
 
+## U
+
+- [UIC-Barcode](lexikon/datenformate/uic-barcode.md)
+
 ## V
 
 - [VDV-Barcode](lexikon/datenformate/vdv-barcode.md)
+- [VDV-Barcode mobile+](lexikon/sicherheit/vdv-barcode-mobile.md)
 - [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) — KA
 - [Versionen](lexikon/grundlagen/versionen.md)
 
@@ -165,6 +172,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 - [XML-Namensraum](lexikon/datenformate/xml-namensraum.md)
 - [XSD und WSDL](lexikon/datenformate/xsd.md) — XSD
+
+## Z
+
+- [zSAM](lexikon/sicherheit/zsam.md) — zSAM
 
 ---
 

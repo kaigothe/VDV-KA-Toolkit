@@ -134,6 +134,8 @@ Die Felder enthalten **Referenzen** auf Schlüssel — Nummer, Version und Inhab
 | `amMKKVP-NM-MAC_ID` | 120 | 1 | 9010 (BVB, KVP) |
 | `amMKERF-NM-MAC_ID` | 130 | 1 | 9060 (SSB, Schlüsselstelle) |
 
+Die Nummern **110, 120 und 130 sind frei gewählte Platzhalter**. Sie liegen bewusst außerhalb der belegten Key-Identifier-Bereiche, damit niemand sie für echte Schlüsselnummern eines Verbunds hält. Die belegte Systematik der Einsatzzwecke steht in [Key-Identifier](../lexikon/sicherheit/key-identifier.md).
+
 ### 6.3 Innere Konsistenz
 
 Der Fall ist absichtlich stimmig gebaut, damit Artikel zur Plausibilitätsprüfung daran arbeiten können:

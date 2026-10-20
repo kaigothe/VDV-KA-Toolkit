@@ -62,6 +62,7 @@ Die Unterartikel gehen diese Schritte einzeln durch — und benennen jeweils, wa
 - [Nullwerte](datenformate/nullwerte.md)
 - [Tag 0xDB Fahrgast](datenformate/tag-0xdb-fahrgast.md)
 - [TLV-Kodierung](datenformate/tlv.md)
+- [UIC-Barcode](datenformate/uic-barcode.md)
 - [VDV-Barcode](datenformate/vdv-barcode.md)
 - [XML-Namensraum](datenformate/xml-namensraum.md)
 - [XSD und WSDL](datenformate/xsd.md)
