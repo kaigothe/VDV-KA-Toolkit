@@ -156,7 +156,9 @@ def seiten_fontkarten(objs, seitenobj):
     m = re.search(rb"/Font\s*<<(.*?)>>", seitenobj, re.DOTALL)
     if not m:
         return karten
-    for name, num in re.findall(rb"/([A-Za-z0-9#+.-]+)\s+(\d+)\s+\d+\s+R", m.group(1)):
+    # Der Unterstrich gehört in die Zeichenklasse: Type0-Schriften heißen in
+    # von Acrobat erzeugten PDFs regelmäßig /C2_0 und fielen sonst heraus.
+    for name, num in re.findall(rb"/([A-Za-z0-9#+._-]+)\s+(\d+)\s+\d+\s+R", m.group(1)):
         font = objs.get(int(num))
         if not font:
             continue
@@ -204,7 +206,18 @@ def unescape(s):
     return bytes(out)
 
 
-str_re = re.compile(rb"\((?:\\\\.|[^\\\\()]|\((?:\\\\.|[^\\\\()])*\))*\)|<[0-9A-Fa-f\s]+>")
+# Literaler String in Klammern oder Hex-String in spitzen Klammern.
+#
+# Die Escape-Alternative muss `\\.` lauten, also EIN Backslash und ein
+# beliebiges Zeichen. Eine frühere Fassung schrieb `\\\\.` und verlangte damit
+# zwei Backslashes; die Zeichenklasse schloss den Backslash aber aus. Folge:
+# Jeder PDF-String mit einer Escape-Sequenz passte auf gar kein Muster und
+# wurde stillschweigend ganz verworfen — nicht nur das maskierte Zeichen.
+# Umlaute stehen in diesen Dokumenten als Oktal-Escape (`\366` für ö), deshalb
+# fehlten im extrahierten Text Umlaute und ganze Wortteile: aus `(Erg\344nzung)`
+# wurde nichts, aus `[(f)(\374r)]` nur `f`. Das ist die Ursache der in
+# CLAUDE.md, Regel 10, beschriebenen Zeichenverluste.
+str_re = re.compile(rb"\((?:\\.|[^\\()]|\((?:\\.|[^\\()])*\))*\)|<[0-9A-Fa-f\s]+>")
 num_re = rb"[-+]?[0-9]*\.?[0-9]+"
 tok_re = re.compile(
     str_re.pattern + rb"|(?P<num>" + num_re + rb")"
@@ -233,7 +246,12 @@ def decode_hex(tok, shift=0, karte=None):
     if karte:
         return _ueber_karte(raw, karte)
     if len(raw) > 1 and raw[0::2].count(0) > len(raw) // 4:
-        return raw.decode("utf-16-be", "replace")
+        # Auch hier den Versatz anwenden. Zweibytige Codes ohne ToUnicode sind
+        # Glyphnummern, keine Zeichen; genau dafür gibt es --shift. Eine
+        # frühere Fassung kehrte hier zurück, bevor der Versatz greifen konnte,
+        # weshalb --shift=29 bei Q07 wirkungslos blieb, obwohl CLAUDE.md,
+        # Regel 10, es als nötig führt.
+        return apply_shift(raw.decode("utf-16-be", "replace"), shift)
     return apply_shift(raw.decode("latin-1", "replace"), shift)
 
 
@@ -288,7 +306,12 @@ def extract(content, shift=0, ygap=2.0, xgap=0.28, fontkarten=None):
             continue
         if op == b"Tf" and nums:
             fs = abs(nums[-1]) or 12.0
-            mf = re.search(rb"/([A-Za-z0-9#+.-]+)\s*$", content[:m.start()].rstrip())
+            # Vor dem Tf steht der Schriftname UND die Schriftgröße
+            # (`/TT0 1 Tf`). Eine frühere Fassung ließ die Größe nicht zu und
+            # fand deshalb nie einen Namen: Die in seiten_fontkarten
+            # gesammelten ToUnicode-Zuordnungen wurden nie angewandt.
+            mf = re.search(rb"/([A-Za-z0-9#+._-]+)(?:\s+[\d.]+)?\s*$",
+                           content[:m.start()].rstrip())
             karte = fontkarten.get(mf.group(1).decode("latin-1")) if mf else None
         elif op == b"Tm" and len(nums) >= 6:
             x, y = nums[-2], nums[-1]

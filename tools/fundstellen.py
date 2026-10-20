@@ -29,7 +29,9 @@ EXTRAKTOR = os.path.join(REPO, "tools", "pdftext.py")
 UMGEBUNG = 3   # so viele Seiten in jede Richtung bei einem Fehlschlag
 
 # (Q-Nummer, zitierte PDF-Seite, erwarteter Marker als regulärer Ausdruck)
-# Die Marker berücksichtigen, dass die Extraktion Umlaute verlieren kann.
+# Die Marker sind bewusst tolerant: Einzelne Quellen bilden Umlaute weiterhin
+# auf fremde Zeichen ab (Q25 etwa ä als ¦), weil ihre Schriften keine
+# brauchbare ToUnicode-Zuordnung mitbringen.
 PROBEN = [
     ("Q02",  19, r"Aktionsliste / Action Lis"),
     ("Q02",  52, r"Kontrolle / Inspection"),
@@ -43,7 +45,7 @@ PROBEN = [
     ("Q06",  36, r"4\.7 Zertifikatsliste"),
     ("Q06",  37, r"PACKAGE ?ACK"),
     ("Q06",  38, r"4\.10"),
-    ("Q06",  40, r"Rollen-Code 31 ALI"),
+    ("Q06",  40, r"Rollen-Code 31 .?ALISE"),
     ("Q06",  41, r"5\.1\.2 Datenschutz"),
     ("Q06",  42, r"5\.3 Duplikate"),
     ("Q06",  44, r"Ticketinfo Mobil"),
@@ -51,7 +53,7 @@ PROBEN = [
     ("Q25",  39, r"Markenbuch"),
     ("Q25", 114, r"XSD- Bereich"),
     ("Q25", 115, r"NamensraumBereich"),
-    ("Q25", 159, r"Ausbauvariante 1: eBezahlen"),
+    ("Q25", 159, r"Ausbauvariante 1: .{0,3}eBezahlen"),
     ("Q25", 239, r"Tabelle 38"),
     ("Q37",   4, r"1\.12\.0"),
     ("Q39",  52, r"TXAAUFBER"),

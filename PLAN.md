@@ -260,6 +260,64 @@ sich wie ein wörtliches Zitat, ist aber eine Rekonstruktion. Die betroffenen St
 `pflichtelemente-einer-transaktion.md` wurden in Paraphrasen umgeschrieben; in Anführungszeichen
 steht nur noch, was im Rohtext wörtlich steht. [CLAUDE.md](CLAUDE.md), Regel 10, hält das fest.
 
+### Nachtrag vom 20.10.2026: Die Zeichenverluste waren ein Fehler im Extraktor
+
+Der Befund oben hat eine unangenehme Pointe. Die Annahme, [Q45](QUELLEN.md#q45), [Q46](QUELLEN.md#q46)
+und [Q25](QUELLEN.md#q25) „verlieren Umlaute und ganze Wortteile“, war falsch. Die PDFs enthalten
+den vollständigen Text. Verloren hat ihn `tools/pdftext.py` — in **drei unabhängigen Fehlern**:
+
+1. **Das Muster für PDF-Strings verlangte zwei Backslashes.** `str_re` schrieb die Escape-Alternative
+   als `\\\\.`, also zwei Backslashes und ein Zeichen, während die Zeichenklasse den Backslash
+   ausschloss. Damit passte **jeder String mit einer Escape-Sequenz auf gar kein Muster** und wurde
+   stillschweigend ganz verworfen — nicht nur das maskierte Zeichen. Umlaute stehen in diesen
+   Dokumenten als Oktal-Escape (`\366` für ö), deshalb fehlten ganze Wortteile: aus
+   `(Erg\344nzung)` wurde nichts, aus `[(f)(\374r)]` nur `f`. Maskierte Klammern traf es ebenso,
+   weshalb überall das Markenpräfix `(((` fehlte und aus „Rollen-Code 31 (ALISE) seitens“ ein
+   „Rollen-Code 31 ALIseitens“ wurde.
+2. **Die ToUnicode-Zuordnungen wurden nie angewandt.** `seiten_fontkarten` sammelte sie korrekt,
+   aber die Suche nach dem Schriftnamen vor dem `Tf`-Operator ließ die Schriftgröße nicht zu. Vor
+   `Tf` steht immer beides (`/TT0 1 Tf`), also fand die Suche nie einen Namen. Folge: Schriften mit
+   eigener Kodierung lieferten Buchstabensalat. In [Q05](QUELLEN.md#q05) stand dort
+   `6WUXNWXUÄ%HUHFKWL` statt `Struktur „Berechti-`, in [Q31](QUELLEN.md#q31) und
+   [Q40](QUELLEN.md#q40) ganze Überschriften. Zusätzlich fielen Type0-Schriften heraus, weil der
+   Unterstrich in `/C2_0` nicht in der Zeichenklasse stand.
+3. **`--shift` griff bei zweibytigen Codes nicht.** Ein UTF-16-Zweig in `decode_hex` kehrte zurück,
+   bevor der Versatz angewandt wurde. Deshalb blieb `--shift=29` bei [Q07](QUELLEN.md#q07)
+   wirkungslos, obwohl [CLAUDE.md](CLAUDE.md) die Option als nötig führte. Q07 war unleserlich und
+   überall als „Auswertung offen“ geführt — die Option stand seit ihrer Einführung im Leerlauf.
+
+**Geprüft wurde diesmal inhaltlich, nicht nach Textmenge.** Alle 30 PDF-Quellen wurden vor und nach
+der Korrektur extrahiert und verglichen: Die **Seitenzählung ist in allen Quellen unverändert**, es
+gibt also keinen Fundstellenversatz wie am 19.10. Die Textmenge wuchs um 3 bis 8 Prozent, Q25 um
+24.000 Zeichen. `tools/fundstellen.py` meldete zwei Abweichungen — beide waren Marker, die gegen die
+**kaputte** Ausgabe geschrieben worden waren (`Rollen-Code 31 ALI` und `Ausbauvariante 1: eBezahlen`);
+sie sind nachgezogen. Alle 60 Proben stimmen.
+
+**Lehre, die über den Einzelfall hinausgeht:** Eine dokumentierte Eigenheit einer Quelle ist eine
+Hypothese, kein Befund. „Diese PDFs verlieren Umlaute“ stand in CLAUDE.md, in PLAN.md und in fünf
+umgeschriebenen Artikeln, ohne dass jemand gefragt hätte, *warum* ein PDF Umlaute verlieren sollte.
+Drei Werkzeugfehler haben sich hinter dieser Erklärung verstecken können. Wo eine Quelle sich
+auffällig verhält, gehört der eigene Code zuerst auf den Prüfstand.
+
+**Was daraus noch offen ist** (Arbeitsvorrat, keine fachlichen Fragen — deshalb hier und nicht in
+Abschnitt 5):
+
+- Die fünf Artikel, die wegen der Zeichenverluste in Paraphrasen umgeschrieben wurden (`zsam.md`,
+  `key-identifier.md`, `uic-barcode.md`, `vdv-barcode-mobile.md`,
+  `pflichtelemente-einer-transaktion.md`), lassen sich jetzt gegen den vollständigen Text prüfen.
+  Die Paraphrasen sind **nicht falsch**, aber unnötig vorsichtig.
+- [Q07](QUELLEN.md#q07) ist erstmals lesbar und damit auswertbar — bisher überall als „Auswertung
+  offen“ geführt. Relevant für O6, weil das Dokument das Datenlayout des RMV-EFS beschreibt.
+- [Q25](QUELLEN.md#q25) liefert stellenweise noch `¦ ¾ ¸` statt `ä ü ö`, [Q07](QUELLEN.md#q07)
+  verliert Ziffern und Leerzeichen. Beides hat **dieselbe Ursache**: Type0-Schriften ohne
+  ToUnicode kodieren Glyphnummern statt Zeichen. Saubere Lösung wäre die Standard-Glyphreihenfolge
+  (Macintosh ordering, 258 Einträge, Standardbibliothek genügt) statt des Behelfs `--shift`.
+- **Zitate, die über Tabellenspalten hinweg zusammengesetzt sind**, sind bisher nicht systematisch
+  geprüft. Eine Stichprobe fand einen Fall: In `multiberechtigung.md` ist der Titel der
+  KA MultiBER-SPEC als durchgehender Satz zitiert, während [Q37](QUELLEN.md#q37) ihn über zwei
+  Spalten verteilt führt (dort steht dazwischen die Versionsangabe `1.12.0`). Eine Prüfung aller
+  513 Zitate steht aus; sie braucht einen spaltenweisen Vergleich, nicht den zeilenweisen.
+
 ---
 
 ## 6. Qualitätsregeln
