@@ -3,10 +3,10 @@ titel: berStatus
 englisch: entitlement status
 parent: lexikon/berechtigungen.md
 siehe_auch: [lexikon/berechtigungen/bersynchronnummer.md, lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md, lexikon/berechtigungen/gueltigkeit.md, lexikon/kontrolle/sperrung.md]
-quellen: [Q02, Q05]
-status: belegt
+quellen: [Q02, Q05, Q51]
+status: abgeleitet
 offene_fragen: [O3]
-stand: 2026-10-19
+stand: 2026-10-20
 codes:
   - wert: 5
     codeliste: WertobjektStatus_CODE
@@ -76,6 +76,8 @@ Die Übergänge sind aus den Aktionstypen und den Transaktionstypcodes erschloss
 
 Dass „neu“ (8) einen höheren Code hat als „aktiv“ (7), ist daher kein Widerspruch: Die Codes sind Zustandskennungen, keine Reihenfolge ([Q02](../../QUELLEN.md#q02) enthält keinen Eintrag „Berechtigungsstatus“).
 
+In etiCORE kennt `EntitlementStatusEnum` die Werte **5** (terminated), **7** (ok) und **19** (blocked) mit Verweis auf EN 1545-1:2015; die 8 fehlt ([Q51](../../QUELLEN.md#q51), Modul `user-medium`). Die Zahlen stammen damit aus einer Normliste und sind nicht RMV-eigen (abgeleitet, O3).
+
 ## Einfach erklärt – Beispiel aus Bärstadt
 
 Ein einziges Byte entscheidet darüber, ob Pia fahren darf.
@@ -99,6 +101,7 @@ Eine Vorsicht bleibt: Diese vier Werte stehen in einem RMV-Dokument. Allerdings 
 
 ## Quellen
 
+- [Q51](../../QUELLEN.md#q51) – etiCORE ASN.1 Data Type Description 3.0.0-rc.6, Modul `user-medium`: Typ `EntitlementStatusEnum` (Werte 5, 7, 19; EN 1545-1:2015 ProductStatus) · *Release-Kandidat*
 - [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (PDF-S. 9): `berStatus` im dynamischen Teil der Berechtigung, Datentyp `INT1` mit einem Byte, Codeliste `WertobjektStatus_CODE`; „relevante Werte“ 5 = Zurückgenommen / Cancelled, 7 = Aktiv / entsperrt / o.k., 8 = Neu, aber noch nicht aktiv / New, 19 = Gesperrt / Blocked · *verbundspezifisch: eTicket RheinMain*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Berechtigungsstatus“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 38 f. („Entsperrung“), S. 91 („Sperrung“)
 

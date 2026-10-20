@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-116 Eintragräge
+117 Eintragräge
 
 
 ## A
@@ -33,7 +33,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Basisobjektmodell](lexikon/datenformate/bom.md) — BOM
 - [Berechtigung](lexikon/berechtigungen/berechtigung.md)
 - [Berechtigungen](lexikon/berechtigungen.md)
-- [berStatus](lexikon/berechtigungen/berstatus.md)
+- [berStatus](lexikon/berechtigungen/berstatus.md) *(abgeleitet)*
 - [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) *(abgeleitet)*
 
 ## C
@@ -148,6 +148,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Sperrung](lexikon/kontrolle/sperrung.md)
 - [Spezifikationsmodell](lexikon/grundlagen/spezifikationsmodell.md)
 - [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md) — StatBer
+- [Statische Berechtigung in etiCORE](lexikon/berechtigungen/statische-berechtigung-in-eticore.md)
 
 ## T
 

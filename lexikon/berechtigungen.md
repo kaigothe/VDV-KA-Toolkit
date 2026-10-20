@@ -63,6 +63,7 @@ Dieser letzte Punkt steht im Glossar des Standards, nicht in einem Zukunftspapie
 - [Produktnummer](berechtigungen/produktnummer.md)
 - [Produktspezifischer Teil](berechtigungen/produktspezifischer-teil.md)
 - [Statische Berechtigung](berechtigungen/statische-berechtigung.md)
+- [Statische Berechtigung in etiCORE](berechtigungen/statische-berechtigung-in-eticore.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->
