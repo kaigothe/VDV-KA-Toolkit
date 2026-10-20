@@ -3,32 +3,32 @@ titel: Ausgabe EFS über Aktionsliste
 englisch: issue of an electronic ticket via action list
 parent: lexikon/aktionsmanagement.md
 siehe_auch: []
-quellen: [Q02, Q06, Q25]
+quellen: [Q02, Q06, Q25, Q52, Q55]
 status: belegt
-offene_fragen: [O1, O2]
+offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 37
     codeliste: NmTransaktionsTyp_CODE
-    bedeutung: TXABER – Ausgabe EFS über Aktionsliste
-    quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
+    bedeutung: Ausgabe EFS über Aktionsliste
+    quelle: Q52
+    fundstelle: Tab. 6-65 (S. 87); ergänzt durch Q55 Kap. 6.2 (S. 67)
     status: belegt
-    verbundspezifisch: true
+    verbundspezifisch: false
   - wert: 38
     codeliste: NmTransaktionsTyp_CODE
-    bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
-    quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
+    bedeutung: Entsperrtransaktion BER über Aktionsliste
+    quelle: Q52
+    fundstelle: Tab. 6-65 (S. 87); ergänzt durch Q55 Kap. 6.2 (S. 67)
     status: belegt
-    verbundspezifisch: true
+    verbundspezifisch: false
   - wert: 39
     codeliste: NmTransaktionsTyp_CODE
-    bedeutung: Rückgabetransaktion EFS über Aktionsliste
-    quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
+    bedeutung: Rückgabe/Rücknahme EFS über Aktionsliste
+    quelle: Q52
+    fundstelle: Tab. 6-65 (S. 87); ergänzt durch Q55 Kap. 6.2 (S. 67)
     status: belegt
-    verbundspezifisch: true
+    verbundspezifisch: false
 ---
 
 <!-- GEN:breadcrumb -->
@@ -49,11 +49,11 @@ Im Feld `logTransaktionsTyp` vom Typ `NmTransaktionsTyp_CODE` gilt ([Q06](../../
 | **38** | `TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste |
 | **39** | Rückgabetransaktion EFS über Aktionsliste |
 
-Diese Zuordnung ist eine Festlegung im eTicket RheinMain. Ob sie KA-weit gilt, ist nicht belegt (zu prüfen, O1).
+Die Werte stammen aus der Standardcodeliste `NmTransaktionsTyp_CODE` ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87) und gelten damit KA-weit. Die KA AktM-SPEC ergänzt sie ausdrücklich für die Listeneinträge `TXALISBER`, `TXELISBER` und `TXRLISBER` ([Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Die Zuordnung der Werte zu den **Nachweisnachrichten** stammt dagegen aus [Q06](../../QUELLEN.md#q06) · *verbundspezifisch: eTicket RheinMain*.
 
 Zum **Rollencode** im Transaktionskopf: In der Schnittstellenversion KA 1.1.07 wurde für solche Transaktionen alternativ auch der Rollencode 31 (ALISE) akzeptiert. Ab KA 1.3.0 ist 31 für einen aus dem PV-System ausgelagerten, eigenständigen zentralen ALISE-Server reserviert; ist ALISE in das PV-System integriert, ist stattdessen die Rolle 3 zu verwenden. In der TMS-Schnittstellenversion KA 1.3.0 ist für Transaktionen aus Aktionsausführungen zwingend der Rollencode 3 zu verwenden ([Q06](../../QUELLEN.md#q06), Fußnote 7, PDF-S. 40).
 
-Normquelle ist die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41). Welchen Wert das Feld `amAuftragsTyp` für diesen Fall trägt, ist nicht belegt (zu prüfen, O2).
+Normquelle ist die KA AktM-SPEC ([Q55](../../QUELLEN.md#q55)). Das Feld `amAuftragsTyp` trägt für diesen Fall den Wert **13** — „Aktionsauftrag Ausgabe“ ([Q55](../../QUELLEN.md#q55), Kap. 6.2, S. 67; siehe [Auftragstyp](auftragstyp.md)).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 

@@ -5,7 +5,7 @@ parent: README.md
 siehe_auch: [lexikon/aktionsmanagement.md]
 quellen: [Q02, Q06, Q25]
 status: belegt
-offene_fragen: [O1]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---

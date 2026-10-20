@@ -3,11 +3,32 @@ titel: Aktionsfreigabe
 englisch: action release
 parent: lexikon/aktionsmanagement.md
 siehe_auch: [lexikon/kontrolle/sperranforderung.md, lexikon/aktionsmanagement/aktion.md, lexikon/aktionsmanagement/aktionsliste.md, lexikon/rollen/alise.md, lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md]
-quellen: [Q02, Q25, Q39, Q40, Q49, Q50]
-status: zu prüfen
-offene_fragen: [O20]
+quellen: [Q02, Q25, Q39, Q40, Q49, Q50, Q55]
+status: belegt
+offene_fragen: []
 stand: 2026-10-20
-codes: []
+codes:
+  - wert: 141
+    codeliste: IONTransaktionsTyp_CODE
+    bedeutung: TXAFREIBER — Aktionsfreigabeauftrag
+    quelle: Q55
+    fundstelle: Kap. 6.2.5 (S. 75)
+    status: belegt
+    verbundspezifisch: false
+  - wert: 142
+    codeliste: IONTransaktionsTyp_CODE
+    bedeutung: TXAFREIMITBER — Aktionsfreigabemitteilung
+    quelle: Q55
+    fundstelle: Kap. 6.2.6 (S. 75)
+    status: belegt
+    verbundspezifisch: false
+  - wert: 9
+    codeliste: AblehnungsTyp_CODE
+    bedeutung: Referenz nicht vorhanden — Ablehnung, wenn der freizugebende Auftrag nicht mehr im Bestand des ALISE ist
+    quelle: Q55
+    fundstelle: Kap. 4.2.2.3, Fußnote 66 (S. 48)
+    status: belegt
+    verbundspezifisch: false
 ---
 
 <!-- GEN:breadcrumb -->
@@ -16,49 +37,49 @@ codes: []
 
 # Aktionsfreigabe
 
-Die Aktionsfreigabe ist ein eigener Schritt im Aktionsmanagement, neben Beauftragung und Ausführung. Das eTicket-Regelwerk führt dafür zwei Anwendungsfälle des Kundenvertragspartner-Systems: „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“ ([Q25](../../QUELLEN.md#q25), Anlage 2, Kap. 5.1.2, Tabelle 38).
+Mit dem Aktionsfreigabeauftrag `TXAFREIBER` erhält der beauftragende Kundenvertragspartner „ein Steuerungsinstrument zur Veranlassung der Entfernung eines von ihm beauftragten Aktionsauftrages vor Ablauf dessen Gültigkeit“ beim ALISES des Produktverantwortlichen, der ihn aus dem Aktionslistenbestand entfernt oder einen Löschauftrag für betroffene Aktionsdifferenzlisten erstellt ([Q55](../../QUELLEN.md#q55), Kap. 4.2.2.3, S. 48).
 
-[Q39](../../QUELLEN.md#q39), Kap. 3.2.5, benennt die zugehörigen **Nachrichten** und ihre Richtung · *verbundspezifisch: eTicket RheinMain*:
+Die Freigabe bezieht sich damit auf den **Auftrag**, nicht auf die Berechtigung. Sie löst beim Produktverantwortlichen denselben Prozess aus wie eine Aktion, die durch Gültigkeitsende zu entfernen ist.
 
-| Nachricht | Richtung | Bedeutung |
-|---|---|---|
-| `TXAFREIBER` | KVP → PV/ALISE | Aktionsfreigabeauftrag des Verkehrsunternehmens als **beauftragender** KVP, asynchron |
-| `TXAFREIMITBER` | PV/ALISE → KVP | Aktionsfreigabemitteilung des ALISE an den beauftragenden KVP, asynchron |
+**Sie ist nur für Entsperrungen zugelassen:** „Er wird nur für die Freigabe einer Entsperrung zugelassen.“ Für Ausgabe und Rücknahme ist sie ausdrücklich ausgeschlossen — wegen der rechtlichen Folgen gegenüber dem Kunden, wegen des Risikos, dass eine freigegebene Ausgabe zwischen Freigabe und Listenaktualisierung doch noch ausgeführt wird, und weil nach der Freigabe einer Ausgabe zusätzlich ein Sperrfreigabeauftrag nötig wäre ([Q55](../../QUELLEN.md#q55), Kap. 4.2.2.3, S. 48 f.).
 
-Die Freigabe ist damit ein **zweiseitiger Vorgang zwischen beauftragendem Kundenvertragspartner und ALISE** und vom Aktionsauftrag getrennt: Die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER` und `TXEAUFBER` stehen in derselben Tabelle daneben.
+**Der Anwendungsfall:** Eine Rücknahme wurde ausgeführt, ohne dass der vorher beauftragte Entsperrauftrag zur gleichen Berechtigung ausgeführt wurde — er trägt eine um eins kleinere [berSynchronNummer](../berechtigungen/bersynchronnummer.md). Da die übersprungene Entsperrung keinen Transaktionsnachweis erzeugt, bliebe sie bis zum Gültigkeitsende im Bestand.
 
-**Was „Freigabe“ meint, zeigt das Benennungsmuster der KA.** Im Sperrmanagement steht dem Sperrauftrag `TXSAUFB` der **Sperrfreigabeauftrag** `TXSFREIB` gegenüber, bei der NmApplikation entsprechend `TXSAUFA` und `TXSFREIA` ([Q39](../../QUELLEN.md#q39), Kap. 3.2.1 f., PDF-S. 50 f.). Eine „Freigabe“ **nimmt dort zurück, was der Auftrag bewirkt hat**; das Glossar definiert den Sperrfreigabeauftrag als Auftrag, „ein Objekt von der jeweiligen Sperrliste zu nehmen“ ([Q02](../../QUELLEN.md#q02), S. 87 f.; [Sperranforderung](../kontrolle/sperranforderung.md)). Ein NRW-Rahmenlastenheft führt Sperraufhebungsanforderung und Sperrfreigabeauftrag als Paar ([Q40](../../QUELLEN.md#q40), PDF-S. 16 und 20) · *verbundspezifisch: NRW*.
+**Bestätigt wird mit `TXB`**, nicht mit der Aktionsfreigabemitteilung. Existiert der freizugebende Auftrag nicht mehr, folgt eine Ablehnung `TXA` mit `AblehnungsTyp_CODE` 9.
 
-**Dazu passt etiCORE.** `cancelOrder` — „Cancel an order“, einziges Feld `orderId` — trägt den Altbezeichner `TXAFREIBER` ([Q50](../../QUELLEN.md#q50)); im Modell wird der Auftrag „im Auftragsbestand als storniert markiert und aus der nächsten Aktionsliste entfernt“ ([Q49](../../QUELLEN.md#q49)). Auch `TXSFREIB` heißt dort `removeEntitlementFromHotlist` ([Q50](../../QUELLEN.md#q50), `hotlist-messaging_xsd`).
-
-Danach ist die Aktionsfreigabe die **Rücknahme eines noch nicht ausgeführten Auftrags** und nicht dessen Scharfstellen (abgeleitet). Eine ausdrückliche Definition fehlt in allen vorliegenden Quellen; das Glossar [Q02](../../QUELLEN.md#q02) kennt den Begriff Aktionsfreigabe nicht (zu prüfen, O20). Normquelle bleibt die nicht öffentliche KA AktM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 41).
+**`TXAFREIMITBER` gehört zum Aktionsclearing.** Damit meldet der Produktverantwortliche, dass er einen Auftrag entfernt hat, dessen Ausführung über einen Kontrollnachweis `TXEBER` oder Sperrnachweis `TXSNAWB` statt über einen Transaktionsnachweis belegt war ([Q55](../../QUELLEN.md#q55), Kap. 4.2.4, S. 49; Kap. 6.4.5.1, S. 96). Die aus [Q39](../../QUELLEN.md#q39) gewonnene Lesart, sie sei die Antwort auf `TXAFREIBER`, gilt für den Standard **nicht**.
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
-Pias Abo-Antrag ist erfasst, der Auftrag ist beim Bären-Verkehrsbund eingegangen — und dann stellt Bodo Bärlauch im Kundencenter fest, dass der Ausbildungsnachweis nicht gültig ist.
+Pia hat ihre BärenKarte verloren gemeldet, das Abo wurde gesperrt. Zwei Tage später findet sie die Karte in der Jackentasche. Bodo Bärlauch im Kundencenter beauftragt die Entsperrung — der Auftrag geht an den Aktionslistenservice und wartet dort, bis Pia das nächste Mal an ein Terminal kommt.
 
-Der Auftrag muss weg. Aber er ist schon unterwegs: Er steht im Auftragsbestand des Aktionslistenservices und würde beim nächsten Listenlauf an die Terminals verteilt. Pia hielte ihre BärenKarte an das Lesegerät T-4712, und die Berechtigung wäre auf dem Chip.
+Sie kommt nicht. Stattdessen entscheidet sie sich für ein anderes Produkt, und die Bärstädter Verkehrsbetriebe nehmen das alte Abo zurück. Diese Rücknahme wird am Automaten ausgeführt — und überspringt dabei die noch offene Entsperrung.
 
-**Genau dafür ist die Freigabe da.** Die Bärstädter Verkehrsbetriebe schicken eine Nachricht an den Aktionslistenservice: „Der Auftrag zur Berechtigung 400815 ist freizugeben.“ Der Auftrag wird im Bestand als storniert vermerkt und kommt in die nächste Aktionsliste nicht mehr hinein. Kurz darauf trifft die Gegenbestätigung ein — die Aktionsfreigabemitteilung.
+Jetzt liegt im Auftragsbestand eine Entsperrung, die niemand mehr ausführen wird. Sie wird auch nicht von selbst verschwinden: Aufträge werden aus dem Bestand entfernt, wenn ein Ausführungsnachweis eintrifft oder wenn ihre Gültigkeit abläuft. Beides passiert hier nicht zeitnah. Bis dahin schleppt jede Aktionsliste einen toten Eintrag mit.
 
-**Warum „Freigabe“ und nicht „Stornierung“?** Weil die KA das Wort anders benutzt, als man zunächst denkt. Freigeben heißt hier: etwas aus einer Bindung lösen. Bei einer Sperre ist das offensichtlich — ein Sperrfreigabeauftrag hebt die Sperre auf und gibt die Karte wieder frei. Bei einem Auftrag ist es dasselbe Muster: Die Berechtigung wird von dem Auftrag freigegeben, der auf ihr liegt.
+**Dafür ist die Aktionsfreigabe da.** Die BVB merken die Lücke, wenn der Nachweis der Rücknahme eintrifft: Sein Zähler ist um eins höher als der der Entsperrung, die nie bestätigt wurde. Also schicken sie eine Nachricht an den Aktionslistenservice: Dieser Auftrag ist freizugeben. Der Service nimmt ihn aus dem Bestand, und der Verkehrsbund bestätigt das.
+
+**Warum „Freigabe“ und nicht „Stornierung“?** Weil die KA das Wort anders benutzt, als man zunächst denkt. Freigeben heißt hier: etwas aus einer Bindung lösen. Bei einer Sperre ist das offensichtlich — ein Sperrfreigabeauftrag hebt die Sperre auf. Bei einem Auftrag ist es dasselbe Muster: Die Berechtigung wird von dem Auftrag freigegeben, der auf ihr liegt.
 
 Wer das Wort im Alltagssinn liest, kommt auf die umgekehrte Bedeutung — „der Auftrag wird zur Ausführung freigegeben“ — und damit auf das Gegenteil. Das ist eine der Stellen, an denen die KA-Begriffe eine Falle stellen.
 
-**Warum es eine eigene Rückmeldung gibt.** Die BVB schickt die Freigabe asynchron, bekommt also keine unmittelbare Antwort. Ohne Mitteilung wüsste sie nicht, ob die Freigabe rechtzeitig angekommen ist — und das muss sie wissen. Kommt sie zu spät, ist die Berechtigung schon auf Pias Karte, und dann hilft nur noch eine Rücknahme über die Aktionsliste, also der umgekehrte Weg mit einem neuen Auftrag.
+**Und jetzt der Teil, der überrascht.** Man würde erwarten, dass sich jeder Auftrag so zurückziehen lässt. Das ist nicht so: Die Freigabe gilt **nur für Entsperrungen**. Eine beauftragte Ausgabe lässt sich nicht freigeben, eine Rücknahme auch nicht.
 
-**Was daran noch offen ist.** Diese Lesart stützt sich auf das Benennungsmuster und auf die etiCORE-Nachfolgenachricht, nicht auf eine Definition. Keine der vorliegenden Quellen schreibt aus, was eine Aktionsfreigabe bewirkt; das Glossar kennt den Begriff nicht einmal. Für ein Prüfwerkzeug heißt das: Die Nachrichtennamen und ihre Richtung sind belegt, die Wirkung ist erschlossen.
+Die Spezifikation begründet das, und die Begründung ist einleuchtend. Eine Ausgabe hängt an einer Zahlung; wer sie zurückzieht, muss das dem Kunden gegenüber vertreten. Vor allem aber: Zwischen der Freigabe und dem Zeitpunkt, an dem die Terminals ihre neue Liste haben, liegt Zeit. In dieser Zeit könnte die Ausgabe doch noch ausgeführt werden — und dann bräuchte man zusätzlich eine Rücknahme. Man hätte also nichts gewonnen, sondern einen Zustand, über den niemand mehr sicher Auskunft geben kann.
 
-Und wie immer bei diesen Nachrichten gilt der Vorbehalt des Verbunds: Dass die Freigabe als eigener Schritt existiert, ist aus dem Pflichtenheft **eines** Verbunds belegt.
+Bei einer Entsperrung ist der Schaden im Zweifel klein: Wird sie doch noch ausgeführt, ist eine Berechtigung entsperrt, die gleich danach ohnehin zurückgenommen wird.
+
+Für ein Prüfwerkzeug ist das eine klare Regel: Ein Aktionsfreigabeauftrag, der sich auf eine Ausgabe oder eine Rücknahme bezieht, ist nach dem Standard unzulässig — und einer, dessen Auftrag gar nicht mehr im Bestand liegt, bekommt eine Ablehnung.
 
 ## Quellen
 
-- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6 „Konzept Externer Mandant“, Kap. 3.2.5 (PDF-S. 52 f.): `TXAFREIBER` als Aktionsfreigabeauftrag des beauftragenden KVP und `TXAFREIMITBER` als Aktionsfreigabemitteilung des ALISE, beide asynchron; daneben die Auftragsnachrichten `TXAAUFBER`, `TXRAUFBER`, `TXEAUFBER` · *verbundspezifisch: eTicket RheinMain*; Kap. 3.2.1 (PDF-S. 50) und Kap. 3.2.2 (PDF-S. 51): `TXSAUFB` als Sperrauftrag und `TXSFREIB` als Sperrfreigabeauftrag für eine Berechtigung, `TXSAUFA` und `TXSFREIA` entsprechend für eine NmApplikation. Die Kapitelüberschrift lautet „Aktionsmanagement RMV-EFS“ — das Dokument ist eine RMV-Quelle, keine aus NRW
-- [Q40](../../QUELLEN.md#q40) – KCD NRW, Rahmenlastenheft DL-System v2.4, PDF-S. 16 (Elementarprozesse `EP_Sperrfreigabeauftrag_Applikation`, `_SAM`, `_Key`, `_Berechtigung` neben `EP_Sperraufhebungsanforderung_Applikation` und `_SAM`), PDF-S. 17 ff. (Anwendungsfälle „… Sperrfreigabemitteilung entgegennehmen“), PDF-S. 20 (Sperraufhebungsanforderungen und „die zugehörigen Sperrmitteilungen und Sperrfreigabemitteilungen“ in einem Satz) · *verbundspezifisch: NRW*
-- [Q49](../../QUELLEN.md#q49) – etiCORE-Spezifikationsmodell, *Ordered action management › Ordering › Cancel order*: Markierung als storniert im Auftragsbestand und Entfernen aus der nächsten Aktionsliste
-- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“; Kap. 3 (KA AktM-SPEC, Inventarnummer 41)
-- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management-messaging_xsd` (Element `cancelOrder`) und `ccp-oa-ordering-messaging_xsd` (Element `notifyOrderSeemsToBeObsolete`), jeweils mit `meta:old` · *Release-Kandidat*
-- [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Aktionsfreigabe“ (geprüft am Inhaltsverzeichnis, S. 2–13); S. 20 f. zum Statusmodell der Aktion; S. 87 f. *Sperrfreigabeauftrag / Hotlisting Removal Order*
+- [Q55](../../QUELLEN.md#q55) – KA AktM-SPEC 1.12.0, Kap. 4.2.2.3 (S. 48 f.): Definition des Aktionsfreigabeauftrags `TXAFREIBER` als Steuerungsinstrument des BKVP zur Entfernung eines eigenen Aktionsauftrags vor Ablauf der Gültigkeit; Bestätigung mit `TXB`; Ablehnung `TXA` mit `AblehnungsTyp_CODE` 9; Beschränkung „Er wird nur für die Freigabe einer Entsperrung zugelassen“ samt drei Begründungen; Anwendungsfall der übersprungenen Entsperrung. Kap. 4.2.4 (S. 49) und Kap. 6.4.5.1 (S. 96): `TXAFREIMITBER` als Nachricht des Aktionsclearings. Kap. 6.2.5 und 6.2.6 (S. 75): neue `IONTransaktionsTyp_CODE` 141 und 142. Exzerpt: [exzerpte/Q55.md](../../exzerpte/Q55.md) · *nicht öffentlich*
+- [Q39](../../QUELLEN.md#q39) – RMV vHGS-Vertrag, Anlage 6 „Konzept Externer Mandant“, Kap. 3.2.5 (PDF-S. 52 f.): `TXAFREIBER` und `TXAFREIMITBER` mit Richtung, beide asynchron · *verbundspezifisch: eTicket RheinMain*; Kap. 3.2.1 f. (PDF-S. 50 f.): `TXSAUFB` und `TXSFREIB`, `TXSAUFA` und `TXSFREIA`
+- [Q40](../../QUELLEN.md#q40) – KCD NRW, Rahmenlastenheft DL-System v2.4, PDF-S. 16 und PDF-S. 20: Sperrfreigabeauftrag und Sperraufhebungsanforderung als Paar · *verbundspezifisch: NRW*
+- [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 87 f.: Sperrfreigabeauftrag als Auftrag, „ein Objekt von der jeweiligen Sperrliste zu nehmen“; **kein** Eintrag „Aktionsfreigabe“
+- [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Anlage 2, Kap. 5.1.2, Tabelle 38 (Anlagenseite 95, PDF-S. 239): Anwendungsfälle „Aktionsfreigabe senden“ und „Aktionsfreigabemitteilung entgegennehmen“
+- [Q49](../../QUELLEN.md#q49) – etiCORE-Spezifikationsmodell, *Ordered action management › Ordering › Cancel order*: Markierung als storniert und Entfernen aus der nächsten Aktionsliste
+- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management-messaging_xsd`, Element `cancelOrder` mit `meta:old` = `TXAFREIBER` · *Release-Kandidat*
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

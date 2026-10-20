@@ -3,9 +3,9 @@ titel: Nachrichten in KA 1.x und etiCORE
 englisch: messages in KA 1.x and etiCORE
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/rollen/rollennamen-in-eticore.md, lexikon/transaktionen/txaml.md, lexikon/aktionsmanagement/aktionsfreigabe.md, lexikon/grundlagen/eticore.md]
-quellen: [Q02, Q49, Q50]
+quellen: [Q02, Q49, Q50, Q55]
 status: zu prüfen
-offene_fragen: [O14, O20]
+offene_fragen: []
 stand: 2026-10-20
 codes: []
 ---
@@ -27,9 +27,9 @@ Für das Aktionsmanagement führt der Namensraum `http://vdv/ka/alise/2` zu den 
 | `TXRAUFBER` | `orderEntitlementTermination` |
 | `TXASAML` / `TXAML` | `getActionList` / `getActionListResponse` |
 | `TXASAMDL` / `TXAMDL` | `getIncrementalActionList` / `…Response` |
-| `TXAFREIBER` | `cancelOrder` (zu prüfen, O20) |
+| `TXAFREIBER` | `cancelOrder` |
 
-Die Listeneinträge `TXALISBER_Type` und Verwandte heißen in etiCORE `EntitlementIssuanceActionListEntry` und so fort; `txalisber` ist demnach vermutlich ein Eintrag der `TXAML` (abgeleitet, O14).
+Die Listeneinträge `TXALISBER_Type` und Verwandte heißen in etiCORE `EntitlementIssuanceActionListEntry` und so fort. Dass `txalisber` ein Eintrag der `TXAML` ist, ist für die KA 1.x belegt ([Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67).
 
 Ohne Entsprechung in der KA 1.x sind `orderEntitlementBlocking` („Nur für etiCORE“, [Q02](../../QUELLEN.md#q02), S. 19), `orderGroup` und `verifyActionListUpdatedViaIncrements` (seit 3.0.0, [Q50](../../QUELLEN.md#q50)).
 

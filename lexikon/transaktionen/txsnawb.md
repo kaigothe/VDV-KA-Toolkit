@@ -4,9 +4,9 @@ abkuerzung: TXSNAWB
 englisch: unblock attestation transaction
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/aktionsmanagement/entsperrnachweis.md, lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md]
-quellen: [Q02, Q06, Q25]
+quellen: [Q02, Q06, Q25, Q52, Q55]
 status: belegt
-offene_fragen: [O1]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -19,7 +19,7 @@ codes: []
 
 `TXSNAWB` ist der Nachweis über die **Entsperrung** einer Berechtigung. [Q06](../../QUELLEN.md#q06), Kap. 2.1.5, führt die Nachricht ausdrücklich als „`TXSNAWB` Entsperrung“ auf. Die Struktur ist der nicht öffentlichen KA SST-SPEC zu entnehmen; zusätzlich ist die KA AktM-SPEC zu beachten ([Q06](../../QUELLEN.md#q06), Kap. 4.3.2; [Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummern 4 und 41).
 
-Im [`logTransaktionsTyp`](logtransaktionstyp.md) ist die Zuordnung ausdrücklich belegt: „`TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste = **38**“ ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Anders als beim [`TXRBER`](txrber.md) ist der Nachrichtenname hier direkt genannt. Ob die Zuordnung KA-weit gilt, ist nicht belegt (zu prüfen, O1) · *verbundspezifisch*.
+Im [`logTransaktionsTyp`](logtransaktionstyp.md) ist die Zuordnung ausdrücklich belegt: „`TXSNAWB` – Entsperrtransaktion EFS über Aktionsliste = **38**“ ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Anders als beim [`TXRBER`](txrber.md) ist der Nachrichtenname hier direkt genannt. Der **Codewert 38** gilt KA-weit ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87); der Standard ordnet ihn dem Listeneintrag `TXELISBER` zu ([Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Die Zuordnung zum Nachweis `TXSNAWB` bleibt eine Festlegung des eTicket RheinMain · *verbundspezifisch*.
 
 `TXSNAWB` ist damit die technische Entsprechung des fachlichen [Entsperrnachweises](../aktionsmanagement/entsperrnachweis.md). Dessen Empfängerregel ist im Glossar festgelegt: Bei einer Nutzermedium-Applikation geht der Nachweis an das Hintergrundsystem des Kundenvertragspartners, bei einer Berechtigung zusätzlich an den Produktverantwortlichen ([Q02](../../QUELLEN.md#q02), S. 39).
 

@@ -3,18 +3,18 @@ titel: Entsperrung über Aktionsliste
 englisch: unblocking via action list
 parent: lexikon/aktionsmanagement.md
 siehe_auch: [lexikon/aktionsmanagement/entsperrnachweis.md, lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md]
-quellen: [Q02, Q06, Q25]
+quellen: [Q02, Q06, Q25, Q52, Q55]
 status: belegt
-offene_fragen: [O1]
+offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 38
     codeliste: NmTransaktionsTyp_CODE
-    bedeutung: TXSNAWB – Entsperrtransaktion EFS über Aktionsliste
-    quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
+    bedeutung: Entsperrtransaktion BER über Aktionsliste
+    quelle: Q52
+    fundstelle: Tab. 6-65 (S. 87); ergänzt durch Q55 Kap. 6.2 (S. 67)
     status: belegt
-    verbundspezifisch: true
+    verbundspezifisch: false
 ---
 
 <!-- GEN:breadcrumb -->
@@ -27,7 +27,7 @@ Das Entsperren einer Berechtigung ist einer der vier Aktionstypen, die über ein
 
 Fachlich ist eine Entsperrung ein **Statuswechsel**: Nutzermedium-Applikationen und Berechtigungen können entsperrt werden und sind danach wieder nutzbar; das Entsperren erfolgt aufgrund einer Statusänderung bei der Applikation oder Berechtigung auf dem Nutzermedium. Ein Entsperren ist **nur an autorisierten Terminals des Kundenvertragspartners möglich** ([Q02](../../QUELLEN.md#q02), S. 38 f.).
 
-Im Feld `logTransaktionsTyp` gilt der Wert **38** für die Entsperrtransaktion EFS über Aktionsliste, dort dem Nachweis `TXSNAWB` zugeordnet ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Diese Zuordnung ist eine Festlegung im eTicket RheinMain; ob sie KA-weit gilt, ist nicht belegt (zu prüfen, O1) · *verbundspezifisch*.
+Im Feld `logTransaktionsTyp` gilt der Wert **38** für die Entsperrtransaktion EFS über Aktionsliste, dort dem Nachweis `TXSNAWB` zugeordnet ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Der **Wert 38** stammt aus der Standardcodeliste und gilt KA-weit; die KA AktM-SPEC ergänzt ihn für den Listeneintrag `TXELISBER` ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87; [Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Die **Zuordnung zum Nachweis `TXSNAWB`** stammt aus [Q06](../../QUELLEN.md#q06) · *verbundspezifisch: eTicket RheinMain*.
 
 Das eTicket-Regelwerk benennt den vollständigen Ablauf über drei Anwendungsfälle des Kundenvertragspartner-Systems: „Aktionsauftrag Berechtigung entsperren“, „Entsperrnachweis bearbeiten nach Aktionsauftrag“ und „Entsperrnachweis an PV melden“ ([Q25](../../QUELLEN.md#q25), Anlage 2, Kap. 5.1.2, Tabelle 38).
 

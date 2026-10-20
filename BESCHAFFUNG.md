@@ -211,10 +211,10 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
-| 29 | 41 | **KA AktM-SPEC** | [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md), [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
+| 37 | 41 | **KA AktM-SPEC** | [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md), [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md), [Entsperrung über Aktionsliste](lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md), [Terminalaktionsliste](lexikon/aktionsmanagement/terminalaktionsliste.md), [TXABER](lexikon/transaktionen/txaber.md), [txalisber](lexikon/transaktionen/txalisber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
 | 28 | 4 | **KA SST-SPEC** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kontrollnachweise](lexikon/kontrolle/kontrollnachweise.md), [Rollen](lexikon/rollen.md), [Sperrliste](lexikon/kontrolle/sperrliste.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [TXABER](lexikon/transaktionen/txaber.md), [TXAML](lexikon/transaktionen/txaml.md), [TXEBER](lexikon/transaktionen/txeber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
 | 15 | 2 | **Anlage TLV EFS** | [Datenformate](lexikon/datenformate.md), [etiCORE](lexikon/grundlagen/eticore.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md), [Tag 0xDB Fahrgast](lexikon/datenformate/tag-0xdb-fahrgast.md), [TLV-Kodierung](lexikon/datenformate/tlv.md) |
-| 12 | 1 | **KA BOM-SPEC** | [Basisobjektmodell](lexikon/datenformate/bom.md), [berStatus](lexikon/berechtigungen/berstatus.md), [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Sperrgrund](lexikon/kontrolle/sperrgrund.md) |
+| 11 | 1 | **KA BOM-SPEC** | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Basisobjektmodell](lexikon/datenformate/bom.md), [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Kürzungsregel für Namen](lexikon/datenformate/kuerzungsregel-fuer-namen.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rollencodes](lexikon/rollen/rollencodes.md), [Sperrgrund](lexikon/kontrolle/sperrgrund.md) |
 | 10 | 42 | **KA STB-Spec** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Statische Berechtigung](lexikon/berechtigungen/statische-berechtigung.md), [VDV-Barcode](lexikon/datenformate/vdv-barcode.md), [VDV-Barcode mobile+](lexikon/sicherheit/vdv-barcode-mobile.md) |
 | 10 | 5 | **KA XML-Schemata und WSDL** | [Datenformate](lexikon/datenformate.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Transaktionen](lexikon/transaktionen.md), [TX_BASE](lexikon/transaktionen/tx-base.md), [XSD und WSDL](lexikon/datenformate/xsd.md) |
 | 8 | 7 | **KA NM-SPEC** | [Applikation](lexikon/medien/applikation.md), [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md), [Nutzermedium](lexikon/medien/nutzermedium.md), [Pflichtelemente einer Transaktion](lexikon/transaktionen/pflichtelemente-einer-transaktion.md), [Secure Application Module](lexikon/sicherheit/sam.md) |
@@ -232,13 +232,11 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 
 | Artikel | offene Fragen |
 |---|---|
-| [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) | O20 |
 | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) | O13 |
-| [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) | O2, O9 |
-| [Gültigkeitsbereich (ASN.1)](lexikon/berechtigungen/gueltigkeitsbereich-asn-1.md) | O21 |
-| [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) | O14, O20 |
+| [Gültigkeitsbereich (ASN.1)](lexikon/berechtigungen/gueltigkeitsbereich-asn-1.md) | — |
+| [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) | — |
 | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) | O19 |
-| [txalisber](lexikon/transaktionen/txalisber.md) | O4, O14 |
+| [txalisber](lexikon/transaktionen/txalisber.md) | O4 |
 | [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) | O22 |
 | [Zertifizierung](lexikon/grundlagen/zertifizierung.md) | O23 |
 
@@ -246,22 +244,14 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 
 | Frage | betrifft |
 |---|---|
-| **O1** | [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md), [Entsperrung über Aktionsliste](lexikon/aktionsmanagement/entsperrung-ueber-aktionsliste.md), [logTransaktionsTyp](lexikon/transaktionen/logtransaktionstyp.md), [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md), [Transaktionen](lexikon/transaktionen.md), [TXABER](lexikon/transaktionen/txaber.md), [TXRBER](lexikon/transaktionen/txrber.md), [TXSNAWB](lexikon/transaktionen/txsnawb.md) |
-| **O2** | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md), [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md) |
-| **O3** | [berStatus](lexikon/berechtigungen/berstatus.md), [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md) |
 | **O4** | [txalisber](lexikon/transaktionen/txalisber.md), [Versionen](lexikon/grundlagen/versionen.md), [XML-Namensraum](lexikon/datenformate/xml-namensraum.md) |
-| **O5** | [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) |
 | **O6** | [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md), [TLV-Kodierung](lexikon/datenformate/tlv.md) |
-| **O9** | [Aktion](lexikon/aktionsmanagement/aktion.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) |
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
-| **O14** | [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md), [txalisber](lexikon/transaktionen/txalisber.md) |
 | **O15** | [Pflichtelemente einer Transaktion](lexikon/transaktionen/pflichtelemente-einer-transaktion.md) |
 | **O16** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | **O17** | [UIC-Barcode](lexikon/datenformate/uic-barcode.md) |
 | **O18** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) |
 | **O19** | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) |
-| **O20** | [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) |
-| **O21** | [Gültigkeitsbereich (ASN.1)](lexikon/berechtigungen/gueltigkeitsbereich-asn-1.md) |
 | **O22** | [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) |
 | **O23** | [Zertifizierung](lexikon/grundlagen/zertifizierung.md) |
 

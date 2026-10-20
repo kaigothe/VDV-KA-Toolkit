@@ -13,7 +13,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Aktion](lexikon/aktionsmanagement/aktion.md)
 - [Aktionsclearing](lexikon/aktionsmanagement/aktionsclearing.md)
 - [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md)
-- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) *(zu prüfen)*
+- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md)
 - [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md) — TXAML
 - [Aktionslistenservice](lexikon/rollen/alise.md) — ALISE
 - [Aktionsmanagement](lexikon/aktionsmanagement.md) — AktM
@@ -25,7 +25,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Applikationsinstanz-ID](lexikon/medien/applikationsinstanz-id.md)
 - [ASM](lexikon/sicherheit/asm.md) — ASM
 - [ASN.1-Typen in etiCORE](lexikon/datenformate/asn-1-typen-in-eticore.md) *(abgeleitet)*
-- [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) *(zu prüfen)*
+- [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md)
 - [Ausbauvarianten](lexikon/grundlagen/ausbauvarianten.md)
 - [Ausgabe EFS über Aktionsliste](lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)
 - [Authentifizierung](lexikon/sicherheit/authentifizierung.md)
@@ -37,7 +37,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Berechtigung](lexikon/berechtigungen/berechtigung.md)
 - [Berechtigungen](lexikon/berechtigungen.md)
 - [berStatus](lexikon/berechtigungen/berstatus.md) *(abgeleitet)*
-- [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md) *(abgeleitet)*
+- [berSynchronNummer](lexikon/berechtigungen/bersynchronnummer.md)
 - [Bescheinigungen zu Applikationen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-applikationen-asn-1.md) *(abgeleitet)*
 - [Bescheinigungen zu Berechtigungen (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-berechtigungen-asn-1.md) *(abgeleitet)*
 - [Bescheinigungen zu Zahlungsmitteln (ASN.1)](lexikon/transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md)

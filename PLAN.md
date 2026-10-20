@@ -185,22 +185,14 @@ Die meisten dieser Fragen lassen sich nur mit den nicht öffentlichen KA-Spezifi
 
 | Nr. | Frage | Betrifft | Klärung über |
 |---|---|---|---|
-| **O1** | Gelten die Transaktionstypen 37/38/39 KA-weit oder nur im eTicket RheinMain? | `transaktionen/logtransaktionstyp.md` und die drei Aktionstyp-Artikel | KA SST-SPEC, KA AktM-SPEC |
-| **O2** | Was bedeutet `amAuftragsTyp` = 13? Die Indizienkette (TX 37, Änderungsreferenz 0, SynchronNummer 1) spricht für „Ausgabe einer Berechtigung“, belegt ist das nicht. *Teilweise geklärt:* In etiCORE entfällt `amAuftragsTyp` in den Listeneinträgen für Ausgabe, Entsperrung und Rücknahme mit der Begründung „clear from context“ ([Q50](QUELLEN.md#q50), `po-oa-management_xsd`): Der Typ des Eintrags trägt die Information. Das Feld unterscheidet also die Auftragsarten (abgeleitet). **Offen bleibt der Zahlenwert** (13). | `aktionsmanagement/auftragstyp.md` | KA AktM-SPEC |
 | **O4** | *Teilweise geklärt:* Die letzte Pfadstelle eines KA-Namensraums ist laut [Q25](QUELLEN.md#q25), Kap. 4.3.3, eine **Version**, und Releases innerhalb einer Version teilen den Namensraum (Kap. 4.3.1.4). Die `2` in `http://vdv/ka/alise/2` ist damit die Namensraum-Version. **Offen bleibt**, welches Release bzw. welche Schemafassung konkret zugrunde liegt. | `transaktionen/txalisber.md`, `datenformate/namespace.md`, Werkzeug | ALISE-XSD |
-| **O3** | *Werte geklärt (Abschnitt 5a), Reichweite offen:* Gelten die Werte der Codeliste `WertobjektStatus_CODE` KA-weit? Dafür spricht, dass [Q05](QUELLEN.md#q05) sie als Auswahl aus einer Standardcodeliste führt — belegt ist es nicht. *Neu:* In etiCORE nennt `EntitlementStatusEnum` dieselben Zahlen 5 (terminated), 7 (ok) und 19 (blocked) und verweist auf EN 1545-1:2015 ([Q51](QUELLEN.md#q51), Modul `user-medium`). Die 8 („neu“) fehlt dort. Die Zahlen stammen danach aus einer Normliste (abgeleitet); ob die KA 1.x dieselbe Liste führt, bleibt offen. | `berechtigungen/berstatus.md`, `aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md` | KA BOM-SPEC (Inv. 1) |
-| **O5** | Erhöht ein reiner Statuswechsel die `berSynchronNummer`? *Teilweise geklärt für etiCORE:* Die Nachfolgerin heißt `entitlementTransitionCounter`; sie ist eine „increasing sequence number which indicates if an entitlement's state has been changed. Each state transition causes an increasing of the counter“ ([Q51](QUELLEN.md#q51), Modul `user-medium`; Zuordnung über [Q50](QUELLEN.md#q50), `po-oa-management_xsd`). Danach erhöht jeder Zustandswechsel den Zähler (abgeleitet für die KA 1.x). | `berechtigungen/bersynchronnummer.md` | KA BOM-SPEC, KA AktM-SPEC |
-| **O6** | *Teilweise geklärt:* Tag 0x85 ist belegt als „Statischer produktspezifischer Teil“ ([Q05](QUELLEN.md#q05), Kap. 2.1), die TLV-Lesart war also richtig; die Länge ist produktabhängig (0x44 im RMV-EFS). **Offen bleibt** die Abweichung zwischen angegebener Länge 0x57 = 87 Byte und 90 folgenden Byte. | `berechtigungen/produktspezifischer-teil.md`, `datenformate/tlv.md` | Anlage TLV EFS, vollständiger Originaldatensatz |
-| **O9** | Verhältnis der Begriffe „Aktion“, „Aktionstyp“ und „Auftragstyp“: Das Glossar nennt Aktionstypen, die Nachricht ein Feld `amAuftragsTyp`. Synonym oder zwei Ebenen? | `aktionsmanagement/*` | KA AktM-SPEC |
+| **O6** | *Weitgehend geklärt:* Tag 0x85 ist als „Statischer Produktspezifischer Teil“ KA-weit belegt ([Q70](QUELLEN.md#q70), Kap. 1, S. 6), ebenso die vollständige Tagliste des TLV EFS. Die Quelle warnt zudem, das Datenobjekt sei „als „primitives Tag“, nicht als Tag für konstruierte Objekte gemäß ASN.1 kodiert, obwohl darunter weitere TLV-Elemente liegen“ — das ist ein Kandidat für die Erklärung der Längenabweichung. **Offen bleibt** die Abweichung zwischen angegebener Länge 0x57 = 87 Byte und 90 folgenden Byte; dafür fehlt der vollständige Originaldatensatz. | `berechtigungen/produktspezifischer-teil.md`, `datenformate/tlv.md` | vollständiger Originaldatensatz |
 | **O13** | Welchen Wert trägt `amAenderungsreferenz_ID` bei einer **tatsächlichen** Änderung, und nimmt es dann Berechtigungsnummer samt Organisation des Vorgängers auf? Es liegt nur ein Beispiel mit dem Wert 0 vor. *Teilweise geklärt, gegen die bisherige Deutung:* In etiCORE heißt das Feld `groupId` (Organisations-ID des bestellenden CCP und Gruppennummer): „Logically groups action list entries to be executed in a single transaction“, optional ([Q50](QUELLEN.md#q50), `po-oa-management_xsd`, Typ `ActionListEntryBaseInformation`). Die Änderungsreferenz wäre danach eine **Gruppe**, nicht der Verweis auf eine Vorgänger-Berechtigung (abgeleitet). Der Wert 0/0 hieße „keine Gruppe“. Der Verweis auf eine ersetzte Berechtigung ist in etiCORE ein eigenes, neues Feld (`replacedEntitlementId`, seit 3.0.0, ohne Altnamen); das stützt die Deutung als Gruppe. | `aktionsmanagement/aenderungsreferenz.md` | KA AktM-SPEC, weitere Beispielnachrichten |
-| **O14** | Wie verhält sich `txalisber` zu `TXAML`? Ein Element innerhalb der `TXAML`, eine eigene Nachricht der ALISE-Schnittstelle oder eine verbund- bzw. herstellerspezifische Variante? [Q06](QUELLEN.md#q06) kennt `txalisber` nicht. *Teilweise geklärt:* In den etiCORE-Schnittstellen tragen die Typen der Listeneinträge `EntitlementIssuanceActionListEntry`, `…UnblockingActionListEntry` und `…TerminationActionListEntry` die Altbezeichner `TXALISBER_Type`, `TXELISBER_Type` und `TXRLISBER_Type` im Namensraum `http://vdv/ka/alise/2` ([Q50](QUELLEN.md#q50), [exzerpte/Q50.md](exzerpte/Q50.md)). Das spricht dafür, dass `txalisber` ein Eintrag in der `TXAML` ist (abgeleitet). **Offen bleibt**, ob das in der KA 1.x ebenso gilt. | `transaktionen/txalisber.md` | ALISE-XSD der KA 1.x |
 | **O15** | Welcher Füllwert gilt für nicht benutzte Datenelemente einer Transaktion? [Q48](QUELLEN.md#q48), S. 7, nennt `0x00`; die Nullwert-Konvention der Datenformate sieht für andere Typen andere Füllwerte vor. Gilt `0x00` nur für die dort genannten Felder? | `transaktionen/pflichtelemente-einer-transaktion.md`, `datenformate/nullwerte.md` | KA NM-SPEC, KA BOM-SPEC |
-| **O16** | Setzt der Download der KA-Spezifikationen im ASM-Tool einen Teilnahmevertrag voraus? [Q46](QUELLEN.md#q46), Kap. 6.1, nennt die Registrierung kostenlos und das ASM-Tool als Downloadort, ohne das Verhältnis zum Vertrag zu klären. | `grundlagen/ka-spezifikationen.md`, [BESCHAFFUNG.md](BESCHAFFUNG.md) | VDV eTicket Service |
+| **O16** | *Beschaffung erledigt, Sachfrage offen:* Die Spezifikationen liegen seit dem 20.10.2026 vor ([QUELLEN.md](QUELLEN.md), Abschnitt 2). Ungeklärt bleibt, **ob der Download im ASM-Tool einen Teilnahmevertrag voraussetzt**. [Q46](QUELLEN.md#q46), Kap. 6.1, nennt die Registrierung kostenlos und das ASM-Tool als Downloadort, ohne das Verhältnis zum Vertrag zu klären. Für die Frage, was andere Teilnehmer legal beziehen können, ist das weiterhin erheblich. | `grundlagen/ka-spezifikationen.md`, `sicherheit/asm.md` | VDV eTicket Service |
 | **O17** | Welcher Datensatz tritt im UIC 918-9\* an die Stelle des Datensatzes 0080BL? [Q46](QUELLEN.md#q46), Kap. 5, nennt den Wechsel, der Name ist in der Textextraktion verloren und am PDF zu prüfen. | `datenformate/uic-barcode.md` | [Q46](QUELLEN.md#q46) im Original, UIC 918-9 |
 | **O18** | Welche konkreten Schlüsselnummern vergibt eine Organisation innerhalb der Key-Identifier-Bereiche 30, 40, 50, 60, 70 und 91? [Q45](QUELLEN.md#q45), S. 19, nennt nur die Bereiche und ihren Einsatzzweck. | `sicherheit/key-identifier.md` | KA SEC-SPEC, KA KM-Dokumentation |
 | **O19** | Was bedeutet das Kürzel „FU“ im Kundenstatus „Teilnehmer Level-3“? [Q45](QUELLEN.md#q45), S. 10 und S. 22, nennt einen „FU-eTicket-Vertrag“ als Gegenstück zum eTicket-Ready-Vertrag; die Auflösung ist in der Textextraktion nicht enthalten. | `grundlagen/teilnahmevertrag.md` | [Q45](QUELLEN.md#q45) im Original, VDV eTicket Service |
-| **O20** | *Richtung geklärt, Definition fehlt:* Was bewirkt der Aktionsfreigabeauftrag `TXAFREIBER`? Fünf unabhängige Belege sprechen für die **Rücknahme eines noch nicht ausgeführten Auftrags**: (1) das Benennungsmuster der KA — dem Sperrauftrag `TXSAUFB` steht der Sperrfreigabeauftrag `TXSFREIB` gegenüber ([Q39](QUELLEN.md#q39), Kap. 3.2.1 f., PDF-S. 50 f.); (2) ein NRW-Rahmenlastenheft paart „Sperraufhebungsanforderungen“ mit „die zugehörigen … Sperrfreigabemitteilungen“ ([Q40](QUELLEN.md#q40), PDF-S. 20, PDF-S. 16); (3) in etiCORE trägt `cancelOrder` („Cancel an order“, einziges Feld `orderId`) den Altbezeichner `TXAFREIBER`, und das Modell markiert den Auftrag als storniert und entfernt ihn aus der nächsten Aktionsliste ([Q50](QUELLEN.md#q50); [Q49](QUELLEN.md#q49), *Ordered action management › Ordering › Cancel order*); (5) das Glossar definiert den Sperrfreigabeauftrag als Auftrag, „ein Objekt von der jeweiligen Sperrliste zu nehmen“ ([Q02](QUELLEN.md#q02), S. 87 f.); (4) dieselbe Spezifikation bildet `TXSAUFB` auf `addEntitlementToHotlist` und `TXSFREIB` auf `removeEntitlementFromHotlist` ab, die „Freigabe“ ist dort also das Entfernen aus der Hotlist ([Q50](QUELLEN.md#q50), `hotlist-messaging_xsd`). **Offen bleibt** eine ausdrückliche Definition und die Frage, ob sich die Freigabe auf den Auftrag oder auf die Berechtigung bezieht. Die frühere Lesart „gibt einen vorbereiteten Auftrag frei“ ist aufgegeben. *Korrektur:* [Q39](QUELLEN.md#q39) ist eine **RMV**-Quelle („Aktionsmanagement RMV-EFS“), nicht aus NRW — eine frühere Fassung dieser Zeile ordnete sie NRW zu. | `aktionsmanagement/aktionsfreigabe.md` | KA AktM-SPEC, KA SST-SPEC |
-| **O21** | Wozu führt der räumliche Geltungsbereich neben der `OriginalValidityAreaList` eine `AlternativeValidityAreaList`? Beide haben dieselben Felder (Typangabe, Organisation des Product Owners, Liste); die Typbeschreibung und das Modell ([Q51](QUELLEN.md#q51), Modul `et`; [Q49](QUELLEN.md#q49), Paket *Types*) erklären den Zweck der zweiten Liste nicht. | `berechtigungen/gueltigkeitsbereich-asn-1.md` | etiCORE-Spezifikation, Product-Owner-Vorgaben |
 | **O22** | Der Warncode `W_CO_ENTITLEMENT_ISSUED_WITH_INVALID_ACTION_COUNTER` trägt in der Quelle die Beschreibung „The initial entitlement status is invalid“, die zum Namen (Aktionszähler) nicht passt. Welche Prüfung ist gemeint? ([Q50](QUELLEN.md#q50), `common-event-enums_xsd`.) | `transaktionen/warnungen-in-eticore.md` | etiCORE-Spezifikation, spätere Fassung |
 | **O23** | Wie läuft die Zertifizierung unter etiCORE ab, und wer prüft? Die ausgewerteten Quellen beschreiben nur die Prüfung nach KA 1.x (Release 1.12.0) und die Marktpraxis; das Glossar nennt die Rolle im Scheme Manager ([Q02](QUELLEN.md#q02), S. 100). | `grundlagen/zertifizierung.md` | VDV eTicket Service, Zulassungsstelle |
 
@@ -226,6 +218,64 @@ Zur Reichweite: Die Formulierung „Codeliste `WertobjektStatus_CODE`, relevante
 
 **O12 — Wirkung der Aktionsfreigabe: geklärt, verbundspezifisch.**
 [Q39](QUELLEN.md#q39), Kap. 3.2.5, nennt die Nachrichten und ihre Richtung: `TXAFREIBER` ist der Aktionsfreigabeauftrag des beauftragenden KVP an PV bzw. ALISE, `TXAFREIMITBER` die Aktionsfreigabemitteilung des ALISE zurück an den beauftragenden KVP, beide asynchron. Ausgearbeitet in `aktionsmanagement/aktionsfreigabe.md`. **Offen bleibt**, wo die Freigabe im Statusmodell des Standards ansetzt — das Glossar kennt den Begriff nicht.
+
+**O1, O2, O3, O5, O9, O14, O20 und O21 — geklärt mit den KA-Spezifikationen 1.12.0.**
+Am 20.10.2026 wurden die Normquellen beschafft ([QUELLEN.md](QUELLEN.md), Abschnitt 2). Damit sind
+acht Fragen beantwortet, die alle nur mit den nicht öffentlichen Spezifikationen zu klären waren. Die Belege stehen in [exzerpte/Q52.md](exzerpte/Q52.md), [exzerpte/Q55.md](exzerpte/Q55.md)
+und [exzerpte/Q70.md](exzerpte/Q70.md).
+
+- **O1 — Transaktionstypen 37/38/39: gelten KA-weit.** Sie stehen in der Standardcodeliste
+  `NmTransaktionsTyp_CODE` ([Q52](QUELLEN.md#q52), Tab. 6-65, S. 87) und werden von der
+  KA AktM-SPEC ausdrücklich für die Listeneinträge `TXALISBER`, `TXELISBER` und `TXRLISBER`
+  ergänzt ([Q55](QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Dasselbe gilt für die übrigen Werte der
+  Tabelle in `transaktionen/logtransaktionstyp.md` — 0, 1, 2, 20, 21, 25 und 27. Die Nennung in
+  [Q05](QUELLEN.md#q05) und [Q06](QUELLEN.md#q06) war eine **Auswahl aus der Standardliste**.
+  *Neu aufgetaucht:* Zwei Versionsvorbehalte derselben Tabelle — für Wert 40 wird „zur Zeit“ die 0
+  verwendet, und 41/42 sind doppelt belegt, aufgelöst über die Version.
+- **O2 — `amAuftragsTyp` = 13 heißt „Aktionsauftrag Ausgabe“.** Die KA AktM-SPEC ergänzt dem
+  `AuftragsTyp_CODE` drei Werte: 13 Ausgabe, 14 Rücknahme, 15 Entsperrung ([Q55](QUELLEN.md#q55),
+  Kap. 6.2, S. 67). Die Indizienkette des Lexikons war richtig. Ausgearbeitet in
+  `aktionsmanagement/auftragstyp.md`.
+- **O3 — `WertobjektStatus_CODE`: Reichweite geklärt, eine Annahme widerlegt.** Die Standardliste
+  hat genau vier Werte: 0, 5, 7 und 19, jeder mit seiner Entsprechung aus EN 1545-1
+  ([Q52](QUELLEN.md#q52), Tab. 6-91, S. 102). **Die 8 gehört nicht dazu** — der in
+  [Q05](QUELLEN.md#q05) genannte Wert „8 = Neu, aber noch nicht aktiv“ ist eine Festlegung des
+  eTicket RheinMain, keine Auswahl aus der Standardliste, wie Abschnitt 5a zuvor annahm. Umgekehrt
+  fehlte dem Lexikon der Wert 0. Für ein Prüfwerkzeug ist das eine echte Falle: Eine 8 ist weder
+  ein Fehler noch standardkonform.
+- **O5 — ein Statuswechsel erhöht die `berSynchronNummer`: ja.** „Die Synchronnummer wird bei
+  Statusänderungen der Berechtigung inkrementiert. Dazu zählen insbesondere auch Sperr- und
+  Entsperrvorgänge“ ([Q52](QUELLEN.md#q52), S. 135). Die KA AktM-SPEC nennt die vier Transaktionen
+  — Ausgabe, Sperrung, Entsperrung, Rücknahme EFS — und die Rechenregeln für den Wert im
+  Aktionsauftrag, einschließlich des Falls „um zwei größer“ ([Q55](QUELLEN.md#q55), Kap. 4.1.2.2,
+  S. 28). **Auch der Überlauf ist belegt:** „Nach Erreichen von 0xff wird sie auf 0x00
+  inkrementiert.“
+- **O9 — Aktionstyp und Auftragstyp sind keine zwei Ebenen.** `amAuftragsTyp` hat den Typ
+  `AuftragsTyp_CODE` und benennt die beauftragte Aktion ([Q55](QUELLEN.md#q55), Kap. 6.4.2, S. 88).
+- **O14 — `txalisber` ist ein Eintrag in der Aktionsliste.** Die KA AktM-SPEC führt `TXALISBER`,
+  `TXRLISBER` und `TXELISBER` als „Datensatzbeschreibung zur Ausgabe, Rücknahme und Entsperrung
+  einer Berechtigung in allen Aktionslisten über das Aktionsmanagement“; die Liste selbst ist die
+  `TXAML` mit `IONTransaktionsTyp_CODE` 137, komprimiert 183 ([Q55](QUELLEN.md#q55), Kap. 6.2.3.1,
+  S. 67). Die aus etiCORE abgeleitete Lesart war richtig.
+- **O20 — der Aktionsfreigabeauftrag entfernt einen eigenen Auftrag.** Er ist „ein
+  Steuerungsinstrument zur Veranlassung der Entfernung eines von ihm beauftragten Aktionsauftrages
+  vor Ablauf dessen Gültigkeit“ ([Q55](QUELLEN.md#q55), Kap. 4.2.2.3, S. 48). Die Freigabe bezieht
+  sich damit auf den **Auftrag**, nicht auf die Berechtigung — die offene Teilfrage ist
+  entschieden, und die abgeleitete Lesart war richtig. **Zwei Befunde kommen hinzu:** Der Auftrag
+  ist **nur für Entsperrungen zugelassen**, und er wird mit `TXB` bestätigt. `TXAFREIMITBER`
+  gehört zum **Aktionsclearing** (Kap. 4.2.4, S. 49) — damit ist die aus [Q39](QUELLEN.md#q39)
+  gewonnene Zuordnung in O12 für den Standard zu korrigieren.
+- **O21 — der alternative Geltungsbereich gilt außerhalb des Normalfalles.** „Mit „alternativer
+  Geltungsbereich“ ist der Geltungsbereich gemeint, den ein EFS außerhalb des Normalfalles (z. B.
+  in Schwachlastzeiten) hat“ ([Q70](QUELLEN.md#q70), Kap. 2.5, S. 18). Die Frage war aus etiCORE
+  entstanden; die KA 1.x beantwortet sie für ihre eigene Struktur. Dass es in etiCORE dasselbe
+  meint, ist naheliegend, aber nicht belegt.
+
+**Ein Nebenbefund zu den Querverweisen.** Die KA AktM-SPEC verweist für `AuftragsTyp_CODE` auf
+„Tabelle 6-42“ und an anderer Stelle auf „Tabelle 6-59“ der KA BOM-SPEC, für
+`NmTransaktionsTyp_CODE` auf „Tabelle 6-52“. In 1.12.0 sind es die Tabellen **6-43** und **6-65**;
+6-59 ist der `IONTransaktionsTyp_CODE`. Die Tabellennummern in den Querverweisen sind über die
+Versionen nicht nachgezogen worden. Wer ihnen folgt, landet auf der falschen Tabelle.
 
 ---
 
@@ -333,7 +383,7 @@ Vollständig in [CLAUDE.md](CLAUDE.md). Die vier wichtigsten:
 
 ## 7. Was als Nächstes passiert
 
-> **Stand 2026-10-20.** Der folgende Text beschreibt die Lage vor der Freigabe der Musterartikel und ist historisch. Heute sind alle zehn Kategorien geschrieben (157 Artikel). Die öffentliche etiCORE-Spezifikation ([Q49](QUELLEN.md#q49) bis [Q51](QUELLEN.md#q51)) ist ausgewertet: Schnittstellen, ASN.1-Typen, 203 Fehler- und Warncodes. **Offen** sind die Fragen O2, O5, O13, O14, O20 bis O23 (Abschnitt 5; zur Abstimmung in [OFFENE-FRAGEN-ETICORE.md](OFFENE-FRAGEN-ETICORE.md)), die nicht öffentlichen Migrationsdokumente ([BESCHAFFUNG.md](BESCHAFFUNG.md), Abschnitt 2b) und die KA AktM-SPEC. **Bewusst nicht geschrieben**, weil die Quellen fehlen: Post-Validation, internationale Beispiele zum ABT.
+> **Stand 2026-10-20.** Der folgende Text beschreibt die Lage vor der Freigabe der Musterartikel und ist historisch. Heute sind alle zehn Kategorien geschrieben (157 Artikel). Die öffentliche etiCORE-Spezifikation ([Q49](QUELLEN.md#q49) bis [Q51](QUELLEN.md#q51)) ist ausgewertet: Schnittstellen, ASN.1-Typen, 203 Fehler- und Warncodes. Seit dem 20.10.2026 liegen zudem die **KA-Spezifikationen 1.12.0** vor (Q52 bis Q81) sowie weitere etiCORE-Dokumente (Q82 bis Q88); damit sind acht offene Fragen beantwortet (Abschnitt 5a). **Offen** sind noch O4, O6, O13, O15 bis O19, O22 und O23 (Abschnitt 5; zur Abstimmung in [OFFENE-FRAGEN-ETICORE.md](OFFENE-FRAGEN-ETICORE.md)) sowie die XML-Schemata und WSDL der ALISE-Schnittstelle, die den geplanten Decoder weiter blockieren ([BESCHAFFUNG.md](BESCHAFFUNG.md)). **Bewusst nicht geschrieben**, weil die Quellen fehlen: Post-Validation, internationale Beispiele zum ABT.
 
 Die **zwei Musterartikel** liegen vor und sind der eigentliche Gegenstand der Freigabe:
 

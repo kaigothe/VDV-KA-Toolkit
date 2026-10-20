@@ -3,9 +3,9 @@ titel: Aktion
 englisch: action
 parent: lexikon/aktionsmanagement.md
 siehe_auch: [lexikon/aktionsmanagement/aktionsliste.md]
-quellen: [Q02]
+quellen: [Q02, Q55]
 status: belegt
-offene_fragen: [O9]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -22,7 +22,7 @@ Sie unterscheidet sich darin von einer **Transaktion**: Der Vorgang ist noch nic
 
 Das Glossar nennt ausdrücklich eine **zweite, abstrahierte Bedeutung**: Im Aktionsmanagement werden ebenfalls Aktionen verwaltet, die später auf einem Nutzermedium durchgeführt werden sollen ([Q02](../../QUELLEN.md#q02), S. 18). Das ist die im Lexikon meist gemeinte Lesart — der vorbereitete Auftrag in einer Aktionsliste.
 
-Beide Bedeutungen tragen denselben Namen, und das Glossar trennt sie nicht durch zwei Begriffe (abgeleitet). Beim Lesen von Spezifikationen lohnt es sich deshalb zu prüfen, ob die Handlung am Medium oder der verwaltete Auftrag gemeint ist. Wie sich dazu „Aktionstyp“ und das Feld `amAuftragsTyp` verhalten, ist offen (zu prüfen, O9).
+Beide Bedeutungen tragen denselben Namen, und das Glossar trennt sie nicht durch zwei Begriffe (abgeleitet). Beim Lesen von Spezifikationen lohnt es sich deshalb zu prüfen, ob die Handlung am Medium oder der verwaltete Auftrag gemeint ist. „Aktionstyp“ und das Feld `amAuftragsTyp` liegen dagegen auf einer Ebene: Das Feld hat den Typ `AuftragsTyp_CODE` und benennt die beauftragte Aktion ([Q55](../../QUELLEN.md#q55), Kap. 6.4.2, S. 88).
 
 Aktionen unterliegen einem Lebenszyklus und müssen deshalb verwaltet werden ([Q02](../../QUELLEN.md#q02), S. 20). Sie sind zudem Bausteine größerer Abläufe: Ein Elementarprozess bezeichnet eine fachlich zusammenhängende Menge von Transaktionen, Aktionen, Nachrichten und Prüfungen ([Q02](../../QUELLEN.md#q02), S. 38).
 

@@ -4,9 +4,9 @@ abkuerzung: TXABER
 englisch: issue attestation
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md, lexikon/transaktionen/logtransaktionstyp.md]
-quellen: [Q05, Q06, Q25]
+quellen: [Q05, Q06, Q25, Q52]
 status: belegt
-offene_fragen: [O1]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -24,7 +24,7 @@ Bemerkenswert ist, dass `TXABER` in **zwei verschiedenen Zusammenhängen** auftr
 - als Transaktionsnachweis aus einer **Aktionsausführung** (Kap. 4.3.2) — hier ist zusätzlich die KA AktM-SPEC zu beachten,
 - als Ausgabenachweis aus dem **Verkauf** (Kap. 4.4.1), dort gemeinsam mit `TXAA`.
 
-Unterschieden werden die beiden Fälle über den [`logTransaktionsTyp`](logtransaktionstyp.md): Der Wert 37 kennzeichnet die Ausgabe EFS **über Aktionsliste** ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Eine Ausgabe im Verkauf trägt diesen Wert folglich nicht (abgeleitet; zu prüfen, O1).
+Unterschieden werden die beiden Fälle über den [`logTransaktionsTyp`](logtransaktionstyp.md): Der Wert 37 kennzeichnet die Ausgabe EFS **über Aktionsliste** ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Der Wert stammt aus der Standardcodeliste und gilt KA-weit ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87). Eine Ausgabe im Verkauf trägt ihn folglich nicht (abgeleitet).
 
 Für den **fachlichen Teil** verweist [Q06](../../QUELLEN.md#q06) auf das Schwesterdokument PH 05-A1 „RMV-EFS“ ([Q05](../../QUELLEN.md#q05)). Insbesondere ist zu beachten, dass das `TXABER` **immer** die Datenstruktur `berechtigungTarifbereichZusatz` gemäß den Vorgaben des PH 05-A1 enthält ([Q06](../../QUELLEN.md#q06), Kap. 4.3.2) · *verbundspezifisch*.
 

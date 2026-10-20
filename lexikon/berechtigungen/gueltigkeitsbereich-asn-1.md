@@ -3,9 +3,9 @@ titel: Gültigkeitsbereich (ASN.1)
 englisch: validity area in ASN.1
 parent: lexikon/berechtigungen.md
 siehe_auch: [lexikon/berechtigungen/gueltigkeit.md, lexikon/datenformate/geraete-orte-und-subjekte-asn-1.md, lexikon/berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md, lexikon/datenformate/asn-1-typen-in-eticore.md]
-quellen: [Q51]
+quellen: [Q51, Q70]
 status: zu prüfen
-offene_fragen: [O21]
+offene_fragen: []
 stand: 2026-10-20
 codes: []
 ---
@@ -27,7 +27,7 @@ Der räumliche Geltungsbereich eines Fahrscheins ist im Modul `et` ([Q51](../../
 | E bis H | wie A bis D, zusätzlich mit einer Startstation, die die Fahrtrichtung festlegt |
 | I | Startstation und die Aufzählung aller möglichen Zielstationen |
 
-Der Product Owner legt fest, welche Stationen zu einer Gebietsnummer gehören. Eingebettet wird die Liste in eine `OriginalValidityAreaList` (`0xB7`) oder eine `AlternativeValidityAreaList` (`0x30`), jeweils mit einer Typangabe (`typeDefinition`), der Organisation des Product Owners und der Liste. Die Quelle nennt nicht, was eine alternative Liste neben der ursprünglichen bedeutet (zu prüfen, O21). Quelle ist ein Release-Kandidat (3.0.0-rc.6).
+Der Product Owner legt fest, welche Stationen zu einer Gebietsnummer gehören. Eingebettet wird die Liste in eine `OriginalValidityAreaList` (`0xB7`) oder eine `AlternativeValidityAreaList` (`0x30`), jeweils mit einer Typangabe (`typeDefinition`), der Organisation des Product Owners und der Liste. Was eine alternative Liste neben der ursprünglichen bedeutet, nennt die etiCORE-Quelle nicht. Die KA 1.x beantwortet es für ihre eigene Struktur: Gemeint ist der Geltungsbereich, „den ein EFS außerhalb des Normalfalles (z. B. in Schwachlastzeiten) hat“; das Tag kann mehrfach mit verschiedenen Organisations-IDs auftreten ([Q70](../../QUELLEN.md#q70), Kap. 2.5, S. 18). Dass es in etiCORE dasselbe meint, ist naheliegend, aber nicht belegt (abgeleitet). Quelle ist ein Release-Kandidat (3.0.0-rc.6).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 

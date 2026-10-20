@@ -4,9 +4,9 @@ abkuerzung: AktM
 englisch: action management
 parent: README.md
 siehe_auch: [lexikon/grundlagen/elementarprozess.md]
-quellen: [Q02, Q06, Q25, Q39]
+quellen: [Q02, Q06, Q25, Q39, Q55]
 status: belegt
-offene_fragen: [O9]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -29,7 +29,7 @@ Das Aktionsmanagement ist eine **optionale Ergänzung** und nur zu den Ausbauvar
 
 Im Nachrichtenfluss stehen eigene **Auftragsnachrichten** neben den Nachweisen: `TXAAUFBER` (Ausgabe), `TXRAUFBER` (Rücknahme), `TXEAUFBER` (Entsperrung) sowie `TXAFREIBER` und `TXAFREIMITBER` für die [Aktionsfreigabe](aktionsmanagement/aktionsfreigabe.md) ([Q39](../QUELLEN.md#q39), Kap. 3.2.5) · *verbundspezifisch*.
 
-Wie sich „Aktionstyp“ und das Nachrichtenfeld `amAuftragsTyp` zueinander verhalten, ist nicht belegt (zu prüfen, O9).
+„Aktionstyp“ und `amAuftragsTyp` sind keine zwei Ebenen: Das Feld hat den Typ `AuftragsTyp_CODE` und benennt die beauftragte Aktion ([Q55](../QUELLEN.md#q55), Kap. 6.4.2, S. 88).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 

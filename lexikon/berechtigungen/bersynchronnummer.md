@@ -3,9 +3,9 @@ titel: berSynchronNummer
 englisch: entitlement synchronisation number
 parent: lexikon/berechtigungen.md
 siehe_auch: [lexikon/berechtigungen/berstatus.md, lexikon/aktionsmanagement/aenderungsreferenz.md]
-quellen: [Q02, Q05, Q11, Q50, Q51]
-status: abgeleitet
-offene_fragen: [O5]
+quellen: [Q02, Q05, Q11, Q50, Q51, Q52, Q55]
+status: belegt
+offene_fragen: []
 stand: 2026-10-20
 codes: []
 ---
@@ -16,19 +16,29 @@ codes: []
 
 # berSynchronNummer
 
-`berSynchronNummer` steht gemeinsam mit [`berStatus`](berstatus.md) im **dynamischen Teil** der Berechtigung und hat den Datentyp **`SequenceNumberOne`** mit **einem Byte** ([Q05](../../QUELLEN.md#q05), Kap. 2.1) · *verbundspezifisch*.
+`berSynchronNummer` steht gemeinsam mit [`berStatus`](berstatus.md) im **dynamischen Teil** der Berechtigung, hat den Datentyp **`SequenceNumberOne`** mit einem Byte und den Wertebereich **0 bis 255** ([Q52](../../QUELLEN.md#q52), S. 135).
 
-Ein Byte bedeutet einen Wertebereich von 0 bis 255 (abgeleitet). Die Zahl der Änderungen an einer Berechtigung ist damit begrenzt; was bei Überlauf geschieht, ist nicht belegt (zu prüfen).
+Die Normquelle beschreibt Zweck und Verhalten: „Die Synchronnummer wird bei Statusänderungen der Berechtigung inkrementiert. Dazu zählen insbesondere auch Sperr- und Entsperrvorgänge.“ Über sie kann ein offline arbeitendes Terminal erkennen, ob die letzte Statusänderung auf dem präsentierten Nutzermedium älter oder jünger ist als die Information, die es vom Hintergrundsystem hat ([Q52](../../QUELLEN.md#q52), S. 135).
 
-**Das Glossar enthält keinen Eintrag „Synchronnummer“** (geprüft am Inhaltsverzeichnis, [Q02](../../QUELLEN.md#q02), S. 2–13). Die Deutung stützt sich daher auf Feldname, Datentyp und Beobachtung.
+**Zum Überlauf:** „Nach Erreichen von 0xff wird sie auf 0x00 inkrementiert.“ Die Hintergrundsysteme müssen diesen Überlauf verarbeiten können ([Q52](../../QUELLEN.md#q52), S. 135). Der Zähler läuft also um und endet nicht.
 
-Aus Name und Typ ergibt sich: Es ist ein **Versionszähler** der Berechtigung (abgeleitet). Der Wert 1 steht für den ersten Stand; bei Änderungen steigt der Zähler, sodass Systeme veraltete Stände erkennen können. In der ausgewerteten Nachricht trägt das Feld den Wert 1 bei gleichzeitig leerer Änderungsreferenz und Status 7 — eine Neuausgabe ([Q11](../../QUELLEN.md#q11)).
+Welche Transaktionen zählen, nennt die KA AktM-SPEC: Ausgabe EFS, Sperrung EFS, Entsperrung EFS/AFB und Rücknahme EFS. Die Nummer bringt „alle entsprechenden Anwendungsfälle, die die Statusänderung ein und derselben Berechtigung betreffen, in eine chronologische Abfolge … unabhängig davon, ob sie innerhalb oder außerhalb des Aktionsmanagements stattfinden“ ([Q55](../../QUELLEN.md#q55), Kap. 4.1.2.2, S. 28).
 
-Dass Status und Synchronnummer **gemeinsam** im dynamischen Teil liegen und zusammen genau zwei Byte belegen, stützt diese Lesart: Es sind die beiden einzigen Angaben einer Berechtigung, die sich im Laufe ihres Lebens ändern (abgeleitet).
+**Zwei Zeitpunkte der Erhöhung:** Im Aktionsmanagement wird bereits **mit der Beauftragung** im KVP-System erhöht, damit der Wert unverändert über die Aktionsliste in den Transaktionsnachweis gelangt. Bei direkter Ausführung am Terminal erhöht **das Terminal** um eins.
 
-**Hinweis aus etiCORE:** Die Nachfolgerin heißt `entitlementTransitionCounter` und ist eine „increasing sequence number which indicates if an entitlement's state has been changed“; der Typ zählt „the number of times the status of an application or entitlement has changed“ ([Q51](../../QUELLEN.md#q51), Modul `user-medium`, Typ `TransitionCounter`; Zuordnung über [Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`, Typ `EntitlementUnblockingActionListEntry`). Der Zähler zählt danach **Statuswechsel** (abgeleitet für die KA 1.x, O5).
+Die Werte im Aktionsauftrag ([Q55](../../QUELLEN.md#q55), Kap. 4.1.2.2, S. 28):
 
-**Offen** (zu prüfen, O5): Gilt das in der KA 1.x ebenso, und zählen auch inhaltliche Änderungen ohne Statuswechsel?
+| Aktion | Wert |
+|---|---|
+| Ausgabe | 1 |
+| Entsperrung | letzte Statusänderung + 1 |
+| Rücknahme, Nachweis liegt vor | dessen Nummer + 1 |
+| Rücknahme, Entsperrnachweis fehlt | beauftragte Nummer + 1 |
+| Rücknahme, Sperrnachweis fehlt | beauftragte Nummer + **2** |
+
+In der ausgewerteten Nachricht trägt das Feld den Wert 1 bei leerer Änderungsreferenz und Status 7 — eine Neuausgabe ([Q11](../../QUELLEN.md#q11)).
+
+**Prüfregel:** Stimmt die Nummer im Sperrlisteneintrag nicht mit dem Applikationsverzeichniseintrag überein, **erfolgt keine Statusänderung** auf dem Nutzermedium ([Q55](../../QUELLEN.md#q55), Kap. 4.1.2.2, Fußnote 27, S. 28).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 
@@ -38,25 +48,29 @@ Das Problem, das sie löst, entsteht aus der Verzögerung im System. Pias Berech
 
 Vier Stellen, vier Stände, die auseinanderlaufen können.
 
-Der Zähler schafft Ordnung: Jede Fassung einer Berechtigung trägt eine Nummer. Pias Abo wurde neu ausgegeben, also steht dort die 1. Würde sein Status später wechseln, etwa durch eine Sperrung, stünde 2 darauf. So zählt es jedenfalls die Nachfolgerin in etiCORE. Trifft ein Gerät mit einem Stand 1 auf eine Karte mit Stand 2, weiß es: Meine Information ist überholt.
+Der Zähler schafft Ordnung: Jede Fassung einer Berechtigung trägt eine Nummer. Pias Abo wurde neu ausgegeben, also steht dort die 1. Wird es gesperrt, steht 2 darauf. Wird es wieder entsperrt, 3. Trifft das Kontrollgerät T-4712 mit einem Stand 2 auf eine Karte mit Stand 3, weiß es: Meine Information ist überholt.
 
-Das ist dasselbe Prinzip, das jede Textverarbeitung mit Versionsnummern verwendet — und dasselbe, das verhindert, dass eine ältere Datei eine neuere überschreibt.
+Gezählt werden dabei nur die **Statusänderungen** — Ausgabe, Sperrung, Entsperrung, Rücknahme. Nicht jede Fahrt, nicht jede Kontrolle.
 
-Bemerkenswert ist die Größe: **ein Byte**. Es passen also 255 Änderungen in eine Berechtigung, dann ist der Zähler am Ende. Für ein Abo über drei Jahre ist das reichlich. Es zeigt aber, wie sparsam auf einer Chipkarte gerechnet wird — man hat für den Zähler kein zweites Byte vorgesehen.
+Jetzt kommt die Stelle, an der es interessant wird: **Der Zähler wird schon beim Auftrag erhöht, nicht erst bei der Ausführung.** Bodo Bärlauch beauftragt die Entsperrung, und in dem Moment steht im System bereits die neue Nummer. Sie reist mit der Aktionsliste zum Automaten und wird dort unverändert in den Nachweis geschrieben.
 
-Zwei Dinge sollte man nicht verwechseln, weil sie direkt nebeneinander stehen.
+Das hat einen Grund und eine Folge. Der Grund: Alle Beteiligten sollen dieselbe Nummer für denselben Vorgang verwenden. Die Folge: Wenn ein Auftrag übersprungen wird, entsteht eine Lücke — eine Nummer, die vergeben wurde, zu der aber nie eine Ausführung kam. Genau daran erkennen die BVB, dass etwas schiefgelaufen ist, und schicken eine [Aktionsfreigabe](../aktionsmanagement/aktionsfreigabe.md).
 
-Der **Status** sagt, in welchem Zustand die Berechtigung ist: aktiv, gesperrt, zurückgenommen. Die **Synchronnummer** sagt, wie oft sie sich geändert hat. Eine Berechtigung mit Status 7 und Nummer 5 ist aktiv und war schon viermal anders.
+Deshalb gibt es auch den merkwürdigen Fall „plus zwei“. Wird eine Rücknahme beauftragt, während eine Sperre noch unbestätigt in der Luft hängt, muss die Rücknahme zwei Schritte weiterzählen — denn die Sperre wird bei ihrer Ausführung ja selbst noch einen Schritt verbrauchen. Wer hier um eins zu niedrig zählt, bekommt eine Berechtigung, deren Nummern nicht mehr zusammenpassen.
 
-Was offen bleibt: Ob eine Sperrung den Zähler erhöht, lässt sich aus den vorliegenden Unterlagen nicht sagen.
+Und das ist nicht harmlos. Ein Sperrlisteneintrag besteht aus der Kennung der Berechtigung **und** dieser Nummer. Stimmt die Nummer nicht mit der auf der Karte überein, dann wird die Karte **nicht** gesperrt. Die Sperre greift einfach nicht. Für ein Prüfwerkzeug ist das eine der wichtigsten Regeln überhaupt: Eine Sperre mit falscher Synchronnummer sieht aus wie eine Sperre, wirkt aber nicht.
+
+Bemerkenswert ist noch die Größe: **ein Byte**. Nach 255 geht es bei 0 weiter — der Zähler läuft um. Das steht ausdrücklich so im Standard, zusammen mit der Auflage an die Hintergrundsysteme, damit umgehen zu können. Wer stattdessen annimmt, nach 255 sei Schluss, baut einen Fehler ein, der erst nach Jahren auffällt.
 
 ## Quellen
 
-- [Q51](../../QUELLEN.md#q51) – etiCORE ASN.1 Data Type Description 3.0.0-rc.6, Modul `user-medium`: Typ `TransitionCounter` (Tag `0x58`), Feld `entitlementTransitionCounter` · *Release-Kandidat*
-- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management_xsd`: `berSynchronNummer` als `meta:old` von `entitlementTransitionCounter` · *Release-Kandidat*
-- [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (PDF-S. 9): `berSynchronNummer` im dynamischen Teil der Berechtigung, Datentyp `SequenceNumberOne` mit einem Byte, gemeinsam mit `berStatus` genau zwei Byte · *verbundspezifisch: eTicket RheinMain*
+- [Q52](../../QUELLEN.md#q52) – KA HD_BOM-SPEC 1.12.0, S. 135: `berSynchronNummer`, Kardinalität 1..1, Wertebereich 0..255, Datentyp `SequenceNumberOne`; „Die Synchronnummer wird bei Statusänderungen der Berechtigung inkrementiert. Dazu zählen insbesondere auch Sperr- und Entsperrvorgänge.“; Erkennung älterer oder jüngerer Stände durch ein offline arbeitendes Terminal; „Nach Erreichen von 0xff wird sie auf 0x00 inkrementiert.“ sowie die Auflage, den Überlauf in den Hintergrundsystemen zu verarbeiten. Datentyp in Tab. 6-33 (S. 56). Exzerpt: [exzerpte/Q52.md](../../exzerpte/Q52.md) · *nicht öffentlich*
+- [Q55](../../QUELLEN.md#q55) – KA AktM-SPEC 1.12.0, Kap. 4.1.2.2 (S. 28): die vier inkrementierenden Transaktionen, Zweck der chronologischen Abfolge, Erhöhung bereits mit der Beauftragung, Erhöhung durch das Terminal bei direkter Ausführung, die Rechenregeln für Ausgabe, Entsperrung und die drei Rücknahmefälle; Fußnote 27: Vergleich des Sperrlisteneintrags mit dem Applikationsverzeichniseintrag, bei Abweichung keine Statusänderung. Exzerpt: [exzerpte/Q55.md](../../exzerpte/Q55.md) · *nicht öffentlich*
+- [Q05](../../QUELLEN.md#q05) – RMV PH 05-A1, Kap. 2.1 (PDF-S. 9): `berSynchronNummer` im dynamischen Teil, Datentyp `SequenceNumberOne` mit einem Byte · *verbundspezifisch: eTicket RheinMain*
+- [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht: Wert 1 bei leerer Änderungsreferenz und Status 7. **Nicht öffentliche Unterlage**; übernommen sind nur Feldname und Wert.
+- [Q51](../../QUELLEN.md#q51) – etiCORE ASN.1 Data Type Description 3.0.0-rc.6, Modul `user-medium`, Typ `TransitionCounter`: Nachfolgerin `entitlementTransitionCounter`, „increasing sequence number which indicates if an entitlement's state has been changed“ · *Release-Kandidat*
+- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management_xsd`, Typ `EntitlementUnblockingActionListEntry`: Zuordnung des Altnamens · *Release-Kandidat*
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE: **kein** Eintrag „Synchronnummer“ (geprüft am Inhaltsverzeichnis, S. 2–13)
-- [Q11](../../QUELLEN.md#q11) – ausgewertete `txalisber`-Nachricht, Feld `berSynchronNummer` mit dem Wert 1 bei leerer Änderungsreferenz und Status 7. **Nicht öffentliche Unterlage**; übernommen sind nur Feldname und Wert.
 
 <!-- GEN:siehe_auch -->
 ## Siehe auch

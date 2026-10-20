@@ -3,18 +3,18 @@ titel: Rücknahme EFS über Aktionsliste
 englisch: termination of an electronic ticket via action list
 parent: lexikon/aktionsmanagement.md
 siehe_auch: [lexikon/aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md]
-quellen: [Q02, Q05, Q06, Q25]
+quellen: [Q02, Q05, Q06, Q25, Q52, Q55]
 status: belegt
-offene_fragen: [O1, O3]
+offene_fragen: []
 stand: 2026-10-19
 codes:
   - wert: 39
     codeliste: NmTransaktionsTyp_CODE
-    bedeutung: Rückgabetransaktion EFS über Aktionsliste
-    quelle: Q06
-    fundstelle: Kap. 2.1.5, Fußnote 1 (PDF-S. 14)
+    bedeutung: Rückgabe/Rücknahme EFS über Aktionsliste
+    quelle: Q52
+    fundstelle: Tab. 6-65 (S. 87); ergänzt durch Q55 Kap. 6.2 (S. 67)
     status: belegt
-    verbundspezifisch: true
+    verbundspezifisch: false
 ---
 
 <!-- GEN:breadcrumb -->
@@ -25,11 +25,11 @@ codes:
 
 Die Rücknahme einer Berechtigung ist einer der vier Aktionstypen der Aktionsliste. [Q02](../../QUELLEN.md#q02), S. 19, fasst sie weiter als die beiden anderen: „Rücknahme einer Berechtigung elektronischer Fahrschein **oder eBezahlberechtigung**“. Als KVP-Aktion des Aktionsmanagements heißt sie Berechtigung-Rücknahme ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5).
 
-Im Feld `logTransaktionsTyp` gilt der Wert **39** für die Rückgabetransaktion EFS über Aktionsliste ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Anders als bei 37 und 38 nennt die Fußnote dort keinen Nachrichtennamen; aus der Aufzählung der zurückgelieferten Nachweise in derselben Kapitelstelle liegt `TXRBER` nahe (abgeleitet). Die Zuordnung ist eine Festlegung im eTicket RheinMain (zu prüfen, O1) · *verbundspezifisch*.
+Im Feld `logTransaktionsTyp` gilt der Wert **39** für die Rückgabetransaktion EFS über Aktionsliste ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1). Anders als bei 37 und 38 nennt die Fußnote dort keinen Nachrichtennamen; aus der Aufzählung der zurückgelieferten Nachweise in derselben Kapitelstelle liegt `TXRBER` nahe (abgeleitet). Der **Wert 39** stammt aus der Standardcodeliste, dort als „Rückgabe/Rücknahme EFS über Aktionsliste“, und gilt KA-weit; die KA AktM-SPEC ergänzt ihn für den Listeneintrag `TXRLISBER` ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87; [Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Die Zuordnung zu `TXRBER` bleibt abgeleitet.
 
 Das eTicket-Regelwerk unterscheidet zwei Anwendungsfälle: „Aktionsauftrag EFS_Berechtigung zurücknehmen“ für die Beauftragung und „EFS_Berechtigung zurücknehmen nach Aktionsauftrag“ für die Ausführung ([Q25](../../QUELLEN.md#q25), Anlage 2, Kap. 5.1.2, Tabelle 38).
 
-Zum resultierenden Status: Im RMV-EFS steht der Wert 5 für „zurückgenommen“ ([Q05](../../QUELLEN.md#q05), Abschnitt 2.1). Dieser Code ist ausdrücklich eine RMV-Festlegung und als solcher noch nicht am Dokument selbst geprüft (zu prüfen, O3) · *verbundspezifisch*.
+Zum resultierenden Status: Der Wert **5** steht für „zurückgenommen“ und stammt aus der Standardcodeliste `WertobjektStatus_CODE`, dort mit der Entsprechung EN 1545-1 „canceled“ ([Q52](../../QUELLEN.md#q52), Tab. 6-91, S. 102). Er gilt damit KA-weit; die Nennung in [Q05](../../QUELLEN.md#q05), Abschnitt 2.1, war eine Auswahl aus dieser Liste. Siehe [berStatus](../berechtigungen/berstatus.md).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 

@@ -4,9 +4,9 @@ abkuerzung: TXRBER
 englisch: termination attestation
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md]
-quellen: [Q06, Q25]
+quellen: [Q06, Q25, Q52, Q55]
 status: belegt
-offene_fragen: [O1]
+offene_fragen: []
 stand: 2026-10-19
 codes: []
 ---
@@ -21,7 +21,7 @@ codes: []
 
 `TXRBER` gehört zu den drei Transaktionsnachweisen, die ein Terminalmanagementsystem aus der Ausführung von Aktionslisteneinträgen zurückliefert — neben [`TXABER`](txaber.md) und [`TXSNAWB`](txsnawb.md). Alle drei sind über spezifische KA-Transaktionstyp-Codes als Ergebnis der Ausführung eines Aktionslisteneintrags gekennzeichnet ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5).
 
-Für die [Rücknahme über Aktionsliste](../aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md) nennt [Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1, den `logTransaktionsTyp`-Wert **39** („Rückgabetransaktion EFS über Aktionsliste“). Anders als bei den Werten 37 und 38 ist dort **kein Nachrichtenname** angegeben; die Zuordnung zu `TXRBER` ergibt sich aus der Aufzählung der zurückgelieferten Nachweise in derselben Kapitelstelle (abgeleitet). Ob die Codezuordnung KA-weit gilt, ist nicht belegt (zu prüfen, O1) · *verbundspezifisch*.
+Für die [Rücknahme über Aktionsliste](../aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md) nennt [Q06](../../QUELLEN.md#q06), Kap. 2.1.5, Fußnote 1, den `logTransaktionsTyp`-Wert **39** („Rückgabetransaktion EFS über Aktionsliste“). Anders als bei den Werten 37 und 38 ist dort **kein Nachrichtenname** angegeben; die Zuordnung zu `TXRBER` ergibt sich aus der Aufzählung der zurückgelieferten Nachweise in derselben Kapitelstelle (abgeleitet). Der **Codewert 39** gilt KA-weit ([Q52](../../QUELLEN.md#q52), Tab. 6-65, S. 87); der Standard ordnet ihn dem Listeneintrag `TXRLISBER` zu ([Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). Die Zuordnung zu `TXRBER` bleibt abgeleitet.
 
 Ab KA 1.3.0 kommt für Multiberechtigungen `TXRMBER` hinzu ([Q06](../../QUELLEN.md#q06), Kap. 2.1.5, 4.3.2).
 

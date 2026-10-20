@@ -3,9 +3,9 @@ titel: txalisber
 englisch: alise entitlement transaction
 parent: lexikon/transaktionen.md
 siehe_auch: [lexikon/transaktionen/txaml.md, lexikon/aktionsmanagement/auftragstyp.md]
-quellen: [Q06, Q11, Q25, Q50]
+quellen: [Q06, Q11, Q25, Q50, Q55]
 status: zu prüfen
-offene_fragen: [O4, O14]
+offene_fragen: [O4]
 stand: 2026-10-20
 codes: []
 ---
@@ -18,15 +18,13 @@ codes: []
 
 `txalisber` ist der Name eines XML-Elements, das in einer ausgewerteten ALISE-Nachricht auftritt. Es trägt den Namespace `http://vdv/ka/alise/2` und enthält einen Aktionslisteneintrag für eine Berechtigung ([Q11](../../QUELLEN.md#q11)).
 
-**Die Nachricht ist in den öffentlichen KA-1.x-Quellen nicht dokumentiert** (zu prüfen). [Q06](../../QUELLEN.md#q06) nennt sie nicht; dort heißt die Aktionsliste [`TXAML`](txaml.md) ([Q06](../../QUELLEN.md#q06), Kap. 4.3.1).
+**Was es ist, ist belegt.** Die KA AktM-SPEC führt `TXALISBER`, `TXRLISBER` und `TXELISBER` als „Datensatzbeschreibung zur Ausgabe, Rücknahme und Entsperrung einer Berechtigung in allen Aktionslisten über das Aktionsmanagement“ und ergänzt für sie die `NmTransaktionsTyp_CODE` 37, 38 und 39 ([Q55](../../QUELLEN.md#q55), Kap. 6.2.3.1, S. 67). `txalisber` ist damit ein **Eintrag** in einer Aktionsliste, keine eigene Nachricht. Die Liste selbst ist die [`TXAML`](txaml.md) mit `IONTransaktionsTyp_CODE` 137, komprimiert 183; sie wird vom KVP-System beim PV-System abgefordert.
 
-Aus dem Namen liegt die Lesart „ALISE-Eintrag Berechtigung“ nahe (abgeleitet). In etiCORE führt `TXALISBER_Type` (Namensraum `http://vdv/ka/alise/2`) auf den Typ `EntitlementIssuanceActionListEntry` zurück ([Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`): einen **Listeneintrag**. Das spricht dafür, dass `txalisber` ein Eintrag innerhalb der `TXAML` ist (abgeleitet); ob das in der KA 1.x ebenso gilt, bleibt offen (zu prüfen, O14).
+Das deckt sich mit etiCORE: Dort führt `TXALISBER_Type` auf den Typ `EntitlementIssuanceActionListEntry`, also ebenfalls einen Listeneintrag ([Q50](../../QUELLEN.md#q50), `po-oa-management_xsd`). [Q06](../../QUELLEN.md#q06) kennt den Namen nicht und nennt nur die [`TXAML`](txaml.md) (Kap. 4.3.1).
 
-Zur **Versionszuordnung** gibt es eine belegte Konvention: [Q25](../../QUELLEN.md#q25), Kap. 4.3.3, definiert den Namensraum in EBNF, endend auf `NamensraumBereich, ["types"], "/", Version`. Die letzte Pfadstelle ist also eine **Version**, nicht ein Release. Dazu Kap. 4.3.1.4: „Innerhalb einer Version sind die Releases hinsichtlich des gemeinsamen Namensraumes kompatibel“; unterstützt werden nur zwei Versionen (Kap. 4.3.1.3).
+Zur **Versionszuordnung** gilt eine belegte Konvention: [Q25](../../QUELLEN.md#q25), Kap. 4.3.3, lässt den Namensraum auf eine **Version** enden, nicht auf ein Release; innerhalb einer Version sind die Releases hinsichtlich des Namensraums kompatibel (Kap. 4.3.1.4). Die `2` in `http://vdv/ka/alise/2` ist damit die Namensraum-Version (abgeleitet). Auf das KA-Release lässt sich daraus **nicht** schließen (zu prüfen, O4).
 
-Die `2` in `http://vdv/ka/alise/2` ist damit sehr wahrscheinlich die **Namensraum-Version** (abgeleitet). Auf das KA-Release — 1.1.07, 1.3.0 oder neuer — lässt sich daraus weiterhin **nicht** schließen, weil mehrere Releases denselben Namensraum teilen (zu prüfen, O4).
-
-Die Bereichsliste derselben Konvention nennt `pv-alise` und `kvp-alise`, die WSDL-Bereiche entsprechend `PV_ALISE` und `KVP_ALISE` ([Q25](../../QUELLEN.md#q25), Kap. 4.3.2 f.). Es gibt also **zwei** ALISE-Schnittstellen, was die Frage nach der Zuordnung von `txalisber` verschärft (zu prüfen, O14).
+Die Bereichsliste nennt `pv-alise` und `kvp-alise`, die WSDL-Bereiche `PV_ALISE` und `KVP_ALISE` ([Q25](../../QUELLEN.md#q25), Kap. 4.3.2 f.) — es gibt also **zwei** ALISE-Schnittstellen.
 
 Das Präfix `am…` mehrerer Felder (`amAuftragsTyp`, `amAenderungsreferenz_ID`, `amTerminalGruppe_ID`) liest sich als Aktionsmanagement-Merkmal (abgeleitet).
 
