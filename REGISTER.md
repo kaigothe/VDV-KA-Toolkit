@@ -123,7 +123,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## R
 
 - [Rollen](lexikon/rollen.md)
-- [Rollencodes](lexikon/rollen/rollencodes.md)
+- [Rollencodes](lexikon/rollen/rollencodes.md) *(abgeleitet)*
 - [Rollennamen in etiCORE](lexikon/rollen/rollennamen-in-eticore.md)
 - [Rücknahme EFS über Aktionsliste](lexikon/aktionsmanagement/ruecknahme-efs-ueber-aktionsliste.md)
 

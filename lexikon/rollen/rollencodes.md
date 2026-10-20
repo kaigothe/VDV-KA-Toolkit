@@ -3,10 +3,10 @@ titel: Rollencodes
 englisch: role codes
 parent: lexikon/rollen.md
 siehe_auch: [lexikon/transaktionen/tx-base.md, lexikon/rollen/organisations-id.md]
-quellen: [Q06, Q25]
-status: belegt
+quellen: [Q06, Q25, Q50]
+status: abgeleitet
 offene_fragen: []
-stand: 2026-10-19
+stand: 2026-10-20
 codes:
   - wert: 1
     codeliste: KA-Rollencode
@@ -50,6 +50,48 @@ codes:
     fundstelle: Fußnote 7 (PDF-S. 40)
     status: belegt
     verbundspezifisch: true
+  - wert: 1
+    codeliste: etiCORE-Rollencode
+    bedeutung: CCP — Customer Contract Partner
+    quelle: Q50
+    fundstelle: WSDL ccp, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
+  - wert: 2
+    codeliste: etiCORE-Rollencode
+    bedeutung: SO — Service Operator
+    quelle: Q50
+    fundstelle: WSDL so, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
+  - wert: 3
+    codeliste: etiCORE-Rollencode
+    bedeutung: PO — Product Owner (auch die Aktionsmanagement-Schnittstelle)
+    quelle: Q50
+    fundstelle: WSDL po und po-oa-management, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
+  - wert: 4
+    codeliste: etiCORE-Rollencode
+    bedeutung: ESH — e-Ticket Security Hub
+    quelle: Q50
+    fundstelle: WSDL esh, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
+  - wert: 5
+    codeliste: etiCORE-Rollencode
+    bedeutung: Hotlist Service
+    quelle: Q50
+    fundstelle: WSDL hotlist, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
+  - wert: 254
+    codeliste: etiCORE-Rollencode
+    bedeutung: CRE — Central Routing Engine
+    quelle: Q50
+    fundstelle: WSDL cre, Kopfangabe „Role (decimal representation)“
+    status: belegt
+    verbundspezifisch: false
 ---
 
 <!-- GEN:breadcrumb -->
@@ -77,6 +119,8 @@ Der Code **31** für ALISE ist ab KA 1.3.0 nur noch für einen aus dem PV-System
 
 [Q06](../../QUELLEN.md#q06), Kap. 4.10, stellt die Codes **je Anwendungsfall** dar und unterscheidet nach der Rolle des Verkehrsunternehmens: ist es DL, aber nicht KVP, gilt DL = 2; ist es KVP, aber nicht DL, gilt KVP = 1; ist es **beides**, gilt KVP = 1 · *verbundspezifisch*.
 
+In etiCORE nennen die WSDL-Köpfe als Rolle: CCP **1**, SO **2**, PO **3**, ESH **4**, Hotlist Service **5**, CRE **254**; ALISE hat keinen eigenen Code ([Q50](../../QUELLEN.md#q50)). Die Codes 1 bis 5 stimmen mit obiger Liste überein, bei der 4 steht in etiCORE der ESH statt des AH; sie scheinen nicht verbundspezifisch zu sein (abgeleitet).
+
 Die Codeliste selbst steht in der nicht öffentlichen KA BOM-SPEC ([Q25](../../QUELLEN.md#q25), Kap. 3, Inventarnummer 1).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
@@ -95,10 +139,13 @@ Der erste: Der Code für den Applikationsherausgeber war im RMV-Pflichtenheft zu
 
 Der zweite: Ist ein Unternehmen gleichzeitig Dienstleister und Kundenvertragspartner — wie in Bärstadt —, dann gilt in den betreffenden Fällen die 1, nicht die 2. Es gibt also eine Vorrangregel. Sie steht nicht im Standard, sondern im Pflichtenheft eines Verbunds, und ob sie überall so gilt, ist offen.
 
+Unter etiCORE ändert sich an den Nummern nichts. Die BVB bleibt `9010 / 1`, jetzt als CCP; der Bären-Verkehrsbund bleibt `9020 / 3`, jetzt als PO. Neu sind die Namen. Nur der zentrale Vermittlungsdienst CRE trägt mit 254 einen Code, der in der Liste oben fehlt.
+
 Deshalb hier derselbe Hinweis wie bei allen Codelisten: Für ein anderes System die dort gültige Festlegung heranziehen.
 
 ## Quellen
 
+- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, Kopf der WSDL `ccp`, `so`, `po`, `po-oa-management`, `esh`, `hotlist`, `cre`: *Role (decimal representation)* · *Release-Kandidat*
 - [Q06](../../QUELLEN.md#q06) – RMV PH 06-02, Kap. 4.10 „Übersicht über die in `TX_BASE` verwendeten KA-Rollencodes und Org-IDs“ (PDF-S. 38 ff.): Darstellung je Anwendungsfall, Codes KVP = 1, DL = 2, PV = 3, KOSE = 5, Vorrangregel bei Doppelrolle; Versionshistorie zu v2.2 (Korrektur des AH-Codes von 5 auf 4); Fußnote 7, PDF-S. 40 (Einschränkung des Codes 31 für ALISE); Kap. 2.1.2 (die Mandantenzuordnung erfolgt im Hintergrundsystem über die Device-ID, nicht über die Sender- und Empfängerattribute des `TX_BASE`) · *verbundspezifisch: eTicket RheinMain*
 - [Q25](../../QUELLEN.md#q25) – eTicket-Regelwerk, Kap. 3 (KA BOM-SPEC, Inventarnummer 1, als Normquelle der Codelisten)
 
