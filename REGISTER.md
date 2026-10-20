@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-156 Eintragräge
+157 Eintragräge
 
 
 ## A
@@ -45,6 +45,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## C
 
+- [Check-in und Check-out](lexikon/abt/cico.md) — CICO
 - [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) — CVC
 - [CV-Zertifikat in etiCORE](lexikon/sicherheit/cv-zertifikat-in-eticore.md) *(abgeleitet)*
 

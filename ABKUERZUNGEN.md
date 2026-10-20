@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-44 Abkürzungen.
+45 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -14,6 +14,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **App** | [Applikation](lexikon/medien/applikation.md) | Application |
 | **ASM** | [ASM](lexikon/sicherheit/asm.md) | application and security management system |
 | **BOM** | [Basisobjektmodell](lexikon/datenformate/bom.md) | Basic Object Model |
+| **CICO** | [Check-in und Check-out](lexikon/abt/cico.md) | check-in and check-out |
 | **CVC** | [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) | card verifiable certificate |
 | **DL** | [Dienstleister](lexikon/rollen/dl.md) | Service Operator |
 | **eBezBer** | [eBezahlberechtigung](lexikon/berechtigungen/ebezahlberechtigung.md) | ePaymentMethod |

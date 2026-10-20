@@ -76,6 +76,7 @@ Eine Beobachtung zum Schluss: Dass eine Berechtigung in einer Cloud liegen darf,
 
 - [ABT in der Kernapplikation](abt/abt-in-der-kernapplikation.md)
 - [Account](abt/account.md)
+- [Check-in und Check-out](abt/cico.md)
 - [Deny List](abt/deny-list.md)
 - [Hybridsystem](abt/hybridsystem.md)
 - [ID-Token](abt/id-token.md)
