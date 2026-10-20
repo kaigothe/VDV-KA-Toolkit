@@ -275,6 +275,8 @@ Vollständig in [CLAUDE.md](CLAUDE.md). Die vier wichtigsten:
 
 ## 7. Was als Nächstes passiert
 
+> **Stand 2026-10-20.** Der folgende Text beschreibt die Lage vor der Freigabe der Musterartikel und ist historisch. Heute sind alle zehn Kategorien geschrieben (157 Artikel). Die öffentliche etiCORE-Spezifikation ([Q49](QUELLEN.md#q49) bis [Q51](QUELLEN.md#q51)) ist ausgewertet: Schnittstellen, ASN.1-Typen, 203 Fehler- und Warncodes. **Offen** sind die Fragen O2, O5, O13, O14, O20 bis O23 (Abschnitt 5; zur Abstimmung in [OFFENE-FRAGEN-ETICORE.md](OFFENE-FRAGEN-ETICORE.md)), die nicht öffentlichen Migrationsdokumente ([BESCHAFFUNG.md](BESCHAFFUNG.md), Abschnitt 2b) und die KA AktM-SPEC. **Bewusst nicht geschrieben**, weil die Quellen fehlen: Post-Validation, internationale Beispiele zum ABT.
+
 Die **zwei Musterartikel** liegen vor und sind der eigentliche Gegenstand der Freigabe:
 
 - Kategorieartikel: [lexikon/aktionsmanagement.md](lexikon/aktionsmanagement.md)
