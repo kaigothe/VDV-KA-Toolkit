@@ -63,6 +63,20 @@ Drei Erkenntnisse verändern die Anfrage erheblich — zwei verkleinern sie, ein
 
 ---
 
+## 2b. Neu: Migrationsdokumente zu etiCORE (Stand 20.10.2026)
+
+[Q43](QUELLEN.md#q43), Kap. 7.1 (PDF-S. 35), nennt Migrationsdokumente im Teilnehmerportal `efi.eticket-deutschland.de`. Die beiden angegebenen Links verlangen eine Anmeldung (HTTP 401, am 20.10.2026 geprüft); die Dokumente sind also **nicht öffentlich**. Sie würden die Feldzuordnung KA 1.x ↔ etiCORE vollständig liefern, von der wir bisher nur den Teil aus den XSDs kennen ([Q50](QUELLEN.md#q50)).
+
+| Datei (Name laut Q43) | Gegenstand | Wofür |
+|---|---|---|
+| `Mapping-old-new-xml.xls` | Gegenüberstellung der Begriffe aus den ION-Schnittstellen und weiteren | Feldzuordnung auf XML-Ebene, würde O13 und F5 klären |
+| `Mapping-old-new-binary.xls` | Gegenüberstellung der Begriffe aus SAM und NM | Binärstrukturen |
+| `Mapping-old-new-spec.xls` | Gegenüberstellung der Begriffe aus den Spezifikationen | Begriffe |
+| `PV-to-PO-Migration-Use-Cases`, `KOSE-to-Hotlist-Migration-Use-Cases`, `ASM-to-ESH-Migration-Use-Cases` u. a. | Gegenüberstellung der Anwendungsfälle je Rolle | Aktionsmanagement, Hotlist Service, ESH |
+| `etiCORE Migration und Parallelbetrieb 3.0.0-rc3.pdf` | Hauptdokument der Migration | Parallelbetrieb 1.x und etiCORE |
+
+---
+
 ## 3. Priorität 1 — ohne diese Dokumente bleiben zentrale Artikel unbelegt
 
 | Inv.-Nr. | Kurzzeichen | Titel | Wofür konkret |

@@ -97,6 +97,8 @@ PROBEN = [
 
 def quelle_pfad(q):
     treffer = sorted(glob.glob(os.path.join(REPO, "QUELLEN", f"{q}_*.pdf")))
+    if not treffer:   # auch der Unterordner QUELLEN/docs/ ist zugelassen
+        treffer = sorted(glob.glob(os.path.join(REPO, "QUELLEN", "docs", f"{q}_*.pdf")))
     return treffer[0] if treffer else None
 
 
