@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-39 Abkürzungen.
+40 Abkürzungen.
 
 | Abkürzung | Begriff | Englisch |
 |---|---|---|
@@ -19,6 +19,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 | **EFM** | [Elektronisches Fahrgeldmanagement](lexikon/grundlagen/efm.md) | Electronic Fare Management |
 | **EFS** | [Elektronischer Fahrschein](lexikon/berechtigungen/efs.md) | Electronic Ticket |
 | **EP** | [Elementarprozess](lexikon/grundlagen/elementarprozess.md) | Basic Process |
+| **ESH** | [ESH](lexikon/sicherheit/esh.md) | e-Ticket Security Hub |
 | **HGS** | [Hintergrundsystem](lexikon/rollen/hintergrundsystem.md) | Backoffice System |
 | **KA** | [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) | core application |
 | **KID** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) | key identifier |
