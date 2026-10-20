@@ -207,7 +207,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**16 nicht öffentliche Dokumente** werden derzeit in 138 Artikeln als Normquelle genannt, nach Häufigkeit:
+**16 nicht öffentliche Dokumente** werden derzeit in 143 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -239,6 +239,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) | O14, O20 |
 | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) | O19 |
 | [txalisber](lexikon/transaktionen/txalisber.md) | O4, O14 |
+| [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) | O22 |
 
 ### Offene Fragen und die betroffenen Artikel
 
@@ -260,8 +261,9 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O19** | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) |
 | **O20** | [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md), [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) |
 | **O21** | [Gültigkeitsbereich (ASN.1)](lexikon/berechtigungen/gueltigkeitsbereich-asn-1.md) |
+| **O22** | [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) |
 
-*Erzeugt aus 138 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 143 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

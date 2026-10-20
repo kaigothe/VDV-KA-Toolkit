@@ -294,7 +294,7 @@ Jede Operation nennt in der WSDL die für sie „relevanten Fehler“ und liefer
 
 **Listen.** Bei `E_CO_CYCLE_NUMBER_UNKNOWN_OR_TOO_OLD` und `E_CO_INCORRECT_CHECKSUM` soll der Abrufende die vollständige Liste anfordern.
 
-Alle 38 betrachteten Codes stehen im Frontmatter. Die Warncodes `W_…` und die Bereiche EUI, HL, ION und andere sind nicht erfasst. Quelle ist ein Release-Kandidat (3.0.0-rc.6).
+Alle 38 betrachteten Codes stehen im Frontmatter. Die übrigen Codes stehen in den Artikeln [Hotlist Service](../kontrolle/fehlercodes-des-hotlist-service.md), [ION](fehlercodes-im-ion.md), [CCP](fehlercodes-und-warnungen-des-ccp.md), [Terminalanteile](fehlercodes-der-terminalanteile.md) und [Warnungen](warnungen-in-eticore.md). Quelle ist ein Release-Kandidat (3.0.0-rc.6).
 
 ## Einfach erklärt – Beispiel aus Bärstadt
 

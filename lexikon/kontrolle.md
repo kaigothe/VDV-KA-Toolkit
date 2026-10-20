@@ -67,6 +67,7 @@ Interessant ist der Blick nach vorn. Heute schreibt das Kontrollgerät einen Nac
 <!-- GEN:unterartikel -->
 ## Unterartikel
 
+- [Fehlercodes des Hotlist Service](kontrolle/fehlercodes-des-hotlist-service.md)
 - [Hotlist Service](kontrolle/hotlist-service.md)
 - [Kontrollgerät](kontrolle/kontrollgeraet.md)
 - [Kontrollnachweise](kontrolle/kontrollnachweise.md)

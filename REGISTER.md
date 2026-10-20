@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-138 Eintragräge
+143 Eintragräge
 
 
 ## A
@@ -70,6 +70,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Fahrgast, Linie und Identifikationsmedium (ASN.1)](lexikon/berechtigungen/fahrgast-linie-und-identifikationsmedium-asn-1.md)
 - [Fahrtdaten (ASN.1)](lexikon/datenformate/fahrtdaten-asn-1.md) *(abgeleitet)*
 - [Fehlercodes (etiCORE)](lexikon/transaktionen/fehlercodes-eticore.md) *(abgeleitet)*
+- [Fehlercodes der Terminalanteile](lexikon/transaktionen/fehlercodes-der-terminalanteile.md) *(abgeleitet)*
+- [Fehlercodes des Hotlist Service](lexikon/kontrolle/fehlercodes-des-hotlist-service.md)
+- [Fehlercodes im ION](lexikon/transaktionen/fehlercodes-im-ion.md) *(abgeleitet)*
+- [Fehlercodes und Warnungen des CCP](lexikon/transaktionen/fehlercodes-und-warnungen-des-ccp.md)
 
 ## G
 
@@ -197,6 +201,10 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [VDV-Kernapplikation](lexikon/grundlagen/vdv-kernapplikation.md) — KA
 - [Versionen](lexikon/grundlagen/versionen.md)
 - [Verzeichnisse auf dem Medium (ASN.1)](lexikon/medien/verzeichnisse-auf-dem-medium-asn-1.md) *(abgeleitet)*
+
+## W
+
+- [Warnungen in etiCORE](lexikon/transaktionen/warnungen-in-eticore.md) *(zu prüfen)*
 
 ## X
 

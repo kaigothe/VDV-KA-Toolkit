@@ -463,7 +463,7 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 **VDV eTicket Service – etiCORE Interfaces Documentation (WSDL und XSD)**
 
 - **Datei:** `QUELLEN/Q49_etiCORE-Spezifikation_3.0.0-rc.6/md/` — Einstieg `index-interfaces.md`; je Schnittstelle ein Ordner (`PO-Action-Management/`, `CCP-Action-Ordering/`, `CCP-Action-Execution/` u. a.)
-- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** teilweise — Aktionsmanagement (PO, CCP-Ordering, CCP-Execution) ausgewertet, Rest offen
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** teilweise — Aktionsmanagement (PO, CCP-Ordering, CCP-Execution), Hotlist und ESH sowie **alle 203 Fehler- und Warncodes** ausgewertet; CRE, SO, die Static-Entitlement-Erweiterungen und die XSD-Datentypen sind offen
 - **Stand:** Version **3.0.0-rc.6** (Release Candidate), geladen am 2026-10-20
 - **Fundstelle:** Dateiname und Element- oder Typname, etwa „`po-oa-management-messaging_xsd`, Element `cancelOrder`“.
 - **Rechte:** wie [Q49](#q49) — Kopie lokal, im Repository nur kurze Exzerpte ([exzerpte/Q50.md](exzerpte/Q50.md)).

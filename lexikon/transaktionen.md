@@ -58,6 +58,9 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 - [Bescheinigungen zu Zahlungsmitteln (ASN.1)](transaktionen/bescheinigungen-zu-zahlungsmitteln-asn-1.md)
 - [Duplikaterkennung](transaktionen/duplikaterkennung.md)
 - [Fehlercodes (etiCORE)](transaktionen/fehlercodes-eticore.md)
+- [Fehlercodes der Terminalanteile](transaktionen/fehlercodes-der-terminalanteile.md)
+- [Fehlercodes im ION](transaktionen/fehlercodes-im-ion.md)
+- [Fehlercodes und Warnungen des CCP](transaktionen/fehlercodes-und-warnungen-des-ccp.md)
 - [logTransaktionsTyp](transaktionen/logtransaktionstyp.md)
 - [Nachrichten in KA 1.x und etiCORE](transaktionen/nachrichten-in-ka-1-x-und-eticore.md)
 - [Nachweis](transaktionen/nachweis.md)
@@ -71,6 +74,7 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 - [TXEBER](transaktionen/txeber.md)
 - [TXRBER](transaktionen/txrber.md)
 - [TXSNAWB](transaktionen/txsnawb.md)
+- [Warnungen in etiCORE](transaktionen/warnungen-in-eticore.md)
 <!-- /GEN:unterartikel -->
 
 <!-- GEN:siehe_auch -->

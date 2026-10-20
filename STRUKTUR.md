@@ -405,3 +405,17 @@ Die Artikel stehen dort, wo ihr Gegenstand liegt, nicht in einer eigenen ASN.1-K
 | **Basistypen des Mediums (ASN.1)** | `datenformate/basistypen-des-mediums-asn-1.md` | Q51, Modul user-medium | Status, Zeitangaben und einfache Zahlentypen. | P2 |
 
 **Stand 2026-10-20:** Alle 21 Artikel sind geschrieben, damit stehen **138 Artikel**. [exzerpte/Q51.md](exzerpte/Q51.md) ordnet jedem der 220 Typen seinen Artikel zu. Die Sprachliste `LanguageEnum` (188 Werte) steht nur im Modul selbst. Neue offene Frage: O21 (`AlternativeValidityAreaList`).
+
+---
+
+## 18. Die übrigen Fehler- und Warncodes aus Q50 (2026-10-20)
+
+[Fehlercodes (etiCORE)](lexikon/transaktionen/fehlercodes-eticore.md) behandelt 38 Codes. Die übrigen **165** werden nach Bereichen in fünf Artikeln gebündelt; die Codes stehen strukturiert im Frontmatter, mit deutscher Bedeutung.
+
+| Artikel | Pfad | Quelle | Grund für diesen Platz | Prio |
+|---|---|---|---|---|
+| **Fehlercodes des Hotlist Service** | `kontrolle/fehlercodes-des-hotlist-service.md` | Q50, `hotlist-event-enums_xsd` | Rückmeldungen des Hotlist Service; gehört zur Sperrliste. | P2 |
+| **Fehlercodes im ION** | `transaktionen/fehlercodes-im-ion.md` | Q50, `ion-event-enums_xsd`, `ion-communication-event-enums_xsd`, `cre-`, `esh-event-enums_xsd` | Fehler beim Übermitteln von Nachrichten; Geschwister von [Fehlercodes (etiCORE)](lexikon/transaktionen/fehlercodes-eticore.md). | P2 |
+| **Fehlercodes und Warnungen des CCP** | `transaktionen/fehlercodes-und-warnungen-des-ccp.md` | Q50, `ccp-event-enums_xsd`, `ccp-ste-event-enums_xsd` | Meldungen der CCP-Systeme zu Sperranforderungen, Check-in/Check-out und Zählern. | P2 |
+| **Fehlercodes der Terminalanteile** | `transaktionen/fehlercodes-der-terminalanteile.md` | Q50, `eui-`, `esi-`, `personalisation-event-enums_xsd` | Fehler der Ausführungseinheit, der Personalisierung und der Fremdsystem-Schnittstelle. | P2 |
+| **Warnungen in etiCORE** | `transaktionen/warnungen-in-eticore.md` | Q50, `common-event-enums_xsd`, `po-event-enums_xsd`, `po-ste-event-enums_xsd` | Die Plausibilitätsprüfungen der Empfängersysteme; Grundlage jeder Fehlererkennung. | P2 |
