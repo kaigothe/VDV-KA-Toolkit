@@ -55,6 +55,7 @@ Die Unterartikel gehen die einzelnen Belegarten durch: den Ausgabenachweis, den 
 
 - [Duplikaterkennung](transaktionen/duplikaterkennung.md)
 - [logTransaktionsTyp](transaktionen/logtransaktionstyp.md)
+- [Nachrichten in KA 1.x und etiCORE](transaktionen/nachrichten-in-ka-1-x-und-eticore.md)
 - [Nachweis](transaktionen/nachweis.md)
 - [Pflichtelemente einer Transaktion](transaktionen/pflichtelemente-einer-transaktion.md)
 - [Transaktion](transaktionen/transaktion.md)

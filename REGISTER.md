@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-111 Eintragräge
+112 Eintragräge
 
 
 ## A
@@ -99,6 +99,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
 ## N
 
+- [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) *(zu prüfen)*
 - [Nachweis](lexikon/transaktionen/nachweis.md)
 - [Nullwerte](lexikon/datenformate/nullwerte.md)
 - [Nutzermedium](lexikon/medien/nutzermedium.md) — NM

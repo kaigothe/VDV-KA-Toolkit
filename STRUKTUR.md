@@ -350,3 +350,21 @@ Sechs neue Dokumente und das öffentlich erreichbare etiCORE-Spezifikationsmodel
 **Eine Korrektur:** [vdv-barcode.md](lexikon/datenformate/vdv-barcode.md) behauptete im Beispielteil, ein Barcode lasse sich nicht sperren. [Q46](QUELLEN.md#q46), Kap. 4.1, PDF-S. 9, sagt das Gegenteil: Ein gesperrtes Barcodeticket wird bei der Kontrolle erkannt und muss abgewiesen werden. Unveränderlich ist der **Inhalt des Barcodes**, nicht die Sperrbarkeit des Tickets.
 
 **Neue offene Fragen:** O15 (Füllwert nicht benutzter Datenelemente), O16 (Zugang zu den Spezifikationen über das ASM-Tool), O17 (Datensatz im UIC 918-9\*), O18 (konkrete Schlüsselnummern in den Key-Identifier-Bereichen), O19 (Bedeutung des Kürzels „FU“ im Kundenstatus).
+
+---
+
+## 16. Erweiterung aus den Quellen Q50 und Q51 (2026-10-20)
+
+Die Schnittstellendokumentation der etiCORE-Spezifikation ([Q50](QUELLEN.md#q50)) und die ASN.1-Typen ([Q51](QUELLEN.md#q51)) liegen als lokale Kopie vor. **Eine eigene Kategorie „etiCORE“ entsteht nicht**: etiCORE ist ein Grundlagenbegriff ([eticore.md](lexikon/grundlagen/eticore.md)), und die Rollenübersetzung steht bei den Rollen. Die neuen Artikel gehören in die Fachkategorien, in denen ihr Gegenstand liegt. Version und Geltung stehen im Text und in den Quellenangaben; ein eigenes Frontmatter-Feld dafür ist nicht nötig.
+
+| Artikel | Pfad | Quelle | Grund für diesen Platz | Prio |
+|---|---|---|---|---|
+| **Nachrichten in KA 1.x und etiCORE** | `transaktionen/nachrichten-in-ka-1-x-und-eticore.md` | [Q50](QUELLEN.md#q50), Elemente mit `meta:old` | Gegenstand sind Nachrichtennamen; er steht bei den Transaktionen und Nachrichten, Geschwister von [TXAML](lexikon/transaktionen/txaml.md). Ergänzt die Rollenübersetzung. | **P1** |
+| **Aktionsmanagement in etiCORE** | `aktionsmanagement/aktionsmanagement-in-eticore.md` | [Q50](QUELLEN.md#q50), `po-oa-management` und `ccp-oa-ordering`; [Q49](QUELLEN.md#q49), Glossar | Zeigt, wie Bestellen, Abrufen und Melden in etiCORE zugeschnitten sind (`orderGroup`, Differenzliste mit Prüfsumme). Gehört zum Aktionsmanagement. | **P1** |
+| **Fehlercodes in etiCORE** | `transaktionen/fehlercodes-eticore.md` | [Q50](QUELLEN.md#q50), Fehlerelemente der Aktionsverwaltung | Rückmeldungen auf Nachrichten; Platz bei den Nachrichten. Offen, ob die vollständige Codeliste lesbar ist. | P2 |
+| **Hotlist Service** | `kontrolle/hotlist-service.md` | [Q50](QUELLEN.md#q50), `hotlist`; [Q49](QUELLEN.md#q49), Glossar | Nachfolger der Rolle KOSE; die Sperraufträge haben Altbezeichner (`TXSAUF…`, `TXSFREI…`). Gegenstand ist die Sperrliste, also Kontrollmanagement. | P2 |
+| **ESH** | `sicherheit/esh.md` | [Q50](QUELLEN.md#q50), `esh`; [Q49](QUELLEN.md#q49), Glossar („successor to the ASM“) | Nachfolger des [ASM](lexikon/sicherheit/asm.md); die Schnittstelle ist noch nicht gelesen. | P2 |
+
+**Erweitert** werden, ohne Umbau: [rollennamen-in-eticore.md](lexikon/rollen/rollennamen-in-eticore.md) (die Gleichsetzung von ALISE und PO-Aktionsmanagement ist über die Altbezeichner im Namensraum `http://vdv/ka/alise/2` gestützt), [spezifikationsmodell.md](lexikon/grundlagen/spezifikationsmodell.md) (Verweis auf Q50 und Q51), [txalisber.md](lexikon/transaktionen/txalisber.md) (O14), [aktionsfreigabe.md](lexikon/aktionsmanagement/aktionsfreigabe.md) (O20).
+
+**Neue offene Frage:** O20 (`TXAFREIBER` wird in etiCORE zu `cancelOrder`).

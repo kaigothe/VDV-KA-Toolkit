@@ -193,7 +193,7 @@ Drei der ursprünglich zwölf Fragen (O7, O8, O12) sind inzwischen aus öffentli
 Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nicht von Hand zu pflegen**. Er zeigt, welcher Artikel welches nicht öffentliche Dokument als Normquelle nennt — damit auf der Gegenseite nachvollziehbar ist, dass die Anfrage aus konkretem Bedarf entsteht und nicht pauschal gestellt wird.
 
 <!-- GEN:verwendung -->
-**16 nicht öffentliche Dokumente** werden derzeit in 111 Artikeln als Normquelle genannt, nach Häufigkeit:
+**16 nicht öffentliche Dokumente** werden derzeit in 112 Artikeln als Normquelle genannt, nach Häufigkeit:
 
 | Nennungen | Inv.-Nr. | Dokument | genannt in |
 |---:|---:|---|---|
@@ -220,6 +220,7 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 |---|---|
 | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) | O13 |
 | [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) | O2, O9 |
+| [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) | O14, O20 |
 | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) | O19 |
 | [txalisber](lexikon/transaktionen/txalisber.md) | O4, O14 |
 
@@ -235,14 +236,15 @@ Dieser Abschnitt wird von `tools/gen.py` aus den Artikeln erzeugt und ist **nich
 | **O6** | [Produktspezifischer Teil](lexikon/berechtigungen/produktspezifischer-teil.md), [TLV-Kodierung](lexikon/datenformate/tlv.md) |
 | **O9** | [Aktion](lexikon/aktionsmanagement/aktion.md), [Aktionsmanagement](lexikon/aktionsmanagement.md), [Auftragstyp](lexikon/aktionsmanagement/auftragstyp.md) |
 | **O13** | [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) |
-| **O14** | [txalisber](lexikon/transaktionen/txalisber.md) |
+| **O14** | [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md), [txalisber](lexikon/transaktionen/txalisber.md) |
 | **O15** | [Pflichtelemente einer Transaktion](lexikon/transaktionen/pflichtelemente-einer-transaktion.md) |
 | **O16** | [KA-Spezifikationen](lexikon/grundlagen/ka-spezifikationen.md) |
 | **O17** | [UIC-Barcode](lexikon/datenformate/uic-barcode.md) |
 | **O18** | [Key-Identifier](lexikon/sicherheit/key-identifier.md) |
 | **O19** | [Teilnahmevertrag](lexikon/grundlagen/teilnahmevertrag.md) |
+| **O20** | [Nachrichten in KA 1.x und etiCORE](lexikon/transaktionen/nachrichten-in-ka-1-x-und-eticore.md) |
 
-*Erzeugt aus 111 Artikeln. Die Links führen in das Lexikon.*
+*Erzeugt aus 112 Artikeln. Die Links führen in das Lexikon.*
 <!-- /GEN:verwendung -->
 
 ---

@@ -1,0 +1,4 @@
+- https://modell.eticket-deutschland.de/3.0.0-rc.6/EA/index.html
+- https://modell.eticket-deutschland.de/3.0.0-rc.6/index-interfaces.html
+- https://modell.eticket-deutschland.de/3.0.0-rc.6/index-asn1.html
+- https://modell.eticket-deutschland.de/3.0.0-rc.6/PO-Action-Management/po-oa-management.html

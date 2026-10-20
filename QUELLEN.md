@@ -445,13 +445,50 @@ Die eigentlichen Normdokumente sind **nicht öffentlich** und nur für Lizenzneh
 **VDV eTicket Service – etiCORE Specification (Spezifikationsmodell, online)**
 
 - **URL:** https://modell.eticket-deutschland.de/LATEST/EA/index.html — die jeweils aktuelle Fassung; versionierte Einstiege wie `…/3.0.0-rc.6/EA/` existieren ebenfalls
-- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** **nur Struktur geprüft, Inhalte offen**
+- **Datei:** `QUELLEN/Q49_etiCORE-Spezifikation_3.0.0-rc.6/` — lokale Gesamtkopie der Version **3.0.0-rc.6** (30.605 Seiten): `html/` Originale, `md/` Markdown-Umwandlung. Sie enthält auch die Unterlagen zu [Q50](#q50) und [Q51](#q51). Nutzungsbedingungen als `nutzungsbedingungen_de.txt` und `nutzungsbedingungen_en.txt` daneben.
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** teilweise — Glossar gelesen, Zugehöriges zum Aktionsmanagement in [Q50](#q50) ausgewertet; der Modellbaum `EA/EARoot/` (Layer 1 bis 5) ist noch nicht durchgearbeitet
+- **Fundstelle:** Das Modell hat keine Kapitelnummern. Zitiert wird mit dem **Paket- oder Elementnamen** und der Versionsangabe, etwa „Glossary, Eintrag *Ordered action*, 3.0.0-rc.6“.
+- **Version:** **3.0.0-rc.6 ist ein Release Candidate**, keine endgültige Fassung. Aussagen daraus sind bei Erscheinen der Endfassung zu prüfen.
+- **Rechte:** Die Nutzungsbedingungen (Punkt 1) gewähren ein „nicht ausschließliches, nicht übertragbares, unentgeltliches und zeitlich unbegrenztes Nutzungsrecht“. Die Kopie bleibt deshalb **lokal**; ins Repository gehören nur kurze Exzerpte mit Fundstelle.
 - **Inhalt — potenziell die wichtigste öffentliche Quelle des Projekts:** Ein HTML-Export des etiCORE-Spezifikationsmodells aus Enterprise Architect, Titel „etiCORE Specification“. Die oberste Ebene hat 18 Pakete:
   - Introduction · **Role Model** · Layer 1 und 2 (Workflows und Basic Processes in BPMN) · Layer 3 (Use Cases in UML) · **Layer 4 (System Components and Interfaces in UML)** · Layer 5 (Implementation Details in UML) · **ION Specification** · General Specification Parts for Terminals · Spec EUI, MPI, ESI · SAM-Server · User Manual · **Types** · **Interfaces** · **Glossary** · Operational parameters · List of References
   - Allein unter „Types“ hängen über 100 Unterpakete.
 - **Einschränkung, die zu beachten ist:** Das Modell beschreibt **etiCORE, also KA Version 3** — nicht die KA 1.x, auf die sich dieses Lexikon vorrangig bezieht. Aussagen daraus gelten **nicht ohne Prüfung** für KA 1.x und sind entsprechend zu kennzeichnen.
-- **Erschließung:** Der Export verschachtelt Pakete tief; jede Seite ist ein Navigationsrahmen mit Inhalt darunter. Eine systematische Auswertung erfordert ein gezieltes Abrufen der Blattseiten. Entsprechender Bedarf ist in [BESCHAFFUNG.md](BESCHAFFUNG.md) vermerkt.
+- **Erschließung:** Der Export verschachtelt Pakete tief. Die lokale Kopie macht das Abrufen einzelner Seiten überflüssig; `md/EA/glossary.md` (englisch, rund 30 KB) ist der schnellste Einstieg.
+- **Das Glossar nennt** unter anderem: *ALISE* = „Action List Service“; *Ordered action* (OA) = „an action to be done on a user medium“, im Produktowner-System bestellt und über Aktionslisten an ausführende CCP verteilt; *ESH* = „E-Ticket Security Hub. The successor to the ASM“; *CRE* = Central Routing Engine; *EO* = Entitlement owner; *TO* = Terminal Operator; *UMO* = User Medium Application Instance Owner; *Level-3* = Produktivumgebung. *etiCORE* sei der Name der neuen Version des deutschen eTicket-Standards.
 - **Stichworte:** etiCORE, Spezifikationsmodell, Datentypen, Codelisten, Schnittstellen, Rollenmodell, ION
+
+## Q50
+
+**VDV eTicket Service – etiCORE Interfaces Documentation (WSDL und XSD)**
+
+- **Datei:** `QUELLEN/Q49_etiCORE-Spezifikation_3.0.0-rc.6/md/` — Einstieg `index-interfaces.md`; je Schnittstelle ein Ordner (`PO-Action-Management/`, `CCP-Action-Ordering/`, `CCP-Action-Execution/` u. a.)
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** teilweise — Aktionsmanagement (PO, CCP-Ordering, CCP-Execution) ausgewertet, Rest offen
+- **Stand:** Version **3.0.0-rc.6** (Release Candidate), geladen am 2026-10-20
+- **Fundstelle:** Dateiname und Element- oder Typname, etwa „`po-oa-management-messaging_xsd`, Element `cancelOrder`“.
+- **Rechte:** wie [Q49](#q49) — Kopie lokal, im Repository nur kurze Exzerpte ([exzerpte/Q50.md](exzerpte/Q50.md)).
+- **Inhalt:** Neunzehn Schnittstellen — zwölf WSDL (ESH, CCP mit den Erweiterungen Action Execution, Action Ordering und Static Entitlement, CRE, Hotlist, PO mit Action Management und Static Entitlement, SO mit Static Entitlement), fünf weitere XSD-Gruppen (EUI, ESI, MPI, Terminal, Media Shipment List) und zwei OpenAPI-Schnittstellen des SAM-Servers.
+  - Die Namensräume haben die Form `https://eticore.org/<schnittstelle>/messaging/3`.
+  - Das WSDL `po-oa-management` nennt als Rolle (dezimal) die **3**.
+  - Das Aktionsmanagement umfasst die Aufträge `orderEntitlementIssuance`, `…Blocking`, `…Unblocking`, `…Termination`, `orderGroup` (seit 3.0.0) und `cancelOrder`, den Abruf `getActionList`, `getIncrementalActionList` und `verifyActionListUpdatedViaIncrements` sowie Meldungen wie `notifyOrderedEntitlementIssued`.
+  - Rund 30 Fehlercodes mit den Präfixen `E_POOAM_`, `E_CO_`, `E_PO_` und `E_CCP_` sind benannt.
+- **Wertvoll für dieses Lexikon:** Die XSDs tragen zu rund 850 Elementen und Typen einen Vermerk `meta:old`, der den **Namen in der KA 1.x mit Namensraum** angibt (etwa `http://vdv/ka/alise/2`). Das ist die bislang einzige öffentliche Verbindung zwischen den KA-1.x-Nachrichten und ihren etiCORE-Nachfolgern. Ausgewertet in [exzerpte/Q50.md](exzerpte/Q50.md).
+- **Einschränkung:** Das Modell beschreibt **etiCORE**. Die `meta:old`-Angaben belegen die Abbildung der Namen, nicht, dass sich Inhalt und Semantik in KA 1.x genauso verhalten. Und: Felder wie `amAuftragsTyp` tauchen als Altname **nicht** auf; die Aktionstypen sind in etiCORE offenbar nicht als Codeliste, sondern als eigene Operationen modelliert (abgeleitet).
+- **Stichworte:** WSDL, XSD, Aktionsmanagement, `meta:old`, Altbezeichner, ALISE, Hotlist, Fehlercodes
+
+## Q51
+
+**VDV eTicket Service – etiCORE ASN.1 Data Type Description**
+
+- **Datei:** `QUELLEN/Q49_etiCORE-Spezifikation_3.0.0-rc.6/md/asn.1/` — Einstieg `index-asn1.md`
+- **Typ:** Primär · **Herkunft:** Original · **Auswertung:** offen — Struktur geprüft, Typen noch nicht ausgewertet
+- **Stand:** Version **3.0.0-rc.6**, geladen am 2026-10-20
+- **Fundstelle:** Modul und Typname, etwa „`ste`, Typ `StaticElectronicTicketParameters`“.
+- **Rechte:** wie [Q49](#q49).
+- **Inhalt:** Neun ASN.1-Module — Electronic Ticket (`et`), Payment, Static Entitlement (`ste`), Tariff, User Medium (`user-medium`), Common, CV Certificate (`cv-certificates`), Mobile Ticketing Crypto Service (`motics`) und Secure Application Module (`sam`). Je Typ stehen Tag (hexadezimal), Art (`SEQUENCE`, `CHOICE`, `ENUMERATED` u. a.), eine Feldtabelle mit Tag, Elementname, Typname, Optional-Kennzeichen und Beschreibung sowie bei Aufzählungen die Werte mit Bezeichnern. Das Modul `common` enthält 44 Typen.
+- **Bedeutung:** maschinenlesbare Grundlage für Tags und Aufzählungen im Chip- und Barcode-Bereich — soweit etiCORE betroffen. Verweise auf EN 1545-1:2015 bei `DeviceTypeCode` und `LocationTypeCode`.
+- **Einschränkung:** etiCORE-Typen, nicht die KA-1.x-Strukturen. Gleiche Namen bedeuten nicht gleiche Kodierung.
+- **Stichworte:** ASN.1, Tags, Static Entitlement, User Medium, Aufzählungen, CV-Zertifikat, MOTICS
 
 ---
 
