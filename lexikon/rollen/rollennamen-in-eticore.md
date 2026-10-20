@@ -3,10 +3,10 @@ titel: Rollennamen in etiCORE
 englisch: role names in etiCORE
 parent: lexikon/rollen.md
 siehe_auch: [lexikon/grundlagen/eticore.md, lexikon/rollen/rollencodes.md]
-quellen: [Q02, Q43, Q45]
+quellen: [Q02, Q43, Q45, Q50]
 status: belegt
 offene_fragen: []
-stand: 2026-10-19
+stand: 2026-10-20
 codes: []
 ---
 
@@ -34,7 +34,7 @@ Die Abkürzungen ZVM, ASM und PE der linken Spalte sind über [Q45](../../QUELLE
 
 **Zwei Rollen haben kein unmittelbares Gegenstück.** Neu ist der **eCCP**, der Executing Customer Contract Partner: ein CCP, „welches zusätzlich zur Grundfunktionalität im Rahmen des [Aktionsmanagements](../aktionsmanagement.md) ausgeführte Aktionen verarbeitet“ beziehungsweise „Aktionen mit dem Nutzermedium ausführt und meldet“. Daneben steht der **CCP-STE** für Systeme und Terminals, die „ausschließlich mit [statischen Berechtigungen](../berechtigungen/statische-berechtigung.md) arbeiten“ ([Q43](../../QUELLEN.md#q43), Kap. 2.1, PDF-S. 24).
 
-Die Aufgabe des [ALISE](alise.md) findet sich in den Schnittstellen wieder: „Product Owner Action Management“ auf der bestellenden, „Customer Contract Partner Action Ordering“ und „Customer Contract Partner Ordered Action Execution“ auf der ausführenden Seite ([Q43](../../QUELLEN.md#q43), Kap. 5.2.2, PDF-S. 33) — eine Gleichsetzung mit ALISE ist damit naheliegend, aber nicht ausgesprochen (abgeleitet).
+Die Aufgabe des [ALISE](alise.md) findet sich in den Schnittstellen wieder: „Product Owner Action Management“ auf der bestellenden, „Customer Contract Partner Action Ordering“ und „Customer Contract Partner Ordered Action Execution“ auf der ausführenden Seite ([Q43](../../QUELLEN.md#q43), Kap. 5.2.2, PDF-S. 33) — eine Gleichsetzung mit ALISE ist damit naheliegend, aber nicht ausgesprochen (abgeleitet). Gestützt wird sie dadurch, dass die Elemente dieser Schnittstellen die Altbezeichner aus dem Namensraum `http://vdv/ka/alise/2` tragen, etwa `TXAML` für `getActionListResponse` ([Q50](../../QUELLEN.md#q50), `po-oa-management-messaging_xsd`; [Nachrichten in KA 1.x und etiCORE](../transaktionen/nachrichten-in-ka-1-x-und-eticore.md)).
 
 Der [AH](ah.md) erscheint als Teil des **Scheme Manager** ([Q02](../../QUELLEN.md#q02), S. 23).
 
@@ -60,6 +60,7 @@ Zwei Dinge sind mehr als eine Umbenennung.
 
 ## Quellen
 
+- [Q50](../../QUELLEN.md#q50) – etiCORE Interfaces Documentation 3.0.0-rc.6, `po-oa-management-messaging_xsd`: Altbezeichner im Namensraum `http://vdv/ka/alise/2` · *Release-Kandidat*
 - [Q43](../../QUELLEN.md#q43) – etiCORE Release Letter 3.0.0-rc.6: Kap. 2.1, PDF-S. 24 (eCCP als CCP, der im Rahmen des Aktionsmanagements ausgeführte Aktionen verarbeitet bzw. Aktionen mit dem Nutzermedium ausführt und meldet; CCP-STE für ausschließlich statische Berechtigungen; Referenzspezifikationen für CCP, SO, PO), Kap. 5.2.2, PDF-S. 33 (Schnittstellen Product Owner Action Management, Customer Contract Partner Action Ordering, Customer Contract Partner Ordered Action Execution; ESH als vormaliges ASM), Kap. 7.1, PDF-S. 35 (Migrationsdokumente mit der Gegenüberstellung KVP/CCP, PV/PO, DL/SO, KOSE/Hotlist Service, ZVM/CRE, ASM/ESH, PE/Execution Unit, Fremdsystem/External System)
 - [Q45](../../QUELLEN.md#q45) – ASM-Tool Glossar, S. 7 f. (Abkürzungen ASM als Applikations- und Sicherheitsmanagement-System, ZVM als Zentrale Vermittlungsstelle im ION, NM als Nutzermedium)
 - [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 23 (Applikationsherausgeber als Teil des Scheme Manager)

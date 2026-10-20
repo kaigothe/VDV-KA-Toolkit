@@ -64,6 +64,7 @@ Für Pia bedeutet das vor allem eines: Zwischen Bodos Genehmigung und dem fertig
 - [Aktionsdifferenzliste](aktionsmanagement/aktionsdifferenzliste.md)
 - [Aktionsfreigabe](aktionsmanagement/aktionsfreigabe.md)
 - [Aktionsliste](aktionsmanagement/aktionsliste.md)
+- [Aktionsmanagement in etiCORE](aktionsmanagement/aktionsmanagement-in-eticore.md)
 - [Änderungsreferenz](aktionsmanagement/aenderungsreferenz.md)
 - [Auftragstyp](aktionsmanagement/auftragstyp.md)
 - [Ausgabe EFS über Aktionsliste](aktionsmanagement/ausgabe-efs-ueber-aktionsliste.md)

@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-112 Eintragräge
+113 Eintragräge
 
 
 ## A
@@ -13,10 +13,11 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Aktion](lexikon/aktionsmanagement/aktion.md)
 - [Aktionsclearing](lexikon/aktionsmanagement/aktionsclearing.md)
 - [Aktionsdifferenzliste](lexikon/aktionsmanagement/aktionsdifferenzliste.md)
-- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md)
+- [Aktionsfreigabe](lexikon/aktionsmanagement/aktionsfreigabe.md) *(abgeleitet)*
 - [Aktionsliste](lexikon/aktionsmanagement/aktionsliste.md) — TXAML
 - [Aktionslistenservice](lexikon/rollen/alise.md) — ALISE
 - [Aktionsmanagement](lexikon/aktionsmanagement.md) — AktM
+- [Aktionsmanagement in etiCORE](lexikon/aktionsmanagement/aktionsmanagement-in-eticore.md)
 - [Akzeptanzterminal](lexikon/rollen/akzeptanzterminal.md) — AKT
 - [Änderungsreferenz](lexikon/aktionsmanagement/aenderungsreferenz.md) *(zu prüfen)*
 - [Applikation](lexikon/medien/applikation.md) — App
