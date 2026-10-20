@@ -3,7 +3,7 @@ titel: Statische Berechtigung in etiCORE
 englisch: static entitlement in etiCORE
 parent: lexikon/berechtigungen.md
 siehe_auch: [lexikon/berechtigungen/statische-berechtigung.md, lexikon/berechtigungen/berstatus.md, lexikon/berechtigungen/bersynchronnummer.md, lexikon/datenformate/vdv-barcode.md]
-quellen: [Q51]
+quellen: [Q02, Q51]
 status: belegt
 offene_fragen: []
 stand: 2026-10-20
@@ -85,12 +85,13 @@ Man kann sich den Datensatz wie einen Brief mit Siegel vorstellen. Im Brief steh
 
 Beigelegt ist ein Ausweis des Absenders: das Zertifikat des SAM, das unterschrieben hat. Damit kann Petra Pranke mit ihrem Kontrollgerät nachvollziehen, wer unterschrieben hat, ohne beim Bären-Verkehrsbund anrufen zu müssen.
 
-Ein Feld, die `sceId`, kann die Berechtigung an eine bestimmte App-Instanz binden, hier an Ollis App. Es ist optional, und wie diese Bindung geprüft wird, nennt die Quelle nicht.
+Ein Feld, die `sceId`, kann die Berechtigung an eine bestimmte SCE binden. Das ist die Secure Crypto Environment auf Ollis Handy, die Schlüssel unveränderlich an das Gerät und die App bindet ([Q02](../../QUELLEN.md#q02), S. 81). Das Feld ist optional, und wie die Bindung geprüft wird, nennt die Quelle nicht.
 
 Und noch ein Hinweis zum Status: Er kennt in diesem Modul nur „beendet“, „in Ordnung“ und „gesperrt“. Wer aus der KA 1.x den Wert 8, „neu, aber noch nicht aktiv“, kennt, findet ihn hier nicht.
 
 ## Quellen
 
+- [Q02](../../QUELLEN.md#q02) – Glossar VDV-KA / etiCORE, S. 81 (Eintrag *Secure Crypto Environment*)
 - [Q51](../../QUELLEN.md#q51) – etiCORE ASN.1 Data Type Description 3.0.0-rc.6: Modul `ste` (Typen `StaticEntitlements`, `StaticEntitlementData`, `StaticEntitlementsData`, `StaticElectronicTicketParameters`), Modul `user-medium` (Typen `Entitlement`, `EntitlementStatusEnum`, `TransitionCounter`) · *Release-Kandidat*
 
 <!-- GEN:unterartikel -->

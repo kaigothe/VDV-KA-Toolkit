@@ -2,7 +2,7 @@
 
 Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 
-123 Eintragräge
+126 Eintragräge
 
 
 ## A
@@ -40,6 +40,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## C
 
 - [CV-Zertifikat](lexikon/sicherheit/cv-zertifikat.md) — CVC
+- [CV-Zertifikat in etiCORE](lexikon/sicherheit/cv-zertifikat-in-eticore.md) *(abgeleitet)*
 
 ## D
 
@@ -104,6 +105,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 - [Medien](lexikon/medien.md)
 - [Mediumbasiertes Ticketing](lexikon/abt/mbt.md) — MBT
 - [MOTICS](lexikon/sicherheit/motics.md) — MOTICS
+- [MOTICS-Authentifizierungsdaten](lexikon/sicherheit/motics-authentifizierungsdaten.md) *(abgeleitet)*
 - [Multiberechtigung](lexikon/berechtigungen/multiberechtigung.md) — MultiBER
 
 ## N
@@ -139,6 +141,7 @@ Erzeugt von `tools/gen.py` aus dem Frontmatter. **Nicht von Hand ändern.**
 ## S
 
 - [SAM-Aktionsdaten (ASN.1)](lexikon/datenformate/sam-aktionsdaten-asn-1.md)
+- [SAM-Datenobjekte (ASN.1)](lexikon/sicherheit/sam-datenobjekte-asn-1.md)
 - [Schlüsselarten](lexikon/sicherheit/schluesselarten.md)
 - [Schlüsselobjekte (ASN.1)](lexikon/sicherheit/schluesselobjekte-asn-1.md)
 - [Schlüsselreferenz](lexikon/sicherheit/schluesselreferenz.md)
